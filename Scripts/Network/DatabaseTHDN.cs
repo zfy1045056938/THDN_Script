@@ -145,6 +145,20 @@ class characters
         public int dust{get;set;}
 
 
+        //
+        public float CAnti { get; set; }
+        public float CEagelEyes { get; set; }
+        //KissAss
+        public float CCheat { get; set; }
+        public float CHardAss { get; set; }
+        //Science
+        public float CSoulView { get; set; }
+        public float CAntiAb { get; set; }
+
+        //Leader
+        public float CBusiness { get; set; }
+        public float CVRate { get; set; }
+
     //Set config
     //public bool hasSet{get;set;}
     //public string setName{get;set;}
@@ -827,6 +841,31 @@ public class DatabaseTHDN:MonoBehaviour{
                 players.exp = row.exp;
                 
                 players.gold = row.money;
+
+                //L3 Stats
+                /*
+                 public float CAnti { get; set; }
+        public float CEagelEyes { get; set; }
+        //KissAss
+        public float CCheat { get; set; }
+        public float CHardAss { get; set; }
+        //Science
+        public float CSoulView { get; set; }
+        public float CAntiAb { get; set; }
+
+        //Leader
+        public float CBusiness { get; set; }
+        public float CVRate { get; set; }
+                */
+
+                players.CAnti  = row.CAnti;
+                players.CEagleEye = row.CEagleEyes;
+                players.CCheat =row.CCheat;
+                players.CHardAss = row.CHardAss;
+                playerrs.CSoulView = row.CSoulView;
+                players.CAntiAb = row.CAntiAb;
+                players.CBusiness= row.CBusiness;
+                players.CVRate=row.CVRate;
                 //check ps
                 if (PlayerPrefs.HasKey("_lastsavename"))
                 {
@@ -1115,6 +1154,31 @@ public class DatabaseTHDN:MonoBehaviour{
             ac_useSkill = Players.AC_UseSkill,
             ac_criNum = Players.AC_CriNum,
             
+            /*
+              //
+        public float CAnti { get; set; }
+        public float CEagelEyes { get; set; }
+        //KissAss
+        public float CCheat { get; set; }
+        public float CHardAss { get; set; }
+        //Science
+        public float CSoulView { get; set; }
+        public float CAntiAb { get; set; }
+
+        //Leader
+        public float CBusiness { get; set; }
+        public float CVRate { get; set; }
+            */
+            //L3 Stats
+            CAnti = Players.CAnti,
+            CEagleEyes =Players.CEagleEye,
+            CCheat = Players.CCheat,
+            CHardAss = Players.CHardAss,
+            CSoulView = Players.CSoulView,
+            CAntiAb = Players.CAntiAb,
+            CBusiness  = Players. CBusiness,
+            CVRate =Players.CvRate,
+
 
         }) ;
         //check last save

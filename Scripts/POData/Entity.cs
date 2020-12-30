@@ -235,6 +235,152 @@ public abstract class Entity : NetworkBehaviourNonAlloc
 
         }
     }
+
+    /*
+      //
+        public float CAnti { get; set; }
+        public float CEagelEyes { get; set; }
+        //KissAss
+        public float CCheat { get; set; }
+        public float CHardAss { get; set; }
+        //Science
+        public float CSoulView { get; set; }
+        public float CAntiAb { get; set; }
+
+        //Leader
+        public float CBusiness { get; set; }
+        public float CVRate { get; set; }
+    */
+    #region Layer3 Stats Inflence by personal skill 
+    [SerializeField] protected int _cAnti;
+    public virtual int CAnti
+    {
+        //extra bouns from items or shrine
+        get
+        {
+            int passiveBouns = 0;
+            int buffBouns = 0;   //skills
+            return _cAnti + passiveBouns + buffBouns;
+        }
+        set
+        {
+            _cAnti = value;
+
+        }
+    }
+    [SerializeField] protected int _CEagleEye;
+    public virtual int CEagleEye
+    {
+        //extra bouns from items or shrine
+        get
+        {
+            int passiveBouns = 0;
+            int buffBouns = 0;   //skills
+            return _CEagleEye + passiveBouns + buffBouns;
+        }
+        set
+        {
+            _CEagleEye = value;
+
+        }
+    }
+    [SerializeField] protected int _CCheat;
+    public virtual int CCheat
+    {
+        //extra bouns from items or shrine
+        get
+        {
+            int passiveBouns = 0;
+            int buffBouns = 0;   //skills
+            return _CCheat + passiveBouns + buffBouns;
+        }
+        set
+        {
+            _CCheat = value;
+
+        }
+    }
+    [SerializeField] protected int _AntiAb;
+    public virtual int AntiAb
+    {
+        //extra bouns from items or shrine
+        get
+        {
+            int passiveBouns = 0;
+            int buffBouns = 0;   //skills
+            return _AntiAb + passiveBouns + buffBouns;
+        }
+        set
+        {
+            _AntiAb = value;
+
+        }
+    }
+    [SerializeField] protected int _CHardAss;
+    public virtual int CHardAss
+    {
+        //extra bouns from items or shrine
+        get
+        {
+            int passiveBouns = 0;
+            int buffBouns = 0;   //skills
+            return _CHardAss + passiveBouns + buffBouns;
+        }
+        set
+        {
+            _CHardAss = value;
+
+        }
+    }
+    [SerializeField] protected int _CBusiness;
+    public virtual int CBusiness
+    {
+        //extra bouns from items or shrine
+        get
+        {
+            int passiveBouns = 0;
+            int buffBouns = 0;   //skills
+            return _CBusiness + passiveBouns + buffBouns;
+        }
+        set
+        {
+            _CBusiness = value;
+
+        }
+    }
+    [SerializeField] protected int _CSoulView;
+    public virtual int CSoulView
+    {
+        //extra bouns from items or shrine
+        get
+        {
+            int passiveBouns = 0;
+            int buffBouns = 0;   //skills
+            return _CSoulView + passiveBouns + buffBouns;
+        }
+        set
+        {
+            _CSoulView = value;
+
+        }
+    }
+    [SerializeField] protected int _CvRate;
+    public virtual int CvRate
+    {
+        //extra bouns from items or shrine
+        get
+        {
+            int passiveBouns = 0;
+            int buffBouns = 0;   //skills
+            return _CvRate + passiveBouns + buffBouns;
+        }
+        set
+        {
+            _CvRate = value;
+
+        }
+    }
+    #endregion
     //[SerializeField] protected LinearFloat _rage = new LinearFloat { baseValue = 0f };
     //public virtual int rage {
     //    //extra bouns from items or shrine
@@ -876,21 +1022,7 @@ public abstract class Entity : NetworkBehaviourNonAlloc
         health -= damage;
         ShowDamagePoup(damage, DamageType.Normal);
     }
-    [Command]
-    public void CmdDamageToTarget(float health, int damage,ElementDamageType type)
-    {
 
-    }
-    //[Command]
-    //public void CmdDamageToTarget(float health, int damage)
-    //{
-
-    //}
-    //[Command]
-    //public void CmdDamageToTarget(float health, int damage)
-    //{
-
-    //}
 
 
     #endregion
@@ -900,7 +1032,7 @@ public abstract class Entity : NetworkBehaviourNonAlloc
     /// </summary>
     /// <param name="amout"></param>
     /// <param name="damageType"></param>
-    [ClientRpc]
+    [Client]
     public void ShowDamagePoup(float amout, DamageType damageType) {
         if (damagePopupPrefab != null) {
             Bounds bs = collider.bounds;
@@ -1046,23 +1178,7 @@ public abstract class Entity : NetworkBehaviourNonAlloc
 
   
 
-    #region SkillUI
-
-
-    /// <summary>
-    /// every level up got eine new points for upgrade , when Onlevelup foreach the skill
-    /// und highlight the skill who can upgrade until the sp == 0
-    /// </summary>
-    /// <param name="skill"></param>
-    [Client]
-    public void TryUpgradeSkill(int index)
-    {
-        if (CheckPoints() && CheckState())
-        {
-            CmdUpgradeSkill(index
-        );
-        }
-    }
+ 
 
     /// <summary>
     /// when skill level needs update skill by sdata-> next level
@@ -1111,6 +1227,8 @@ public abstract class Entity : NetworkBehaviourNonAlloc
     {
 
     }
+    
+    
     [Command]
     public virtual void CmdUnEquipSkill(int index)
     {
@@ -1126,10 +1244,7 @@ public abstract class Entity : NetworkBehaviourNonAlloc
     }
 
     
-    #endregion
-
-
-    #region DungeonModule
+    
     /// <summary>
     /// Dungeon Module for player who explore at the dungeon und try interactive with the obj ,player at
     /// dungeon mainly do three things
@@ -1171,6 +1286,5 @@ public abstract class Entity : NetworkBehaviourNonAlloc
 
 
 
-
-    #endregion
 }
+#endregion

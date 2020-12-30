@@ -50,20 +50,20 @@ public partial struct Skill
             //       causes Unity SendMessage warnings and false positives.
             //       this solution is a lot better.
             if (!ScriptableSkill.dict.ContainsKey(hash))
-                throw new KeyNotFoundException("There is no ScriptableSkill with hash=" + hash + ". Make sure that all ScriptableSkills are in the Resources folder so they are loaded properly.");
+                throw new KeysNotFoundException("There is no ScriptableSkill with hash=" + hash + ". Make sure that all ScriptableSkills are in the Resources folder so they are loaded properly.");
             return ScriptableSkill.dict[hash];
         }
     }
     public string name => data.name;
     //
-    public float castTime => data.castTime;
+    public float castTime ;
 
-    public float cooldown => data.cooldown;
+    public float cooldown;
 
     //rtv
     public float amount;
     //
-    public float manaCosts => data.manaCost;
+    public float manaCosts ;
    
    
    
@@ -110,6 +110,9 @@ public partial struct Skill
         //
         hasLearn = false;
         amount = 0;
+        castTime=0;
+        manaCosts =0;
+        cooldown=0;
         // ready immediately
         castTimeEnd = cooldownEnd = NetworkTime.time;
         

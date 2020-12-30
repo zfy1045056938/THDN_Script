@@ -474,6 +474,7 @@ public class UISkill : MonoBehaviour
                 skillTypeText.text = s.skillType.ToString();
                 sCastType.text = s.sCastType.ToString();
                 sCoolDown.text = s.cooldown.ToString();
+            
                 sSkillCharacter.text = s.SkillCharacter.ToString();
                 sAmount.text = s.sAmount.ToString();
                 // skillIcon.sprite = s.data.sSprite;

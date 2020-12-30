@@ -16,6 +16,7 @@ using Cinemachine;
 using UnityEngine.EventSystems;
 using Invector.vItemManager;
 using UnityEngine.Events;
+using GameDataEditor;
 
 //For Dialogue Add-on
 public delegate bool DSValideInt(Players p, int x);
@@ -1852,13 +1853,33 @@ public class Players : Entity
     public void IncreaseByLevel(Skill s , int level) {
         if (s.data != null)
         {
+             List<GDESkillDataData> recordSkill = new List<GDESkillDataData>();
             //upgrade rtskill data for db player save current state
             //when update reload the whole current data
-            List<SkillData> sd = GdeManager.GetAll<SkillData>();
-            if (sd.Count > 0)
-            {
+           List<GDESkillDataData> skilldata = GDEDataManager.GetAllItems<GDESkillDataData>();
+           //
+           for(int i=0;i<skilldata.Count;i++){
+               string csName= skilldata[i].SName;
+               int indexof = csName.IndexOf("_");
+               if(csName.Substring(indexof)== s.data.name){
+                    //record the skill
+                     recordSkill = new List<GDESkillDataData>();
+                    recordSkill.Add(skilldata[i]);
+               }
+           }
+           //Got Current All skill data then increase by level
+           for(int j=0;j<recordSkill.Count;j++){
+               if(recordSkill[j].SLevel == level){
+                   //Update current skill data
+                   s.amount =recordSkill[j].SAmount;
+                   s.manaCosts =recordSkill[j].SCostMana;
+                    s.cooldown=recordSkill[j].SCoolDown;
+                    s.castTime = recordSkill[j].SEffectTime;
+                    s.level = recordSkill[j].SLevel;
+                    s.data.sDetail = recordSkill[j].SDetail;
 
-            }
+               }
+           }
         }
     }
 

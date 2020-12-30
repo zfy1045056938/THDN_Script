@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using Mirror;
 using PixelCrushers.DialogueSystem;
 using UnityEngine.UI;
@@ -12,6 +12,7 @@ using UnityEngine.EventSystems;
 using UnityEngine;
 using UnityEngine.AI;
 using GameDataEditor;
+using System.Linq;
 //
 using Invector;
 using Invector.vCharacterController;
@@ -52,6 +53,7 @@ public enum DifficultType
     public List<DungeonAsset> mapList;   //storge map list 
     public DungeonAsset dungeonaAsset;
     public GameObject dungeonObj;
+    public List<vItem> dungeonItemList;
 
     [Header("DungeonSize")]
     //public int seed = -1;
@@ -72,7 +74,8 @@ public enum DifficultType
     //public GameManager globalSetting;   //common 
     public SoundManager sound;  //sound
     public bool atDungeon = false;
-    
+    public bool haveEnemies = false;
+
     
 
 
@@ -108,6 +111,15 @@ public enum DifficultType
     
     public ItemDatabase itemDatabase;
     public THDNGameDatabase gameDatabase;
+
+
+
+    [vEditorToolbar("Common Obj")]
+    public GameObject deadLoot;
+   
+    //for dungeon config
+    public bool rndProp=false;
+    public DifficultType difficult=DifficultType.Normal;
     /// <summary>
     /// 
     /// </summary>
@@ -121,7 +133,7 @@ public enum DifficultType
         Debug.Log("Load Main Game");
         player = FindObjectOfType<Players>().GetComponent<Players>();
         //GameDebug
-        GameDebug.Init(Application.dataPath,"GameLogs");
+        // GameDebug.Init(Application.dataPath,"GameLogs");
       GDEDataManager.Init("gde_data");
         //Load Dungeon asset
         StartCoroutine(InitABMRoutine());
@@ -272,7 +284,16 @@ public enum DifficultType
     }
     // Generate Player
     player.transform.position = scene.GetComponent<GlobalSetting>().startPosition.position;
+    //
+    if(isRndProp==true){
+    GenerateProp();
+    }
 
+        //TODO Update rnd enmey for dungeon by enemy folder
+        if (haveEnemies == true)
+        {
+            GenerateEnemies();
+        }
     // //Check Items und validate
     // ItemDatabase.instance.Init();
     // THDNGameDatabase.instance.Init();
@@ -290,8 +311,178 @@ public enum DifficultType
         
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+  void GenerateEnemies()
+    {
+        var enemiesList = sceneObj.GetComponent<GlobalSetting>().enemyList.ToList();
 
-   
+        if (enemiesList.Count > 0)
+        {
+            for(int i = 0; i < enemiesList.Count; i++)
+            {
+                //rnd value und items by dungeon
+               
+                //load enemy data from gdb preload
+                for(int j = 0; j < itemDatabase.cList.Count; j++)
+                    if(enemiesList[i].name == itemDatabase.cList[j].cName)
+                    {
+                        //got enemy und generate by rnd
+                        Debug.Log("Got Enemy");
+                        //Invector && AI
+
+                        //Got Loot item by vitem-> vfrom
+
+                        //network identity
+                        var health = Random.Range(itemDatabase.cList[j].cHealth,itemDatabase.cList[j].cHealth + itemDatabase.cList[j].cHealth * 0.5);
+                        var shield = Random.Range(itemDatabase.cList[j].cHealth, itemDatabase.cList[j].cHealth + itemDatabase.cList[j].cHealth * 0.5);
+                        var damage = Random.Range(itemDatabase.cList[j].cHealth, itemDatabase.cList[j].cHealth + itemDatabase.cList[j].cHealth * 0.5);
+                     
+
+                        //invector ai
+
+                        //emerald ai
+                        //load items by itemfrom
+                        List<vItem> items = itemDatabase.itemList.Where(citem => citem.itemFrom == enemiesList[i].cFrom).ToList();
+                         if(items.Count > 0)
+                        {
+                            //rnd
+                            int rndItemNum = Random.Range(1, 3);
+                            for(int n = 0; n < rndItemNum; n++)
+                            {
+                                //check detail items
+                                int ditem = Random.Range(0, items.Count);
+                                int ditemCounter = Random.Range(1, 3);
+                                //add to enemyAI Loot
+                               while(ditemCounter>0)
+                                {
+                                    //Add to entity
+                                    
+                                    enemiesList[i].lootItemList.Add(ditem);
+
+                                    //add to EAI
+
+                                    //add to eItemCollection
+
+                                    //
+                                    ditemCounter--;
+                                }
+                            }
+                        }  
+                    }
+            }
+        }
+    }
+
+    /*
+    *
+    * public List<DungeonChest> chest;
+    public List<Entity> enemyList;
+    public List<DungeonShrine> shrineList;
+    */
+
+    //generate by rnd und difficult(10%~30%)
+   public void GenerateProp(){
+     var cd = sceneObj.GetComponent<GlobalSetting>();
+     var itemManager= FindObjectofType<vItemManager>();
+     if(cd && itemManager){
+         //
+        if(cd.enemyList.Count>0){
+            for(int i=0;i<cd.enemyList.Count;i++){
+                if(cd.enemyList[i]!=null){
+
+                    //reload the item from dungeon.dataList
+                      //check item counter
+                    float SlotItem =Random.Range(1,2);
+                    for(int i=0;i<SlotItem.Count;i++){
+                        //Check detail item 
+                        float itemIndex= Random.Range(0,dungeonItemList.Count);
+                        var detailItem = itemManager.GetItems(dungeonItemList.id);
+                        cd.enemyList[i].itemList.Add(detailItem);
+                        //gernerate item by id to vitemmanager
+                        // if(detailItem!=null){
+                        //        //generate amount for itemreference
+                        // float itemAmount= Random.Range(1,3);
+                        
+                        // cs.Chest[i].GetComponent<vItemCollection>().item 
+                        // = new ItemRegerence{
+                        //     id = detailItem.id,
+                        //     name = detailItem.name,
+                        //     amount = itemAmount,
+
+                        // };
+                       
+                       
+                     
+                        // }
+                    }
+                }
+
+                }
+            }
+            //
+            for(int j=0;j<cs.Chest.Count;j++){
+                if(cs.Chest[j]!=null){
+                    //got all items
+
+
+                    //check item counter
+                    float SlotItem =Random.Range(1,2);
+                    for(int i=0;i<SlotItem.Count;i++){
+                        //Check detail item 
+                        float itemIndex= Random.Range(0,dungeonItemList.Count);
+                        var detailItem = itemManager.GetItems(dungeonItemList.id);
+                        //gernerate item by id to vitemmanager
+                        if(detailItem!=null){
+                               //generate amount for itemreference
+                        float itemAmount= Random.Range(1,3);
+                        
+                        cs.Chest[i].GetComponent<vItemCollection>().item 
+                        = new ItemRegerence{
+                            id = detailItem.id,
+                            name = detailItem.name,
+                            amount = itemAmount,
+
+                        };
+                       
+                       
+                     
+                        }
+                    }
+                }
+            }
+            //
+            for(int l=0;l<cs.shrineList.Count;l++){
+                if(cs.Chest[l]!=null){
+                    //got rnd event
+                    int index = Random.Range(0,ItemDatabase.instance.dungeonEventList);
+                    DungeonEvent cs = ItemDatabase.instnace.GotDE(index);
+                    if(cs!=null){
+                        //set to cs.s
+                        var de = cs;
+                        var shrine = cs.shrineList[i].GetComponent<DungeonShrine>();
+                        cs.shrineList[i].GetComponent<DungeonShrine>().dungeonEvent=cs;
+                        shrine.amount = Random.Range(cs.deAmount/2,cs.deAmount);
+                        shrine.effectTime = de.deEffectTime;
+                        shrine.buffType=de.bufType;
+                        //Bind UI
+                        shrine.nameText.text= de.dename.ToString();
+                        shrine.typeText.text= de.buffType.ToString();
+                        shrine.detailText.text= de.deDetail.ToString();
+                        
+                    }
+                }
+            }
+        }
+
+     }else{
+         Debug.Log("Couldn't found the dungeon");
+         GameDebug.Log("ERROR::Couldn't found the dungeon");
+         
+     }
+
+   }
     
     
     /// <summary>
@@ -570,8 +761,7 @@ public enum DifficultType
     #endregion
 
     public void ChangeScene(string name){
-        fadeCanvas.FadeIn();
-    
+      
         
     //  GameObject d = sceneObj;
 
@@ -592,7 +782,7 @@ public enum DifficultType
             //  player.transform.position =s.GetComponent<GlobalSetting>().startPosition.position;
             var p = FindObjectOfType<Players>();
             p.Warp(vGameController.spawnPoint.position);
-               fadeCanvas.FadeOut();
+             
        fadeCanvas.group.alpha=0;
             // vGameController.SpawnAtPoint(vGameController.spawnPoint);
         }else{

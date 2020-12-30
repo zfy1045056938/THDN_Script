@@ -15,6 +15,7 @@ public class ItemDatabase : MonoBehaviour
     public List<DungeonEvent> deList;
     public List<GamePiece> gpList;
 
+    
 
       public static Dictionary<int, ScriptableSkill> skillDic = new Dictionary<int, ScriptableSkill>();
 

@@ -78,11 +78,11 @@ using UnityEngine.UI;
                     });
 
                     // image
-                    if (skill.level > 0)
-                    {
-                        slot.image.color = Color.white;
-                        slot.image.sprite = skill.image;
-                    }
+                    // if (skill.level > 0)
+                    // {
+                    //     slot.image.color = Color.white;
+                    //     slot.image.sprite = skill;
+                    // }
 
                     // description
                     // slot.descriptionText.text = skill.ToolTip(showRequirements: skill.level == 0);

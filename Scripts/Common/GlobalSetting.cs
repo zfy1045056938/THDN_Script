@@ -164,6 +164,8 @@ public class GlobalSetting : MonoBehaviour
 public GameObject [] torch;
 public GameObject [] enemy;
 public GameObject[] DungeonTrap;
+public GameObject[] dungeonShrine;
+
 
     [Header("DungeonInfo")]
     public string dungeonName;
@@ -173,7 +175,12 @@ public GameObject[] DungeonTrap;
 
     public DungeonNavAgent3D dungeonNavAgent;
 
-   
+    //for random generate item or ability 
+    //
+    public List<DungeonChest> chest;
+    public List<Entity> enemyList;
+    public List<DungeonShrine> shrineList;
+    
     private void Start()
     {
         instance = this;
@@ -183,8 +190,38 @@ public GameObject[] DungeonTrap;
         // playerList.Add(DungeonStartInfo.PLAYERS.netId, DungeonStartInfo.PLAYERS);
         //
         // playerTeam.Add(mainPlayer.name,mainPlayer);
-
+        //Rnd Generae Prop
+      ReloadDungeonAsset();
     }
+
+/*
+* public GameObject[]  Chest;
+public GameObject [] torch;
+public GameObject [] enemy;
+public GameObject[] DungeonTrap;
+public GameObject[] dungeonShrine;
+*/
+
+    public void ReloadDungeonAsset(){
+        //clear old object
+        foreacg(var v in Chest){
+            if(v!=null){
+            chest.Add(v.GetComponent<DungeonChest>());
+            }
+        }
+          foreacg(var e enemy){
+            if(e!=null){
+            chest.Add(e.GetComponent<Monster>());
+            }
+        }
+          foreacg(var d in dungeonShrne){
+            if(d!=null){
+            chest.Add(d.GetComponent<DungeonShrine>());
+            }
+        }
+    }
+
+    
 
     /// <summary>
     /// Trace States

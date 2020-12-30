@@ -165,16 +165,14 @@ public class Monster : Entity
     public double deadTimeEnd;
     #endregion
 
-    //only for monster
+    //only for monster need bind to AI->Loot Items
+    [Header("Monster Loot")]
+    public List<vItem> itemLoot;    //when dead can loot
+    
+    
    
     
 
-    //collect the skill for enemy ready to use player
-    public Queue<Skill> skilQueue;
-    
-    //for ai skill und notice player what skill will use to player
-   
-    public int nextSKill = -1;
 
     [Header("Battle State")]
     public bool canAtk = false;
@@ -460,20 +458,20 @@ public class Monster : Entity
     }
 
 
-    public bool CanUseSkill(int skillIndex) {
-        //target Skill
-        Skill s = skills[skillIndex];
+    // public bool CanUseSkill(int skillIndex) {
+    //     //target Skill
+    //     Skill s = skills[skillIndex];
 
-        return health > 0 && mana > s.manaCosts ;
-    }
-    public bool CanAtk() {
-        return target.health > 0;
-    }
-    //AI needs move tile auto when got matches change state to atk
-    // Monster->UpdateServer-> state=Combat
-    public bool MoveTile() {
-        return health > 0 && !isFreeze; 
-    }
+    //     return health > 0 && mana > s.manaCosts ;
+    // }
+    // public bool CanAtk() {
+    //     return target.health > 0;
+    // }
+    // //AI needs move tile auto when got matches change state to atk
+    // // Monster->UpdateServer-> state=Combat
+    // public bool MoveTile() {
+    //     return health > 0 && !isFreeze; 
+    // }
 
 
     

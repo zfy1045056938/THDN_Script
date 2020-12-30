@@ -18,6 +18,9 @@ public class DungeonEvent : MonoBehaviour
     private float amount;
     private DEType _dType;
     public string deDetail;
+    public float effectTime;
+    public BuffType buffType;
+    
     //
    
 
