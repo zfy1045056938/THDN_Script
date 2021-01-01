@@ -1,0 +1,183 @@
+﻿Database
+Name,Version,Author,Description,Emphasis1,Emphasis2,Emphasis3,Emphasis4
+THDN,1.0,RichardLynch,THDN,#ffffffff ---,#ff0000ff ---,#00ff00ff ---,#0000ffff ---
+Global User Script
+
+Actors
+ID,Portrait,AltPortraits,SpritePortrait,AltSpritePortraits,Name,Pictures,Description,IsPlayer,NodeColor
+Number,Special,Special,Special,Special,Text,Files,Text,Boolean,Text
+1,,[],,[],Player,[],,True,Blue
+2,,[],,[],Zino,[],"the first guy who save at sodtyxjails2 , help him esacpe from the jails needs key  ",False,Gray
+3,,[],,[],Paven,[],,False,Gray
+8,,[],,[],KuQuo,[],,False,{{omit}}
+5,,[],,[],Tunnel,[],Trigger to Matches Module,False,Gray
+6,,[],,[],Shrine,[],,False,Gray
+4,,[],,[],Terminal,[],,False,Gray
+9,,[],,[],SodtyxGuardBrain,[],"Save every Indie Mind container room , can hacker und check science skill ",False,{{omit}}
+7,,[],,[],SodtyxGuard,[],,False,Gray
+10,,[],,[],Nam,[],,False,{{omit}}
+12,,[],,[],Diablo,[],,False,{{omit}}
+11,,[],,[],Rica,[],,False,{{omit}}
+13,,[],,[],TrainTerminal,[],Link To KenQuo SoulView Layer,False,{{omit}}
+14,,[],,[],SodtyxTrain,[],,False,{{omit}}
+Items
+ID,Name,Pictures,Description,Success Description,Failure Description,State,Is Item,Locations,Display Name,Trackable,Track,XP Reward,Scrap Reward,Item Reward Amount,Item Reward,Entry Count,Entry 1,Entry 1 State,Entry 1 Display Name,Entry 1 Active,Entry 1 Success,Entry 1 CurrentAmount,Entry 1 GoalAmount,Entry 1 Target,Entry 2,Entry 2 State,Entry 2 Display Name,Entry 2 Active,Entry 2 Success,Entry 2 CurrentAmount,Entry 2 GoalAmount,Entry 3,Entry 3 State,Entry 3 Display Name,Entry 3 Active,Entry 3 Success,Entry 3 CurrentAmount,Entry 3 Goal Amount,Abandonable,Group
+Number,Text,Files,Text,Text,Text,Text,Boolean,Text,Text,Boolean,Boolean,Number,Number,Number,Text,Number,Text,Text,Text,Text,Text,Number,Number,Actor,Text,Text,Text,Text,Text,Number,Number,Text,Text,Text,Text,Text,Number,Number,Boolean,Text
+2,Escape Jails,[],,,,unassigned,False,,,False,False,0,0,0,,0,,(None),,,,,,,,(None),,,,,,,(None),,,,,,False,
+1,Save Zino,[],,,,unassigned,False,,,True,False,0,0,0,,1,"[var=""EnemyHasKilled""]/1 has killed",active,,,,0,0,,,(None),,,,,,,(None),,,,,,False,
+3,Save Paven,[],,,,unassigned,False,,,False,False,0,0,0,,0,,(None),,,,,,,,(None),,,,,,,(None),,,,,,False,
+7,Save KuQuo,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+4,Welcome to the Jungle,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+5,The Powerful Items,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+6,Tower Monster,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+8,===Train Part ===,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+9,HackTheKenquoControl,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+10,CollectTheCore,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+11,Train Mission_1,[],"Free the other ludya guy at train part 4 ,who team called raven Nam ",,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+12,Train Mission_2,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+13,Train Mission_3,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+Locations
+ID
+Number
+Variables
+ID,Name,Initial Value,Description,InitialValueType
+Number,Text,Text,Text,Text
+1,Alert,,,Text
+2,EnemyHasKilled,0,,Number
+3,ItemCollected,0,,Number
+4,HasCollectKey,False,When Player pick up the quest key needs notice und  update the quest state,Boolean
+5,Unlock,False,"For terminal who needs hack for lock set,when success reset when got reward",Boolean
+6,CheckSkillSuccess,False,Check the perc skill success,Boolean
+Conversations
+ID,Title,Pictures,Description,Actor,Conversant
+Number,Text,Files,Text,Actor,Actor
+1,Ziko,[],,1,2
+2,SouvViewReport1,[],,1,2
+3,SodtyxGuardBrains,[],"Dead Body that can Hack, when guard die spawn the brain for hacker opreation",1,9
+4,Paven,[],"Paven jail at the sj-1,who can save him with the the hacker skill  at the termainl , when save paven successfully , player can dialogue with the paven in the outdoor ,that will explore with a new quest .",1,3
+5,SodtyxTerminal,[],"the terminal as the science skil for player needs win the matches module, the matches for player includes \n1.scores limit\n2.time limt\n3.",1,4
+6,SodtyxTrain,[],"the runtime sene will set the player at the trains , player game at the trains und stream with rolling train ,when train move to the edge of the map , loading ",1,14
+7,Nam,[],,1,10
+8,TrainTerminal,[],,1,2
+DialogueEntries
+entrytag,ConvID,ID,Actor,Conversant,Title,MenuText,DialogueText,IsGroup,FalseConditionAction,ConditionPriority,Conditions,Script,Sequence,Pictures,Description,Parenthetical,Audio Files,Video File,Response Menu Sequence,Portraits Visible,EventGuid,canvasRect
+Text,Number,Number,Number,Number,Text,Text,Text,Boolean,Special,Special,Text,Text,Text,Files,Text,Text,Files,Text,Text,Boolean,Text,Text
+Player_1_0,1,0,1,2,START,,,True,Block,Normal,,,None(),[],,,[],,,False,{{omit}},604.0336;11.51633
+Zino_1_1,1,1,2,1,,,"i need the key to unlock door , the key was at the soul view room table ,u need ",False,Block,Normal,"CurrentQuestState(""Save Zino"")==""unassigned""",,,[],,,[],,,False,,224.8773;124.5579
+Zino_1_2,1,2,2,1,,,u here,False,Block,Normal,"CurrentQuestState(""Save Zino"")==""active""",,,[],,,[],,,False,{{omit}},602.0448;166.9111
+Player_1_3,1,3,1,2,,,where's the soul view room ?,False,Block,Normal,,,,[],,,[],,,False,{{omit}},23.55423;237.4303
+Player_1_4,1,4,1,2,,where's other guy,,False,Block,Normal,,,,[],,,[],,,False,{{omit}},320.9142;188.3352
+Zino_1_5,1,5,2,1,,,we need hack the jails terminal to got the new .,False,Block,Normal,,,,[],,,[],,,False,{{omit}},359.7926;259.9969
+Zino_1_6,1,6,2,1,,,"u need got new from guard ,hack them soul view layer then got the key ",False,Block,Normal,,"SetQuestState(""Save Zino"",""active"");\n",,[],,,[],,,False,{{omit}},50.00222;501.422
+Player_1_7,1,7,1,2,,,how to got the new ,False,Block,Normal,,,,[],,,[],,,False,{{omit}},433.5765;377.9407
+Player_1_9,1,9,1,2,,,how to save u??,False,Block,Normal,,,,[],,,[],,,False,{{omit}},182.4956;368.6563
+Zino_1_10,1,10,2,1,,,"when one of the guard die ,the brain will show up und u can hack the brain to got the guard mind, hack them und collect the tips when u can knew about all the sodtyxjails,",False,Block,Normal,,"SetQuestState(""Hack The Core Terminal"",""active"");",,[],,,[],,,False,{{omit}},344.1664;456.3416
+Zino_1_11,1,11,2,1,,,"good job bro, now we need leave here , found the way und leave here",False,Block,Normal,"variable[""EnemyHasKilled""]>0","SetQuestState(""Save Zino"",success);\nAddReward(30,100);\n",,[],,,[],,,False,{{omit}},608.6611;258.1362
+Zino_1_12,1,12,2,1,,,got the key bro!!,False,Block,Normal,"Variables[""EnemyHasKilled""]>0",,,[],,,[],,,False,{{omit}},880.4807;243.9747
+Player_1_13,1,13,1,2,,,we need found the other guy,False,Block,Normal,,"SetQuestState(""Escape Jail"",""active"");",,[],,,[],,,False,{{omit}},692.186;452.9641
+Player_1_14,1,14,1,2,,,"the gate has open ,we need return to ludya ",False,Block,Normal,,,,[],,,[],,,False,{{omit}},806.2851;304.6758
+Zino_1_15,1,15,2,1,,,"found other guy that we can robber the sodtyx train ,we cab't lost them.",False,Block,Normal,,,,[],,,[],,,False,{{omit}},840.4116;373.5294
+Player_1_16,1,16,1,2,New Dialogue Entry,,,False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},484.7014;522.4849
+Player_1_17,1,17,1,2,,,how's hack?,False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},277.0609;522.7351
+Zino_1_18,1,18,2,1,,,"""The Hacker"" is all about your science skill , belongs ShenShan Server send message in the Soul View Layer ,u needs build the mess line to the can connect that can link the right message .",False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},252.8457;574.8579
+Player_1_19,1,19,1,2,,,Got it!,False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},287.5963;664.2972
+Zino_1_20,1,20,2,1,At Trains Discuss How's robber the trains ,,go to controller room und take control,False,Block,Normal,"CurrentQuestState(""Save ZiNo"")==""success""",,,[],,,[],,{{omit}},{{omit}},{{omit}},798.9081;101.2488
+Zino_1_21,1,21,2,1,Save Zino Part,,,True,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},331.9025;58.03552
+Player_1_22,1,22,1,2,,,the train struct,False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},1021.342;62.34867
+Zino_1_23,1,23,2,1,New Dialogue Entry,,,False,Block,Normal,,,,[],the line about zino around how's start the trains core to avoid the sodtyx  army protect the trains .\n1. around the dialogue will discuss the trains info \n,,[],,{{omit}},{{omit}},{{omit}},1261.236;21.72056
+Player_1_24,1,24,1,2,,,where the train arrived? ,False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},1000.068;139.5294
+Zino_1_25,1,25,2,1,,,"the train will arrive at kenquo, storge  lots of the  kono  for kenquo ,we can rubber it und t road to side line belongs ludya in a cave .",False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},1107.773;188.3587
+Zino_1_26,1,26,2,1,,,"the train have 3 layer, inside ,top und bottom ,\n",False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},1268.36;94.78811
+Player_1_27,1,27,1,2,,,how's take control?,False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},1161.625;246.5537
+Player_1_28,1,28,1,2,New Dialogue Entry,,,False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},1325.524;188.0185
+Zino_1_29,1,29,2,1,,,"u need open the freight gate at trai part  4, the others guy lock that place. when u arrive there, talk to them",False,Block,Normal,,"SetQuestState(""Train Mission_1"",""active"");",,[],,,[],,{{omit}},{{omit}},{{omit}},1277.525;301.2365
+Player_2_0,2,0,1,2,START,,,False,Block,Normal,,,None(),[],,,[],,,,{{omit}},323;57
+Player_3_0,3,0,1,9,START,,,False,Block,Normal,,,None(),[],,,[],,,,{{omit}},416;38
+SodtyxGuardBrain_3_1,3,1,9,1,,,"Dead Brain show up under the guard, seem can hack the message from the brain",False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},405;100
+Player_3_2,3,2,1,9,,,Hack,False,Block,Normal,,MatchModule();,,[],,,[],,{{omit}},{{omit}},{{omit}},317;179
+Player_3_3,3,3,1,9,,,Leave,False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},524;189
+SodtyxGuardBrain_3_4,3,4,9,1,New Dialogue Entry,,,False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},282;245
+Player_4_0,4,0,1,3,START,,,False,Block,Normal,,,None(),[],,,[],,,,{{omit}},481.659;1
+Paven_4_1,4,1,3,1,New Dialogue Entry,,,True,Block,Normal,,,,[],Jails Part,,[],,{{omit}},{{omit}},{{omit}},191.4198;66.28502
+Paven_4_2,4,2,3,1,,,"hey guys,have u seen zino  , sodtyx guard locked him at the others jails, we need hurry up und rubber trains return to ludya .",False,Block,Normal,"CurrentQuestState(""Save Paven"")==""unassigned""",,,[],,,[],,{{omit}},{{omit}},{{omit}},117;199
+Paven_4_3,4,3,3,1,New Dialogue Entry,,,False,Block,Normal,"CurrentQuestState(""SavePaven"")==""active""",,,[],,,[],,{{omit}},{{omit}},{{omit}},399.9462;119.9192
+Paven_4_6,4,6,3,1,,,"okey,we need leave here, but  we need save KuQuo ",False,Block,Normal,"Variable[""Unlock""]~=false",,,[],,,[],,{{omit}},{{omit}},{{omit}},478.8499;194.3328
+Player_4_8,4,8,1,3,,,"he's free now, how to save u?",False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},228.6068;586.377
+Player_4_9,4,9,1,3,,,"(Cheat)No ,he's in hell now ,what a sad news ",False,Block,Normal,,,,[],"Check the pp skill ,when success then can add the ppexp ",,[],,{{omit}},{{omit}},{{omit}},316.7939;280.4562
+Paven_4_10,4,10,3,1,,,Counter the perc,False,Block,Normal,,"CheckPersonalSkill(""Chest"",70);",,[],Counter the perc und check the success,,[],,{{omit}},{{omit}},{{omit}},445.826;362.2359
+Paven_4_11,4,11,3,1,,,"found the terminal und hack it , the door lock by the sv lock that needs unlock from terminal",False,Block,Normal,,"SetQuestState(""Save Paven"",""active"");",,[],,,[],,{{omit}},{{omit}},{{omit}},343.7598;706.1458
+Paven_4_12,4,12,3,1,,,"(success)oh man,that was the bad new ",False,Block,Normal,"Variable[""CheckSkillSuccess""]~=false","AddPersonalSKill(""Cheat"",15);",,[],,,[],,{{omit}},{{omit}},{{omit}},492.0297;554.1638
+Paven_4_13,4,13,3,1,,,"i saw him due ,u r suck .(filed)",False,Block,Normal,"Variale[""CheckSkillSuccess""]~=true",,,[],,,[],,{{omit}},{{omit}},{{omit}},313.7927;459.1779
+Player_4_14,4,14,1,3,,,where's KuQuo?,False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},668.6185;238.8251
+Paven_4_15,4,15,3,1,,,"he's locked at the entrance ,near by the gate ",False,Block,Normal,,"SetQuestState(""Save KuQuo"",""active"");",,[],,,[],,{{omit}},{{omit}},{{omit}},765.2277;314.3445
+Player_5_0,5,0,1,4,START,,,False,Block,Normal,,,None(),[],,,[],,{{omit}},{{omit}},{{omit}},334;34
+Terminal_5_1,5,1,4,1,New Dialogue Entry,,,False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},335;115
+Player_5_2,5,2,1,4,,,Hack,False,Block,Normal,,MatchModule();,,[],,,[],,{{omit}},{{omit}},{{omit}},87;167
+Player_5_3,5,3,1,4,,,Try Skip,False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},346;186
+Player_5_4,5,4,1,4,New Dialogue Entry,,,False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},537;204
+Terminal_5_5,5,5,4,1,New Dialogue Entry,,,False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},342.9104;244.0895
+Terminal_5_6,5,6,4,1,New Dialogue Entry,,,False,Block,Normal,"Variable[""CheckSkillSuccess""]~=false",,,[],,,[],,{{omit}},{{omit}},{{omit}},235;331
+Terminal_5_7,5,7,4,1,New Dialogue Entry,,,False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},448;324
+Player_6_0,6,0,1,14,START,,,False,Block,Normal,,,None(),[],,,[],,{{omit}},{{omit}},{{omit}},239.5187;31.42784
+SodtyxTrain_6_1,6,1,14,1,New Dialogue Entry,,,False,Block,Normal,,,,[],,,[],,{{omit}},{{omit}},{{omit}},331.1715;93.25131
+Player_7_0,7,0,1,10,START,,,False,Block,Normal,,,None(),[],,,[],,{{omit}},{{omit}},{{omit}},203;31
+Player_8_0,8,0,1,2,START,,,False,,Normal,,,None(),[],,,[],,{{omit}},{{omit}},{{omit}},20;30
+OutgoingLinks
+OriginConvID,OriginID,DestConvID,DestID,ConditionPriority
+Number,Number,Number,Number,Special
+1,0,1,20,Normal
+1,0,1,21,Normal
+1,1,1,3,Normal
+1,1,1,4,Normal
+1,2,1,11,Normal
+1,2,1,12,Normal
+1,3,1,6,Normal
+1,4,1,5,Normal
+1,5,1,7,Normal
+1,5,1,9,Normal
+1,7,1,10,Normal
+1,9,1,6,Normal
+1,10,1,9,Normal
+1,10,1,16,Normal
+1,10,1,17,Normal
+1,11,1,13,Normal
+1,11,1,14,Normal
+1,14,1,15,Normal
+1,15,1,13,Normal
+1,17,1,18,Normal
+1,18,1,19,Normal
+1,20,1,22,Normal
+1,20,1,24,Normal
+1,21,1,1,Normal
+1,21,1,2,Normal
+1,22,1,26,Normal
+1,24,1,25,Normal
+1,25,1,27,Normal
+1,25,1,28,Normal
+1,27,1,29,Normal
+3,0,3,1,Normal
+3,1,3,2,Normal
+3,1,3,3,Normal
+3,2,3,4,Normal
+4,0,4,1,Normal
+4,1,4,2,Normal
+4,1,4,3,Normal
+4,2,4,8,Normal
+4,2,4,9,Normal
+4,3,4,6,Normal
+4,6,4,14,Normal
+4,8,4,11,Normal
+4,9,4,10,Normal
+4,10,4,12,Normal
+4,10,4,13,Normal
+4,12,4,8,Normal
+4,13,4,8,Normal
+4,14,4,15,Normal
+5,0,5,1,Normal
+5,1,5,2,Normal
+5,1,5,3,Normal
+5,1,5,4,Normal
+5,3,5,5,Normal
+5,5,5,6,Normal
+5,5,5,7,Normal
+6,0,6,1,Normal
