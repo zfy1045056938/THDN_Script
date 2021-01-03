@@ -1,0 +1,4217 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f3602cfd0ac79644a19fea8f4fd1b49, type: 3}
+  m_Name: test
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 114125156532609708}
+  - {fileID: 114627281081178096}
+  - {fileID: 114288358281183850}
+  - {fileID: 114190424643383520}
+  - {fileID: 114325653643710032}
+  - {fileID: 114196928804889562}
+  - {fileID: 114200915409404150}
+  - {fileID: 114186682900697362}
+  - {fileID: 114604038394410524}
+  - {fileID: 114715351208267322}
+  - {fileID: 114586153106019302}
+  - {fileID: 114629800601881132}
+  - {fileID: 114329660338464538}
+  - {fileID: 114532526263019090}
+  - {fileID: 114357119510508596}
+  - {fileID: 114364989337111376}
+  - {fileID: 114560014843943302}
+  - {fileID: 114532234274563362}
+  - {fileID: 114445755695046794}
+  - {fileID: 114658042469671788}
+  - {fileID: 114369318802181618}
+  - {fileID: 114606184550066522}
+  - {fileID: 114418727606359738}
+  - {fileID: 114798921142875692}
+  - {fileID: 114683136024276258}
+  - {fileID: 114091654128176356}
+  - {fileID: 114982408966267382}
+  - {fileID: 114096677628154608}
+  - {fileID: 114995073016484724}
+  - {fileID: 114347682501274504}
+  - {fileID: 114339470208790938}
+  - {fileID: 114696167808074140}
+  - {fileID: 114826289187177282}
+  - {fileID: 114339202819539426}
+  - {fileID: 114332095714766150}
+  - {fileID: 114435702894008788}
+  - {fileID: 114420829471832488}
+  - {fileID: 114400563242138620}
+  - {fileID: 114591837696139902}
+  - {fileID: 114437306923039438}
+  - {fileID: 114213169137107482}
+  - {fileID: 114709575094055670}
+  - {fileID: 114677765887548340}
+  - {fileID: 114853092280058302}
+  - {fileID: 114373013845133544}
+  - {fileID: 114358237201548314}
+  - {fileID: 114980384514961886}
+  - {fileID: 114266813852010390}
+  - {fileID: 114652867378592118}
+  - {fileID: 114167733885055418}
+  - {fileID: 114261251589612922}
+  - {fileID: 114895144988630356}
+  - {fileID: 114326325615547948}
+  - {fileID: 114163123486598440}
+  - {fileID: 114933601593319854}
+  - {fileID: 114474129543100370}
+  - {fileID: 114025557511992678}
+  - {fileID: 114888123156547608}
+  - {fileID: 114432862854804800}
+  - {fileID: 114208285526115784}
+  inEdition: 0
+  itemsHidden: 1
+--- !u!114 &114025557511992678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u7B80\u6613\u7684\u6728\u7BAD\u56FE\u7EB8"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 56
+  description: Item Description
+  type: 8
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 57
+  itemDetail: "\u5236\u4F5C\u56FE\u7EB8,\u53EA\u53EF\u5B66\u4E60\u4E00\u6B21"
+  itemRarity: 2
+  itemLevel: 3
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114091654128176356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u7075\u89C6\u5316\u7A7A\u74F6\u5B50"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 25
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 25
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114096677628154608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u6742\u8D28\u5E15\u6D1B\u5C14\u63D0\u53D6\u6DB2"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 27
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 27
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114125156532609708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u5FAE\u5F31\u7BDD\u706B"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 0
+  description: Item Description
+  type: 0
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 0
+  itemDetail: "\u4F7F\u7528\u7BDD\u706B\u8FDB\u5165\u8C03\u6574\u72B6\u6001"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114163123486598440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u9632\u62A4\u5E3D\u5B50"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 1
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 53
+  description: Item Description
+  type: 9
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 53
+  itemDetail: "\u62A4\u7532:{Armor}"
+  itemRarity: 1
+  itemLevel: 2
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 3
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 300
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114167733885055418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u7B80\u6613\u9632\u62A4\u5E3D\u5B50\u56FE\u7EB8"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 49
+  description: Item Description
+  type: 8
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 49
+  itemDetail: "\u5236\u4F5C\u7B80\u6613\u9632\u62A4\u5E3D\u5B50"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 1000
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114186682900697362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u7834\u65E7\u5E3D\u5B50"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 1
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 7
+  description: Item Description
+  type: 9
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 7
+  itemDetail: "\u6253\u5F00\u5B9D\u7BB1\u6216\u8005\u5927\u95E8\u88C5\u7F6E\uFF0C\u57FA\u4E8E\u5F00\u9501\u7B49\u7EA7\u786E\u5B9A\u6210\u529F\u7387"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114190424643383520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u56ED\u6728\u76FE"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 3
+  description: Item Description
+  type: 1
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 3
+  itemDetail: 
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 10
+  itemArmor: 0
+  itemAShield: 4
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114196928804889562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u64AC\u68CD"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 5
+  description: Item Description
+  type: 1
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 5
+  itemDetail: "\u6253\u5F00\u5B9D\u7BB1\u6216\u8005\u5927\u95E8\u88C5\u7F6E\uFF0C\u57FA\u4E8E\u5F00\u9501\u7B49\u7EA7\u786E\u5B9A\u6210\u529F\u7387"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 10
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 5
+  blockPerc: 20
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114200915409404150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u4E0B\u6C34\u9053\u4E95\u76D6"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 6
+  description: Item Description
+  type: 1
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 6
+  itemDetail: "\u4E0B\u6C34\u9053\u4E95\u76D6"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 6
+  critPerc: 0
+  blockPerc: 40
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114208285526115784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u6728\u7247\u62A4\u8155\u56FE\u7EB8"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 59
+  description: Item Description
+  type: 8
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 60
+  itemDetail: "\u5236\u4F5C\u56FE\u7EB8,\u53EA\u53EF\u5B66\u4E60\u4E00\u6B21"
+  itemRarity: 2
+  itemLevel: 3
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114213169137107482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u51EF\u5B89\u7CBE\u81F4\u5E03\u6599"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 40
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 40
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114261251589612922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u7B80\u6613\u6297\u4FB5\u8680\u5E3D\u5B50"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 50
+  description: Item Description
+  type: 8
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 50
+  itemDetail: "\u5236\u4F5C\u7B80\u6613\u6297\u4FB5\u8680\u5E3D\u5B50"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 1000
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114266813852010390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u539F\u6728\u5251\u56FE\u7EB8"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 47
+  description: Item Description
+  type: 8
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 47
+  itemDetail: "\u5236\u4F5C\u539F\u6728\u5251"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 1000
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114288358281183850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u706B\u628A"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 2
+  description: Item Description
+  type: 1
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 2
+  itemDetail: "\u76D1\u72F1\u5E38\u89C1\u7684\u7167\u660E\u5DE5\u5177,\u53EF\u7528\u4E8E\u6B66\u5668"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 10
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114325653643710032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u7834\u65E7\u7684\u56DA\u8863"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 4
+  description: Item Description
+  type: 10
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 4
+  itemDetail: 
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 4
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114326325615547948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u5E9F\u94C1\u62A4\u76FE"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 1
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 52
+  description: Item Description
+  type: 1
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 52
+  itemDetail: "\u62A4\u7532:{Armor}"
+  itemRarity: 1
+  itemLevel: 2
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 5
+  critPerc: 0
+  blockPerc: 50
+  flashPerc: 0
+  itemPrice: 300
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114329660338464538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u5E9F\u5F03\u7684\u514B\u519C\u6CE8\u5C04\u5668"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 12
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 12
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114332095714766150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u7834\u65E7\u7684\u5E03\u6599"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 34
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 34
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114339202819539426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u7075\u89C6\u5E9F\u5F03\u7269"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 33
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 33
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114339470208790938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u7D22\u591A\u63D0\u65AF\u7CBE\u70BC\u77F3"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 30
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 30
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114347682501274504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u5E9F\u94C1"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 29
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 29
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114357119510508596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u5F3A\u529B\u7684\u514B\u519C\u6CE8\u5C04\u5668"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 14
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 14
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114358237201548314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u76D1\u72F1\u51FA\u53E3\u94A5\u5319"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 45
+  description: Item Description
+  type: 11
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 45
+  itemDetail: "\u89E3\u5F00\u5927\u95E8\u94A5\u5319"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114364989337111376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u5E9F\u5F03\u7684\u7075\u89C6\u5197\u4F59\u7269"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 15
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 15
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114369318802181618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u666E\u901A\u7684\u53E4\u67EF\u8349"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 20
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 20
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114373013845133544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u514B\u8861"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 44
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 44
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114400563242138620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u7075\u89C6\u865A\u63A9\u5B50\u7F51\u56E0\u5B50"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 37
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 37
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114418727606359738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u5217\u8F66\u4EE3\u5E01"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 22
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 22
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114420829471832488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u80AF\u6258\u7CBE\u70BC\u514B\u519C"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 36
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 36
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 3
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114432862854804800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u591A\u529F\u80FD\u94C1\u94FE\u56FE\u7EB8"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 58
+  description: Item Description
+  type: 8
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 59
+  itemDetail: "\u5236\u4F5C\u56FE\u7EB8,\u53EA\u53EF\u5B66\u4E60\u4E00\u6B21"
+  itemRarity: 2
+  itemLevel: 3
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114435702894008788
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u4F0F\u5C14\u56FE\u65AF\u70C8\u7130"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 35
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 35
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114437306923039438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u51EF\u5B89\u5BC6\u7A00\u5E03\u6599"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 39
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 39
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 3
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114445755695046794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u9601\u697C\u6742\u5FD7\u6563\u9875"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 18
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 18
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 3
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114474129543100370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u575A\u786C\u7684\u6728\u6756\u56FE\u7EB8"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 55
+  description: Item Description
+  type: 8
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 56
+  itemDetail: "\u5236\u4F5C\u56FE\u7EB8,\u53EA\u53EF\u5B66\u4E60\u4E00\u6B21"
+  itemRarity: 2
+  itemLevel: 3
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114532234274563362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u7CBE\u826F\u7684\u7075\u89C6\u5197\u4F59\u7269"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 17
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 17
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114532526263019090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u666E\u901A\u7684\u514B\u519C\u6CE8\u5C04\u5668"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 13
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 13
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114560014843943302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u666E\u901A\u7684\u7075\u89C6\u5197\u4F59\u7269"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 16
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 16
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114586153106019302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u8F7B\u5FAE\u788E\u606F\u836F\u6C34"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 1
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 10
+  description: Item Description
+  type: 0
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 10
+  itemDetail: "\u7F13\u6162\u6062\u590D30%\u788E\u606F"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114591837696139902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u6D53\u7F29\u6DF1\u6E0A\u7C92\u5B50"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 38
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 38
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114604038394410524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u788E\u606F\u77F3"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 1
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 8
+  description: Item Description
+  type: 0
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 8
+  itemDetail: "\u7ACB\u5373\u6062\u590D20%\u788E\u606F"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114606184550066522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u4F18\u8D28\u7684\u53E4\u67EF\u8349"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 21
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 21
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114627281081178096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u521D\u7EA7\u9006\u5411\u8FFD\u8E2A\u88C5\u7F6E"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 1
+  description: Item Description
+  type: 0
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 1
+  itemDetail: "\u7528\u4E8E\u89E3\u5F00\u5C01\u9501\u7684\u7269\u54C1"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114629800601881132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u8F7B\u5FAE\u4F53\u529B\u836F\u6C34"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 1
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 11
+  description: Item Description
+  type: 0
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 11
+  itemDetail: "\u6062\u590D\u901F\u7387\u63D0\u9AD85.\u6301\u7EED30\u79D2"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114652867378592118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u5E9F\u94C1\u62A4\u76FE\u56FE\u7EB8"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 48
+  description: Item Description
+  type: 8
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 48
+  itemDetail: "\u5236\u4F5C\u5E9F\u94C1\u62A4\u76FE"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 1000
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114658042469671788
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u53E4\u67EF\u6DF7\u5408\u7269"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 19
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 19
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114677765887548340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u5E15\u6D1B\u5C14\u677E\u7802\u9732"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 42
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 42
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114683136024276258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u7CBE\u81F4\u7684\u7A7A\u74F6\u5B50"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 24
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 24
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114696167808074140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u5E15\u7F57\u5C14\u6DB2\u5316\u77F3"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 31
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 31
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114709575094055670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u594E\u5361\u5408\u91D1"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 41
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 41
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114715351208267322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u8F7B\u5FAE\u751F\u547D\u836F\u6C34"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 1
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 9
+  description: Item Description
+  type: 0
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 9
+  itemDetail: "\u7F13\u6162\u6062\u590D20%\u751F\u547D"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114798921142875692
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u5E9F\u5F03\u7684\u7A7A\u74F6\u5B50"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 23
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 23
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114826289187177282
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u594E\u5361\u7ED3\u6676"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 32
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 32
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 1
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114853092280058302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u7CBE\u826F\u7684\u5E73\u514B"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 43
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 43
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114888123156547608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u7F1D\u8865\u7684\u56DA\u8863\u56FE\u7EB8"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 57
+  description: Item Description
+  type: 8
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 58
+  itemDetail: "\u5236\u4F5C\u56FE\u7EB8,\u53EA\u53EF\u5B66\u4E60\u4E00\u6B21"
+  itemRarity: 2
+  itemLevel: 3
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114895144988630356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u539F\u6728\u5251"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 1
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 51
+  description: Item Description
+  type: 1
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 51
+  itemDetail: "\u4F24\u5BB3:(Damage)"
+  itemRarity: 1
+  itemLevel: 2
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 13
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 15
+  blockPerc: 20
+  flashPerc: 0
+  itemPrice: 300
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114933601593319854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u7D22\u591A\u63D0\u65AF\u65C5\u884C\u7EAA\u5FF5\u5E3D\u5B50\u56FE\u7EB8"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 54
+  description: Item Description
+  type: 8
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 55
+  itemDetail: "\u5236\u4F5C\u56FE\u7EB8,\u53EA\u53EF\u5B66\u4E60\u4E00\u6B21"
+  itemRarity: 2
+  itemLevel: 3
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 0
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114980384514961886
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u76D1\u72F1\u94A5\u5319"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 46
+  description: Item Description
+  type: 11
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 46
+  itemDetail: "\u89E3\u5F00\u5927\u95E8\u94A5\u5319"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114982408966267382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u6742\u8D28\u594E\u5361\u63D0\u53D6\u6DB2"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 26
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 26
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
+--- !u!114 &114995073016484724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: "\u6742\u8D28\u6240\u591A\u63D0\u65AF\u8403\u53D6\u6DB2"
+  m_EditorClassIdentifier: 
+  itemsToCraft: []
+  canCraft: 0
+  price: 0
+  canSplit: 0
+  isInit: 0
+  craftPerc: 0
+  itemType: 8
+  hash: 0
+  id: 28
+  description: Item Description
+  type: 6
+  icon: {fileID: 0}
+  iconName: {fileID: 0}
+  stackable: 1
+  maxStack: 999
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 0}
+  isInEquipArea: 0
+  itemFrom: 
+  destroyAfterUse: 1
+  canBeUsed: 1
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  itemSell: 0
+  canSellable: 0
+  canRepairable: 0
+  canDestorable: 0
+  tooltip: 
+  itemID: 28
+  itemDetail: "\u5236\u4F5C\u6750\u6599"
+  itemRarity: 2
+  itemLevel: 1
+  canPU: 0
+  maxItemLevel: 0
+  itemHP: 0
+  itemeMP: 0
+  itemStamina: 0
+  itemDamage: 0
+  itemArmor: 0
+  itemAShield: 0
+  critPerc: 0
+  blockPerc: 0
+  flashPerc: 0
+  itemPrice: 3
+  effectType: 0
+  effectAmount: 0
+  itemScript: 
