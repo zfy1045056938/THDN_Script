@@ -11,14 +11,14 @@ using System.Text;
 public class BuffSkill:ScriptableSkill{
 
     [Header("Damage")]
-    public LinearFloat amount = new LinearFloat();
-    public LinearFloat castTime = new LinearFloat();
-    public LinearFloat effectTime = new LinearFloat();      //active effect time
+    public float amount = new float();
+    public float castTime = new float();
+    public float effectTime = new float();      //active effect time
     public BuffType buffType = BuffType.None;
-    public LinearFloat cdTime = new LinearFloat();
+    public float cdTime = new float();
     public float buffTime=0f;
     public bool remainAfterDeath=false;
-    public BuffSkillEffect effect;  //ass Obj show app
+    // public BuffSkillEffect effect;  //ass Obj show app
     public int maxLevel =5;
     public override void Apply(Entity entity, int level)
     {
@@ -76,15 +76,15 @@ public class BuffSkill:ScriptableSkill{
     /// <param name="target"></param>
     public void SpawnEffect(Entity caster, Entity spawnTarget)
     {
-        if (effect != null)
-        {
-            GameObject go = Instantiate(effect.gameObject, spawnTarget.transform.position, Quaternion.identity);
-            BuffSkillEffect effectComponent = go.GetComponent<BuffSkillEffect>();
-            effectComponent.caster = caster;
-            effectComponent.target = spawnTarget;
-            effectComponent.buffName = name;
-            NetworkServer.Spawn(go);
-        }
+        // if (effect != null)
+        // {
+        //     GameObject go = Instantiate(effect.gameObject, spawnTarget.transform.position, Quaternion.identity);
+        //     BuffSkillEffect effectComponent = go.GetComponent<BuffSkillEffect>();
+        //     effectComponent.caster = caster;
+        //     effectComponent.target = spawnTarget;
+        //     effectComponent.buffName = name;
+        //     NetworkServer.Spawn(go);
+        // }
     }
 
     

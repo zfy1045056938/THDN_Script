@@ -199,7 +199,7 @@ public class Players : Entity
 
     public override float manaMax { get; set; }
 
-    public override float damage
+    public override int damage
     {
         get
         {
@@ -467,20 +467,6 @@ public class Players : Entity
     SyncDictionaryIntDouble itemCooldown = new SyncDictionaryIntDouble();
 
 
-    ////delegate TODO _CHANGELOG_1124
-    //public delegate void onRoomChanged();
-
-    //public event onRoomChanged OnRoomChange;
-
-    //Sync list
-    // public SyncList<Item> items;
-    // public SyncList<Skill> skill;
-    // public SyncList<Buffs> buffs;
-    //
-    //public SyncList<Dungeon> dungeons;
-
-    //[HideInInspector]
-    //private Board gameBoard;
 
     //TODO _128 check current model for set default character in team list
     public List<Entity> teamList;
@@ -613,65 +599,13 @@ public class Players : Entity
     {
         //根据状态更新行为,分为移动状态,死亡状态，技能状态,攻击状态
         //Inclient
-        if (isLocalPlayer)
-        {
-            if (state == "IDLE")
-            {
-                if (isLocalPlayer)
-                {
-                    //Update By Moving
-                    //SelectionHandling();
-                    //
-                    //WASDHandling();
-
-                    //if (Input.GetKeyDown(cancelActionKey))
-                    //{
-                    //    agent.ResetPath();
-                    //    CmdCancelAction();
-                    //}
-                    //SKill out of range
-                }
-            }else if (state == "Sprint")
-            {
-                //
-            }
-            else if (state == "Roll")
-            {
-                //
-            }
-            else if (state == "Interactive")
-            {
-                //
-            }
-            else if (state == "Sprint")
-            {
-                //
-            }
-            else if (state == "Casting")
-            {
-
-            }
-            else if (state == "Dead")
-            {
-
-            }
-            else if (state == "COMBAT")
-            {
-
-            }
-            else if (state == "CAMP") { }
-
-
-        }
-        //hooks
+      
         Util.InvokeMany(typeof(Players), this, "UpdateClient_");
     }
 
     #endregion 
 
     
-
-
 
     #region  Server
 
@@ -680,8 +614,6 @@ public class Players : Entity
         base.OnStartServer();
 
         //Invoke Reapeating when start battle
-       
-
 
         Util.InvokeMany(typeof(Players), this, "OnStartServer_");
     }
@@ -693,377 +625,6 @@ public class Players : Entity
   
 
 
-    //FSM with player has these motion with state
-    //1.IDLE
-    //2.MOVING(S->E)
-    //3.TRADE(S->E)
-    //4.BATTLE(THDN S->E)
-    //5.DIED
-    //--------RPG---------------
-    //6.CRAFT
-    //7.LOOT FROM ENEMY
-    //8.SKILLCASTING(S->E)
-    // ->SKILLRequest
-    // ->SkillStart
-    // ->SkillFinish
-    ///desc: after the cal player can use skill to enemy in runtime(Match Time)
-    //
-    ////////////////////////////
-
-
-
-    //FSM SERVER
-
-    //IDLE=>Only Check Dead 
-    [Server]
-    public override string UpdateServer_IDLE()
-    {
-        // events sorted by priority (e.g. target doesn't matter if we died)
-
-        if (EventDied())
-        {
-            OnDeath();
-            return "DEAD";
-        }
-        //At Dungeon move next room
-        if (EventMoveStart())
-        {
-            //Start Explore NextRoom TODO
-            //ChangeLog_1124
-            // if(GlobalSetting.instance.atDungeon==true && health > 0)
-            // {
-            //     //ChangeRoom
-            //     GlobalSetting.instance.MoveNextRooms();
-            //     //reward for change room add health bouns
-            //     //health += OnRoomChange;
-
-            // }
-
-            return "MOVING";
-        }
-        //Arrive New Room Got RoomsType
-        if (EventMoveEnd())
-        {
-            //New Rooms
-            return "IDLE";
-
-        }
-
-        //////
-        //at board matches und use skill
-        if (EventCombat())
-        {
-            return "COMBAT";
-        }
-        if (EventMatches())
-        {
-            return "MATCHES";
-
-        }
-        if (EventStartCasting())
-        {
-            //use skill
-            return "CASTING";
-        }
-        if (EventCancelCasting())
-        {
-            return "MATCHES";
-        }
-        if (EventFinishCasting())
-        {
-            return "MATCHES";
-        }
-        //Camp
-        if (EventCamp())
-        {
-            return "IDLE";
-        }
-        if (EventDialogue())
-        {
-            return "DIALOGUE";
-        }
-
-        if (EventStartCraft())
-        {
-            return "CRAFT";
-        }
-        if (EventEndCraft())
-        {
-            return "IDLE";
-        }
-        if (EventTrade())
-        {
-            return "IDLE";
-        }
-        if (EventStartTrade())
-        {
-            return "IDLE";
-        }
-        if (EventEndTrade())
-        {
-            return "IDLE";
-        }
-
-
-        return "IDLE"; // nothing interesting happened
-
-    }
-
-
-
-    [Server]
-    public override string UpdateServer_MOVING()
-    {
-
-        if (EventIdle())
-        {
-            return "IDLE";
-        }
-        if (EventDied())
-        {
-            return "DEAD";
-        }
-        //At Dungeon move next room
-        if (EventMoveStart())
-        {
-            return "MoVING";
-        }
-        if (EventMoveEnd())
-        {
-            //TODO 
-            // if (GlobalSetting.instance.atDungeon == true && health > 0 && GlobalSetting.instance.isMove == false)
-            // {
-            //     //start re by room
-            //     //GlobalSetting.instance.StartRoomEvent(GlobalSetting.instance.currentRoom);
-            // }
-            return "IDLE";
-
-        }
-        //at board matches und use skill
-        if (EventCombat())
-        {
-            return "COMBAT";
-        }
-        if (EventMatches())
-        {
-            return "MATCHES";
-
-        }
-        if (EventStartCasting())
-        {
-            //use skill
-            return "CASTING";
-        }
-        if (EventCancelCasting())
-        {
-            return "MATCHES";
-        }
-        if (EventFinishCasting())
-        {
-            return "MATCHES";
-        }
-        //Camp
-        if (EventCamp())
-        {
-            return "IDLE";
-        }
-        if (EventDialogue())
-        {
-            return "DIALOGUE";
-        }
-
-        if (EventStartCraft())
-        {
-            return "CRAFT";
-        }
-        if (EventEndCraft())
-        {
-            return "IDLE";
-        }
-        if (EventTrade())
-        {
-            return "IDLE";
-        }
-        if (EventStartTrade())
-        {
-            return "IDLE";
-        }
-        if (EventEndTrade())
-        {
-            return "IDLE";
-        }
-        return "Moving";
-    }
-
-
-
-
-    [Server]
-    public override string UpdateServer_CASTING()
-    {
-        if (EventIdle())
-        {
-            return "IDLE";
-        }
-        if (EventDied())
-        {
-            OnDeath();
-            return "DEAD";
-        }
-        //At Dungeon move next room
-        if (EventMoveStart())
-        {
-            return "MoVING";
-        }
-        if (EventMoveEnd())
-        {
-            return "IDLE";
-
-        }
-        //at board matches und use skill
-        if (EventCombat())
-        {
-            return "COMBAT";
-        }
-        if (EventMatches())
-        {
-            return "MATCHES";
-
-        }
-        if (EventStartCasting())
-        {
-            //use skill
-            return "CASTING";
-        }
-        if (EventCancelCasting())
-        {
-            return "MATCHES";
-        }
-        if (EventFinishCasting())
-        {
-      
-            //
-
-            return "MATCHES";
-        }
-        //Camp
-        if (EventCamp())
-        {
-            return "IDLE";
-        }
-        if (EventDialogue())
-        {
-            return "DIALOGUE";
-        }
-
-        if (EventStartCraft())
-        {
-            return "CRAFT";
-        }
-        if (EventEndCraft())
-        {
-            return "IDLE";
-        }
-        if (EventTrade())
-        {
-            return "IDLE";
-        }
-        if (EventStartTrade())
-        {
-            return "IDLE";
-        }
-        if (EventEndTrade())
-        {
-            return "IDLE";
-        }
-        return "IDLE";
-    }
-
-    [Server]
-    public override string UpdateServer_DEAD()
-    {
-        if (EventIdle())
-        {
-            return "IDLE";
-        }
-        if (EventDied())
-        {
-            return "DEAD";
-        }
-        //At Dungeon move next room
-        if (EventMoveStart())
-        {
-            return "MoVING";
-        }
-        if (EventMoveEnd())
-        {
-            return "IDLE";
-
-        }
-        //at board matches und use skill
-        if (EventCombat())
-        {
-            return "COMBAT";
-        }
-        if (EventMatches())
-        {
-            return "MATCHES";
-
-        }
-        if (EventStartCasting())
-        {
-            //use skill
-            return "CASTING";
-        }
-        if (EventCancelCasting())
-        {
-            return "MATCHES";
-        }
-        if (EventFinishCasting())
-        {
-            return "MATCHES";
-        }
-        //Camp
-        if (EventCamp())
-        {
-            return "IDLE";
-        }
-        if (EventDialogue())
-        {
-            return "DIALOGUE";
-        }
-
-        if (EventStartCraft())
-        {
-            return "CRAFT";
-        }
-        if (EventEndCraft())
-        {
-            return "IDLE";
-        }
-        if (EventTrade())
-        {
-            return "IDLE";
-        }
-        if (EventStartTrade())
-        {
-            return "IDLE";
-        }
-        if (EventEndTrade())
-        {
-            return "IDLE";
-        }
-        return "IDLE";
-    }
-
-
-    [Client]
-    public override string UpdateClient_IDLE()
-    {
-
-
-        return "IDLE";
-    }
 
     //用于角色动作控制器，通过fsm获取动机并执行对应动作
     //在服务器中，获取报文并将请求发送给客户端
@@ -1209,85 +770,6 @@ public class Players : Entity
         return "IDLE";
     }
 
-    private string UpdateServer_CRAFTING()
-    {
-        if (EventIdle())
-        {
-            return "IDLE";
-        }
-        if (EventDied())
-        {
-            return "DEAD";
-        }
-        //At Dungeon move next room
-        if (EventMoveStart())
-        {
-            return "MOVING";
-        }
-        if (EventMoveEnd())
-        {
-            return "IDLE";
-
-        }
-        //at board matches und use skill
-        if (EventCombat())
-        {
-            return "COMBAT";
-        }
-        if (EventMatches())
-        {
-            return "MATCHES";
-
-        }
-        if (EventStartCasting())
-        {
-            //use skill
-            return "CASTING";
-        }
-        if (EventCancelCasting())
-        {
-            return "MATCHES";
-        }
-        if (EventFinishCasting())
-        {
-            return "MATCHES";
-        }
-        //Camp
-        if (EventCamp())
-        {
-            return "IDLE";
-        }
-        if (EventDialogue())
-        {
-            return "DIALOGUE";
-        }
-
-        if (EventStartCraft())
-        {
-            return "CRAFT";
-        }
-        if (EventEndCraft())
-        {
-            return "IDLE";
-        }
-        if (EventTrade())
-        {
-            return "IDLE";
-        }
-        if (EventStartTrade())
-        {
-            return "IDLE";
-        }
-        if (EventEndTrade())
-        {
-            return "IDLE";
-        }
-
-        return "CRAFT";
-    }
-
-  
-   
 
 
     #region  Equipment Module
@@ -1569,21 +1051,6 @@ public class Players : Entity
         //writer.WriteVector3(new Vector3(transform.position.x,transform.position.y,transform.position.z));
     }
 
-    [Command]
-    public void CmdStartDialogue(string covName)
-    {
-        if (state == "DIALOGUE" && covName != null)
-        {
-            DialogueManager.StartConversation(covName);
-        }
-        else
-        {
-
-        }
-
-    }
-
-
     #region EVENT FOR FSM 
     bool EventDied()
     {
@@ -1591,33 +1058,7 @@ public class Players : Entity
         return health==0;
     }
 
-    bool EventTargetDisappeared() { return target == null; }
-    bool EventMoveStart() { return state != "Moving" && IsMoving(); }
-
-
-    //target is  npc who can business or special
-    bool EventTradeStart() { return state != "IDLE" && !CanTrade(); }
-
-    private bool CanTrade()
-    {
-        throw new NotImplementedException();
-    }
-
-    bool EventTradeOver() { return state == "IDLE" && CanTrade(); }
-    //Emeny in Dungeon or event in NPC
-    bool EventBattle() { return state == "IDLE" && CanBattle(); }
-
-    private bool CanBattle()
-    {
-        throw new NotImplementedException();
-    }
-
-    bool EventTalk() { return state == "IDLE" && CanTalk(); }
-
-    private bool CanTalk()
-    {
-        throw new NotImplementedException();
-    }
+   
 
 
     #region Player Common Module
@@ -1961,11 +1402,6 @@ public class Players : Entity
         (entity is Players);
     }
 
-    [ClientRpc]
-    public override void RpcShowComboTip(int num)
-    {
-
-    }
     #endregion
 
 
@@ -1993,26 +1429,19 @@ public class Players : Entity
 
     }
 
-    #endregion
-
-
-
-    #region Loot Module
     [Command]
-    public void CmdLootItem(int index)
+    public void CmdReward(float exp, int money, int dust)
     {
-        //get item by index
-
-    
-    }
-
-    [Command]
-    public void CmdLootMoney(int money)
-    {
+        exp += exp;
         gold += money;
+        dust += dust;
     }
 
     #endregion
+
+
+
+   
 
 
 
@@ -2040,360 +1469,12 @@ public class Players : Entity
     }
 
 
-    ///////////////////////////////////////////////
-    ////UpdateServer Module Update by Entity Animation(FSM)
-    /// FSM includes clip for character when change animation
-    /// IDLE
-    /// MOVING
-    /// DEAD
-    /// DIALOGUE
-    /// MATCHES(COMBAT,CASTING(START,END,CD,CANCEL),)
-    /// BUSINESS
-    /// CRAFT
-    /// CAMP
-    /// CASTING
-    /// 
-    ///////////////////////////////////////////////
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <returns></returns>
-    // public override string UpdateServer_Matches()
-    // {
-    //     if (EventIdle())
-    //     {
-    //         return "IDLE";
-    //     }
-    //     if (EventDied())
-    //     {
-    //         return "DEAD";
-    //     }
-    //     //At Dungeon move next room
-    //     if (EventMoveStart())
-    //     {
-    //         return "MOVING";
-    //     }
-    //     if (EventMoveEnd())
-    //     {
-    //         return "IDLE";
-
-    //     }
-    //     //at board matches und use skill
-    //     if (EventCombat())
-    //     {
-    //         return "COMBAT";
-    //     }
-    //     if (EventMatches())
-    //     {
-    //         //Matches Module
-    //         // CmdDragToTile(targetTile);
-
-    //         return "MATCHES";
-
-    //     }
-    //     if (EventStartCasting())
-    //     {
-    //         //use skill
-    //         return "CASTING";
-    //     }
-    //     if (EventCancelCasting())
-    //     {
-    //         return "MATCHES";
-    //     }
-    //     if (EventFinishCasting())
-    //     {
-    //         return "MATCHES";
-    //     }
-    //     //Camp
-    //     if (EventCamp())
-    //     {
-    //         return "IDLE";
-    //     }
-    //     if (EventDialogue())
-    //     {
-    //         return "DIALOGUE";
-    //     }
-
-    //     if (EventStartCraft())
-    //     {
-    //         return "CRAFT";
-    //     }
-    //     if (EventEndCraft())
-    //     {
-    //         return "IDLE";
-    //     }
-    //     if (EventTrade())
-    //     {
-    //         return "IDLE";
-    //     }
-    //     if (EventStartTrade())
-    //     {
-    //         return "IDLE";
-    //     }
-    //     if (EventEndTrade())
-    //     {
-    //         return "IDLE";
-    //     }
-
-    //     return "MATCHES";
-    // }
-
-    public override string UpdateServer_COMBAT()
-    {
-
-        if (EventIdle())
-        {
-            return "IDLE";
-        }
-        if (EventDied())
-        {
-            return "DEAD";
-        }
-        //At Dungeon move next room
-        if (EventMoveStart())
-        {
-            return "MoVING";
-        }
-        if (EventMoveEnd())
-        {
-            return "IDLE";
-
-        }
-        //at board matches und use skill
-        if (EventCombat())
-        {
-            return "COMBAT";
-        }
-        ///
-        if (EventMatches())
-        {
-            return "MATCHES";
-
-        }
-        if (EventStartCasting())
-        {
-            //use skill
-            return "CASTING";
-        }
-        if (EventCancelCasting())
-        {
-            return "MATCHES";
-        }
-        if (EventFinishCasting())
-        {
-            return "MATCHES";
-        }
-        //Camp
-        if (EventCamp())
-        {
-            return "IDLE";
-        }
-        if (EventDialogue())
-        {
-            return "DIALOGUE";
-        }
-
-        if (EventStartCraft())
-        {
-            return "CRAFT";
-        }
-        if (EventEndCraft())
-        {
-            return "IDLE";
-        }
-        if (EventTrade())
-        {
-            return "IDLE";
-        }
-        if (EventStartTrade())
-        {
-            return "IDLE";
-        }
-        if (EventEndTrade())
-        {
-            return "IDLE";
-        }
-        return "COMBAT";
-    }
-
-
-    #region Event Module
-    public override bool EventIdle()
-    {
-        return !IsMoving();
-    }
-
-    /// <summary>
-    /// At Dungeon , the doors r open one of them ,except lock, active
-    /// moving animation to new room und cause events(e,b,bs)
-    /// </summary>
-    /// <returns></returns>
-    public override bool EventMoving()
-    {
-        return true;
-    }
-
-    public override bool EventMoveEnd()
-    {
-       return state=="IDLE";
-    }
-
-
    
-
-    public override bool EventCancelCasting()
-    {
-        throw new NotImplementedException();
-    }
-
-
-
-    public override bool EventSkillFinish()
-    {
-        throw new NotImplementedException();
-    }
-
-
-
-
-    //BATTLE EVENT
-    public override bool EventMatches()
-    {
-        return false;
-    }
-    public override bool EventCombat()
-    {
-        return isMatches && target.health > 0 && CanAttack(this);
-    }
-
-  
-
-    //BUSINESS EVENT
-
-    //DUNGEON EVENT
-
-    //COMMON
-
-    public override bool EventCamp()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override bool EventDead()
-    {
-        return target.health <= 0 || health <= 0;
-    }
-
-
-
-
-
-    bool EventTargetDied()
-    {
-        //win the game
-        return target != null && target.health == 0 && WinnerConsole(target);
-    }
-
-
-
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <returns></returns>
-    bool EventTradeStarted()
-    {
-        // did someone request a trade? and did we request a trade with him too?
-
-        return target != null;
-    }
-    bool EventTradeDone()
-    {
-        // trade canceled or finished?
-        return state == "TRADING";
-    }
-
-    bool craftingRequested;
-    bool EventCraftingStarted()
-    {
-        bool result = craftingRequested;
-        craftingRequested = false;
-        return result;
-    }
-
-    //bool EventCraftingDone()
-    //{
-    //    return state == "CRAFTING" ;
-    //}
-
-
-
-    public override bool EventCraft()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override bool EventStartCraft()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override bool EventEndCraft()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override bool EventDialogue()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override bool EventTrade()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override bool EventStartTrade()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override bool EventEndTrade()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override string UpdateServer_Sprint()
-    {
-        return "Sprint";
-    }
-
-    public override string UpdateServer_ROLL()
-    {
-       return "Roll";
-    }
-
+//
     public override void Warp(Vector3 pos)
     {
         banding.RpcWarp(pos);
     }
-
-    public override bool EventStartCasting()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override bool EventFinishCasting()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override bool EventSkillRequest()
-    {
-        throw new NotImplementedException();
-    }
-
-
 
 
     #endregion
@@ -2404,8 +1485,8 @@ public class Players : Entity
     //1.buff -> DB && Server.NetworkTime && Set Icon 
     // when networktime over destory the buff (DB && )
     // the relationship between de und buff 
-    [Command]
-    public void CmdActiveShrine(DungeonEvent de){
+   
+    public void ActiveShrine(DungeonEvent de){
         Buffs buff = buffs[de.DeID];
         if(buff.data!=null){
             // bind de amount when blessing success, 
@@ -2423,7 +1504,22 @@ public class Players : Entity
 
     }
 
-    #endregion 
+    [Command]
+    public void CmdActiveDE(int index){
+        DungeonEvent de = ItemDatabase.instance.GotDEByIndex(index);
+
+        //
+        if(de!=null){
+            
+        }
+    }
+
+    public override string UpdateClient_IDLE()
+    {
+        throw new NotImplementedException();
+    }
+
+    #endregion
 
     //TODO
     #region Items Module
@@ -2438,4 +1534,3 @@ public class Players : Entity
 
     #endregion
 }
-#endregion

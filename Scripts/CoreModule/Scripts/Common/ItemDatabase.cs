@@ -233,4 +233,8 @@ skillsList.Add(s);
 
         return cl;
     }
+
+    public DungeonEvent GotDEByIndex(int index){
+     return deList[index];   
+    }
 }

@@ -438,20 +438,23 @@ namespace Invector.vItemManager
     
     for(int i=0;i<craftList.Count;i++){
         //
-        Debug.Log(craftList[i].cItems.ToString()+"try load ");
-        if(craftList[i].cItems == itemName){
-            //get target itemList then add to citemList
-             for(int j =0;j<craftList[i].cRequiredItems.Count;i++){
-                 for(int l =0; l<craftList[i].cItemAmount.Count;l++){
-                     //add to craftItem by order
-                      var cItem = new vItemCraft{
-                          item = itemDatabase.GetItemByName(craftList[i].cRequiredItems[j]),
-                          amount =int.Parse(craftList[i].cItemAmount[l]),
 
-                      };
-                      cItemList.Add(cItem);
-                 }
-             }
+        if (craftList[i].cItems == itemName)
+        {
+
+            //get target itemList then add to citemList
+            for (int j = 0; j < craftList[i].cRequiredItems.Count; j++)
+            {
+
+                //add to craftItem by order
+                    var cItem = new vItemCraft
+                    {
+                        item = itemDatabase.GetItemByName(craftList[i].cRequiredItems[j]),
+                        amount =3,
+                    };
+                    cItemList.Add(cItem);
+            }
+
         }
         
     }

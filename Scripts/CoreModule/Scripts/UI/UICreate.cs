@@ -27,6 +27,7 @@ public class UICreate:MonoBehaviour{
     public TMP_InputField tmpImp;
     //
     public TextMeshProUGUI nameText;
+    
     // public Dropdown classText;
     public TMP_Dropdown selector;
     //TODO 127 DICE to roll rnd number 

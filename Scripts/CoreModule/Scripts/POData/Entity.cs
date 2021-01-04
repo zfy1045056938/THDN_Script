@@ -26,30 +26,30 @@ public enum CombatType
 }
 
 
-[System.Serializable]
-public class LinearInt{
-    public int baseValue;
-    public int bounsLevel;
+// [System.Serializable]
+// public class LinearInt{
+//     public int baseValue;
+//     public int bounsLevel;
    
 
-    public int Get(int v)=>bounsLevel*(v-1)+baseValue;
-}
+//     public int Get(int v)=>bounsLevel*(v-1)+baseValue;
+// }
 
 
 
-[System.Serializable]
-public class LinearFloat{
-    public float baseValue;
-    public LinearFloat (){}
-    public LinearFloat(float f){
-        this.baseValue=f;
-    }
-    public  float Get(float fs)
-    {
-        return fs;
-    }
+// [System.Serializable]
+// public class LinearFloat{
+//     public float baseValue;
+//     public LinearFloat (){}
+//     public LinearFloat(float f){
+//         this.baseValue=f;
+//     }
+//     public  float Get(float fs)
+//     {
+//         return fs;
+//     }
 
-}
+// }
 
 //Game Entity Base Classes Includes(For THDN has 3 Entities(Player,NPC,Monster))
 //1.Stats 
@@ -115,60 +115,17 @@ public abstract class Entity : NetworkBehaviourNonAlloc
    
 
 
-    //[SerializeField] private LinearInt _str = new LinearInt { baseValue = 0 };
-    //public virtual int str {
-    //    //extra bouns from items or shrine
-
-    //    get {
-    //        int passiveBouns = 0;
-    //        int buffBouns = 0;   //skills
-    //        return _str.Get(level) + passiveBouns + buffBouns;
-    //    }
-    //}
-
-    [SerializeField] protected LinearInt _aShield = new LinearInt { baseValue = 0 };
+    [SerializeField] int _aShield =0;
     public virtual int aShield {
         get {
-            return _aShield.Get(level);
+            return _aShield;
+        }
+        set{
+            _aShield=value;
         }
     }
 
-    //[SerializeField] protected LinearInt _dex = new LinearInt { baseValue = 0 };
-    //public virtual int dex
-    //{
-    //    //extra bouns from items or shrine
-
-    //    get
-    //    {
-    //        int passiveBouns = 0;
-    //        int buffBouns = 0;   //skills
-    //        return _dex.Get(level) + passiveBouns + buffBouns;
-    //    }
-    //}
-    //[SerializeField] protected LinearInt _inte = new LinearInt { baseValue = 0 };
-    //public virtual int inte
-    //{
-    //    //extra bouns from items or shrine
-
-    //    get
-    //    {
-    //        int passiveBouns = 0;
-    //        int buffBouns = 0;   //skills
-    //        return _inte.Get(level) + passiveBouns + buffBouns;
-    //    }
-    //}
-    //[SerializeField] protected LinearInt _con = new LinearInt { baseValue = 0 };
-    //public virtual int con
-    //{
-    //    //extra bouns from items or shrine
-
-    //    get
-    //    {
-    //        int passiveBouns = 0;
-    //        int buffBouns = 0;   //skills
-    //        return _con.Get(level) + passiveBouns + buffBouns;
-    //    }
-    //}
+    
 
     #region personal skill
     //TODO Set when use pp when reward or upgrade 
@@ -236,21 +193,6 @@ public abstract class Entity : NetworkBehaviourNonAlloc
         }
     }
 
-    /*
-      //
-        public float CAnti { get; set; }
-        public float CEagelEyes { get; set; }
-        //KissAss
-        public float CCheat { get; set; }
-        public float CHardAss { get; set; }
-        //Science
-        public float CSoulView { get; set; }
-        public float CAntiAb { get; set; }
-
-        //Leader
-        public float CBusiness { get; set; }
-        public float CVRate { get; set; }
-    */
     #region Layer3 Stats Inflence by personal skill 
     [SerializeField] protected float _cAnti;
     public virtual float CAnti
@@ -435,15 +377,15 @@ public abstract class Entity : NetworkBehaviourNonAlloc
 
     #endregion
 
-    [SerializeField] protected LinearFloat _manaMax = new LinearFloat { baseValue = 10f };
+    [SerializeField] protected int _manaMax =100;
     public virtual float manaMax {
         get {
             int passiveBouns = 0;
             //
             int buffBouns = 0;
-            return _manaMax.Get(level) + passiveBouns + buffBouns;
+            return _manaMax + passiveBouns + buffBouns;
         }
-        set { value = _manaMax.Get(manaMax); }
+        set { value = _manaMax; }
     }
     public float manaRate { get; set; }
     
@@ -469,65 +411,81 @@ public abstract class Entity : NetworkBehaviourNonAlloc
 
 
     public bool canstmainaRate { get; set; }
-    [SerializeField] protected LinearFloat _damage = new LinearFloat { baseValue = 0f };
-    public virtual float damage {
+    [SerializeField] protected int _damage = 0;
+    public virtual int damage {
         get {
             int buffBouns = 0;
             int skillBouns = 0;
-            return _damage.Get(level) + buffBouns + skillBouns;
+            return _damage + buffBouns + skillBouns;
+        }
+
+        set{
+            _damage=value;
         }
 
 
     }
 
-    [SerializeField] LinearInt _armor = new LinearInt { baseValue = 10 };
+    [SerializeField] int _armor =3;
     public virtual int armor {
         get {
             int bufferBouns = 0;
             int skillBouns = 0;
-            return _armor.Get(level) + bufferBouns + skillBouns;
+            return _armor+ bufferBouns + skillBouns;
+        }
+
+        set{
+            _armor=value;
         }
 
     }
 
-    [SerializeField] LinearFloat _crit = new LinearFloat { baseValue = 0.0f };
+    [SerializeField] float _crit =0.03f;
     public virtual float crit {
         get {
-            return _crit.Get(level) + crit;
+            return _crit + crit;
         }
     }
 
-    [SerializeField] LinearFloat _speed = new LinearFloat { baseValue = 5 };
+    [SerializeField] float _speed =0.5f;
 
     public virtual float speed
     {
-        get { return _speed.Get(level); }
+        get { return _speed; }
     }
 
     //block needs equipment required that has percent by block(0.0~0.5)
-    [SerializeField] LinearFloat _blockChance = new LinearFloat { baseValue = 0.0f };
+    [SerializeField] float _blockChance =0f;
     public virtual float blockChance {
         get {
             int buffBouns = 0;
             int skillBouns = 0;
-            return _blockChance.Get(level) + skillBouns + buffBouns;
+            return _blockChance + skillBouns + buffBouns;
         }
     }
 
-    [SerializeField] float _health = 0f;
+    [SerializeField]  float _health = 0f;
 
-    public float health
+    public virtual float health
     {
         get { return _health; }
-        set { _health = math.clamp(value, 0, healthMax); }
+        set
+        {
+            _health = math.clamp(value, 0, healthMax);
+      
+        }
     }
 
-    [SerializeField] protected LinearInt _healthMax = new LinearInt { baseValue = 100 };
+    [SerializeField] protected int _healthMax = 100;
     public virtual int healthMax {
         get {
             
             int passiveBouns = 0;
-            return _healthMax.Get(level) + passiveBouns;
+            return _healthMax + passiveBouns;
+        }
+
+        set{
+            _healthMax=value;
         }
 
     }
@@ -547,9 +505,16 @@ public abstract class Entity : NetworkBehaviourNonAlloc
     [Header("COMMON")]
     [SyncVar, SerializeField] int _gold = 0;
     public int gold { get { return _gold; } set { _gold = math.max(value, 0); } }
-
+    
+    [SyncVar, SerializeField] int _dust = 0;
+    public int dust { get { return _dust; } set { _dust = math.max(value, 0); } }
     protected int Level { get => level; set => level = value; }
-
+   
+    public int lootMoney = 0;
+    public float lootExp = 0f;
+    public int lootDust = 0;
+    
+    
     #region model data
     //cst = Players.SprintStamina,
     //        cws = Players.WalkSpeed,
@@ -560,6 +525,9 @@ public abstract class Entity : NetworkBehaviourNonAlloc
     public virtual float SprintStamina { get; set; }
     public virtual float WalkSpeed { get; set; }
     public virtual float RollSpeed { get; set; }
+    public virtual float RunningSpeed { get; set; }
+    public virtual float SprintSpeed { get; set; }
+    
     public virtual float RollDistance { get; set; }
     public virtual float JumpSpeed { get; set; }
     public virtual float LadderStamina { get; set; }
@@ -599,9 +567,7 @@ public abstract class Entity : NetworkBehaviourNonAlloc
 
     public ScriptableSkill[] skillTemplates;
 
-    //For Dungeon event 
-    //public SyncBuff buff = new SyncBuff();
-
+   
 
     //Use battle when got ED from skills
     //TODO 128 buffs 
@@ -719,54 +685,13 @@ public abstract class Entity : NetworkBehaviourNonAlloc
 
     //Abstract UpdateServer Event(FSM)
     public abstract string UpdateServer();
-    public abstract string UpdateServer_IDLE();
-    // public abstract string UpdateServer_Matches();          //TODO do nothing
-    public abstract string UpdateServer_CASTING();  
-    public abstract string UpdateServer_COMBAT();
-    public abstract string UpdateServer_DEAD();
-    // public abstract string UpdateServer_DIALOGUE();
-
-    public abstract string UpdateServer_MOVING();
-
-
-    //Object server Msg
-    public abstract string UpdateServer_Sprint();
-    public abstract string UpdateServer_ROLL();
+  
     // public abstract string UpdateServer_INTERACTIVE();
     //public abstract string UpdateServer_INTERACTIVE();
 
 
     //FSM Event
-    public abstract bool EventIdle();
-    public abstract bool EventMoving();
-    public abstract bool EventMoveEnd();
-    //atk
-    public abstract bool EventCombat();
-
-    //skill
-    public abstract bool EventMatches();
-    public abstract bool EventStartCasting();
-    public abstract bool EventFinishCasting();
-    //if the skill in casttime use others skill , cause cancel cast sequence
-    public abstract bool EventCancelCasting();
-    //
-    public abstract bool EventSkillRequest();
-    public abstract bool EventSkillFinish();
-      
-
-    //motion
-    public abstract bool EventDead();
-    public abstract bool EventCamp();
-    public abstract bool EventCraft();
-    public abstract bool EventStartCraft();
-    public abstract bool EventEndCraft();
-    public abstract bool EventDialogue();
-
-
-    public abstract bool EventTrade();
-    public abstract bool EventStartTrade();
-    public abstract bool EventEndTrade();
-
+  
     //
     public virtual void OnDeath()
     {
@@ -804,77 +729,10 @@ public abstract class Entity : NetworkBehaviourNonAlloc
         }
 
     }
-    [ClientRpc]
-    public virtual void RpcShowComboTip(int num){
-        
-    }
-
+  
     public abstract void Warp(Vector3 pos);
 
 
-
-    ///// <summary>
-    ///// 
-    ///// </summary>
-    ///// <param name="index"></param>
-    //public void StartCastSkill(Skill index) {
-    //    // start casting and set the casting end time cooldown
-    //    index.castTimeEnd = NetworkTime.time + index.castTime;
-        
-
-    //    // save modifications
-    //    skills[currentSkill] = index;
-
-    //    // rpc for client sided effects
-    //    // -> pass that skill because skillIndex might be reset in the mean
-    //    //    time, we never know
-    //    RpcCastSkillStarted(index);
-    //}
-
-    ///// <summary>
-    ///// 
-    ///// </summary>
-    ///// <param name="skill"></param>
-    //public void FinishCastSkill(Skill skill) {
-    //    // * check if we can currently cast a skill (enough mana etc.)
-    //    // * check if we can cast THAT skill on THAT target
-    //    // note: we don't check the distance again. the skill will be cast even
-    //    //   if the target walked a bit while we casted it (it's simply better
-    //    //   gameplay and less frustrating)
-    //    if (CheckSelf(skill) && CheckTarget(skill) && CheckBoard())
-
-    //    {
-    //        // let the skill template handle the action
-    //        skill.Apply(this);
-
-    //        // rpc for client sided effects
-    //        // -> pass that skill because skillIndex might be reset in the mean
-    //        //    time, we never know
-    //        RpcCastSkillFinished(skill);
-
-    //        // decrease mana in any case
-    //        manaMax -= skill.manaCosts;
-
-    //        // start the cooldown (and save it in the struct)
-    //        skill.cooldownEnd = NetworkTime.time + skill.cooldown;
-
-    //        // save any skill modifications in any case
-    //        skills[currentSkill] = skill;
-    //    }
-    //    else
-    //    {
-    //        // not all requirements met. no need to cast the same skill again
-    //        currentSkill = -1;
-    //    }
-    //}
-
-    public bool CheckSelf(Skill entity) { return health > 0 && manaMax > 0; }
-    public bool CheckTarget(Skill entity) { return target.health > 0; }
-    public bool CheckBoard() { return GameManagers.instance.gameTime > 0f; }
-    public bool CheckMatchesSkill(int num) { return true; }
-    public void UseSkillAtCP(List<CollectionsPool> cp) { }
-
-   
 
 
     #endregion
@@ -1070,118 +928,7 @@ public abstract class Entity : NetworkBehaviourNonAlloc
     ////////////////////////////////////////////
     #endregion
 
-    
-  
-  
-  
-
-
-
-    // helper function to remove 'n' items from the inventory
-    // public bool InventoryRemove(ItemReference item, int amount)
-    // {
-    //     for (int i = 0; i < inventory.Count; ++i)
-    //     {
-    //         vItemSlot slot = inventory[i];
-    //         // note: .Equals because name AND dynamic variables matter (petLevel etc.)
-    //         if (slot.amount > 0 && slot.item.Equals(item))
-    //         {
-    //             // take as many as possible
-    //             amount -= slot.DecreaseAmount(amount);
-    //             inventory[i] = slot;
-
-    //             // are we done?
-    //             if (amount == 0) return true;
-    //         }
-    //     }
-
-    //     // if we got here, then we didn't remove enough items
-    //     return false;
-    // }
-
-    // // helper function to check if the inventory has space for 'n' items of type
-    // // -> the easiest solution would be to check for enough free item slots
-    // // -> it's better to try to add it onto existing stacks of the same type
-    // //    first though
-    // // -> it could easily take more than one slot too
-    // // note: this checks for one item type once. we can't use this function to
-    // //       check if we can add 10 potions and then 10 potions again (e.g. when
-    // //       doing player to player trading), because it will be the same result
-    // public bool InventoryCanAdd(ItemReference item, int amount)
-    // {
-    //     // go through each slot
-    //     for (int i = 0; i < inventory.Count; ++i)
-    //     {
-    //         // empty? then subtract maxstack
-    //         if (inventory[i].amount == 0)
-    //             amount -= item.stackSize;
-    //         // not empty. same type too? then subtract free amount (max-amount)
-    //         // note: .Equals because name AND dynamic variables matter (petLevel etc.)
-    //         else if (inventory[i].item.Equals(item))
-    //             amount -= (inventory[i].item.stackSize - inventory[i].amount);
-
-    //         // were we able to fit the whole amount already?
-    //         if (amount <= 0) return true;
-    //     }
-
-    //     // if we got here than amount was never <= 0
-    //     return false;
-    // }
-
-    // // helper function to put 'n' items of a type into the inventory, while
-    // // trying to put them onto existing item stacks first
-    // // -> this is better than always adding items to the first free slot
-    // // -> function will only add them if there is enough space for all of them
-    // public bool InventoryAdd(ItemReference item, int amount)
-    // {
-    //     // we only want to add them if there is enough space for all of them, so
-    //     // let's double check
-    //     if (InventoryCanAdd(item, amount))
-    //     {
-    //         // add to same item stacks first (if any)
-    //         // (otherwise we add to first empty even if there is an existing
-    //         //  stack afterwards)
-    //         for (int i = 0; i < inventory.Count; ++i)
-    //         {
-    //             // not empty and same type? then add free amount (max-amount)
-    //             // note: .Equals because name AND dynamic variables matter (petLevel etc.)
-    //             if (inventory[i].amount > 0 && inventory[i].item.Equals(item))
-    //             {
-    //                 vItemSlot temp = inventory[i];
-    //                 amount -= temp.IncreaseAmount(amount);
-    //                 inventory[i] = temp;
-    //             }
-
-    //             // were we able to fit the whole amount already? then stop loop
-    //             if (amount <= 0) return true;
-    //         }
-
-    //         // add to empty slots (if any)
-    //         for (int i = 0; i < inventory.Count; ++i)
-    //         {
-    //             // empty? then fill slot with as many as possible
-    //             if (inventory[i].amount == 0)
-    //             {
-    //                 int add = Mathf.Min(amount, item.itemAmount);
-    //                 inventory[i] = new vItemSlot(item, add);
-    //                 amount -= add;
-    //             }
-
-    //             // were we able to fit the whole amount already? then stop loop
-    //             if (amount <= 0) return true;
-    //         }
-    //         // we should have been able to add all of them
-    //         if (amount != 0) Debug.LogError("inventory add failed: " + item.name + " " + amount);
-    //     }
-    //     return false;
-    // }
-
- 
-
-  
-
- 
-
+   
     /// <summary>
     /// when skill level needs update skill by sdata-> next level
     /// skill data load indie list from class if s.name&&level==target 
@@ -1236,56 +983,6 @@ public abstract class Entity : NetworkBehaviourNonAlloc
     {
 
     }
-
-
-
-
-    public bool CheckPoints()
-    {
-        return skillPoints > 0 || characterPoints > 0;
-    }
-
-    
-    
-    /// <summary>
-    /// Dungeon Module for player who explore at the dungeon und try interactive with the obj ,player at
-    /// dungeon mainly do three things
-    /// 1.Explore room und go next rooms : the whole room have range(9,36)size tile for explore by difficult(e,n,h,s), player at new dungeon
-    /// 
-    /// </summary>
-    [Client]
-    public void OnDungeon()
-    {
-
-        if (isServer)
-        {
-            //server for dungeon can party with fiends with eine dungeon (config by teamDungeon),declare array for storge entity who
-            //GameManagers.instance.Players[]
-        }
-        else if (isClient) {
-            //at client only one player at dungeon und
-            //GameManagers.instance.Players[]
-
-        }
-
-        //Util.InvokeMany(typeof(Dungeon), this, "OnDungeon_");
-
-
-    }
-
-    //[Command]
-    //    public void CmdNextRooms(DungeonRooms rooms)
-    //    {
-            
-    //    }
-
-    public bool CheckFinishRoom() { return GameManagers.instance.isFinalRoom == true && health > 0; }
-
-    internal int GetBuffIndexByName(string buffName)
-    {
-        throw new NotImplementedException();
-    }
-
 
 
 }

@@ -26,17 +26,17 @@ using System.Text;
     public float amount;
 
     // contructors
-    public Buffs(BuffSkill data, int level)
+    public Buffs(ScriptableSkill data, int level)
     {
         hash = data.name.GetStableHashCode();
         this.level = level;
-        buffTimeEnd = NetworkTime.time + data.buffTime; // start buff immediately
+        buffTimeEnd = NetworkTime.time ; // start buff immediately
         amount =0;
-        
+        buffTime=0f;
         }
 
     // wrappers for easier access
-    public DungeonEvent data
+    public ScriptableSkill data
     {
         get
         {
@@ -46,13 +46,13 @@ using System.Text;
             //       this solution is a lot better.
             if (!ScriptableSkill.dict.ContainsKey(hash))
                 throw new KeyNotFoundException("There is no ScriptableSkill with hash=" + hash + ". Make sure that all ScriptableSkills are in the Resources folder so they are loaded properly.");
-            return (DungeonEvent)ScriptableSkill.dict[hash];
+            return (ScriptableSkill)ScriptableSkill.dict[hash];
         }
     }
     public string name => data.name;
     
-    public float buffTime => data.castTime.Get(level);
-    public bool remainAfterDeath => data.remainAfterDeath;
+    public float buffTime ;
+    // public bool remainAfterDeath => data.remainAfterDeath;
  
    
    

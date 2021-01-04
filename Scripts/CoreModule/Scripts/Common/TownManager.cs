@@ -295,6 +295,9 @@ public enum DifficultType
         if (haveEnemies == true)
         {
             GenerateEnemies();
+        }else{
+            //when false check array data then set random range value
+            InitEnemies();
         }
     // //Check Items und validate
     // ItemDatabase.instance.Init();
@@ -313,6 +316,7 @@ public enum DifficultType
         
     }
 
+#region  Enemy Module
     /// <summary>
     /// 
     /// </summary>
@@ -385,7 +389,29 @@ public enum DifficultType
             }
         }
     }
+ void InitEnemies(){
+     var sObj = sceneObj.GetComponent<GlobalSetting>();
 
+     if(sceneObj.GetComponent<GlobalSetting>().enemyList.Count>0){
+            //
+        
+        for(int i=0;i<sObj.enemyList.Count;i++){
+            //
+            var cEnemy = ItemDatabase.instance.cList.Find(ci =>ci.cName == sObj.enemyList[i].name);
+            if(cEnemy!=null){
+                //Add random value to target
+                //Damage & health & armor
+                var enemy = sObj.enemyList[i];
+                enemy.healthMax =Mathf.FloorToInt( Random.Range(cEnemy.cHealth,cEnemy.cHealth*0.2f + cEnemy.cHealth));
+                  enemy.damage =Mathf.FloorToInt( Random.Range(cEnemy.cDamage,cEnemy.cDamage*0.2f + cEnemy.cDamage));
+                  enemy.armor =Mathf.FloorToInt( Random.Range(cEnemy.cArmor,cEnemy.cArmor*0.2f + cEnemy.cArmor));
+                
+            }
+        } 
+     }
+ }
+
+ #endregion
     /*
     *
     * public List<DungeonChest> chest;
@@ -496,21 +522,7 @@ public enum DifficultType
 
    }
     
-    
-    /// <summary>
-    /// every map have own dungeonAsset at map , map place all location with dungeonasset, when player
-    /// enter the dungeon with unlock,enter this functions first ,needs check the dungeon type then load enity und scene
-    /// if have events for player start cov first
-    /// TODO
-    /// </summary>
-    public void EnterDungeon(int index, bool isDungeon,int num =3 , bool hasEvent=false)
-    {
-        //got dungeon index
-        //DungeonAsset dungeon = dungeonList[index];
-        //load dungeon theme und grid flow by dungeonasset::GDE
-        
-        
-    }
+  
 
     //Bind Data
     void InitPlayer(){
@@ -525,28 +537,33 @@ public enum DifficultType
 //Check Curor
 
 //  pcursor.tpInput.LockCursor(true);
-        Debug.Log("Add Invector Component");
+//Entity.Health -> TCM data 
+//
+        Debug.Log("Add Invector Component, Loaded Object stats");
        var ptpc=pObj.GetComponent<vThirdPersonController>();
-    //    ptpc.MaxHealth = player.healthMax;
-    //    ptpc.currentHealth = player.healthMax;
-    // //    //
-    //   ptpc.healthRecovery = player.healthRate;
-    //   //Movement speed
-    //   ptpc.walkSpeed = player.WalkSpeed;
-    //   ptpc.sprintStamina = player.SprintStamina;
-    //   ptpc.currentStamina = player.Stamina;
-    //   ptpc.maxStamina = player.Stamina;
-    //   ptpc.staminaRecovery = player.staminaRate;
-    //   //
-      
-    //   ptpc.rollSpeed = player.RollSpeed;
-    // //   ptpc.UpdateMotor();
-    // Debug.Log(string.Format("LOAD PLAYER DONE PLAYER STATS IST===>hp->{0}\nstmina->{1}\n",ptpc.currentHealth.ToString(),ptpc.maxStamina.ToString()));
-     
+       
+       //currentHealth = HealthMax when level add maxHealth
+       ptpc.MaxHealth = player.healthMax;
+        ptpc.maxStamina = player.Stamina;
+      ptpc.ManaMax=player.manaMax;
+    //    //
+      ptpc.healthRecovery = player.healthRate;
+      //Animator Obj Stats
+      ptpc.walkSpeed = player.WalkSpeed;
+      ptpc.runningSpeed = player.RunningSpeed;
+      ptpc.sprintSpeed = player.SprintSpeed;
+      ptpc.rollSpeed = player.RollSpeed;
+    //   ptpc.UpdateMotor();
+    Debug.Log(string.Format("LOAD PLAYER DONE PLAYER STATS IST===>hp->{0}\nstmina->{1}\n",ptpc.currentHealth.ToString(),ptpc.maxStamina.ToString()));
+
+        //Damage Module 
+        
 
       Debug.Log("Melee Combat");
    var pcombat=pObj.GetComponent<vMeleeManager>();
-    pcombat.defaultDamage.damageValue =Mathf.FloorToInt(player.damage); 
+    pcombat.defaultDamage = new vDamage(Mathf.FloorToInt(player.damage)); 
+    
+    
 // player.gameObject.AddComponent<vItemManager>();
 //  var vmci= pObj.AddComponent<vMeleeCombatInput>().GetComponent<vMeleeCombatInput>();
 //  StartCoroutine(vmci.CharacterInit());
@@ -625,21 +642,6 @@ public enum DifficultType
   
 
 
-    /// <summary>
-    /// 
-    /// </summary>
-    public void LeaveDungeon(bool isFinish) {
-        if (isFinish)
-        {
-            //
-
-
-        }
-        else
-        {
-            //clear old dungeon und leave
-        }
-    }
 
     #endregion
 
@@ -699,70 +701,8 @@ public enum DifficultType
     //     yield return null;
     // }
 
-    /// <summary>
-    ///  dungoen spawn npc in  theme , so just trace player
-    /// </summary>
-    /// <param name="e"></param>.
-    void BuildPlayer(Players  e)
-    {
-        // e = FindObjectOfType<Players>().GetComponent<Players>();
-        // if (e != null)
-        // {
-        //     //Camera trace player obj
-        //     GlobalSetting.instance.mainCamera.LookAt = player.transform;
-        //     //Set character Module for dungeon UI
-        //     GlobalSetting.instance.battle_Character.Init(e);
-        //     //init skill bar und can't manager when at camp
-        //     GlobalSetting.instance.battle_skill.Init(e);
-
-        //     GlobalSetting.instance.InitTmpInventory(e);
-
-        // }
-    }
-
-    //Load Data To UI
-    public void LoadEntityToDungeonUI(Players entity){
-        DungeonStartInfo.PLAYERS = entity;
-
-    }
-
-    
-    /// <summary>
-    /// At Dungeon when player explore this rooms done, unlock adj rooms who can
-    /// explore next rooms , when select the doors enter next rooms
-    /// 
-    /// </summary>
-    /// <param name="canNext"></param>
-    /// <param name="isFinal"></param>
-    /// <param name="dungeonDay"></param>
-    public void NextRoom(bool canNext,bool isFinal , int dungeonDay)
-    {
-        //clear this rooms
-        //load rooms pieces
-
-        //Check rooms types 
-    }
-
-    private void AppendLoadingText(string v)
-    {
-        loadingText.text += v;
-        GameDebug.Log(v);
-    }
-    /// <summary>
-    /// For ai
-    /// when player can 
-    /// </summary>
-    private void RebuildNavigation()
-    {
-        //navMesh.BuildNavMesh();
-    }
-
-
-
-    private void NotifyDestroyed()
-    {
-        
-    }
+   
+  
     #endregion
 
     public void ChangeScene(string name){

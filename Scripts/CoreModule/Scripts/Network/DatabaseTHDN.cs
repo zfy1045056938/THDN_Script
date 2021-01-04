@@ -120,6 +120,11 @@ class characters
     public float flashPerc { get; set; }
     public float blockPerc { get; set; }
 
+    //
+    public float walkSpeed { get; set; }
+    public float runningSpeed { get; set; }       
+    public float sprintSpeed { get; set; }
+    public float rollSpeed { get; set; }
     //party Num , limit is 3 that player can customize party with 
     // npc at dungeon who explore or save them , but at least eine main
     // character with leader , und the leader save to database with the basic
@@ -773,7 +778,7 @@ public class DatabaseTHDN:MonoBehaviour{
                 // make sure that 1 <= level <= maxlevel (in case we removed a skill
                 // level etc)
                 int level = Mathf.Clamp(row.level, 1, skillData.maxLevel);
-                Buffs buff = new Buffs((BuffSkill)skillData, level);
+                Buffs buff = new Buffs((ScriptableSkill)skillData, level);
                 // buffTimeEnd is based on NetworkTime.time, which will be
                 // different when restarting a server, hence why we saved
                 // them as just the remaining times. so let's convert them
@@ -842,21 +847,19 @@ public class DatabaseTHDN:MonoBehaviour{
                 
                 players.gold = row.money;
 
-                //L3 Stats
-                /*
-                 public float CAnti { get; set; }
-        public float CEagelEyes { get; set; }
-        //KissAss
-        public float CCheat { get; set; }
-        public float CHardAss { get; set; }
-        //Science
-        public float CSoulView { get; set; }
-        public float CAntiAb { get; set; }
 
-        //Leader
-        public float CBusiness { get; set; }
-        public float CVRate { get; set; }
-                */
+                 //animator
+                 /*
+            walkSpeed= Players.WalkSpeed,
+            runningSpeed=Players.RunningSpeed,
+            sprintSpeed=Players.SprintSpeed,
+            rollSpeed=Players.RollSpeed,
+            */
+                players.WalkSpeed=row.walkSpeed;
+                players.RunningSpeed=row.runningSpeed;
+                players.SprintSpeed =row.sprintSpeed;
+                players.RollSpeed = row.rollSpeed;
+                
 
                 players.CAnti  = row.CAnti;
                 players.CEagleEye = row.CEagleEyes;
@@ -1088,7 +1091,7 @@ public class DatabaseTHDN:MonoBehaviour{
         //Query DB for field
         sqlConect.InsertOrReplace(new characters
         {
-            //TODO
+         
             name = Players.name,
             account = Players.account,
             classname = Players.className,
@@ -1114,6 +1117,13 @@ public class DatabaseTHDN:MonoBehaviour{
             //sv
             damage = Players.damage,
             aShield = Players.aShield,
+
+            //animator
+            walkSpeed= Players.WalkSpeed,
+            runningSpeed=Players.RunningSpeed,
+            sprintSpeed=Players.SprintSpeed,
+            rollSpeed=Players.RollSpeed,
+
 
             //model data
             cst = Players.SprintStamina,
@@ -1143,6 +1153,7 @@ public class DatabaseTHDN:MonoBehaviour{
 
 
             exp = Players.exp,
+            dust = Players.dust,
 
             online = online,
             lastsaved = DateTime.Now,
@@ -1154,21 +1165,7 @@ public class DatabaseTHDN:MonoBehaviour{
             ac_useSkill = Players.AC_UseSkill,
             ac_criNum = Players.AC_CriNum,
             
-            /*
-              //
-        public float CAnti { get; set; }
-        public float CEagelEyes { get; set; }
-        //KissAss
-        public float CCheat { get; set; }
-        public float CHardAss { get; set; }
-        //Science
-        public float CSoulView { get; set; }
-        public float CAntiAb { get; set; }
-
-        //Leader
-        public float CBusiness { get; set; }
-        public float CVRate { get; set; }
-            */
+        
             //L3 Stats
             CAnti = Players.CAnti,
             CEagleEyes =Players.CEagleEye,

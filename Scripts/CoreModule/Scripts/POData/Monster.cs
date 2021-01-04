@@ -3,6 +3,8 @@ using Mirror;
 using System.Collections.Generic;
 using Invector.vItemManager;
 using System.Linq;
+using Unity.Collections;
+using UnityEngine.AI;
 
 public enum MonsterType
 {
@@ -33,8 +35,7 @@ public class Monster : Entity
     #region Monster Stats
 
 
-
-        public override int healthMax{
+    public override int healthMax{
             get{
                 int equipBouns=0;
                 // foreach(vItemSlot slot in equipment)
@@ -70,7 +71,7 @@ public class Monster : Entity
 
         public override float manaMax { get; set; }
 
-        public override  float damage{
+        public override  int damage{
             get
             {
                 int equipBouns = 0;
@@ -168,8 +169,8 @@ public class Monster : Entity
     //only for monster need bind to AI->Loot Items
     [Header("Monster Loot")]
     public List<vItem> itemLoot;    //when dead can loot
-    
-    
+
+    public GameObject LootObj;
    
     
 
@@ -198,200 +199,9 @@ public class Monster : Entity
     [Server]
     public override string UpdateServer(){
 
-        if (state == "IDLE")     return UpdateServer_IDLE();
-
-        // if (state == "Matches") return UpdateServer_Matches();
-        
-        // if (state == "DIALOGUE") return UpdateServer_DIALOGUE();
-        
-        if (state == "CASTING")  return UpdateServer_CASTING();
-
-        if (state == "COMBAT") return UpdateServer_COMBAT();
-       
-        if (state == "DEAD")     return UpdateServer_DEAD();
         return "IDLE";
     }
-     [Server]
-    public override string UpdateServer_DEAD(){
-       //when monster die,show console panel und player got reward
-        if (EventDead())
-        {
-            return "DEAD";
-        }
-       
-
-        return "DEAD";
-    }
-     [Server]
-    public override string UpdateServer_IDLE(){
-
-
-        if (EventIdle())
-        {
-            return "IDLE";
-        }
-        if (EventDead())
-        {
-            return "DEAD";
-        }
-
-        //at board matches und use skill
-        if (EventCombat())
-        {
-            return "COMBAT";
-        }
-
-        //with playe then idle to matches
-        if (EventMatches())
-        {
-            return "MATCHES";
-
-        }
-        if (EventStartCasting())
-        {
-            //use skill
-            return "CASTING";
-        }
-
-        if (EventFinishCasting())
-        {
-            return "MATCHES";
-        }
-        //Camp
-
-
-        return "IDLE";
-    }
-
     
-
-     [Server]
-    public override string UpdateServer_CASTING(){
-
-
-        if (EventIdle())
-        {
-            return "IDLE";
-        }
-        if (EventDead())
-        {
-            return "DEAD";
-        }
-
-        //at board matches und use skill
-        if (EventCombat())
-        {
-            return "COMBAT";
-        }
-        if (EventMatches())
-        {
-            return "MATCHES";
-
-        }
-        if (EventStartCasting())
-        {
-            //use skill
-            return "CASTING";
-        }
-
-        if (EventFinishCasting())
-        {
-            return "MATCHES";
-        }
-        //Camp
-
-
-        return "CASTING";
-    }
-
-    //  [Server]
-    // public override string UpdateServer_Matches(){
-
-
-    //     if (EventIdle())
-    //     {
-    //         return "IDLE";
-    //     }
-    //     if (EventDead())
-    //     {
-    //         return "DEAD";
-    //     }
-
-    //     //at board matches und use skill
-    //     if (EventCombat())
-    //     {
-    //         return "COMBAT";
-    //     }
-    //     if (EventMatches())
-    //     {
-    //         return "MATCHES";
-
-    //     }
-    //     if (EventStartCasting())
-    //     {
-    //         //use skill
-    //         return "CASTING";
-    //     }
-
-    //     if (EventFinishCasting())
-    //     {
-    //         return "MATCHES";
-    //     }
-    //     //Camp
-
-
-    //     return "MATCHES";
-
-      
-    // }
-
-
-
-     [Server]
-    public override string UpdateServer_COMBAT(){
-        if (EventIdle())
-        {
-            return "IDLE";
-        }
-        if (EventDead())
-        {
-            return "DEAD";
-        }
-       
-        //at board matches und use skill
-        if (EventCombat())
-        {
-            //Start Battle
-            DealDamageToTarget(target, damage, 1f, 1f, DamageType.Normal);
-            //
-            RpcOnDamageReceived(damage, DamageType.Normal);
-            //
-
-
-            return "COMBAT";
-        }
-        if (EventMatches())
-        {
-            return "MATCHES";
-
-        }
-        if (EventStartCasting())
-        {
-            //use skill
-            return "CASTING";
-        }
-       
-        if (EventFinishCasting())
-        {
-            return "MATCHES";
-        }
-        //Camp
-       
-
-        return "COMBAT";
-    }
-   
-
 
     #endregion
 
@@ -563,58 +373,7 @@ public class Monster : Entity
     /// ////////////////////////FSM Event Module/////////////////////////
     /// </summary>
     /// <returns></returns>
-    #region Event  Module
-    //player first meet monster at new rooms 
-    public override bool EventIdle()
-    {
-        return state=="IDLE" && !IsMoving() && !GameManagers.instance.inBattle
-            && !GameManagers.instance.isFinalRoom;
-    }
-
-    public override bool EventMoving()
-    {
-        // throw new NotImplementedException();
-        return state=="MOVING";
-    }
-    //at matches board  player start matches with enemy
-    //when enemy matches then auto atk to player
-    //state : idle -> combat
-    // UPdateServer_Combat->StartCombat()->CmddalDamagetotarget
-    public override bool EventCombat()
-    {
-        return state == "COMBAT" && !canAtk && !isMatches;
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <returns></returns>
-    public override bool EventMatches()
-    {
-        return state == "MATCHES" && !isMatches && target.health>0;
-    }
-
-    public override bool EventDead()
-    {
-
-
-        return state == "DEAD" && GameManagers.instance.inBattle == false && health <= 0;
-    }
-
-    public override bool EventStartCasting()
-    {
-        return state=="CASTING"  && !canUseSkill;
-    }
-
-    public override bool EventFinishCasting()
-    {
-        return state == "MATCHES" ;
-    }
-
-    #endregion
-
    
-
    
 
     
@@ -674,80 +433,6 @@ public class Monster : Entity
     //     return "COMBAT";
     // }
 
-    public override string UpdateServer_MOVING()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventMoveEnd()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventCancelCasting()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventSkillRequest()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventSkillFinish()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventCamp()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventCraft()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventStartCraft()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventEndCraft()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventDialogue()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventTrade()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventStartTrade()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventEndTrade()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override string UpdateServer_Sprint()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override string UpdateServer_ROLL()
-    {
-        throw new System.NotImplementedException();
-    }
 
     public override int GetHashCode()
     {
@@ -813,13 +498,73 @@ public class Monster : Entity
         base.UpdateOverlays();
     }
 
-    public override void RpcShowComboTip(int num)
-    {
-        base.RpcShowComboTip(num);
-    }
-
     public override void Warp(Vector3 pos)
     {
-        throw new System.NotImplementedException();
+       
     }
+
+
+    #region DeadModule
+
+    
+
+    public void DeadLoot()
+    {
+        if (health <= 0)
+        {
+            Debug.Log(name+"Dead and Drop Loot");
+            GameObject dObj = Instantiate(LootObj,transform.position,Quaternion.identity)as GameObject;
+            //Add Random items from itemManager CM
+            //itemNum-> counter(itemid -> itemCount)
+            var craftItems = ItemDatabase.instance.itemList.FindAll(ci => ci.type == vItemType.CraftingMaterials);
+            var itemGot = Random.Range(1, 3);
+            var itemId = Random.Range(0, craftItems.Count);
+            var itemNum = Random.Range(0, 3);
+            
+            //item Num
+            while (itemGot > 0)
+            {
+                //Get Detail Item
+                vItem dItem = ItemDatabase.instance.GetItemByName(craftItems[itemId].name);
+                int dItemNumber = itemNum;
+                ItemReference itemR = new ItemReference
+                {
+                    name =  dItem.name,
+                    amount = dItemNumber,
+                };
+                //Add Loot
+                  dObj.GetComponent<vItemCollection>().items.Add(itemR);
+                  NetworkServer.Spawn(dObj);
+                  
+                itemGot--;
+
+            }
+            //
+            Debug.Log("Item Add to loot pack ,Destory Obj");
+            
+            NetworkServer.Destroy(this.gameObject);
+
+          
+            
+        }
+
+    }
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    public void DeadGiveReward()
+    {
+        if (health <= 0)
+        {
+            //Give reward
+             Players.localPlayer.CmdReward(lootExp,lootMoney,lootDust);
+
+        }
+    }
+        
+        
+    #endregion
+    
+    
 }

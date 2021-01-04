@@ -61,35 +61,6 @@ public class NPC : Entity
         throw new System.NotImplementedException();
     }
 
-    public override string UpdateServer_IDLE()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    // public override string UpdateServer_Matches()
-    // {
-    //     throw new System.NotImplementedException();
-    // }
-
-    public override string UpdateServer_CASTING()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override string UpdateServer_COMBAT()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override string UpdateServer_DEAD()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override string UpdateServer_MOVING()
-    {
-        throw new System.NotImplementedException();
-    }
 
     public override int GetHashCode()
     {
@@ -186,97 +157,6 @@ public class NPC : Entity
     }
 
     
-
-    public override bool EventIdle()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventMoving()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventCombat()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventMatches()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventStartCasting()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventFinishCasting()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventCancelCasting()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventSkillRequest()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventSkillFinish()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventDead()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventCamp()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventCraft()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventStartCraft()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventEndCraft()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventDialogue()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventTrade()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventStartTrade()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override bool EventEndTrade()
-    {
-        throw new System.NotImplementedException();
-    }
-
     protected override void UpdateOverlays()
     {
         base.UpdateOverlays();
@@ -292,33 +172,7 @@ public class NPC : Entity
         base.OnAggro(e);
     }
 
-    public override void RpcShowComboTip(int num)
-    {
-        throw new System.NotImplementedException();
-    }
 
-    public override bool EventMoveEnd()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    // public override string UpdateServer_DIALOGUE()
-    // {
-    //     throw new System.NotImplementedException();
-    // }
-
-    
-
-
-    public override string UpdateServer_Sprint()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override string UpdateServer_ROLL()
-    {
-        throw new System.NotImplementedException();
-    }
 
 
 
@@ -332,7 +186,7 @@ public class NPC : Entity
         throw new System.NotImplementedException();
     }
 
-    public override float damage
+    public override int damage
     {
         get { return base.damage; }
     }
