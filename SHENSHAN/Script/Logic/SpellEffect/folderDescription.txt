@@ -1,0 +1,14 @@
+this folder for card effect both in it,include these effet in card effect,include 
+-------------------------------------
+1.card effect
+Eine.Draw a card :
+        give player another card from pack or create card with same type，player have one change to rechange
+
+Zwei. Give Mana :
+        give player mana for this turn ,
+
+Drei. atkAllCreaturetotable:
+        group magic ,to get table creatue,according card value to hurt character
+
+4. HideCard
+        back card in table if atk need combie the card
