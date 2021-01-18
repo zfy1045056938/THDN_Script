@@ -13,6 +13,9 @@ using System.Linq;
 //
 /// <summary>
 /// 玩家类,用于控制玩家基本属性,控制其余实现功能
+/// ChangeLog 2021-1-18
+/// 1.delete stats(str & dex & inte)
+/// 2.
 /// </summary>
 [SerializeField]
 public class Players : MonoBehaviour, ICharacter
@@ -138,6 +141,11 @@ public class Players : MonoBehaviour, ICharacter
         }
     }
 
+    //TODO 2021-1-18
+    public bool shenshanModule; //active the module when mana>=7 
+
+
+
 
     //For Enemy Asset
    public void LoadEnemyAssetFromVisual(Players p)
@@ -212,23 +220,23 @@ public class Players : MonoBehaviour, ICharacter
         get { return _atk; }
         set { 
 
-            if (playerData.Strength % 3 == 0)
-            {
-                _atk = value+(Mathf.RoundToInt(playerData.Strength/3));
-            }
+            // if (playerData.Strength % 3 == 0)
+            // {
+            //     _atk = value+(Mathf.RoundToInt(playerData.Strength/3));
+            // }
 
             _atk = value;
 
         }
     }
 
-    private int _atkDur;
+    // private int _atkDur;
 
-    public int atkDur
-    {
-        get { return _atkDur; }
-        set { _atkDur = value; }
-    }
+    // public int atkDur
+    // {
+    //     get { return _atkDur; }
+    //     set { _atkDur = value; }
+    // }
 
 
 
@@ -238,12 +246,24 @@ public class Players : MonoBehaviour, ICharacter
         get { return health; }
         set
         {
-            if (playerData.Strength % 3 == 0)
-            {
-                health = value + Mathf.RoundToInt(playerData.Strength / 3);
-            }
+            //Health = Equipment + effect  +base
+            // if (playerData.Strength % 3 == 0)
+            // {
+            //     health = value + Mathf.RoundToInt(playerData.Strength / 3);
+            // }
 
-            health = value;
+
+
+            //TODO 2011-1-18
+            var Equipmentslot = FindObjectsOfType<EquipmentSlot>();
+            
+            var effect = FindObjectOfType<BuffList>();
+
+            int eb=0;
+            int effectb=0;
+            
+
+            health = base.health + eb + effectcb;
             if (value <= 0)
                 Die();
         }
@@ -254,10 +274,10 @@ public class Players : MonoBehaviour, ICharacter
         get { return _armor; }
         set
         {
-            if (playerData.Dex % 3 == 0)
-            {
-                _armor = value + Mathf.RoundToInt(playerData.Dex / 3);
-            }
+            // if (playerData.Dex % 3 == 0)
+            // {
+            //     _armor = value + Mathf.RoundToInt(playerData.Dex / 3);
+            // }
 
             if (_armor < 0)
             {
@@ -266,9 +286,9 @@ public class Players : MonoBehaviour, ICharacter
             _armor = value;
         }
     }
-    public int STR { get; set; }
-    public int DEX { get; set; }
-    public int INTE { get; set; }
+    // public int STR { get; set; }
+    // public int DEX { get; set; }
+    // public int INTE { get; set; }
 
     public EnemyAsset enemyAsset { get; set; }
 
@@ -330,6 +350,10 @@ public class Players : MonoBehaviour, ICharacter
 
         ++manaThisTurn;
         manaLeft = manaThisTurn;
+        //Shenshan Modle 1-18
+        if(TurnManager.instance.whoseTurn.manaLeft >=7){
+            GlobalSetting.instance.ShenShanModule();
+        }
         
         //creature Buff Update
        for(int cl=0;cl<table.creatureOnTable.Count;cl++){

@@ -92,6 +92,9 @@ public class GlobalSetting : MonoBehaviour
     public GameObject artifactIcon;
     public GameObject viewEffectPrefab;
     
+    //1-18
+    public GameObject SSObj;
+    
     //
     public Button b_LeaveTownBtn;
     public Button b_GiveUpBtn;
@@ -304,6 +307,12 @@ LoadCard();
         menuPanel.gameObject.SetActive(true);
         menuPanel.gameObject.transform.DOMove(showpos.transform.position, 0.4f);
       
+    }
+
+    //TOOD 1-18
+    // Show panel und active 3  effect util player select
+    public void ShenShanModule(){
+
     }
 
     //Set amount und logs to lp
