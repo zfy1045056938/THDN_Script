@@ -225,14 +225,7 @@ public class NPC : Entity
 
     public override float blockChance => base.blockChance;
 
-    public override EntityAnimState entityState { get => base.entityState; set => base.entityState = value; }
-    public override float Stamina { get => base.Stamina; set => base.Stamina = value; }
-    public override float SprintStamina { get => base.SprintStamina; set => base.SprintStamina = value; }
-    public override float WalkSpeed { get => base.WalkSpeed; set => base.WalkSpeed = value; }
-    public override float RollSpeed { get => base.RollSpeed; set => base.RollSpeed = value; }
-    public override float RollDistance { get => base.RollDistance; set => base.RollDistance = value; }
-    public override float JumpSpeed { get => base.JumpSpeed; set => base.JumpSpeed = value; }
-    public override float LadderStamina { get => base.LadderStamina; set => base.LadderStamina = value; }
+   
 }
 
 public class DSRewardAuthorization

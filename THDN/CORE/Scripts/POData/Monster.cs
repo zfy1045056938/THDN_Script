@@ -147,7 +147,6 @@ public class Monster : Entity
     public override int aShield => base.aShield;
 
     
-    public override EntityAnimState entityState { get => base.entityState; set => base.entityState = value; }
     public override int lockpick { get => base.lockpick; set => base.lockpick = value; }
     public override int science { get => base.science; set => base.science = value; }
     public override int leader { get => base.leader; set => base.leader = value; }
@@ -155,12 +154,7 @@ public class Monster : Entity
     public override float heavy { get => base.heavy; set => base.heavy = value; }
     public override int dungeoneering { get => base.dungeoneering; set => base.dungeoneering = value; }
     public override float Stamina { get => base.Stamina; set => base.Stamina = value; }
-    public override float SprintStamina { get => base.SprintStamina; set => base.SprintStamina = value; }
-    public override float WalkSpeed { get => base.WalkSpeed; set => base.WalkSpeed = value; }
-    public override float RollSpeed { get => base.RollSpeed; set => base.RollSpeed = value; }
-    public override float RollDistance { get => base.RollDistance; set => base.RollDistance = value; }
-    public override float JumpSpeed { get => base.JumpSpeed; set => base.JumpSpeed = value; }
-    public override float LadderStamina { get => base.LadderStamina; set => base.LadderStamina = value; }
+  
 
     public double deadTime;
     public double deadTimeEnd;

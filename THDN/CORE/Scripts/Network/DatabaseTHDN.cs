@@ -101,7 +101,7 @@ class characters
         public int dungeoneeringLevel{get;set;}
         public int leaderLevel{get;set;}
 
-    //model data
+    //model data remove
     public float cst { get; set; }  
     public float cws { get; set; }
     //roll
@@ -721,8 +721,8 @@ public class DatabaseTHDN:MonoBehaviour{
         //    which are only for newly created characters)
 
         // fill all slots first
-        foreach (ScriptableSkill skillData in player.skillTemplates)
-            player.skills.Add(new Skill(skillData));
+        // foreach (ScriptableSkill skillData in player.skillTemplates)
+        //     player.skills.Add(new Skill(skillData));
 
         // then load learned skills and put into their slots
         // (one big query is A LOT faster than querying each slot separately)
@@ -855,10 +855,10 @@ public class DatabaseTHDN:MonoBehaviour{
             sprintSpeed=Players.SprintSpeed,
             rollSpeed=Players.RollSpeed,
             */
-                players.WalkSpeed=row.walkSpeed;
-                players.RunningSpeed=row.runningSpeed;
-                players.SprintSpeed =row.sprintSpeed;
-                players.RollSpeed = row.rollSpeed;
+                // players.WalkSpeed=row.walkSpeed;
+                // players.RunningSpeed=row.runningSpeed;
+                // players.SprintSpeed =row.sprintSpeed;
+                // players.RollSpeed = row.rollSpeed;
                 
 
                 players.CAnti  = row.CAnti;
@@ -1032,29 +1032,29 @@ public class DatabaseTHDN:MonoBehaviour{
     {
         // skills: remove old entries first, then add all new ones
         sqlConect.Execute("DELETE FROM character_skills WHERE character=?", Players.name);
-        foreach (ScriptableSkill skill in Players.skillTemplates)
-            if (skill.level
-                > 0) // only learned skills to save queries/storage/time
-            {
-                // castTimeEnd and cooldownEnd are based on NetworkTime.time,
-                // which will be different when restarting the server, so let's
-                // convert them to the remaining time for easier save & load
-                // note: this does NOT work when trying to save character data
-                //       shortly before closing the editor or game because
-                //       NetworkTime.time is 0 then.
-                sqlConect.InsertOrReplace(new character_skills {
-                    character = Players.name,
-                    name = skill.name,
-                    level = skill.level,
+        // foreach (ScriptableSkill skill in Players.skillTemplates)
+        //     if (skill.level
+        //         > 0) // only learned skills to save queries/storage/time
+        //     {
+        //         // castTimeEnd and cooldownEnd are based on NetworkTime.time,
+        //         // which will be different when restarting the server, so let's
+        //         // convert them to the remaining time for easier save & load
+        //         // note: this does NOT work when trying to save character data
+        //         //       shortly before closing the editor or game because
+        //         //       NetworkTime.time is 0 then.
+        //         sqlConect.InsertOrReplace(new character_skills {
+        //             character = Players.name,
+        //             name = skill.name,
+        //             level = skill.level,
                   
-                    hasLearn = skill.hasLearn,
-                    sAmount = skill.sAmount,
+        //             hasLearn = skill.hasLearn,
+        //             sAmount = skill.sAmount,
                     
-                    castTimeEnd = skill.castTimeRemaining(),
-                    cooldownEnd=skill.cooldownRemaining()
+        //             castTimeEnd = skill.castTimeRemaining(),
+        //             cooldownEnd=skill.cooldownRemaining()
 
-                }) ;
-            }
+        //         }) ;
+        //     }
     }
 
 
@@ -1123,19 +1123,19 @@ public class DatabaseTHDN:MonoBehaviour{
             aShield = Players.aShield,
 
             //animator
-            walkSpeed= Players.WalkSpeed,
-            runningSpeed=Players.RunningSpeed,
-            sprintSpeed=Players.SprintSpeed,
-            rollSpeed=Players.RollSpeed,
+            // walkSpeed= Players.WalkSpeed,
+            // runningSpeed=Players.RunningSpeed,
+            // sprintSpeed=Players.SprintSpeed,
+            // rollSpeed=Players.RollSpeed,
 
 
-            //model data
-            cst = Players.SprintStamina,
-            cws = Players.WalkSpeed,
-            crs = Players.RollSpeed,
-            crd = Players.RollDistance,
-            cjs = Players.JumpSpeed,
-            cls = Players.LadderStamina,
+            // //model data
+            // cst = Players.SprintStamina,
+            // cws = Players.WalkSpeed,
+            // crs = Players.RollSpeed,
+            // crd = Players.RollDistance,
+            // cjs = Players.JumpSpeed,
+            // cls = Players.LadderStamina,
 
 
             //ev

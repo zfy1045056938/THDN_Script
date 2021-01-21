@@ -21,11 +21,11 @@ public partial class CharacterCreateMsg:MessageBase{
     public string names;
     public int className;
     //
-    public int de;
-    public int sc;
-    public int ka;
-    public int lp;
-    public int leader;
+    // public int de;
+    // public int sc;
+    // public int ka;
+    // public int lp;
+    // public int leader;
     
     //gamedata.avatarLib
     // public string iconName;

@@ -464,7 +464,7 @@ public abstract class Entity : NetworkBehaviourNonAlloc
         }
     }
 
-    [SerializeField]  float _health = 0f;
+    [SerializeField]  float _health = 100f;
 
     public virtual float health
     {

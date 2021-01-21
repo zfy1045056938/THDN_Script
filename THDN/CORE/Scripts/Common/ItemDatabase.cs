@@ -47,11 +47,11 @@ public class ItemDatabase : MonoBehaviour
 
    public void Init(){
         Debug.Log("Init Item DB ");
-        foreach(var v in itemList){
-            if(!itemDic.ContainsKey(v.itemID)){
-                itemDic.Add(v.itemID,v);
-            }
-        }
+        // foreach(var v in itemList){
+        //     if(!itemDic.ContainsKey(v.itemID)){
+        //         itemDic.Add(v.itemID,v);
+        //     }
+        // }
         //
         
     }

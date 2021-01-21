@@ -86,18 +86,18 @@ public class UICreate:MonoBehaviour{
         });
 
 
-        deSlider.value = depoints;
-        kaSlider.value=kissasspoints;
-        leaderSlider.value=leaderpoints;
-        scSlider.value=sciencepoints;
-        lpSlider.value=lockpoints;
-        totalText.text= totalPoints.ToString();
+        // deSlider.value = depoints;
+        // kaSlider.value=kissasspoints;
+        // leaderSlider.value=leaderpoints;
+        // scSlider.value=sciencepoints;
+        // lpSlider.value=lockpoints;
+        // totalText.text= totalPoints.ToString();
 
-        deText.text=depoints.ToString();
-        kissassText.text=kissasspoints.ToString();
-        leaderText.text=leaderpoints.ToString();
-        lpText.text=lockpoints.ToString();
-        scienceText.text=sciencepoints.ToString();
+        // deText.text=depoints.ToString();
+        // kissassText.text=kissasspoints.ToString();
+        // leaderText.text=leaderpoints.ToString();
+        // lpText.text=lockpoints.ToString();
+        // scienceText.text=sciencepoints.ToString();
 
         // kaBtn.onClick.AddListener(()=>{
         //     AddkaPoint();
@@ -117,13 +117,8 @@ public class UICreate:MonoBehaviour{
         // });
         
 
-        if(totalPoints<1){
-
-        }
-
-
-        }
-    // }
+      
+    }
 
     public void CreateC(){
 
@@ -131,10 +126,10 @@ public class UICreate:MonoBehaviour{
             CharacterCreateMsg message=new CharacterCreateMsg{
                 names =nameText.text,
                 className=selector.value,
-                ka=kissasspoints,
-                lp=lockpoints,
-                leader=leaderpoints,
-                de=depoints,
+                // ka=kissasspoints,
+                // lp=lockpoints,
+                // leader=leaderpoints,
+                // de=depoints,
 
                  
             };

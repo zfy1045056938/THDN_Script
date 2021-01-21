@@ -281,7 +281,7 @@ public enum DifficultType
                         Debug.Log("Got Enemy");
                         //Invector && AI
                         var Ehealth = enemiesList[i].GetComponent<EmeraldAISystem>().CurrentHealth ;
-                        var Earmor =enemiesList[i].GetComponent<EmeraldAISystem>().Armor;
+                        // var Earmor =enemiesList[i].GetComponent<EmeraldAISystem>().Armor;
                         //Got Loot item by vitem-> vfrom
 
                         //network identity
@@ -298,7 +298,7 @@ public enum DifficultType
                         }
                         //emerald ai
                         var eAI = enemiesList[i].gameObject.GetComponent<EmeraldAISystem>();
-                        if(eAI){s
+                        if(eAI){
                             eAI.CurrentHealth = Mathf.FloorToInt(health);
                            
                         }
@@ -509,22 +509,19 @@ public enum DifficultType
 //  pcursor.tpInput.LockCursor(true);
 //Entity.Health -> TCM data 
 //
-        Debug.Log("Add Invector Component, Loaded Object stats");
-       var ptpc=pObj.GetComponent<vThirdPersonController>();
+    //     Debug.Log("Add Invector Component, Loaded Object stats");
+    //    var ptpc=pObj.GetComponent<vThirdPersonController>();
        
-       //currentHealth = HealthMax when level add maxHealth
-       ptpc.MaxHealth = player.healthMax;
-        ptpc.maxStamina = player.Stamina;
-      ptpc.MaxMana=player.manaMax;
-    //    //
-      ptpc.healthRecovery = player.healthRate;
-      //Animator Obj Stats
-    //   ptpc.walkSpeed = player.WalkSpeed;
-    //   ptpc.runningSpeed = player.RunningSpeed;
-    //   ptpc.sprintSpeed = player.SprintSpeed;
-    //   ptpc.rollSpeed = player.RollSpeed;
-    //   ptpc.UpdateMotor();
-    Debug.Log(string.Format("LOAD PLAYER DONE PLAYER STATS IST===>hp->{0}\nstmina->{1}\n",ptpc.currentHealth.ToString(),ptpc.maxStamina.ToString()));
+    //    //currentHealth = HealthMax when level add maxHealth
+    //    ptpc.MaxHealth = player.healthMax;
+
+    //     ptpc.maxStamina = player.Stamina;
+    //   ptpc.MaxMana=player.manaMax;
+    // //    //
+    //   ptpc.healthRecovery = player.healthRate;
+    // //  .
+    // //   ptpc.UpdateMotor();
+    // Debug.Log(string.Format("LOAD PLAYER DONE PLAYER STATS IST===>hp->{0}\nstmina->{1}\n",ptpc.currentHealth.ToString(),ptpc.maxStamina.ToString()));
 
         //Damage Module 
         
@@ -533,17 +530,6 @@ public enum DifficultType
    var pcombat=pObj.GetComponent<vMeleeManager>();
     pcombat.defaultDamage = new vDamage(Mathf.FloorToInt(player.damage)); 
     
-    
-// player.gameObject.AddComponent<vItemManager>();
-//  var vmci= pObj.AddComponent<vMeleeCombatInput>().GetComponent<vMeleeCombatInput>();
-//  StartCoroutine(vmci.CharacterInit());
-// player.gameObject.AddComponent<vLockOn>();
-//  var vmci= pObj.AddComponent<vMeleeCombatInput>().GetComponent<vMeleeCombatInput>();
-//   var pcursor =ptpc.GetComponent<vGenericAction>();
-//   pcursor.tpInput.LockCursor(pcursor.tpInput.showCursorOnStart);
-  
-//   pcursor.tpInput.ShowCursor(pcursor.tpInput.unlockCursorOnStart);
-//  StartCoroutine(vmci.CharacterInit());
             //Item
            var pitem=pObj.GetComponent<vItemManager>();
             pitem.inventory = inventory;
@@ -587,6 +573,21 @@ public enum DifficultType
         vGameController.spawnPoint = sceneObj.GetComponent<GlobalSetting>().startPosition;
         // pObj.transform.parent = sceneObj.GetComponent<GlobalSetting>().startPosition;
         // pObj.transform.parent = vGameController.spawnPoint; SM_Env_Basement_Ceiling_
+        //
+            Debug.Log("Add Invector Component, Loaded Object stats");
+       var ptpc=pObj.GetComponent<vThirdPersonController>();
+       
+    //    currentHealth = HealthMax //when level add maxHealth
+       ptpc.MaxHealth = player.healthMax;
+
+        ptpc.maxStamina = player.Stamina;
+      ptpc.MaxMana=player.manaMax;
+    //    //
+      ptpc.healthRecovery = player.healthRate;
+    //  .
+    //   ptpc.UpdateMotor();
+    Debug.Log(string.Format("LOAD PLAYER DONE PLAYER STATS IST===>hp->{0}\nstmina->{1}\n",ptpc.currentHealth.ToString(),ptpc.maxStamina.ToString()));
+
         
 
         var tcinput =ptpc.GetComponent<vGenericAction>().tpInput;
@@ -643,7 +644,7 @@ public enum DifficultType
             p.Warp(vGameController.spawnPoint.position);
             p.gameObject.transform.SetParent ( vGameController.spawnPoint);
              
-       fadeCanvas.group.alpha=0;
+    //    fadeCanvas.group.alpha=0;
             // vGameController.SpawnAtPoint(vGameController.spawnPoint);
         }else{
             Debug.Log("No scene");

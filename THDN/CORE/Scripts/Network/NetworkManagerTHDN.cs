@@ -446,11 +446,20 @@ public class NetworkManagerTHDN: NetworkManager
                             // create new character based on the prefab.
                             Players player = CreateCharacter(playerClasses[message.className].gameObject, message.names, account);
                     //add extra points TODO _128
-                    player.dungeoneering = message.de;
-                    player.science = message.sc;
-                    player.kissass = message.ka;
-                    player.lockpick = message.lp;
-                    player.leader = message.leader;
+                    player.dungeoneering =1;
+                    player.science =1;
+                    player.kissass = 1;
+                    player.lockpick = 1;
+                    player.leader = 1;
+                    //
+                    player.racename = "Qika";
+                    player.level=1;
+                    //
+                    player.healthMax =100;
+                    player.manaMax=90;
+                    
+                    player.damage =10;
+                    player.armor=3;
 
                     //
                     // player.portrainIcon =Sprite.Create(THDNGameDatabase.avaDic[message.iconName],new Rect(0,0, THDNGameDatabase.avaDic[message.iconName].width, THDNGameDatabase.avaDic[message.iconName].height),Vector2.zero);

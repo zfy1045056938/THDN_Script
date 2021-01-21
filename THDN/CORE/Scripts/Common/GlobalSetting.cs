@@ -203,7 +203,7 @@ public GameObject[] dungeonShrine;
     {
         instance = this;
 
-        //
+    
         player =  Players.localPlayer;
         // playerList.Add(DungeonStartInfo.PLAYERS.netId, DungeonStartInfo.PLAYERS);
         //
@@ -211,7 +211,7 @@ public GameObject[] dungeonShrine;
         //Rnd Generae Prop
       ReloadDungeonAsset();
        //
-        StartCoroutine("DungeonTimeRoutine");
+        // StartCoroutine("DungeonTimeRoutine");
     }
 
     void Update(){
@@ -274,7 +274,7 @@ public GameObject[] dungeonShrine;
    
 
     public void BreakWall(){
-        TrapWall.GetComponent<Destructible>().ApplyDamage(100.0f);
+        // TrapWall.GetComponent<Destructible>().ApplyDamage(100.0f);
         TrapWall.GetComponent<AudioSource>().Play();
         
     }
@@ -301,5 +301,13 @@ public GameObject[] dungeonShrine;
     }
     public void DeadConsole(){
 
+    }
+
+    public void FinalConsole(bool check){
+        if(check){
+
+        }else{
+            //Clear object und return map
+        }
     }
 }
