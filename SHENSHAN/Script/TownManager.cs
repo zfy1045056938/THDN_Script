@@ -1057,6 +1057,13 @@ if(newMap.hasBoss==true){
         e.detail=boss.Detail;
         e.hasCard=boss.HssCard;
         e.model=boss.ModelName;
+        //TODO
+        e.damage = boss.Damage;
+        e.def = boss.Armor;
+        //
+        e.attackCard = boss.AttackCard;
+        e.armorCard = boss.ArmorCard;
+
         // e.pos=boss.Pos;
                 
         if (e.hasCard == true)
@@ -1102,6 +1109,18 @@ if(newMap.hasBoss==true){
             e.hasCard = enemy[i].HssCard;
             //
             e.model =enemy[i].ModelName;
+            //
+            //
+            e.damage = enemy[i].Damage;
+            e.def = enemy[i].Armor;
+
+
+            //Common Card load from itemdatabase as common card
+            //that card as spell und ability r  same to enemy stat
+            // attackCard->damage | armor -> def
+            e.attackCard = enemy[i].AttackCard;
+            e.armorCard = enemy[i].ArmorCard;
+
             //
            
 

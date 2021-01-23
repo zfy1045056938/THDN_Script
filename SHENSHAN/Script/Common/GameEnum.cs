@@ -123,6 +123,7 @@ public enum TypeOfCards
     Creature,
     Spell,
     Token,
+    Common,
 }
 
 public enum DamageElementalType

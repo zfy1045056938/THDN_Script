@@ -246,70 +246,70 @@ public class ItemDatabase : MonoBehaviour
 //			
 //			}
 			
-		#region unknown for equipment rarity
-			//Ratity 
-			float FV = Random.Range(0.0f,1.0f);
-			//new Item
-			int RareRV = Random.Range(20006, 20015);
-			if (FV > (1 - epicPerc))
-			{
-				//Got the range of the epic item 
-				int EpicRV = Random.Range(22001,22006);
-				float SV = Random.Range(0.0f, 1.0f);
-				if (SV > (1 - lendPerc))
-				{
-					//Got lend EquipIndex
-					int LendV = Random.Range(23001, 23001);
-					float TV = Random.Range(0.0f, 1.0f);
-					if (TV > (1 - ancientPerc))
-					{
-						//Last P Got Ancient Equipment
-						int ANV = Random.Range(24001, 24003);
-						return GenerateNewItems(ANV);
-					}
-					else
-					{
-						return GenerateNewItems(LendV);
-					}
-				}
-				else
-				{
-					return GenerateNewItems(EpicRV);
-				}
-			}
-			else
-			{
-//				Items newItems = ItemDatabase.instance.FindItem(RareRV);
-//				if (newItems != null)
+//		#region unknown for equipment rarity
+//			//Ratity 
+//			float FV = Random.Range(0.0f,1.0f);
+//			//new Item
+//			int RareRV = Random.Range(20006, 20015);
+//			if (FV > (1 - epicPerc))
+//			{
+//				//Got the range of the epic item 
+//				int EpicRV = Random.Range(22001,22006);
+//				float SV = Random.Range(0.0f, 1.0f);
+//				if (SV > (1 - lendPerc))
 //				{
-//					newItems = InventorySystem.DeepCopy(newItems);
-//
-//					//Stats
-//					item.strength = Random.Range(item.minStrength, item.maxStrength);
-//					item.dexterity = Random.Range(item.minDexterity, item.maxDexterity);
-//					item.magic = Random.Range(item.minMagic, item.maxMagic);
-//
-//					//REsistance
-//					item.fireResistance = Random.Range(item.minFireRes, item.maxFireRes);
-//					item.iceResistance = Random.Range(item.minIceRes, item.maxIceRes);
-//					item.posionResistance = Random.Range(item.minPosionRes, item.maxPosionRes);
-//					item.phyicsResistance = Random.Range(item.minPhyRes, item.maxPhyRes);
-//					item.electronicResistance = Random.Range(item.minElecRes, item.maxElecRes);
-//
-//					//Armor
-//					item.armor = Random.Range(item.minArmor, item.maxArmor);
-//					//damage
-//					item.damage = Random.Range(item.minDamage, item.maxDamage);
-//
-//
-//					//potion
-//					item.healAmount = Random.Range(item.minEffectAmount, item.maxEffectAmount);
-
+//					//Got lend EquipIndex
+//					int LendV = Random.Range(23001, 23001);
+//					float TV = Random.Range(0.0f, 1.0f);
+//					if (TV > (1 - ancientPerc))
+//					{
+//						//Last P Got Ancient Equipment
+//						int ANV = Random.Range(24001, 24003);
+//						return GenerateNewItems(ANV);
+//					}
+//					else
+//					{
+//						return GenerateNewItems(LendV);
+//					}
 //				}
-//for detail
-				return GenerateNewItems(RareRV);
-			}
-			#endregion
+//				else
+//				{
+//					return GenerateNewItems(EpicRV);
+//				}
+//			}
+//			else
+//			{
+////				Items newItems = ItemDatabase.instance.FindItem(RareRV);
+////				if (newItems != null)
+////				{
+////					newItems = InventorySystem.DeepCopy(newItems);
+////
+////					//Stats
+////					item.strength = Random.Range(item.minStrength, item.maxStrength);
+////					item.dexterity = Random.Range(item.minDexterity, item.maxDexterity);
+////					item.magic = Random.Range(item.minMagic, item.maxMagic);
+////
+////					//REsistance
+////					item.fireResistance = Random.Range(item.minFireRes, item.maxFireRes);
+////					item.iceResistance = Random.Range(item.minIceRes, item.maxIceRes);
+////					item.posionResistance = Random.Range(item.minPosionRes, item.maxPosionRes);
+////					item.phyicsResistance = Random.Range(item.minPhyRes, item.maxPhyRes);
+////					item.electronicResistance = Random.Range(item.minElecRes, item.maxElecRes);
+////
+////					//Armor
+////					item.armor = Random.Range(item.minArmor, item.maxArmor);
+////					//damage
+////					item.damage = Random.Range(item.minDamage, item.maxDamage);
+////
+////
+////					//potion
+////					item.healAmount = Random.Range(item.minEffectAmount, item.maxEffectAmount);
+
+////				}
+////for detail
+//				return GenerateNewItems(RareRV);
+//			}
+//			#endregion
 			
 			#region Schema Perc
 			
@@ -324,84 +324,84 @@ public class ItemDatabase : MonoBehaviour
 		{
          
 			Debug.Log("Try get detail items\t\t"+item.itemName);
-			//got from merchant with detail not needs scroll,it load will fixed values
+            //got from merchant with detail not needs scroll,it load will fixed values
 
-//			item = InventorySystem.DeepCopy(item);
-//
-////		if (InventorySystem.instance.identifying == true)
-////		{
-////			Debug.Log("Start identifing und got sab or gem slot");
-////			float rnds = Random.Range(0.0f, 1.0f);
-////			Debug.Log("ROOL POINTS IST" + rnds);
-////			//Check perc
-////			if (rnds > 0.4f)
-////			{
-////				Debug.Log("NORMAL SAB");
-////				int rnd = Random.Range(0, sabList.Count);
-////				for (int i = 0; i < sabList.Count; i++)
-////				{
-////					if (sabList[rnd] == sabList[i])
-////					{
-////						item.sabNames = sabList[rnd].sabName;
-////						item.itemName = item.sabNames + item.itemName;
-////					}
-////
-////				}
-////			}
-////		}
-//
-//			//Stats
-//			item.strength = Random.Range(item.minStrength, item.maxStrength);
-//			item.dexterity = Random.Range(item.minDexterity, item.maxDexterity);
-//			item.magic = Random.Range(item.minMagic, item.maxMagic);
-//
-//			//REsistance
-//			item.fireResistance = Random.Range(item.minFireRes, item.maxFireRes);
-//			item.iceResistance = Random.Range(item.minIceRes, item.maxIceRes);
-//			item.posionResistance = Random.Range(item.minPosionRes, item.maxPosionRes);
-//			item.phyicsResistance = Random.Range(item.minPhyRes, item.maxPhyRes);
-//			item.electronicResistance = Random.Range(item.minElecRes, item.maxElecRes);
-//
-//			//Armor
-//			item.armor = Random.Range(item.minArmor, item.maxArmor);
-//			//damage
-//			item.damage = Random.Range(item.minDamage, item.maxDamage);
-//
-//
-//			//potion
-//			item.healAmount = Random.Range(item.minEffectAmount, item.maxEffectAmount);
+            //			item = InventorySystem.DeepCopy(item);
+            //
+            ////		if (InventorySystem.instance.identifying == true)
+            ////		{
+            ////			Debug.Log("Start identifing und got sab or gem slot");
+            ////			float rnds = Random.Range(0.0f, 1.0f);
+            ////			Debug.Log("ROOL POINTS IST" + rnds);
+            ////			//Check perc
+            ////			if (rnds > 0.4f)
+            ////			{
+            ////				Debug.Log("NORMAL SAB");
+            ////				int rnd = Random.Range(0, sabList.Count);
+            ////				for (int i = 0; i < sabList.Count; i++)
+            ////				{
+            ////					if (sabList[rnd] == sabList[i])
+            ////					{
+            ////						item.sabNames = sabList[rnd].sabName;
+            ////						item.itemName = item.sabNames + item.itemName;
+            ////					}
+            ////
+            ////				}
+            ////			}
+            ////		}
+            //
+            //			//Stats
+            //			item.strength = Random.Range(item.minStrength, item.maxStrength);
+            //			item.dexterity = Random.Range(item.minDexterity, item.maxDexterity);
+            //			item.magic = Random.Range(item.minMagic, item.maxMagic);
+            //
+            //			//REsistance
+            //			item.fireResistance = Random.Range(item.minFireRes, item.maxFireRes);
+            //			item.iceResistance = Random.Range(item.minIceRes, item.maxIceRes);
+            //			item.posionResistance = Random.Range(item.minPosionRes, item.maxPosionRes);
+            //			item.phyicsResistance = Random.Range(item.minPhyRes, item.maxPhyRes);
+            //			item.electronicResistance = Random.Range(item.minElecRes, item.maxElecRes);
+            //
+            //Armor
+            //item.armor = Random.Range(item.minArmor, item.maxArmor);
+            ////damage
+            //item.damage = Random.Range(item.minDamage, item.maxDamage);
 
-			int count=0;
+            //
+            //			//potion
+            //			item.healAmount = Random.Range(item.minEffectAmount, item.maxEffectAmount);
+
+            int count =0;
 			count++;
-if (PlayerPrefs.HasKey("ESTR" + item.itemName + count))
-			{
-				item.strength = PlayerPrefs.GetInt("ESTR" + item.itemName + count);
-			}
-			else
-			{
-				item.strength = Random.Range(item.minStrength, item.maxStrength);
-				PlayerPrefs.SetInt("ESTR_" + item.itemName + count,(Mathf.FloorToInt(item.strength)));
-			}
-			//
-			if (PlayerPrefs.HasKey("EDEX_" + item.itemName + count))
-			{
-				item.dexterity = PlayerPrefs.GetInt("EDEX_" + item.itemName + count);
-			}
-			else
-			{
-				item.dexterity = Random.Range(item.minDexterity, item.maxDexterity);
-				PlayerPrefs.SetInt("EDEX_" + item.itemName + count,(Mathf.FloorToInt(item.dexterity)));
-			}
-			//
-			if (PlayerPrefs.HasKey("EINTE_" + item.itemName + count))
-			{
-				item.strength = PlayerPrefs.GetInt("EINTE_" + item.itemName + count);
-			}
-			else
-			{
-				item.magic = Random.Range(item.minMagic, item.maxMagic);
-				PlayerPrefs.SetInt("EINTE_" + item.itemName + count,(Mathf.FloorToInt(item.magic)));
-			}
+//if (PlayerPrefs.HasKey("ESTR" + item.itemName + count))
+//			{
+//				item.strength = PlayerPrefs.GetInt("ESTR" + item.itemName + count);
+//			}
+//			else
+//			{
+//				item.strength = Random.Range(item.minStrength, item.maxStrength);
+//				PlayerPrefs.SetInt("ESTR_" + item.itemName + count,(Mathf.FloorToInt(item.strength)));
+//			}
+//			//
+//			if (PlayerPrefs.HasKey("EDEX_" + item.itemName + count))
+//			{
+//				item.dexterity = PlayerPrefs.GetInt("EDEX_" + item.itemName + count);
+//			}
+//			else
+//			{
+//				item.dexterity = Random.Range(item.minDexterity, item.maxDexterity);
+//				PlayerPrefs.SetInt("EDEX_" + item.itemName + count,(Mathf.FloorToInt(item.dexterity)));
+//			}
+//			//
+//			if (PlayerPrefs.HasKey("EINTE_" + item.itemName + count))
+//			{
+//				item.strength = PlayerPrefs.GetInt("EINTE_" + item.itemName + count);
+//			}
+//			else
+//			{
+//				item.magic = Random.Range(item.minMagic, item.maxMagic);
+//				PlayerPrefs.SetInt("EINTE_" + item.itemName + count,(Mathf.FloorToInt(item.magic)));
+//			}
 			
 			
 			//REsistance
@@ -435,15 +435,7 @@ if (PlayerPrefs.HasKey("ESTR" + item.itemName + count))
 				PlayerPrefs.SetInt("EPR_" + item.itemName + count,(Mathf.FloorToInt(item.posionResistance)));
 			}
 			//e phy r
-			if (PlayerPrefs.HasKey("EPHR_" + item.itemName + count))
-			{
-				item.phyicsResistance = PlayerPrefs.GetInt("EPHR_" + item.itemName + count);
-			}
-			else
-			{
-				item.phyicsResistance = Random.Range(item.minPhyRes, item.maxPhyRes);
-				PlayerPrefs.SetInt("EPHR_" + item.itemName + count,(Mathf.FloorToInt(item.phyicsResistance)));
-			}
+			
 			
 			//elec re
 			if (PlayerPrefs.HasKey("EER_" + item.itemName + count))
@@ -491,7 +483,7 @@ if (PlayerPrefs.HasKey("ESTR" + item.itemName + count))
 				PlayerPrefs.SetInt("EHEALA_" + item.itemName + count,(Mathf.FloorToInt(item.healAmount)));
 			}
 
-
+			Debug.Log("Load item ::" + item.itemName + "::Done");
 			return item;
 		}
 
@@ -511,36 +503,36 @@ if (PlayerPrefs.HasKey("ESTR" + item.itemName + count))
 			count++;
 			item = InventorySystem.DeepCopy(item);
 
-			//Stats
-			if (PlayerPrefs.HasKey("ESTR" + item.itemName + count))
-			{
-				item.strength = PlayerPrefs.GetInt("ESTR" + item.itemName + count);
-			}
-			else
-			{
-				item.strength = Random.Range(item.minStrength, item.maxStrength);
-				PlayerPrefs.SetInt("ESTR_" + item.itemName + count,(Mathf.FloorToInt(item.strength)));
-			}
-			//
-			if (PlayerPrefs.HasKey("EDEX_" + item.itemName + count))
-			{
-				item.dexterity = PlayerPrefs.GetInt("EDEX_" + item.itemName + count);
-			}
-			else
-			{
-				item.dexterity = Random.Range(item.minDexterity, item.maxDexterity);
-				PlayerPrefs.SetInt("EDEX_" + item.itemName + count,(Mathf.FloorToInt(item.dexterity)));
-			}
-			//
-			if (PlayerPrefs.HasKey("EINTE_" + item.itemName + count))
-			{
-				item.strength = PlayerPrefs.GetInt("EINTE_" + item.itemName + count);
-			}
-			else
-			{
-				item.magic = Random.Range(item.minMagic, item.maxMagic);
-				PlayerPrefs.SetInt("EINTE_" + item.itemName + count,(Mathf.FloorToInt(item.magic)));
-			}
+			////Stats
+			//if (PlayerPrefs.HasKey("ESTR" + item.itemName + count))
+			//{
+			//	item.strength = PlayerPrefs.GetInt("ESTR" + item.itemName + count);
+			//}
+			//else
+			//{
+			//	item.strength = Random.Range(item.minStrength, item.maxStrength);
+			//	PlayerPrefs.SetInt("ESTR_" + item.itemName + count,(Mathf.FloorToInt(item.strength)));
+			//}
+			////
+			//if (PlayerPrefs.HasKey("EDEX_" + item.itemName + count))
+			//{
+			//	item.dexterity = PlayerPrefs.GetInt("EDEX_" + item.itemName + count);
+			//}
+			//else
+			//{
+			//	item.dexterity = Random.Range(item.minDexterity, item.maxDexterity);
+			//	PlayerPrefs.SetInt("EDEX_" + item.itemName + count,(Mathf.FloorToInt(item.dexterity)));
+			//}
+			////
+			//if (PlayerPrefs.HasKey("EINTE_" + item.itemName + count))
+			//{
+			//	item.strength = PlayerPrefs.GetInt("EINTE_" + item.itemName + count);
+			//}
+			//else
+			//{
+			//	item.magic = Random.Range(item.minMagic, item.maxMagic);
+			//	PlayerPrefs.SetInt("EINTE_" + item.itemName + count,(Mathf.FloorToInt(item.magic)));
+			//}
 			
 			
 			//REsistance

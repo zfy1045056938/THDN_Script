@@ -130,11 +130,16 @@ public class TurnManager : MonoBehaviour {
 
             if (p == GlobalSetting.instance.lowPlayer)
             {
+                //Load player
+                //chanlog 123
+                //if have weapon set to common damage card but different to armor card
+                // weapon equals atk card
+                //armor not equals def card und it's  will increase by card effect(Armor)
                 p.LoadCharacterInfoFromAsset();
                 p.AddDungeonBouns();
                 p.LoadStatsFromdata();
-                p.playerArea.playerPortraitVisual.weapon.LoadItems();
-                p.playerArea.playerPortraitVisual.ring.LoadItems();
+                //p.playerArea.playerPortraitVisual.weapon.LoadItems();
+                //p.playerArea.playerPortraitVisual.ring.LoadItems();
                 
                 GlobalSetting.instance.lowPlayer.playerArea.playerPortraitVisual.LoadStatsFromAsset();
                 p.LoadBattleInfo(BattleStartInfo.player);
@@ -146,8 +151,8 @@ public class TurnManager : MonoBehaviour {
              p.LoadEnemyAssetFromVisual(p);
              Debug.Log("Load Enemy Done");
                p.LoadBattleInfoEnemy(BattleStartInfo.SelectEnemyDeck.enemyAsset);
-                   p.playerArea.playerPortraitVisual.weapon.LoadItems();
-                p.playerArea.playerPortraitVisual.ring.LoadItems();
+                //   p.playerArea.playerPortraitVisual.weapon.LoadItems();
+                //p.playerArea.playerPortraitVisual.ring.LoadItems();
              
             }
             
@@ -193,7 +198,13 @@ public class TurnManager : MonoBehaviour {
            Debug.Log(whoGoesSecond);
 
            // draw 4 cards for first player and 5 for second player
-           int initDraw = 4;
+           //changelog 123  ->lastest card module
+           // player deck totally have 20 card(10 customize + 10 common(5+5))
+           // if equipment have init effect , as a card for equipment effect  set to hand in the first round
+           // according to equipment effect it will check effect every the turn step(draw,play,attack,end,next)
+           // the items card can add to discard pool until player call the dp
+           // different to oppenent , extra 
+           int initDraw = 6;    // init draw 6 (3+3+n!)n<=3 -> 9
            for (int i = 0; i < initDraw; i++)
            {
                // second player draws a card

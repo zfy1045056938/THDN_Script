@@ -47,7 +47,8 @@ public class HandVisual:MonoBehaviour{
     /// </summary>
     /// <param name="card">Card.</param>
     public void AddCard(GameObject card){
-        if (CardsInHand.Count <= 6)
+        //TODO 123
+        if (CardsInHand.Count <= 9)
         {
             CardsInHand.Insert(0, card);
             //
@@ -165,8 +166,10 @@ public class HandVisual:MonoBehaviour{
     //6.野外资源可能产生效果
     public void GivePlayerACard(CardAsset c,int uniqueID,bool fast =false,bool fromDeck=true,bool isLimitOfHandCard=false,Transform pos=null,bool fromdis=false){
         GameObject card;
-        Debug.Log(c.name.ToString()+"GIVE Card");
+       
         SoundManager.instance.PlayClipAtPoint(giveCardSound, Vector3.zero, SoundManager.instance.musicVolume, false);
+        //Particle Effect
+        GlobalSetting.instance.drawCardEffect.Play();
         if(fromDeck)    //判断是否来自牌桌还是其他来源
         {
           

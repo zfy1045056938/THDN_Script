@@ -126,7 +126,7 @@ public class Database : MonoBehaviour
     private void ExecuteNonQuery(string sql,params SqliteParameter[] args)
     {
         using (SqliteCommand command = new SqliteCommand(sql, sqlConn))
-        {
+        { 
             foreach (SqliteParameter param in args)
                 command.Parameters.Add(param);
             command.ExecuteNonQuery();

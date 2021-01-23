@@ -91,6 +91,7 @@ public class GlobalSetting : MonoBehaviour
     public GameObject buffIcon;
     public GameObject artifactIcon;
     public GameObject viewEffectPrefab;
+    public GameObject shenshanPrefab;
     
     //1-18
     public GameObject SSObj;
@@ -136,6 +137,17 @@ public class GlobalSetting : MonoBehaviour
     public AudioClip buffClip;
     public AudioClip machineClip;
     public AudioClip bloodyClip;
+
+
+    [Header("Particle System Manager")]
+    public ParticleSystem drawCardEffect;
+    public ParticleSystem burningEffect;
+    public ParticleSystem freezeEffect;
+    public ParticleSystem electronicEffect;
+    public ParticleSystem posionEffect;
+    public ParticleSystem critEffect;
+    public ParticleSystem healEffect;
+    public ParticleSystem bloodEffect;
 
     /// <summary>
     /// Awake this instance.
@@ -311,8 +323,9 @@ LoadCard();
 
     //TOOD 1-18
     // Show panel und active 3  effect util player select
-    public void ShenShanModule(){
-
+    public void ShenShanModule(int defaultNum=3){
+        int round = 0;
+        shenshanPrefab.GetComponent<ShenShanModule>().Init(round,defaultNum);
     }
 
     //Set amount und logs to lp

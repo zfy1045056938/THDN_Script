@@ -24,21 +24,21 @@ public class Items
   public int itemLevel;
 
     [Header("Weapon")]
-    public float strength;
-    public float magic;
-    public float dexterity;
-    [Range(0,10)]
-  public float minStrength;
-  [Range(0,10)]
-public float maxStrength;
-[Range(0, 10)]
-    public float minMagic;
-    [Range(0,10)]
-    public float maxMagic;
-    [Range(0, 10)]
-    public float minDexterity;
-    [Range(0,10)]
-    public float maxDexterity;
+    //public float strength;
+    //public float magic;
+    //public float dexterity;
+//    [Range(0,10)]
+//  public float minStrength;
+//  [Range(0,10)]
+//public float maxStrength;
+//[Range(0, 10)]
+//    public float minMagic;
+//    [Range(0,10)]
+//    public float maxMagic;
+//    [Range(0, 10)]
+//    public float minDexterity;
+//    [Range(0,10)]
+//    public float maxDexterity;
     [Range(0, 100)]
     public int itemHeavy;
   

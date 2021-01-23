@@ -38,7 +38,8 @@ public class DrawACardCommand : Command {
     {
         //sound
         SoundManager.instance.PlaySound(GlobalSetting.instance.drawClip);
-        if (p.hand.CardInHand.Count <= 6)
+        //TODO 123
+        if (p.hand.CardInHand.Count <= 9)
         {
             if (fromDeck)
             {

@@ -45,7 +45,7 @@ public class PlayerData : Entity
     public List<EquipmentSlot> equipSlot;
     private CardCollection cardCollection;
     
-    public RoleUpgradeConfigData info;
+    //public RoleUpgradeConfigData info;
 
     private ItemManager ItemManager;
       //Bind Info
@@ -81,33 +81,7 @@ public class PlayerData : Entity
         this.isActive = isActive;
     }
 
-    public PlayerData(int strength, int dex, int magic, int fR, int iR, int pR,  int phyR, int damage, int weaponDef, int armorDef, int weaponDur, int armorDur,List<EquipmentSlot>slots)
-    {
-        Strength = strength;
-        Strength = strength;
-        Dex = dex;
-        Dex = dex;
-        Magic = magic;
-        Magic = magic;
-       
-        FR = fR;
-        
-        IR = iR;
-       
-        PR = pR;
-       
-        PhyR = phyR;
-        this.damage = damage;
-        WeaponDef = weaponDef;
-       
-        ArmorDef = armorDef;
-       
-        atkCount = weaponDur;
-       
-        ArmorDur = armorDur;
-      
-        this.equipSlot=new List<EquipmentSlot>(slots);
-    }
+    
 
     #region PlayerStat
 
@@ -270,44 +244,7 @@ public class PlayerData : Entity
         _special=Mathf.Max(value,0);
     } }
     //////////////////////////////RPG//////////////////////////////////
-    private int strength=0;
-
-    [SerializeField]
-    public int Strength
-    {
-        get{
-          
-            return strength;}
-        set{
-            
-                strength = value;
-           
-        }
-        
-    }
-
-    private int dex;
-
-    [SerializeField]
-    public int Dex
-    {
-        get { return dex; }
-        set { dex = value; }
-            
-           
-            }
-    
-
-    private int magic;
-
-    [SerializeField]
-    public int Magic
-    {
-        get { return magic; }
-        set {
-            
-             magic = value; }
-    }
+    #region Resistance Module
     private int fr;
 
     [SerializeField]
@@ -348,15 +285,12 @@ private int er;
         get { return pr; }
         set { pr = value; }
     }
-    private int phyr;
 
-    [SerializeField]
-    public int PhyR
-    {
-        get { return phyr; }
-        set { phyr = value; }
-    }
-   
+
+    #endregion
+
+
+
     // private int def;
 
     // [SerializeField]
@@ -526,10 +460,10 @@ public static PlayerData localPlayer;
 
     protected override void UpdaetClient()
     {
-//        if (state == "IDLE")
-//        {
-//            SelectHandling();
-//        }
+        //
+        Debug.Log("====Upate Client Module====");
+
+        Utils.InvokeMany(typeof(PlayerData), this, "UpdateServer_");
     }
 
 
@@ -559,40 +493,35 @@ public static PlayerData localPlayer;
             
                 onlinePlayers[name] = this;
 
-             
-
-            Debug.Log("Player Name In Server is"+name);
-          
-            //
             Utils.InvokeMany(typeof(PlayerData),this,"Start_");
         }
 
     //
 
     public void UpdateInfo(){
-        if(Strength>=3){
-            atk+= Mathf.FloorToInt(Strength/3);
-        }
-        if(Dex>=3){
-            int ed=0;
-            float edp=0.0f;
-            //has extra
-                ed= Mathf.RoundToInt(Dex/3);
-                edp = Dex/3.0f/100;
-                armorDef +=ed;
-           //flash
-           extraFlash = 0.3f + edp;
-        }
-        if( Magic >=3){
-            int esd= 0;
-            float esdp =0.0f;
+        //if(Strength>=3){
+        //    atk+= Mathf.FloorToInt(Strength/3);
+        //}
+        //if(Dex>=3){
+        //    int ed=0;
+        //    float edp=0.0f;
+        //    //has extra
+        //        ed= Mathf.RoundToInt(Dex/3);
+        //        edp = Dex/3.0f/100;
+        //        armorDef +=ed;
+        //   //flash
+        //   extraFlash = 0.3f + edp;
+        //}
+        //if( Magic >=3){
+        //    int esd= 0;
+        //    float esdp =0.0f;
             
-                esd = Mathf.RoundToInt(Magic/3);
-                esdp = Magic/3.0f/100;
+        //        esd = Mathf.RoundToInt(Magic/3);
+        //        esdp = Magic/3.0f/100;
             
-           extraSpellDamage =1;
-           ESDPerc = 0.4f + esdp;
-        }
+           //extraSpellDamage =1;
+           //ESDPerc = 0.4f + esdp;
+        //}
         
     }
  
@@ -733,51 +662,4 @@ Items itemss = ItemDatabase.instance.FindItem(int.Parse(item));
 
 
 
-    #region Move Module
-
-    public void SelectHandling()
-    {
-        if (Input.GetMouseButtonDown(0) && Input.touchCount <= 1)
-        {
-            Ray ray;
-            RaycastHit2D hit=Physics2D.Raycast(transform.position, Camera.main.WorldToScreenPoint(Input.mousePosition));
-
-            bool cast = hit;
-
-            if (cast)
-            {
-                Debug.Log("Move Module");
-                //target logic
-                Entity entity = hit.transform.GetComponent<Entity>();
-                if (entity)
-                {
-                    if (entity is Monster )
-                    {
-                        BattleStartInfo.SelectEnemyDeck.cards = entity.cardList;
-                        BattleStartInfo.SelectEnemyDeck.enemyAsset = GetComponent<Monster>().enemyAsset;
-                        //
-                        DungeonUIManager.instance.battleConfigPanel.gameObject.SetActive(true);
-                        BattleConfigManager.instance.LoadConfig();
-                        Debug.Log("U Click Monster");
-                    }
-                }
-                else
-                {
-                    Debug.Log("Move");
-                    Vector3 bestDestination = agent.NearestValidDestination(hit.point);
-                    
-                }
-            }
-           
-        }
-    }
-
-
-    void OnMouseDown()
-    {
-        Debug.Log("U Click the object");
-    }
-    
-
-    #endregion
 }

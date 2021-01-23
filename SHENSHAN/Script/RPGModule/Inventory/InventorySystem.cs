@@ -212,37 +212,7 @@ public float slotIconSize = 39f;					//Size of the icons
 			}
 
 			
-			//Add the amount of slots we want
-//			for (int i = 0; i < inventoryWidth * inventoryHeight; i++)
-//			{
-//				GameObject slot = Instantiate(slotPrefab) as GameObject;
-//				slot.transform.SetParent(inventorySlots);
-//				slot.name = i.ToString();
-//				slot.transform.localScale = Vector3.one;
-//
-//				//
-//				InventorySlot inventorySlot = slot.GetComponent<InventorySlot>();
-//
-//				//
-//				inventorySlot.item = new Items();
-//				inventorySlot.item.itemName = "";
-//				inventorySlot.itemStartNumber = i;
-//				items.Add(inventorySlot);
-//
-//			}
-//
-//			//Get the grid component of the inventory slot transform
-//			GridLayoutGroup grid = GetComponentInChildren<GridLayoutGroup>();
-//			//Set the amount of coloumns equal to the width of the inventory
-//			grid.constraintCount = inventoryWidth;
-//			//Set the size of the slots equal to the slot size
-//			grid.cellSize = new Vector2(slotIconSize, slotIconSize);
-//			//Reset all the names of the equipment slots
-//			for (int i = 0; i < equipmentSlots.Count; i++)
-//			{
-//				equipmentSlots[i].item = new Items();
-//				equipmentSlots[i].item.itemName = "";
-//			}
+		
 
 			//
 			player.equipSlot = equipmentSlots;
@@ -1572,12 +1542,12 @@ public void RemoveSet(){
                    }
 
                }
-               //right -> 0 to start identify
+               //::REMOVE FEATURE::
                if(identifying)
                {
 	               identifyObj.gameObject.SetActive(true);
                     if(slot.item.unidentified){
-                        IdentifyItem(slot);
+                        //IdentifyItem(slot);
                     }
                }
                else if(dragging)
@@ -1819,20 +1789,20 @@ public void RemoveSet(){
 		if (item != null && player != null)
 		{
 			//Check Data
-			if (item.strength != 0)
-			{
-				player.Strength +=Mathf.FloorToInt(item.strength);
-			}
+			//if (item.strength != 0)
+			//{
+			//	player.Strength +=Mathf.FloorToInt(item.strength);
+			//}
 
-			if (item.dexterity != 0)
-			{
-				player.Dex += Mathf.FloorToInt(item.dexterity);
-			}
+			//if (item.dexterity != 0)
+			//{
+			//	player.Dex += Mathf.FloorToInt(item.dexterity);
+			//}
 
-			if (item.magic != 0)
-			{
-				player.Magic += Mathf.FloorToInt(item.magic);
-			}
+			//if (item.magic != 0)
+			//{
+			//	player.Magic += Mathf.FloorToInt(item.magic);
+			//}
 			
 			//Resistance
 			if (item.fireResistance != 0)
@@ -1912,10 +1882,10 @@ public void RemoveSet(){
 		//
 		if (player != null)
 		{
-			player.Strength -= Mathf.FloorToInt(item.strength);
-			player.Dex -= Mathf.FloorToInt(item.dexterity);
-			player.Magic -= Mathf.FloorToInt(item.magic);
-			//
+			//player.Strength -= Mathf.FloorToInt(item.strength);
+			//player.Dex -= Mathf.FloorToInt(item.dexterity);
+			//player.Magic -= Mathf.FloorToInt(item.magic);
+			////
 			player.FR -= item.fireResistance;
 			player.IR -= item.iceResistance;
 			player.PR -= item.posionResistance;
@@ -2007,14 +1977,14 @@ public void RemoveSet(){
 		if (player != null && oItem != null && nItem != null)
 		{
 			
-				player.Dex = Mathf.RoundToInt(player.Dex - nItem.dexterity + oItem.dexterity);
-				player.Strength = Mathf.RoundToInt(player.Strength - nItem.strength + oItem.strength);
-				player.Magic = Mathf.RoundToInt(player.Magic - nItem.magic + oItem.magic);
-				//
-				player.FR = Mathf.RoundToInt(player.FR - nItem.magic + oItem.magic);
-				player.IR = Mathf.RoundToInt(player.IR - nItem.iceResistance + oItem.iceResistance);
-				player.PR = Mathf.RoundToInt(player.PR - nItem.posionResistance + oItem.posionResistance);
-				player.PhyR = Mathf.RoundToInt(player.PhyR - nItem.phyicsResistance + oItem.phyicsResistance);
+				//player.Dex = Mathf.RoundToInt(player.Dex - nItem.dexterity + oItem.dexterity);
+				//player.Strength = Mathf.RoundToInt(player.Strength - nItem.strength + oItem.strength);
+				//player.Magic = Mathf.RoundToInt(player.Magic - nItem.magic + oItem.magic);
+				////
+				player.FR = Mathf.RoundToInt(player.FR );
+				player.IR = Mathf.RoundToInt(player.IR );
+				player.PR = Mathf.RoundToInt(player.PR );
+				//player.PhyR = Mathf.RoundToInt(player.PhyR - nItem.phyicsResistance + oItem.phyicsResistance);
 				
 				//
 				player.atk = Mathf.RoundToInt(player.atk - nItem.damage + oItem.damage);
@@ -2132,47 +2102,47 @@ public void RemoveSet(){
 	}
 
 	//Identify the item
-	public void IdentifyItem(InventorySlot slot) {
+//	public void IdentifyItem(InventorySlot slot) {
 		
 		
-//		RemoveItemFromSlot(slot);
-		//Generate Items
-	   Items newItems=ItemDatabase.instance.GenerateItem(slot.item,false,true);
-	   		RemoveItemFromSlot(slot);
-		slot.item =newItems;
-		slot.item.icon = newItems.icon;
-		//
-		if (AddItem(DeepCopy(slot.item)))
-		{
-			ItemDatabase.instance.FindItem(int.Parse(slot.item.itemID));
-		}
+////		RemoveItemFromSlot(slot);
+//		//Generate Items
+//	   Items newItems=ItemDatabase.instance.GenerateItem(slot.item,false,true);
+//	   		RemoveItemFromSlot(slot);
+//		slot.item =newItems;
+//		slot.item.icon = newItems.icon;
+//		//
+//		if (AddItem(DeepCopy(slot.item)))
+//		{
+//			ItemDatabase.instance.FindItem(int.Parse(slot.item.itemID));
+//		}
 		
-		//Run through all the slots that the item fills and remove the unidentified flag from them
-		for(int i = 0; i < slot.item.height; i++) {
-			for(int j = 0; j < slot.item.width; j++) {
-				items[slot.itemStartNumber + inventoryWidth * i + j].item.unidentified = false;
-			}
-		}
-		//hide identify icon
-		items[slot.itemStartNumber].itemImage.color = Color.white;
-		items[slot.itemStartNumber].unidentfied.gameObject.SetActive(false);
-		//Generate Items
-//		ItemDatabase.instance.GenerateItem(slot.item,false,true);
-		//
-		identifying = false;
-//		identifyingScrollOrignalSlot.item.stackSize--;
-//		identifyingScrollOrignalSlot.stackSizeText.text = identifyingScrollOrignalSlot.item.stackSize.ToString();
-		//CursorManager.ChangeCursor("Default");
-		RemoveItemFromSlot(identifyingScrollOrignalSlot);
+//		//Run through all the slots that the item fills and remove the unidentified flag from them
+//		for(int i = 0; i < slot.item.height; i++) {
+//			for(int j = 0; j < slot.item.width; j++) {
+//				items[slot.itemStartNumber + inventoryWidth * i + j].item.unidentified = false;
+//			}
+//		}
+//		//hide identify icon
+//		items[slot.itemStartNumber].itemImage.color = Color.white;
+//		items[slot.itemStartNumber].unidentfied.gameObject.SetActive(false);
+//		//Generate Items
+////		ItemDatabase.instance.GenerateItem(slot.item,false,true);
+//		//
+//		identifying = false;
+////		identifyingScrollOrignalSlot.item.stackSize--;
+////		identifyingScrollOrignalSlot.stackSizeText.text = identifyingScrollOrignalSlot.item.stackSize.ToString();
+//		//CursorManager.ChangeCursor("Default");
+//		RemoveItemFromSlot(identifyingScrollOrignalSlot);
 		
 		
-		//
-		identifyObj.gameObject.SetActive(false);
-		//updates the tooltip
-		OnMouseEnter(slot.gameObject);
-		//
-		Canvas.ForceUpdateCanvases();
-	}
+//		//
+//		identifyObj.gameObject.SetActive(false);
+//		//updates the tooltip
+//		OnMouseEnter(slot.gameObject);
+//		//
+//		Canvas.ForceUpdateCanvases();
+//	}
 
 	//Called when the mouse enters a slot
 	public void OnMouseEnter(GameObject obj) {

@@ -350,7 +350,7 @@ public class Players : MonoBehaviour, ICharacter
 
         ++manaThisTurn;
         manaLeft = manaThisTurn;
-        //Shenshan Modle 1-18
+        //TODO 123
         if(TurnManager.instance.whoseTurn.manaLeft >=7){
             GlobalSetting.instance.ShenShanModule();
         }
@@ -453,9 +453,41 @@ public void LoadBattleInfoEnemy(EnemyAsset e){
         {
             if (hand.CardInHand.Count < playerArea.handVisual.slots.children.Length)
             {
+
+                //TODO123 Draw Logic
+                //common hand have 6 common + 4 customize every draw needs check the hand state if
+                // common >=6 then draw diy
+                var commonHand = hand.CardInHand.FindAll(ci => ci.card.typeOfCards == TypeOfCards.Common);
+
+                //effect Card
+                var EC = deck.cards.FindAll(ec => ec.typeOfCards != TypeOfCards.Common);
+
+                var CC = deck.cards.FindAll(ec => ec.typeOfCards == TypeOfCards.Common);
+
+                //
                 // 1) logic: add card to hand
-                CardLogic newCard = new CardLogic(this, deck.cards[0]);
-                Debug.Log("Get Card "+newCard.card.name.ToString());
+                CardLogic newCard = null;
+                if (commonHand.Count <= 6 && manaLeft==0)
+                {
+                    //
+                    Debug.Log("Draw Common Card");
+                    CardLogic nc = new CardLogic(this, CC[0]);
+                    newCard = nc;
+                }
+                else if(commonHand.Count>=6  && manaLeft==0)
+                {
+
+                    Debug.Log("Draw Effect card");
+                    CardLogic nc = new CardLogic(this, EC[0]);
+                    newCard = nc;
+                }else
+                {
+                    Debug.Log("Draw card");
+                    CardLogic nc = new CardLogic(this, deck.cards[0]);
+                    newCard = nc;
+
+                }
+
                 hand.CardInHand.Insert(0, newCard);
                 // Debug.Log(hand.CardInHand.Count);
                 // 2) logic: remove the card from the deck
@@ -981,9 +1013,9 @@ public void LoadBattleInfoEnemy(EnemyAsset e){
         if (playerData != null)
         {
             //load data from data
-            STR = playerData.Strength;
-            DEX =playerData.Dex;
-            INTE=playerData.Magic;
+            //STR = playerData.Strength;
+            //DEX =playerData.Dex;
+            //INTE=playerData.Magic;
 
             FR= playerData.FR;
             IR =playerData.IR;

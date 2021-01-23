@@ -68,6 +68,12 @@ public class CardLogic : IIdentifiable
 
       
         ResetManaCost();
+
+
+        //Init Card
+        //TODO 123
+
+        GotCommon(ca);
         
         
         Debug.Log("PRE LOAD SPN"+ca.spellScriptName);
@@ -95,7 +101,9 @@ public class CardLogic : IIdentifiable
 
       
         ResetManaCost();
-      
+
+        GotCommon(ca);
+        //
         if (ca.spellScriptName != null && card.spellScriptName != "")
         {
             spellEffect = System.Activator.CreateInstance(System.Type.GetType(ca.spellScriptName)) as SpellEffect;
@@ -119,7 +127,37 @@ public class CardLogic : IIdentifiable
     {
         
     }
-   
+
+    void GotCommon(CardAsset ca)
+    {
+
+
+        if (ca.typeOfCards == TypeOfCards.Common)
+        {
+            //Set stat to cv
+            var ps = TurnManager.instance.WhoseTurn;
+
+            if (ps)
+            {
+                if (ca.spellBuffType == SpellBuffType.Atk)
+                {
+                    //Common=>Damage Card
+                    ca.SpecialSpellAmount = ps.CreatureAtk;
+                }
+                else if (ca.spellBuffType == SpellBuffType.Armor)
+                {
+                    //Common=>Armor Card
+                    ca.SpecialSpellAmount = ps.CreatureDef;
+                }
+            }
+            else
+            {
+                Debug.Log("Can't found players");
+            }
+        }
+
+    }
+
 
     /// <summary>
     /// Compares to.

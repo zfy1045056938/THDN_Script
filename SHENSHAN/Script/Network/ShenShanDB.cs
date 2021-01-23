@@ -44,11 +44,11 @@ public partial class ShenShanDB : MonoBehaviour
         public int level { get; set; }
         public int health { get; set; }
         public int mana { get; set; }
-        public int strength { get; set; }
-        public int intelligence { get; set; }
+        //public int strength { get; set; }
+        //public int intelligence { get; set; }
         public int extraSpellDamage { get; set; }
         public float esdPerc { get; set; }
-        public int dex { get; set; }
+        //public int dex { get; set; }
         public float flashPerc { get; set; }
         public int damage { get; set; }
         public int damageDur { get; set; }
@@ -351,12 +351,12 @@ public partial class ShenShanDB : MonoBehaviour
                 player.className          = row.classname;
                 Vector3 position          = new Vector3(row.x, row.y, row.z);
                 player.PlayerLevel              = Mathf.Min(row.level, player.maxLevel); // limit to max level in case we changed it
-                player.Strength           = row.strength;
+                //player.Strength           = row.strength;
                 player.extraFlash         = row.flashPerc;
-                player.Magic               = row.intelligence;
+                //player.Magic               = row.intelligence;
                 player.extraSpellDamage    = row.extraSpellDamage;
                 player.ESDPerc             = row.esdPerc;
-                player.Dex                 =row.dex;
+                //player.Dex                 =row.dex;
                 
 
                 player.experience         = row.experience;
@@ -417,11 +417,11 @@ public partial class ShenShanDB : MonoBehaviour
             level = player.PlayerLevel,
             health = player.playerHealth,
             mana = player.mana,
-            strength = player.Strength,
-            intelligence = player.Magic,
+            //strength = player.Strength,
+            //intelligence = player.Magic,
             extraSpellDamage=player.extraSpellDamage,
             esdPerc = player.ESDPerc,
-            dex =player.Dex,
+            //dex =player.Dex,
             flashPerc=player.extraFlash,
             damage = player.atk,
             damageDur = player.atkCount,

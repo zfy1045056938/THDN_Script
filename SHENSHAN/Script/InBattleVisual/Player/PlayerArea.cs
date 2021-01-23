@@ -16,7 +16,7 @@ public class PlayerArea:MonoBehaviour
         public HandVisual handVisual;    //手部
         public PlayerPortraitVisual playerPortraitVisual;   //英雄
         public HeroPowerBtn heroPowerBtn;   //英雄技能
-     public CastleManager castleManager;  //城堡
+     //public CastleManager castleManager;  //城堡
     //public WorkerManager workerManager;   //工人
     public TableVisual tableVisual;         
         public Transform portraitPosition;
