@@ -197,18 +197,7 @@ public class TooltipManager3 : MonoBehaviour
       if (item.itemRatity != ItemRatity.Normal && item.itemRatity != ItemRatity.Junk)
       {
         
-         if (item.strength > 0)
-         {
-            gtt +="\t\t+"+ item.strength + "力量\n\n";
-         }
-         if (item.dexterity > 0)
-         {
-            gtt += "\t\t+" + item.dexterity + "敏捷\n\n";
-         }
-         if (item.magic > 0)
-         {
-               
-         }
+        
          if (item.fireResistance > 0)
          {
                

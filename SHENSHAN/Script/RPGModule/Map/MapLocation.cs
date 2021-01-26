@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using DungeonArchitect;
-using DungeonArchitect.Graphs;
+// using DungeonArchitect;
+// using DungeonArchitect.Graphs;
 using UnityEngine;
 
 
@@ -16,40 +16,7 @@ public class MapLocation
 {
     public MapLocation(){}
 
-    public MapLocation(string locationID, string locationName, string locationDetail,
-     EnemyAsset[] npcList, bool islock, bool isLock, Sprite locationBG, 
-     TownType townType, float itemPriceflow, bool hasCrash, bool isDungeon, 
-     int minLevel, int maxLevel, bool hasEvent, List<EnemyAsset> enemyList,
-      QuestInfos[] events, Graph dungeonTheme, bool hasBoss, EnemyAsset bossAsset,
-       EnemyAsset[] bossList, List<string> itemList, DungeonType dungeonType, int needsKill
-      )
-    {
-        this.locationID = locationID;
-        this.locationName = locationName;
-        this.locationDetail = locationDetail;
-        this.npcList = npcList;
-        _islock = islock;
-        this.isLock = isLock;
-        this.locationBG = locationBG;
-        this.townType = townType;
-        this.itemPriceflow = itemPriceflow;
-        this.hasCrash = hasCrash;
-        this.isDungeon = isDungeon;
-        this.minLevel = minLevel;
-        this.maxLevel = maxLevel;
-        this.hasEvent = hasEvent;
-        this.enemyList = enemyList;
-        this.events = events;
-        this.dungeonTheme = dungeonTheme;
-        this.hasBoss = hasBoss;
-        this.bossAsset = bossAsset;
-        this.bossList = bossList;
-        this.itemList = itemList;
-        this.dungeonType = dungeonType;
-        NeedsKill = needsKill;
     
-    }
-
     public string locationID;
  public string locationName;
  public string locationScene;
@@ -76,8 +43,6 @@ public class MapLocation
  public List<EnemyAsset> enemyList;
  public List<Vector3> enemyPos;
  public QuestInfos[] events;
- 
- public Graph dungeonTheme;
  
  public Vector3 camPos;
  public EnemyAsset camObj;

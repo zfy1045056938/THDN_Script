@@ -67,7 +67,7 @@ public Button deleteBtn;
          {
              CharactersAvailableMsg.CharacterPreview[] cs = manager.charactersAvailableMsg.characters;
              
-             startBtn.interactable=(manager.selection!=-1);
+             startBtn.interactable=(cs.Length>0);
 //             startBtn.onClick.AddListener(() =>
 //             {
 //                 ClientScene.Ready(NetworkClient.connection);
@@ -127,7 +127,7 @@ ls.LoadSceneWait();
 
               ClientScene.Ready(NetworkClient.connection);
               //
-              NetworkClient.connection.Send(new CharacterSelectMsg {index = manager.selection});
+              NetworkClient.connection.Send(new CharacterSelectMsg {index =0});
  
               manager.ClearPreviews();
            }

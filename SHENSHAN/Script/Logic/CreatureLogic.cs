@@ -189,23 +189,7 @@ public event VoidWithNoArugment CreatureAtkEvent;
         this.owner = owner;
         this.card = ca;
 
-        if(TurnManager.instance.WhoseTurn.STR%3==0){
-            healthBouns = Mathf.FloorToInt(TurnManager.instance.WhoseTurn.STR/3);
-             atkBouns = Mathf.FloorToInt(TurnManager.instance.WhoseTurn.DEX/3);
-            baseHealth = ca.cardHealth+healthBouns;
-            baseAtk = ca.cardAtk+atkBouns;
-        }else{
-              baseHealth = ca.cardHealth;
-            baseAtk = ca.cardAtk;
-        }
-
-
-        if(TurnManager.instance.WhoseTurn.DEX%3==0){
-            armorBouns = Mathf.FloorToInt(TurnManager.instance.WhoseTurn.INTE/3);
-        baseDef = ca.cardDef+armorBouns;
-        }else{
-            baseDef = ca.cardDef; 
-        }
+       
         
 
         //

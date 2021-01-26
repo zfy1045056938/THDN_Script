@@ -503,10 +503,10 @@ public float slotIconSize = 39f;					//Size of the icons
 //                dragStackText.gameObject.SetActive(false);
 //            }
 
-
-            if(Input.GetMouseButtonDown(1)){
-                ReturnDraggedItem();
-            }
+			//TODO 21.1.26 removed dragged action 
+            //if(Input.GetMouseButtonDown(1)){
+            //    ReturnDraggedItem();
+            //}
         }
 
         //If the player is currently identifying an item
@@ -653,12 +653,12 @@ public float slotIconSize = 39f;					//Size of the icons
 
 								
 								//The item is unidentified
-								if(item.unidentified)
-								{
-									items[i + inventoryWidth * l + m].itemImage.color = Color.red;
-									items[i + inventoryWidth * l + m].unidentfied.gameObject.SetActive(true);
-									PlayerPrefsX.SetBool("Unid_"+item.itemName,true);
-								}
+								//if(item.unidentified)
+								//{
+								//	items[i + inventoryWidth * l + m].itemImage.color = Color.red;
+								//	items[i + inventoryWidth * l + m].unidentfied.gameObject.SetActive(true);
+								//	PlayerPrefsX.SetBool("Unid_"+item.itemName,true);
+								//}
 								
 								//
 							}
@@ -745,11 +745,11 @@ public float slotIconSize = 39f;					//Size of the icons
 								PlayerPrefs.SetInt("ItemHeight"+"_"+i+"_"+item.itemID,item.height);
 
 								//If the item is unidentified
-								if(item.unidentified) {
-									items[i + inventoryWidth * l + m].itemImage.color = Color.red;
-									items[i + inventoryWidth * l + m].unidentfied.gameObject.SetActive(true);
-									PlayerPrefsX.SetBool("Unid_"+item.itemName,true);
-								}
+								//if(item.unidentified) {
+								//	items[i + inventoryWidth * l + m].itemImage.color = Color.red;
+								//	items[i + inventoryWidth * l + m].unidentfied.gameObject.SetActive(true);
+								//	PlayerPrefsX.SetBool("Unid_"+item.itemName,true);
+								//}
 								//If the item is stackable
 								if(item.stackable) {
 									items[i + inventoryWidth * l + m].stackSizeText.gameObject.SetActive(true);
@@ -950,35 +950,35 @@ public float slotIconSize = 39f;					//Size of the icons
 //		}
 //when player equip item must set und add set state with player
 // 
-		if(item.hasSet==true){
-			player.hasSet=true;
-			hasSet=true;
-			int tmpSno = 0;
-			//
-			string tmpSetName = item.setName;
-			PlayerPrefs.SetString("PlayerSetName",item.setName);
-			for(int i=0;i<equipmentSlots.Count;i++){
-				if(equipmentSlots[i].item.setName==tmpSetName){
-						tmpSno++;
-						if(tmpSno==2){
-							setNum=tmpSno;
-							setName = tmpSetName;
-							//Active target SetDetail1
-							SetSetDetail(tmpSetName,2);
-							PlayerPrefs.SetInt("PlayerSetNum",setNum);
-							PlayerPrefs.SetString("PlayerSetName",setName);
-						}
-						//
+//		if(item.hasSet==true){
+//			player.hasSet=true;
+//			hasSet=true;
+//			int tmpSno = 0;
+//			//
+//			string tmpSetName = item.setName;
+//			PlayerPrefs.SetString("PlayerSetName",item.setName);
+//			for(int i=0;i<equipmentSlots.Count;i++){
+//				if(equipmentSlots[i].item.setName==tmpSetName){
+//						tmpSno++;
+//						if(tmpSno==2){
+//							setNum=tmpSno;
+//							setName = tmpSetName;
+//							//Active target SetDetail1
+//							SetSetDetail(tmpSetName,2);
+//							PlayerPrefs.SetInt("PlayerSetNum",setNum);
+//							PlayerPrefs.SetString("PlayerSetName",setName);
+//						}
+//						//
 						
-						if(tmpSno==3){
-							setNum=tmpSno;
-							//Active targe SetDetail2
-SetSetDetail(tmpSetName,3);
-PlayerPrefs.SetInt("PlayerSetNum",setNum);
-						}
-				}
-			}
-		}
+//						if(tmpSno==3){
+//							setNum=tmpSno;
+//							//Active targe SetDetail2
+//SetSetDetail(tmpSetName,3);
+//PlayerPrefs.SetInt("PlayerSetNum",setNum);
+//						}
+//				}
+//			}
+//		}
 	}
 
 #region 套装配置
@@ -1678,6 +1678,7 @@ public void RemoveSet(){
 					// 	Debug.Log("Start Conversation"+slot.item.covName.ToString());
 					// 	DialogueManager.StartConversation(slot.item.covName);
 					// }
+
 		                //Equip Items
 		                if (RequiredEquip(slot.item))
 		                {

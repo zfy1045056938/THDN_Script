@@ -318,17 +318,17 @@ public class PlayerPortraitVisual:MonoBehaviour
     {
         atkText.text = TurnManager.instance.WhoseTurn.CreatureAtk.ToString();
         defText.text = TurnManager.instance.WhoseTurn.CreatureDef.ToString();
-        atkDurText.text = TurnManager.instance.WhoseTurn.atkDur.ToString();
+        // atkDurText.text = TurnManager.instance.WhoseTurn.atkDur.ToString();
 
-        if (TurnManager.instance.WhoseTurn.atkDur > 0)
-        {
+        // if (TurnManager.instance.WhoseTurn.atkDur > 0)
+        // {
             
-            WeaponImage.gameObject.SetActive(true);
-        }
-        else
-        {
-            WeaponImage.gameObject.SetActive(false);
-        }
+        //     WeaponImage.gameObject.SetActive(true);
+        // }
+        // else
+        // {
+        //     WeaponImage.gameObject.SetActive(false);
+        // }
 
         if (TurnManager.instance.WhoseTurn.CreatureDef > 0)
         {
@@ -406,28 +406,28 @@ public class PlayerPortraitVisual:MonoBehaviour
             }
 
             //
-            if(BattleStartInfo.player.Strength>0){
-            STRObj.gameObject.SetActive(true);
-            StrText.text= BattleStartInfo.player.Strength.ToString();
-            }else{
-                STRObj.gameObject.SetActive(false);
-            }
-            if(BattleStartInfo.player.Strength>0){
-            DEXObj.gameObject.SetActive(true);
-            DexText.text = BattleStartInfo.player.Dex.ToString();
-            FlashPercText.text=BattleStartInfo.player.extraFlash*100+"%";
-            }else{
-                DEXObj.gameObject.SetActive(false);
-            }
+            // if(BattleStartInfo.player.Strength>0){
+            // STRObj.gameObject.SetActive(true);
+            // StrText.text= BattleStartInfo.player.Strength.ToString();
+            // }else{
+            //     STRObj.gameObject.SetActive(false);
+            // }
+            // if(BattleStartInfo.player.Strength>0){
+            // DEXObj.gameObject.SetActive(true);
+            // DexText.text = BattleStartInfo.player.Dex.ToString();
+            // FlashPercText.text=BattleStartInfo.player.extraFlash*100+"%";
+            // }else{
+            //     DEXObj.gameObject.SetActive(false);
+            // }
 
-            if(BattleStartInfo.player.Magic>0){
-            INTEObj.gameObject.SetActive(true);
-            InteText.text=BattleStartInfo.player.Magic.ToString();
-            ExtraSDText.text = BattleStartInfo.player.extraSpellDamage.ToString();
-            // ExtraSDPercText.text=BattleStartInfo.player.ESDPerc*100+"%";
-            }else{
-                INTEObj.gameObject.SetActive(false);
-            }
+            // if(BattleStartInfo.player.Magic>0){
+            // INTEObj.gameObject.SetActive(true);
+            // InteText.text=BattleStartInfo.player.Magic.ToString();
+            // ExtraSDText.text = BattleStartInfo.player.extraSpellDamage.ToString();
+            // // ExtraSDPercText.text=BattleStartInfo.player.ESDPerc*100+"%";
+            // }else{
+            //     INTEObj.gameObject.SetActive(false);
+            // }
             // if(TurnManager.instance.WhoseTurn.hurtDef>0){
             //     ArmorSprite.sprite=HurtDefSprite;
             // }

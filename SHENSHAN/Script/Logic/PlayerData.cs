@@ -10,8 +10,6 @@ using Random = System.Random;
 using Mirror;
 using System.Linq;
 using DG.Tweening;
-using DungeonArchitect.Samples.GridFlow;
-using Mirror.Examples.Pong;
 using PixelCrushers.DialogueSystem;
 using UnityEngine.AI;
 

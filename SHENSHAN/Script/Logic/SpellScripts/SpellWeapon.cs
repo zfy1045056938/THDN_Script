@@ -8,7 +8,7 @@ public class SpellWeapon : SpellEffect
   {
     SoundManager.instance.PlaySound(GlobalSetting.instance.weaponClip);
     TurnManager.instance.WhoseTurn.CreatureAtk += specialAmount;
-    TurnManager.instance.WhoseTurn.atkDur += 2;
+    // TurnManager.instance.WhoseTurn.atkDur += 2;
     TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.BUpdateV();
   }
 }

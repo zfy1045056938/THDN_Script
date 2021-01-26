@@ -26,14 +26,15 @@ public class LoadCharacterByName :  MonoBehaviour {
     }
 
     
-    
+    //
     void LoadCharacter()
     {
         List<GDECharacterAssetData> allCharacter = GDEDataManager.GetAllItems<GDECharacterAssetData>();
                             for(int i=0; i<allCharacter.Count;i++ ){
                                 CharacterAsset ca = new CharacterAsset(
               GetCharacterJob(allCharacter[i].PlayersJob),allCharacter[i].ClassName,
-              allCharacter[i].MaxHealth,allCharacter[i].PowerName,GenerateSprite(allCharacter[i].AvatarImage),allCharacter[i].Detail,GenerateSprite(allCharacter[i].BGSprite));
+              allCharacter[i].MaxHealth,allCharacter[i].PowerName,GenerateSprite(allCharacter[i].AvatarImage),
+              allCharacter[i].Detail,GenerateSprite(allCharacter[i].BGSprite),allCharacter[i].AttackCard,allCharacter[i].ArmorCard);
             if (!allDic.ContainsKey(ca.className))
             {
                 Debug.Log(ca.className+"classes names");

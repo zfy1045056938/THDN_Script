@@ -126,7 +126,7 @@ public class Database : MonoBehaviour
     private void ExecuteNonQuery(string sql,params SqliteParameter[] args)
     {
         using (SqliteCommand command = new SqliteCommand(sql, sqlConn))
-        { 
+        {
             foreach (SqliteParameter param in args)
                 command.Parameters.Add(param);
             command.ExecuteNonQuery();
@@ -234,14 +234,14 @@ public class Database : MonoBehaviour
             new SqliteParameter("@level",player.PlayerLevel),
             new SqliteParameter("@health",player.playerHealth),
                 
-            new SqliteParameter("@strength",player.Strength),
-            new SqliteParameter("@magic",player.Magic),
-                new SqliteParameter("@dex",player.Dex),
+            // new SqliteParameter("@strength",player.Strength),
+            // new SqliteParameter("@magic",player.Magic),
+            //     new SqliteParameter("@dex",player.Dex),
                 
             new SqliteParameter("@FR",player.FR),
             new SqliteParameter("@IR",player.IR),
             new SqliteParameter("@PR",player.PR),
-            new SqliteParameter("@PHR",player.PhyR),
+            // new SqliteParameter("@PHR",player.PhyR),
 
             new SqliteParameter("@WEAPON_ATK",player.atk),
             new SqliteParameter("@WEAPON_COUNT",player.atkCount),
@@ -297,14 +297,14 @@ public class Database : MonoBehaviour
                 pd.account = (string) mr[1];
                 pd.PlayerLevel = Convert.ToInt32((long) mr[2]);
                 pd.playerHealth = Convert.ToInt32((long) mr[3]);
-                pd.Strength = Convert.ToInt32((long) mr[4]);
-                pd.Magic = Convert.ToInt32((long) mr[5]);
-                pd.Dex = Convert.ToInt32((long) mr[6]);
+                // pd.Strength = Convert.ToInt32((long) mr[4]);
+                // pd.Magic = Convert.ToInt32((long) mr[5]);
+                // pd.Dex = Convert.ToInt32((long) mr[6]);
                 //
                 pd.FR = Convert.ToInt32((long) mr[7]);
                 pd.IR = Convert.ToInt32((long) mr[8]);
                 pd.PR = Convert.ToInt32((long) mr[9]);
-                pd.PhyR = Convert.ToInt32((long) mr[10]);
+                // pd.PhyR = Convert.ToInt32((long) mr[10]);
                 //
                 pd.atk = Convert.ToInt32((long) mr[11]);
                 pd.atkCount = Convert.ToInt32((long) mr[12]);

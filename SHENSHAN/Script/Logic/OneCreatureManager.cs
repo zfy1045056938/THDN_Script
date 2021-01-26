@@ -200,44 +200,44 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
                 }
                 break;
             
-            case SpellBuffType.AtkDur:
-                SoundManager.instance.PlaySound(GlobalSetting.instance.weaponClip);
-                TurnManager.instance.WhoseTurn.atkDur += amount;
-                TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.atkDurText.text =TurnManager.instance.WhoseTurn.atkDur.ToString();
-                break;
-            case  SpellBuffType.DEX:
-                Debug.Log("SpellBuff ----> Dex");
-                TurnManager.instance.WhoseTurn.DEX += amount;
-                TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.InteText.text =  TurnManager.instance.WhoseTurn.DEX.ToString();
-                if ( TurnManager.instance.WhoseTurn.DEX % 3 == 0)
-                {
-                     TurnManager.instance.WhoseTurn.DEX += 1;
-                }
-                break;
-            case SpellBuffType.INT:
-                //cl change to player
-            Debug.Log("SpellBuff ----> INTE");
-                TurnManager.instance.WhoseTurn.INTE += amount;
-                TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.InteText.text =  TurnManager.instance.WhoseTurn.INTE.ToString();
-                if ( TurnManager.instance.WhoseTurn.INTE % 3 == 0)
-                {
-                     TurnManager.instance.WhoseTurn.INTE += 1;
-                }
-                break;
-                  case SpellBuffType.ExtraSpell:
-                  Debug.Log("Extra Spell");
-               TurnManager.instance.WhoseTurn.ExtraSpellDamage +=amount;
-               TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.ExtraSDText.text=TurnManager.instance.WhoseTurn.ExtraSpellDamage.ToString();
-                break;
-            case  SpellBuffType.STR:
-               Debug.Log("SpellBuff ----> STR");
-                TurnManager.instance.WhoseTurn.STR += amount;
-                TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.StrText.text =  TurnManager.instance.WhoseTurn.STR.ToString();
-                if ( TurnManager.instance.WhoseTurn.STR % 3 == 0)
-                {
-                     TurnManager.instance.WhoseTurn.STR += 1;
-                }
-                break;
+            // case SpellBuffType.AtkDur:
+            //     SoundManager.instance.PlaySound(GlobalSetting.instance.weaponClip);
+            //     // TurnManager.instance.WhoseTurn.atkDur += amount;
+            //     TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.atkDurText.text =TurnManager.instance.WhoseTurn.atkDur.ToString();
+            //     break;
+            // case  SpellBuffType.DEX:
+            //     Debug.Log("SpellBuff ----> Dex");
+            //     // TurnManager.instance.WhoseTurn.DEX += amount;
+            //     TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.InteText.text =  TurnManager.instance.WhoseTurn.DEX.ToString();
+            //     if ( TurnManager.instance.WhoseTurn.DEX % 3 == 0)
+            //     {
+            //          TurnManager.instance.WhoseTurn.DEX += 1;
+            //     }
+            //     break;
+            // case SpellBuffType.INT:
+            //     //cl change to player
+            // Debug.Log("SpellBuff ----> INTE");
+            //     TurnManager.instance.WhoseTurn.INTE += amount;
+            //     TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.InteText.text =  TurnManager.instance.WhoseTurn.INTE.ToString();
+            //     if ( TurnManager.instance.WhoseTurn.INTE % 3 == 0)
+            //     {
+            //          TurnManager.instance.WhoseTurn.INTE += 1;
+            //     }
+            //     break;
+            //       case SpellBuffType.ExtraSpell:
+            //       Debug.Log("Extra Spell");
+            //    TurnManager.instance.WhoseTurn.ExtraSpellDamage +=amount;
+            //    TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.ExtraSDText.text=TurnManager.instance.WhoseTurn.ExtraSpellDamage.ToString();
+            //     break;
+            // case  SpellBuffType.STR:
+            //    Debug.Log("SpellBuff ----> STR");
+            //     TurnManager.instance.WhoseTurn.STR += amount;
+            //     TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.StrText.text =  TurnManager.instance.WhoseTurn.STR.ToString();
+            //     if ( TurnManager.instance.WhoseTurn.STR % 3 == 0)
+            //     {
+            //          TurnManager.instance.WhoseTurn.STR += 1;
+            //     }
+            //     break;
 //            case SpellBuffType.Bloody:
 //                //Add Icon with 3 round
 //                cl.MaxHealth -= 1;
@@ -463,6 +463,8 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
     
     /// <summary>
     /// 与buff不同的是获得伤害性持续效果,在每回合开始受到伤害,buff效果为基础属性增益,damageeffect为伤害性属性增益,
+    /// Resistance effect  r influence to indie effect
+    /// the total damage = effect.value + esd + (!Resistance )+ stats
     /// </summary>
     /// <param name="cl"></param>
     /// <param name="amount"></param>
@@ -472,6 +474,10 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
     public void ElementalBuff(CreatureLogic cl,int amount, int roundTime, DamageElementalType type)
     {
         bool hasEffect=false;
+
+
+        var reduceAmount = 0;
+
 
         //Check has Elemental
         for(int i=0;i<buffList.Count;i++){
@@ -496,7 +502,8 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
                     Debug.Log("Posion Effect Cause");
                     if(TurnManager.instance.WhoseTurn.hasESD==true){
                         amount += TurnManager.instance.WhoseTurn.ExtraSpellDamage;
-                    }
+                    }   
+                    //
                     if(cl.HasPosion==false){
                     cl.HasPosion = true;
                     cl.PosPoint = amount;
@@ -746,25 +753,25 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
             DamageEffect.ShowBuffEffect(transform.position,type,amount);
             break;
 
-            case SpellBuffType.STR:
-             Debug.Log("Update Stat For Player == > STR :: num ist "+amount);
-            TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.StrText.text = TurnManager.instance.WhoseTurn.STR.ToString();
-            DamageEffect.ShowBuffEffect(transform.position,type,amount);
+            // case SpellBuffType.STR:
+            //  Debug.Log("Update Stat For Player == > STR :: num ist "+amount);
+            // TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.StrText.text = TurnManager.instance.WhoseTurn.STR.ToString();
+            // DamageEffect.ShowBuffEffect(transform.position,type,amount);
 
-            break;
+            // break;
 
-             case SpellBuffType.DEX:
-              Debug.Log("Update Stat For Player == > DEX :: num ist "+amount);
-            TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.DexText.text = TurnManager.instance.WhoseTurn.DEX.ToString();
-            DamageEffect.ShowBuffEffect(transform.position,type,amount);
+            //  case SpellBuffType.DEX:
+            //   Debug.Log("Update Stat For Player == > DEX :: num ist "+amount);
+            // TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.DexText.text = TurnManager.instance.WhoseTurn.DEX.ToString();
+            // DamageEffect.ShowBuffEffect(transform.position,type,amount);
 
-            break;
-             case SpellBuffType.INT:
-              Debug.Log("Update Stat For Player == > INTE :: num ist "+amount);
-            TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.InteText.text = TurnManager.instance.WhoseTurn.INTE.ToString();
-            DamageEffect.ShowBuffEffect(transform.position,type,amount);
+            // break;
+            //  case SpellBuffType.INT:
+            //   Debug.Log("Update Stat For Player == > INTE :: num ist "+amount);
+            // TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.InteText.text = TurnManager.instance.WhoseTurn.INTE.ToString();
+            // DamageEffect.ShowBuffEffect(transform.position,type,amount);
 
-            break;
+            // break;
 
             case SpellBuffType.Atk:
              Debug.Log("Update Stat For Player == > ATK :: num ist "+amount);
@@ -773,14 +780,14 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
 
             break;
 
-            case SpellBuffType.AtkDur:
-             Debug.Log("Update Stat For Player == > AD :: num ist "+amount);
-             SoundManager.instance.PlaySound(GlobalSetting.instance.weaponClip);
-             TurnManager.instance.WhoseTurn.atkDur+=amount;
-            TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.atkDurText.text = TurnManager.instance.WhoseTurn.atkDur.ToString();
-            DamageEffect.ShowBuffEffect(transform.position,type,amount);
+            // case SpellBuffType.AtkDur:
+            //  Debug.Log("Update Stat For Player == > AD :: num ist "+amount);
+            //  SoundManager.instance.PlaySound(GlobalSetting.instance.weaponClip);
+            //  TurnManager.instance.WhoseTurn.atkDur+=amount;
+            // TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.atkDurText.text = TurnManager.instance.WhoseTurn.atkDur.ToString();
+            // DamageEffect.ShowBuffEffect(transform.position,type,amount);
 
-            break;
+            // break;
 
         }
     }

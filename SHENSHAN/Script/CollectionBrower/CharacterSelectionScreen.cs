@@ -6,6 +6,7 @@ using PixelCrushers;
 using UnityEngine.UI;
 using GameDataEditor;
 using Mirror;
+using TMPro;
 public class CharacterSelectionScreen :MonoBehaviour
 {
     public UIPanel  ScreenContent;
@@ -97,7 +98,8 @@ public class CharacterSelectionScreen :MonoBehaviour
 
       public CharacterAsset GetCharacterAsset(GDECharacterAssetData d){
         GDECharacterAssetData data= new GDECharacterAssetData(d.Key);
-        return new CharacterAsset(Utils.GetPlayerJob(data.PlayersJob),data.ClassName,data.MaxHealth,data.PowerName,Utils.CreateSprite(data.AvatarImage),data.Detail,Utils.CreateSprite(data.BGSprite));
+        return new CharacterAsset(Utils.GetPlayerJob(data.PlayersJob),data.ClassName,data.MaxHealth,data.PowerName,Utils.CreateSprite(data.AvatarImage),
+        data.Detail,Utils.CreateSprite(data.BGSprite),data.AttackCard,data.ArmorCard);
     }
 
     public void ClearObj(){
@@ -158,7 +160,7 @@ public class CharacterSelectionScreen :MonoBehaviour
 
                 });
                 
-                //
+                
                 NetworkServer.Spawn(obj);
 
                 

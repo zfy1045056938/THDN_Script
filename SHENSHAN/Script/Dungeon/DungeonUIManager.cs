@@ -2,8 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using DAShooter.TwoD;
-using DungeonArchitect.Navigation;
+// using DAShooter.TwoD;
+// using DungeonArchitect.Navigation;
 using PixelCrushers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -25,7 +25,7 @@ public class DungeonUIManager : MonoBehaviour
 
     public GameObject items;
 
-    public DungeonManager dungeon;
+    // public DungeonManager dungeon;
     public DungeonGoal dungeonGoal;
     public UIPanel bottomUI;
     public GameObject playerPanel;
@@ -117,43 +117,43 @@ public class DungeonUIManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+//     void Update()
+//     {
         
-//        //
-//        while (BattleStartInfo.IsWinner == false)
-//        {
-//            DungeonLeaveUI.instance.panel.Open();
-//        }
-        StopBtn.gameObject.SetActive(!PlayBtn.gameObject.activeSelf);
+// //        //
+// //        while (BattleStartInfo.IsWinner == false)
+// //        {
+// //            DungeonLeaveUI.instance.panel.Open();
+// //        }
+//         StopBtn.gameObject.SetActive(!PlayBtn.gameObject.activeSelf);
         
-        StopBtn.onClick.AddListener(() => { Time.timeScale = 0;Debug.Log("Time Stop"+Time.deltaTime); });
-        PlayBtn.onClick.AddListener(() => { Time.timeScale = 1;});
-        LeaveBtn.onClick.AddListener(() =>
-        {
-            UIConfirmation.instance.Show("离开将损失在当前所收集的物品", () => {LeavePanel.Open();});
-        });
+//         StopBtn.onClick.AddListener(() => { Time.timeScale = 0;Debug.Log("Time Stop"+Time.deltaTime); });
+//         PlayBtn.onClick.AddListener(() => { Time.timeScale = 1;});
+//         LeaveBtn.onClick.AddListener(() =>
+//         {
+//             UIConfirmation.instance.Show("离开将损失在当前所收集的物品", () => {LeavePanel.Open();});
+//         });
         
-        LoadStatsFromConsole();
-        //
-        seText.text = second.ToString();
-        minText.text = minute.ToString();
+//         LoadStatsFromConsole();
+//         //
+//         seText.text = second.ToString();
+//         minText.text = minute.ToString();
 
      
         
-           dungeonGoal.Current.text = dungeon.dungeonCurrent.ToString();
+//            dungeonGoal.Current.text = dungeon.dungeonCurrent.ToString();
         
 
-        //
-        if(dungeon.dungeonCurrent >= dungeon.dungeonGoal){
-            Debug.Log("FinalBoss");
-            dungeonGoal.FinalBoss=true;
-            dungeonGoal.isFinish=true;
+//         //
+//         if(dungeon.dungeonCurrent >= dungeon.dungeonGoal){
+//             Debug.Log("FinalBoss");
+//             dungeonGoal.FinalBoss=true;
+//             dungeonGoal.isFinish=true;
             
-        }
+//         }
 
 
-    }
+//     }
 
     private void SetStatsFromDungeon()
     {
@@ -197,12 +197,12 @@ public class DungeonUIManager : MonoBehaviour
             dungeonUI.SetActive(false);
             BG.SetActive(false);
             //stop all npc ai
-            foreach (var npc in dungeon.npc.LimitNPC)
-            {
-                var nps = npc.GetComponent<DungeonNavAgent2D>();
-                if (nps == null) return;
-                nps.Stop();
-            }
+            // foreach (var npc in dungeon.npc.LimitNPC)
+            // {
+            //     var nps = npc.GetComponent<DungeonNavAgent2D>();
+            //     if (nps == null) return;
+            //     nps.Stop();
+            // }
             //
             Debug.Log("Change Scene");
             

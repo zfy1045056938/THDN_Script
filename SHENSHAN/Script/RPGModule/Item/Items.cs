@@ -88,7 +88,7 @@ public class Items
     public int iceResistance;
     public int posionResistance;
     public int electronicResistance;
-    public int phyicsResistance;
+    //public int phyicsResistance;
     #endregion
 
     //护甲属性

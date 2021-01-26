@@ -88,9 +88,9 @@ public void SetInfo(EnemyAsset e){
      if(e!=null){
            EnemyName.text =e.EnemyName.ToString();
     
-            dex.text= e.dex.ToString();
-            inte.text =e.inte.ToString();
-            str.text =e.str.ToString();
+            //dex.text= e.dex.ToString();
+            //inte.text =e.inte.ToString();
+            //str.text =e.str.ToString();
 
 
             ir.text=e.ir.ToString();

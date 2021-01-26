@@ -347,10 +347,10 @@ public class NetworkManagerShenShan : NetworkManager
 
             // find the prefab for that class
             PlayerData prefab = playerClasses.Find(p => p.name == character.className);
-            if (prefab != null)
-                LoadPreview(prefab.gameObject, selectionLocations[i], i, character);
-            else
-                Debug.LogWarning("Character Selection: no prefab found for class " + character.className);
+            // if (prefab != null)
+            //     LoadPreview(prefab.gameObject, selectionLocations[i], i, character);
+            // else
+            //     Debug.LogWarning("Character Selection: no prefab found for class " + character.className);
         }
 
         // setup camera

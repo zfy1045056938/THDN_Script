@@ -78,10 +78,16 @@ public class DealDamageCommand : Command
           Debug.Log("Check damage elements  ");
           CreatureLogic cl = new CreatureLogic(TurnManager.instance.WhoseTurn,target.GetComponent<OneCreatureManager>().cardAsset);
 
+           //TODO 21_1_26 elemental damage will reduce by resistance
+           //  bd /round ->  bd-target.fr
+           //  freeze/ round -> freeze perc - ir%
+           // posion! / round++ -> posion! - pr!
+           // er: round -> ed- er 
           //round time damage
           switch (det)
           {
               case DamageElementalType.Posion:
+                    
                   target.GetComponent<OneCreatureManager>().ElementalBuff(cl,amount, roundTime,det);
                   break;
               case DamageElementalType.Bloody:

@@ -48,7 +48,7 @@ public class ShenShanModule : MonoBehaviour
 
             obj.transform.SetParent(scPos);
             //
-            obj.GetComponent<DungeonCard>().dec =
+            // obj.GetComponent<DungeonCard>().dec =
         }
         
     }

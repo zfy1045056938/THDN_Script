@@ -63,9 +63,9 @@ public class CharacterInfoPanel : MonoBehaviour
             // playerLevelText.text = player.playerHealth.ToString();
 
             playerHealText.text = player.playerHealth.ToString();
-            playerDexText.text= player.Dex.ToString();
-            playerMagicText.text =player.Magic.ToString();
-            playerStrengthText.text =player.Strength.ToString();
+            // playerDexText.text= player.Dex.ToString();
+            // playerMagicText.text =player.Magic.ToString();
+            // playerStrengthText.text =player.Strength.ToString();
 
 
             playerIrText.text=player.IR.ToString();
@@ -96,9 +96,9 @@ public class CharacterInfoPanel : MonoBehaviour
         PlayerData.localPlayer.atkCount = 0;
         PlayerData.localPlayer.ArmorDef = 0;
         //
-        PlayerData.localPlayer.Strength = 0;
-        PlayerData.localPlayer.Dex = 0;
-        PlayerData.localPlayer.Magic = 0;
+        // PlayerData.localPlayer.Strength = 0;
+        // PlayerData.localPlayer.Dex = 0;
+        // PlayerData.localPlayer.Magic = 0;
         //
         PlayerData.localPlayer.FR = 0;
         PlayerData.localPlayer.IR = 0;

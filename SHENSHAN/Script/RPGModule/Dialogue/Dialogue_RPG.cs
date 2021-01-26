@@ -411,14 +411,14 @@ nbPanel.newBeePanel.gameObject.SetActive(true);
 
    
     var p = FindObjectOfType<PlayerData>();
-     if(n=="STR"){
-       p.Strength+=(int)count;
-     }else if(n=="DEX"){
-       p.Dex+=(int)count;
+    //  if(n=="STR"){
+    //    p.Strength+=(int)count;
+    //  }else if(n=="DEX"){
+    //    p.Dex+=(int)count;
        
-     }else if(n=="INTE"){
-       p.Magic+=(int)count;
-     }
+    //  }else if(n=="INTE"){
+    //    p.Magic+=(int)count;
+    //  }
      p.UpdateInfo();
   }
 

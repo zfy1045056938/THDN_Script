@@ -64,39 +64,39 @@ public class DungeonEvent : MonoBehaviour
     
     }
 
-    List<GDEDungeonEventData> gdd = GDEDataManager.GetAllItems<GDEDungeonEventData>();
+    // List<GDEDungeonEventData> gdd = GDEDataManager.GetAllItems<GDEDungeonEventData>();
     
-    //Create Sprite
-    for (int i = 0; i < dungeonEvents.Count; i++)
-    {
-        GDEDungeonEventData ge = new GDEDungeonEventData(gdd[i].Key);
-        if (ge.DEName == dungeonEvents[i].deName)
-        {
-            dungeonEvents[i].deIcon = Utils.CreateSprite(ge.DEIcon);
-        }
-    }
+    // //Create Sprite
+    // for (int i = 0; i < dungeonEvents.Count; i++)
+    // {
+    //     GDEDungeonEventData ge = new GDEDungeonEventData(gdd[i].Key);
+    //     if (ge.DEName == dungeonEvents[i].deName)
+    //     {
+    //         dungeonEvents[i].deIcon = Utils.CreateSprite(ge.DEIcon);
+    //     }
+    // }
    }
 
   
 
    void LoadDEFromGDE(){
-       List<GDEDungeonEventData> dvd = GDEDataManager.GetAllItems<GDEDungeonEventData>();
+    //    List<GDEDungeonEventData> dvd = GDEDataManager.GetAllItems<GDEDungeonEventData>();
         
-       for(int i=0;i< dvd.Count;i++){
-           DungeonEventClass dvc = new DungeonEventClass();
-           dvc.deID = dvd[i].DungeonID;
-           dvc.deName = dvd[i].DEName;
-           dvc.deDetail =dvd[i].DEDetail;
-           dvc.deAmount =dvd[i].DEAmount;
-           dvc.dePerc = dvd[i].DEPerc;
-          dvc.DEReward =dvd[i].DEReward;
-          dvc.DAAmount = dvd[i].DAAMoun;
-           dvc.deIcon = Utils.CreateSprite(dvd[i].DEIcon);
-           dvc.rarity = Utils.GetCardRarity(dvd[i].DERarity);
-           dvc.DET = GetDETFromGDE(dvd[i].DEType);
+    //    for(int i=0;i< dvd.Count;i++){
+    //        DungeonEventClass dvc = new DungeonEventClass();
+    //        dvc.deID = dvd[i].DungeonID;
+    //        dvc.deName = dvd[i].DEName;
+    //        dvc.deDetail =dvd[i].DEDetail;
+    //        dvc.deAmount =dvd[i].DEAmount;
+    //        dvc.dePerc = dvd[i].DEPerc;
+    //       dvc.DEReward =dvd[i].DEReward;
+    //       dvc.DAAmount = dvd[i].DAAMoun;
+    //        dvc.deIcon = Utils.CreateSprite(dvd[i].DEIcon);
+    //        dvc.rarity = Utils.GetCardRarity(dvd[i].DERarity);
+    //        dvc.DET = GetDETFromGDE(dvd[i].DEType);
 
-           dungeonEvents.Add(dvc);
-       }
+    //        dungeonEvents.Add(dvc);
+    //    }
    }
 
    public void ShowDungeonEvent(){

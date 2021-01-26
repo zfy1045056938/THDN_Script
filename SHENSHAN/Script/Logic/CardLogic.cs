@@ -54,7 +54,7 @@ public class CardLogic : IIdentifiable
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="T:CardLogic"/> class.
+    /// the fiest step load common for every player with config set ,  <see cref="T:CardLogic"/> class.
     /// </summary>
     /// <param name="owner">Owner.</param>
     /// <param name="ca">Ca.</param>
@@ -70,8 +70,6 @@ public class CardLogic : IIdentifiable
         ResetManaCost();
 
 
-        //Init Card
-        //TODO 123
 
         GotCommon(ca);
         
@@ -107,7 +105,9 @@ public class CardLogic : IIdentifiable
         if (ca.spellScriptName != null && card.spellScriptName != "")
         {
             spellEffect = System.Activator.CreateInstance(System.Type.GetType(ca.spellScriptName)) as SpellEffect;
-            spellEffect.owner = owner; 
+            spellEffect.owner = owner;
+            //TODO add amount to common card
+            spellEffect.amount = ca.SpecialSpellAmount;
         }
         
         CardsCreatedThisInGame.Add(UniqueCardID, this);

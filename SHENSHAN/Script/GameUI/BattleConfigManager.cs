@@ -7,6 +7,10 @@ using PixelCrushers.DialogueSystem;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+
+using TMPro;
+
+
 public enum GameMode
 {
     Classical,
@@ -51,6 +55,9 @@ public class BattleConfigManager : MonoBehaviour
     public Image entityAvatar;
     public Text entityHealth;
     public Text entitySkillText;
+    public TextMeshProUGUI atkAmount;
+    public TextMeshProUGUI armorAmount;
+
     
     public GameObject[] stars;
     public List<QuestPieces> quests;
@@ -157,6 +164,10 @@ public class BattleConfigManager : MonoBehaviour
                 atkDurText.text = players.atkCount.ToString();
                 armorText.text = players.ArmorDef.ToString();
                 armorDurText.text = players.ArmorDur.ToString();
+            //TODO added card common 
+            atkAmount.text = BattleStartInfo.SelectDeck.atkNum.ToString();
+            armorAmount.text = BattleStartInfo.SelectDeck.defNum.ToString();
+
             
         }
         else

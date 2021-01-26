@@ -42,9 +42,9 @@ public class CraftingScreen:MonoBehaviour{
     public Text ArmorText;
     
     
-    public Text StrText;
-    public Text DexText;
-    public Text IntText;
+    // public Text StrText;
+    // public Text DexText;
+    // public Text IntText;
     public Text SpdText;
     public Text ResText;
     public Text cardDes;
@@ -173,9 +173,9 @@ statPanel.gameObject.SetActive(true);
         
         //show stats
         rp.LoadCardAsset(currentCard);
-        StrText.text = cardToShow.STR.ToString();
-        DexText.text = cardToShow.DEX.ToString();
-        IntText.text = cardToShow.INT.ToString();
+        // StrText.text = cardToShow.STR.ToString();
+        // DexText.text = cardToShow.DEX.ToString();
+        // IntText.text = cardToShow.INT.ToString();
         //
         atkText.text = cardToShow.cardAtk.ToString();
         healText.text = cardToShow.cardHealth.ToString();

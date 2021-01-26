@@ -91,11 +91,14 @@ public class Players : MonoBehaviour, ICharacter
             _coinNumber=value;
         }}
 
+    #region  Resistance
+
     public int FR { get; set; }
     public int IR { get; set; }
     public int ER { get; set; }
     public int PR { get; set; }
 
+    #endregion
     #region G/S
     // PROPERTIES 
     // this property is a part of interface ICharacter
@@ -257,13 +260,13 @@ public class Players : MonoBehaviour, ICharacter
             //TODO 2011-1-18
             var Equipmentslot = FindObjectsOfType<EquipmentSlot>();
             
-            var effect = FindObjectOfType<BuffList>();
+            // var effect = FindObjectOfType<BuffList>();
 
-            int eb=0;
-            int effectb=0;
+            // int eb=0;
+            // int effectb=0;
             
 
-            health = base.health + eb + effectcb;
+            // health = base.health + eb + effectcb;
             if (value <= 0)
                 Die();
         }
@@ -343,15 +346,15 @@ public class Players : MonoBehaviour, ICharacter
       TurnManager.instance.WhoseTurn.playCardThisTurn=0;
 
 
-        if (TurnManager.instance.WhoseTurn == GlobalSetting.instance.lowPlayer)
-        {
-            playerArea.playerPortraitVisual.weapon.WasUsed = false;
-        }
+        //if (TurnManager.instance.WhoseTurn == GlobalSetting.instance.lowPlayer)
+        //{
+        //    playerArea.playerPortraitVisual.weapon.WasUsed = false;
+        //}
 
         ++manaThisTurn;
         manaLeft = manaThisTurn;
         //TODO 123
-        if(TurnManager.instance.whoseTurn.manaLeft >=7){
+        if(TurnManager.instance.WhoseTurn.manaLeft >=7){
             GlobalSetting.instance.ShenShanModule();
         }
         
@@ -370,7 +373,6 @@ public class Players : MonoBehaviour, ICharacter
                         playerArea.playerPortraitVisual.UpdateArtifact(playerArea.playerPortraitVisual.artifactList[i].GetComponent<ArtifactIcon>().type,
                             playerArea.playerPortraitVisual.artifactList[i].GetComponent<ArtifactIcon>().amount);
                     }
-                    
                 }
                 
                 Debug.Log("============================================>Buff State ");
@@ -397,14 +399,14 @@ public class Players : MonoBehaviour, ICharacter
            }
        }
 
-       playerArea.heroPowerBtn.WasUsed = false;
+       //playerArea.heroPowerBtn.WasUsed = false;
 
-         if(otherPlayer==GlobalSetting.instance.lowPlayer){
-             Debug.Log("Lock weapon");
-        otherPlayer.playerArea.playerPortraitVisual.weapon.usedPanel.gameObject.SetActive(true);
-         }else{
-             otherPlayer.playerArea.playerPortraitVisual.weapon.usedPanel.gameObject.SetActive(false);
-         }
+        // if(otherPlayer==GlobalSetting.instance.lowPlayer){
+        //     Debug.Log("Lock weapon");
+        //otherPlayer.playerArea.playerPortraitVisual.weapon.usedPanel.gameObject.SetActive(true);
+        // }else{
+        //     otherPlayer.playerArea.playerPortraitVisual.weapon.usedPanel.gameObject.SetActive(false);
+        // }
 
 
     }
@@ -436,6 +438,7 @@ public class Players : MonoBehaviour, ICharacter
         manaLeft += amount;
     }
 
+    //Todo
 public void LoadBattleInfo(PlayerData p){
     playerArea.bci.SetInfo(p);
 }
@@ -767,66 +770,66 @@ public void LoadBattleInfoEnemy(EnemyAsset e){
 
    
 
-    public void UseWeapon()
-    {
+    // public void UseWeapon()
+    // {
         
-        useWeapon = true;
-        if (atkDur > 0 && TurnManager.instance.WhoseTurn==GlobalSetting.instance.lowPlayer)
-        {
-            playerArea.playerPortraitVisual.weapon.spellEffect.ActiveEffect();
-            playerArea.playerPortraitVisual.weapon.WasUsed = true;
+    //     useWeapon = true;
+    //     if (atkDur > 0 && TurnManager.instance.WhoseTurn==GlobalSetting.instance.lowPlayer)
+    //     {
+    //         playerArea.playerPortraitVisual.weapon.spellEffect.ActiveEffect();
+    //         playerArea.playerPortraitVisual.weapon.WasUsed = true;
          
-            atkDur--;
-            if(atkDur==0){
-                playerArea.playerPortraitVisual.WeaponImage.SetActive(false);
-            }
-        }
-        else if(atkDur > 0 && TurnManager.instance.WhoseTurn==GlobalSetting.instance.topPlayer)
-        {
-           Players oppp = TurnManager.instance.WhoseTurn.otherPlayer;
-            if (oppp.CreatureDef > 0)
-            {
-                new DealDamageCommand(oppp.ID, TurnManager.instance.WhoseTurn.CreatureAtk,
-                    oppp.MaxHealth - TurnManager.instance.WhoseTurn.CreatureAtk,
-                    oppp.CreatureDef - TurnManager.instance.WhoseTurn.CreatureAtk).AddToQueue();
-            }else if (oppp.CreatureDef - TurnManager.instance.WhoseTurn.CreatureAtk < 0)
-            {
-                new DealDamageCommand(TurnManager.instance.WhoseTurn.otherPlayer.playerID, TurnManager.instance.WhoseTurn.CreatureAtk, TurnManager.instance.WhoseTurn.otherPlayer.MaxHealth +(oppp.CreatureDef-TurnManager.instance.WhoseTurn.CreatureAtk),
-                    TurnManager.instance.WhoseTurn.otherPlayer.CreatureDef - TurnManager.instance.WhoseTurn.CreatureAtk).AddToQueue();
-            }
-            else
-            {
-                new DealDamageCommand(TurnManager.instance.WhoseTurn.otherPlayer.playerID, TurnManager.instance.WhoseTurn.CreatureAtk, TurnManager.instance.WhoseTurn.otherPlayer.MaxHealth - TurnManager.instance.WhoseTurn.CreatureAtk,
-                    0).AddToQueue();
-            }
+    //         atkDur--;
+    //         if(atkDur==0){
+    //             playerArea.playerPortraitVisual.WeaponImage.SetActive(false);
+    //         }
+    //     }
+    //     else if(atkDur > 0 && TurnManager.instance.WhoseTurn==GlobalSetting.instance.topPlayer)
+    //     {
+    //        Players oppp = TurnManager.instance.WhoseTurn.otherPlayer;
+    //         if (oppp.CreatureDef > 0)
+    //         {
+    //             new DealDamageCommand(oppp.ID, TurnManager.instance.WhoseTurn.CreatureAtk,
+    //                 oppp.MaxHealth - TurnManager.instance.WhoseTurn.CreatureAtk,
+    //                 oppp.CreatureDef - TurnManager.instance.WhoseTurn.CreatureAtk).AddToQueue();
+    //         }else if (oppp.CreatureDef - TurnManager.instance.WhoseTurn.CreatureAtk < 0)
+    //         {
+    //             new DealDamageCommand(TurnManager.instance.WhoseTurn.otherPlayer.playerID, TurnManager.instance.WhoseTurn.CreatureAtk, TurnManager.instance.WhoseTurn.otherPlayer.MaxHealth +(oppp.CreatureDef-TurnManager.instance.WhoseTurn.CreatureAtk),
+    //                 TurnManager.instance.WhoseTurn.otherPlayer.CreatureDef - TurnManager.instance.WhoseTurn.CreatureAtk).AddToQueue();
+    //         }
+    //         else
+    //         {
+    //             new DealDamageCommand(TurnManager.instance.WhoseTurn.otherPlayer.playerID, TurnManager.instance.WhoseTurn.CreatureAtk, TurnManager.instance.WhoseTurn.otherPlayer.MaxHealth - TurnManager.instance.WhoseTurn.CreatureAtk,
+    //                 0).AddToQueue();
+    //         }
 
-            useWeapon = true;
+    //         useWeapon = true;
 
-            atkDur--;
-            //das weapon is empty ,reset weapon value
-            if (atkDur == 0)
-            {
-                CreatureAtk = 0;
-                atkDur = 0;
-            }
-        }
-        //
-        if (atkDur < 0)
-        {
-            if (TurnManager.instance.WhoseTurn == GlobalSetting.instance.lowPlayer)
-            {
-                playerArea.playerPortraitVisual.WeaponImage.SetActive(false);
+    //         atkDur--;
+    //         //das weapon is empty ,reset weapon value
+    //         if (atkDur == 0)
+    //         {
+    //             CreatureAtk = 0;
+    //             atkDur = 0;
+    //         }
+    //     }
+    //     //
+    //     if (atkDur < 0)
+    //     {
+    //         if (TurnManager.instance.WhoseTurn == GlobalSetting.instance.lowPlayer)
+    //         {
+    //             playerArea.playerPortraitVisual.WeaponImage.SetActive(false);
 
-                GlobalSetting.instance.SETLogs("武器破损本场无法使用武器,哦吼");
-            }else if (TurnManager.instance.WhoseTurn == GlobalSetting.instance.topPlayer)
-            {
-               //TODO
-            }
-        }
+    //             GlobalSetting.instance.SETLogs("武器破损本场无法使用武器,哦吼");
+    //         }else if (TurnManager.instance.WhoseTurn == GlobalSetting.instance.topPlayer)
+    //         {
+    //            //TODO
+    //         }
+    //     }
         
-        //Sound
-        SoundManager.instance.PlaySound(GlobalSetting.instance.weaponClip);
-    }
+    //     //Sound
+    //     SoundManager.instance.PlaySound(GlobalSetting.instance.weaponClip);
+    // }
    
 
     public void Die()
@@ -1006,7 +1009,7 @@ public void LoadBattleInfoEnemy(EnemyAsset e){
         //
         CreatureAtk += DungeonExplore.DATK;
         //
-        atkDur  += DungeonExplore.DDUR;
+        // atkDur  += DungeonExplore.DDUR;
     }
     public void LoadStatsFromdata()
     {
@@ -1030,7 +1033,7 @@ public void LoadBattleInfoEnemy(EnemyAsset e){
             ExtraSpellDamage = playerData.extraSpellDamage + DungeonExplore.DESD;
             
             playerArea.playerPortraitVisual.atkText.text = CreatureAtk.ToString();
-            playerArea.playerPortraitVisual.atkDurText.text = atkDur.ToString();
+            // playerArea.playerPortraitVisual.atkDurText.text = atkDur.ToString();
             playerArea.playerPortraitVisual.defText.text = CreatureDef.ToString();
         }
         else
@@ -1047,7 +1050,7 @@ public void LoadBattleInfoEnemy(EnemyAsset e){
         if (playerData != null)
         {
             CreatureAtk =Mathf.FloorToInt(playerData.atk);
-            atkDur = Mathf.FloorToInt(playerData.atkCount);
+            // atkDur = Mathf.FloorToInt(playerData.atkCount);
 
             CreatureDef = playerData.ArmorDef;
 

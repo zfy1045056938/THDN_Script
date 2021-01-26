@@ -133,7 +133,7 @@ public static class Utils
 		for(int i=0;i<gda.Count;i++){
 	     if(gda[i].ClassName==characterAsset){
 			 GDECharacterAssetData cs =new GDECharacterAssetData(gda[i].Key);
-			return new  CharacterAsset(GetPlayerJob(cs.PlayersJob),cs.ClassName,cs.MaxHealth,cs.PowerName,CreateSprite(cs.AvatarImage),cs.Detail,CreateSprite(cs.BGSprite));
+			return new  CharacterAsset(GetPlayerJob(cs.PlayersJob),cs.ClassName,cs.MaxHealth,cs.PowerName,CreateSprite(cs.AvatarImage),cs.Detail,CreateSprite(cs.BGSprite),cs.AttackCard,cs.ArmorCard);
 		 }
 		}
 		return null;

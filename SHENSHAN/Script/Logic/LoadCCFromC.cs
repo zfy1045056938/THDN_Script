@@ -56,19 +56,19 @@ public class LoadCCFromC : MonoBehaviour
             }
 
             //Try Get Player Equipment
-            if (BattleStartInfo.Weapon != null)
-            {
-                p.playerArea.playerPortraitVisual.weapon.weapon = BattleStartInfo.Weapon;
-                p.atkDur = players.atkCount;
-                p.CreatureAtk = players.atk;
-            }
+            // if (BattleStartInfo.Weapon != null)
+            // {
+            //     p.playerArea.playerPortraitVisual.weapon.weapon = BattleStartInfo.Weapon;
+            //     p.atkDur = players.atkCount;
+            //     p.CreatureAtk = players.atk;
+            // }
 
             
-                p.CreatureDef = players.ArmorDef;
-             if (BattleStartInfo.Ring != null)
-            {
-                p.playerArea.playerPortraitVisual.ring.items = BattleStartInfo.Ring;
-            }
+            //     p.CreatureDef = players.ArmorDef;
+            //  if (BattleStartInfo.Ring != null)
+            // {
+            //     p.playerArea.playerPortraitVisual.ring.items = BattleStartInfo.Ring;
+            // }
 
         }
         else

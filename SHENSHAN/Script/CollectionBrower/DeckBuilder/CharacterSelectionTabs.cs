@@ -127,7 +127,9 @@ public static CharacterSelectionTabs instance;
 
     public CharacterAsset GetCharacterAsset(GDECharacterAssetData d){
         GDECharacterAssetData data= new GDECharacterAssetData(d.Key);
-        return new CharacterAsset(GetPlayerJobs(data.PlayersJob),data.ClassName,data.MaxHealth,data.PowerName,GetCsBGSpritecs(data.AvatarImage),data.Detail,GetCsAvaSprite(data.BGSprite));
+        return new CharacterAsset(GetPlayerJobs(data.PlayersJob),
+        data.ClassName,data.MaxHealth,data.PowerName,GetCsBGSpritecs(data.AvatarImage),data.Detail,GetCsAvaSprite(data.BGSprite),
+        data.AttackCard,data.ArmorCard);
     }
 
     public void SetClassOnClassTab(CharacterAsset asset)

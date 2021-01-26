@@ -16,7 +16,7 @@ using Cinemachine;
 using TMPro;
 using Michsky.LSS;
 using Michsky.UI.Zone;
-using Dreamteck.Splines;
+
 using TravelSystem;
 
 ///
@@ -122,7 +122,6 @@ public class TownManager : MonoBehaviour
     public LoadingScreenManager loadingScreenManager;
     public MainPanelManager topPanelManager;
 
-    public SplineComputer mapSc;
     public GameObject FtObj;
     public Transform Ftpos;
     private void Awake()
@@ -275,6 +274,7 @@ public class TownManager : MonoBehaviour
         PreInit = "Chap01Qika";
         PlayerPrefs.SetString("PreScene",PreInit);
     }
+    //
     GameObject g = ab.LoadAsset<GameObject>(PreInit);
     //
     if(g!=null){
@@ -296,7 +296,7 @@ public class TownManager : MonoBehaviour
     }
    void LoadTownData(string map)
    {
-
+       Debug.Log("Load Map"+map.ToString());
 int m=0;
        //Clear Old Obj
       foreach(var e in npcModels){
@@ -373,6 +373,8 @@ int m=0;
                     locationEnemy.Add(ea);
                 }
             }
+
+       
             //Add NPC
             Debug.Log("=====>Add Town NPC Not Dungeon");
             if(mapLocation.isDungeon==false){
@@ -624,7 +626,7 @@ int m=0;
        //try get variable
     //   DialogueLua.SetVariable("DungeonBoss",0);
       //show UI
-      Sequence sequence= DOTween.Sequence();
+    //   Sequence sequence= DOTween.Sequence();
      
        //Change Camera
       selectGroup.gameObject.SetActive(false);
@@ -663,23 +665,23 @@ int m=0;
           }
           else
           {
-              //First game
+            //   First game
               GDEMapLocationData map = new GDEMapLocationData(GDEItemKeys.MapLocation_奎卡);
               LoadTownData(map.MapName);
               if(map.MapType=="Main"){
               PlayerPrefs.SetString("locName",map.MapName);
               }
-              //show 
-            //    newBeePanel.gameObject.SetActive(true);
-            //    hasNB = PlayerPrefsX.GetBool("TownNBUI");
-            // if(hasNB==false){
-            //     newBeePanel.SetActive(false);
-            //     Debug.Log("HAS X KEY");
-            // }
-            // else{
-            //     newBeePanel.SetActive(true);
-            //     Debug.Log("Show new bee");
-            // }
+            //   show 
+               newBeePanel.gameObject.SetActive(true);
+               hasNB = PlayerPrefsX.GetBool("TownNBUI");
+            if(hasNB==false){
+                newBeePanel.SetActive(false);
+                Debug.Log("HAS X KEY");
+            }
+            else{
+                newBeePanel.SetActive(true);
+                Debug.Log("Show new bee");
+            }
 
           }
                
@@ -938,6 +940,7 @@ public GameObject LoadItemFromAB(string abName,EnemyAsset ea){
 public GameObject GetObjRoutine(string n,EnemyAsset ea){
     GameObject ng=null;
     if(ea.model!=null){
+        Debug.Log("Got Model"+ea.model);
      ng= ab.LoadAsset<GameObject>(ea.model);
     }
     if(ng!=null)
@@ -969,7 +972,7 @@ return null;
             newMap.locationName = alllMap[i].MapName;
             newMap.locationScene=alllMap[i].LocationScene;
 
-            Debug.Log("LOC NAMES IS"+newMap.locationName.ToString());
+            // Debug.Log("LOC NAMES IS"+newMap.locationName.ToString());
             newMap.townType = GetTownType(alllMap[i].MapType);
             newMap.dungeonType = GetDungeonType(alllMap[i].DungeonType);
 
@@ -1008,7 +1011,7 @@ return null;
 //            }
 
             newMap.hasEvent = alllMap[i].HasEvent;
-           
+     
             //NPC
             newMap.enemyList = new List<EnemyAsset>(GetEnemyListFromGDE(alllMap[i].DungeonEnemyList));
             newMap.enemyPos = new List<Vector3>(alllMap[i].EnemyPos);
@@ -1040,7 +1043,7 @@ if(newMap.hasBoss==true){
         
         EnemyAsset e =new EnemyAsset();
         e.EnemyName=boss.NpcName;
-        Debug.Log(e.EnemyName+"Got boss");
+        // Debug.Log(e.EnemyName+"Got boss");
         e.Tags = boss.Tags;
         e.npcType = Utils.ConvertNpcType(boss.NpcType);
         e.Head=Utils.CreateSprite(boss.Head);
@@ -1057,13 +1060,6 @@ if(newMap.hasBoss==true){
         e.detail=boss.Detail;
         e.hasCard=boss.HssCard;
         e.model=boss.ModelName;
-        //TODO
-        e.damage = boss.Damage;
-        e.def = boss.Armor;
-        //
-        e.attackCard = boss.AttackCard;
-        e.armorCard = boss.ArmorCard;
-
         // e.pos=boss.Pos;
                 
         if (e.hasCard == true)
@@ -1091,7 +1087,7 @@ if(newMap.hasBoss==true){
         {
             EnemyAsset e = new EnemyAsset();
             e.EnemyName = enemy[i].NpcName;
-            Debug.Log(e.EnemyName + "Got enemy ");
+            // Debug.Log(e.EnemyName + "Got enemy ");
             e.Tags = enemy[i].Tags;
             e.npcType = Utils.ConvertNpcType(enemy[i].NpcType);
             e.Head = Utils.CreateSprite(enemy[i].Head);
@@ -1109,18 +1105,6 @@ if(newMap.hasBoss==true){
             e.hasCard = enemy[i].HssCard;
             //
             e.model =enemy[i].ModelName;
-            //
-            //
-            e.damage = enemy[i].Damage;
-            e.def = enemy[i].Armor;
-
-
-            //Common Card load from itemdatabase as common card
-            //that card as spell und ability r  same to enemy stat
-            // attackCard->damage | armor -> def
-            e.attackCard = enemy[i].AttackCard;
-            e.armorCard = enemy[i].ArmorCard;
-
             //
            
 

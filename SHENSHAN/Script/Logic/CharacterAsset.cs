@@ -16,8 +16,12 @@ public class CharacterAsset
     public Sprite avatarImage;
     public string description;
     public Sprite avatarBGImage;
+    public int atkNum;
+    public int defNum;
 
-    public CharacterAsset(PlayerJob jobs, string className, int maxHealth, string heroPowerName, Sprite avatarImage, string description, Sprite avatarBGImage)
+    public CharacterAsset(){}
+
+    public CharacterAsset(PlayerJob jobs, string className, int maxHealth, string heroPowerName, Sprite avatarImage, string description, Sprite avatarBGImage, int atkNum, int defNum)
     {
         this.jobs = jobs;
         this.className = className;
@@ -26,8 +30,9 @@ public class CharacterAsset
         this.avatarImage = avatarImage;
         this.description = description;
         this.avatarBGImage = avatarBGImage;
+        this.atkNum = atkNum;
+        this.defNum = defNum;
     }
-    public CharacterAsset(){}
 
 
     // public int strength;    //力量

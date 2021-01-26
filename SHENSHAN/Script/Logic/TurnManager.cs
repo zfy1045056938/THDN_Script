@@ -80,11 +80,11 @@ public class TurnManager : MonoBehaviour {
         {
             Debug.Log("LowPlayer has Data");
         }
-        foreach (Players p in Players)
-        {
-            Debug.Log(p.name);
+        //foreach (Players p in Players)
+        //{
+        //    Debug.Log(p.name);
             
-        }
+        //}
 
       foreach (string q in QuestLog.GetAllQuests())
               {

@@ -47,8 +47,7 @@ public class HandVisual:MonoBehaviour{
     /// </summary>
     /// <param name="card">Card.</param>
     public void AddCard(GameObject card){
-        //TODO 123
-        if (CardsInHand.Count <= 9)
+        if (CardsInHand.Count <= 6)
         {
             CardsInHand.Insert(0, card);
             //
@@ -164,12 +163,11 @@ public class HandVisual:MonoBehaviour{
     //4.当玩家到达最大持牌数时如果继续进行发牌行为则发生爆牌行为，如果所持有卡牌数为空则友军伤害收到加成效果,
     //5.工人所产生的特殊效果，在玩家指定工人的劳动行为时,在进行探险操作时有几率触发发牌操作.
     //6.野外资源可能产生效果
-    public void GivePlayerACard(CardAsset c,int uniqueID,bool fast =false,bool fromDeck=true,bool isLimitOfHandCard=false,Transform pos=null,bool fromdis=false){
+    public void GivePlayerACard(CardAsset c,int uniqueID,bool fast =false,
+        bool fromDeck=true,bool isLimitOfHandCard=false,Transform pos=null,bool fromdis=false){
         GameObject card;
-       
+        Debug.Log(c.name.ToString()+"GIVE Card");
         SoundManager.instance.PlayClipAtPoint(giveCardSound, Vector3.zero, SoundManager.instance.musicVolume, false);
-        //Particle Effect
-        GlobalSetting.instance.drawCardEffect.Play();
         if(fromDeck)    //判断是否来自牌桌还是其他来源
         {
           
@@ -254,6 +252,7 @@ public class HandVisual:MonoBehaviour{
             s.PrependInterval(0.4f);
             s.OnComplete(() => { ChangeLastCardStatusToInHand(c, w); });
     }
+
     //
     void ChangeLastCardStatusToInHand(CardAsset card,WhereIsTheCardOfCreature w){
         if(areaPosition ==AreaPositions.Low){

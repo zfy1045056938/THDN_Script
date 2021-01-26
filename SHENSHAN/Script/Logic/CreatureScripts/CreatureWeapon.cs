@@ -48,8 +48,8 @@ public class CreatureWeapon : CreatureEffect
 
     public override void WhenACreatureIsPlayed()
     {
-       TurnManager.instance.WhoseTurn.atkDur+=specialAmount;
-       TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.atkDurText.text = TurnManager.instance.WhoseTurn.atkDur.ToString();
+    //    TurnManager.instance.WhoseTurn.atkDur+=specialAmount;
+    //    TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.atkDurText.text = TurnManager.instance.WhoseTurn.atkDur.ToString();
        GlobalSetting.instance.SETLogs(string.Format("铁匠效果:恢复{0}点武器耐久度",specialAmount));
    
   

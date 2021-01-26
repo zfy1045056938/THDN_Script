@@ -20,26 +20,26 @@ public class CharacterInfoPanel2 : MonoBehaviour
 
     CloseOrOpen(false);
         if(NetworkClient.isConnected && player!=null){
-            LoadCharacterData();
+            // LoadCharacterData();
         }
     }
 
 
-    void LoadCharacterData(){
-      str.text=player.Strength.ToString();
-    }
+    // void LoadCharacterData(){
+    //   str.text=player.Strength.ToString();
+    // }
 
     public string ExtraBouns(ItemManager item){
         string amount ="";
         slots=new List<EquipmentSlot>();
         for(int i=0;i<slots.Count;i++){
             if(slots[i].item!=null){
-                if(item.strength !=0){
-                    amount += item.strength.ToString();
-                    return player.Strength+amount;
-                }else{ 
-                    return player.Strength.ToString();
-                }
+                // if(item.strength !=0){
+                //     amount += item.strength.ToString();
+                //     return player.Strength+amount;
+                // }else{ 
+                //     return player.Strength.ToString();
+                // }
             }
         }
         return amount;

@@ -43,9 +43,9 @@ public class TooltipManager : MonoBehaviour {
 
 	public Text DescriptionText;
 	public Text ItemScoreText;
-	public  Text StrengthText;
-	public Text DexText;
-	public Text MagicText;
+	//public  Text StrengthText;
+	//public Text DexText;
+	//public Text MagicText;
 	public Text specialText;
 	public Image tooltipHeader;
 	public Color attributeColor;
@@ -125,9 +125,9 @@ public class TooltipManager : MonoBehaviour {
 					tooltipRequiredLevelText.text = "<size=10>需要等级: " + item.itemLevel.ToString() + "</size>";
 
 					//
-					StrengthText.text = Mathf.RoundToInt(item.strength).ToString();
-					DexText.text = Mathf.RoundToInt(item.dexterity).ToString();
-					MagicText.text = Mathf.RoundToInt(item.magic).ToString();
+					// StrengthText.text = Mathf.RoundToInt(item.strength).ToString();
+					// DexText.text = Mathf.RoundToInt(item.dexterity).ToString();
+					// MagicText.text = Mathf.RoundToInt(item.magic).ToString();
 
 					//
 					frText.text = item.fireResistance.ToString();
@@ -189,9 +189,9 @@ public class TooltipManager : MonoBehaviour {
 			else
 			{
 				ItemScoreText.text = "???";
-				StrengthText.text = "???";
-				DexText.text = "???";
-				MagicText.text = "???";
+				//StrengthText.text = "???";
+				//DexText.text = "???";
+				//MagicText.text = "???";
 				baseDurText.text = "???";
 				baseValueText.text = "???";
 				frText.text = "???";
@@ -517,16 +517,8 @@ string LoadRatityLoC(Items i){
 
 			generatedTooltipText += "<color=#"+ColorToHex(attributeColor)+">\n";
 
-			if(item.dexterity > 0) {
-				generatedTooltipText += "+" + item.dexterity.ToString() + " Dexterity\n";
-			}
-			if(item.strength > 0) {
-				generatedTooltipText += "+" + item.strength.ToString() + " Strength\n";
-			}
 			
-			if(item.magic > 0) {
-				generatedTooltipText += "+" + item.magic.ToString() + " Magic\n";
-			}else if (item.fireResistance>0)
+			 if (item.fireResistance>0)
 			{
 				generatedTooltipText += "+" + item.fireResistance.ToString() + "fireResistance\n";
 			}else if (item.iceResistance>0)

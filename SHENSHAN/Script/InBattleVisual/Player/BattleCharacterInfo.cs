@@ -45,9 +45,9 @@ void Start(){
 }
 
 void Update(){
-     playerDexText.text= p.DEX.ToString();
-            playerMagicText.text =p.INTE.ToString();
-            playerStrengthText.text =p.STR.ToString();
+    //  playerDexText.text= p.DEX.ToString();
+    //         playerMagicText.text =p.INTE.ToString();
+    //         playerStrengthText.text =p.STR.ToString();
 
 
             playerIrText.text=p.IR.ToString();
@@ -72,9 +72,9 @@ void Update(){
           if(player!=null){
            nameText.text =BattleStartInfo.SelectEnemyDeck.enemyAsset.EnemyName.ToString();
     
-            playerDexText.text= player.Dex.ToString();
-            playerMagicText.text =player.Magic.ToString();
-            playerStrengthText.text =player.Strength.ToString();
+            // playerDexText.text= player.Dex.ToString();
+            // playerMagicText.text =player.Magic.ToString();
+            // playerStrengthText.text =player.Strength.ToString();
 
 
             playerIrText.text=player.IR.ToString();

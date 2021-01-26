@@ -55,10 +55,10 @@ public class AITurnMaker : TurnMaker
     bool MakeOneAIMove(bool atkFirst)
     {
         //first chechk weapon stage
-        if (p.CreatureAtk > 0 && p.atkDur > 0 && p.manaLeft >= 2 && p.useWeapon ==false )
-        {
-            PlayerWeapon();
-        }
+        // if (p.CreatureAtk > 0 && p.atkDur > 0 && p.manaLeft >= 2 && p.useWeapon ==false )
+        // {
+        //     PlayerWeapon();
+        // }
         
         
         if (Command.CardDrawPending()) return true;
@@ -155,16 +155,7 @@ public class AITurnMaker : TurnMaker
                     return false;
                 }
 
-                public bool PlayerWeapon()
-                {
-                    if (p.manaLeft > 0 && p.useWeapon == false)
-                    {
-                        p.UseWeapon();
-                        return true;
-                    }
-
-                    return false;
-                }
+               
     //攻击随从
   bool AttackWithCreature(){
         //获取桌面上的随从

@@ -90,17 +90,17 @@ public class AddCardToDeck :  MonoBehaviour,IPointerEnterHandler,IPointerExitHan
 //            cardManager.previewManager.gameObject.SetActive(true);
 //        }
      
-       List<GDECardEffectGuideData> geg = GDEDataManager.GetAllItems<GDECardEffectGuideData>();
-       for(int i=0;i<geg.Count;i++){
-            if(cardAsset.cardDetail.Substring(0,cardAsset.cardDetail.LastIndexOf(":")) ==  geg[i].GName ){
-               //
-               if(EObj!=null){
-                 EObj.gameObject.SetActive(true);
-            //    Debug.Log(cardAsset.cardDetail.Substring(0,cardAsset.cardDetail.LastIndexOf(":"))+"got");
-               EffectText.text=geg[i].GDetail.ToString();
-               }
-           } 
-       }
+    //    List<GDECardEffectGuideData> geg = GDEDataManager.GetAllItems<GDECardEffectGuideData>();
+    //    for(int i=0;i<geg.Count;i++){
+    //         if(cardAsset.cardDetail.Substring(0,cardAsset.cardDetail.LastIndexOf(":")) ==  geg[i].GName ){
+    //            //
+    //            if(EObj!=null){
+    //              EObj.gameObject.SetActive(true);
+    //         //    Debug.Log(cardAsset.cardDetail.Substring(0,cardAsset.cardDetail.LastIndexOf(":"))+"got");
+    //            EffectText.text=geg[i].GDetail.ToString();
+    //            }
+    //        } 
+    //    }
 
     }
 

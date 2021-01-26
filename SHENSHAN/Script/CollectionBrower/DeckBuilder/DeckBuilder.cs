@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using PixelCrushers.DialogueSystem;
 using System.Collections;
 using Michsky.UI.Zone;
+using TMPro;
 public enum BuildMode{
     Normal,
     Draft,
@@ -14,25 +15,33 @@ public enum BuildMode{
 /// 1.建立卡牌（amountofcard<9)
 /// 2.选择角色(selectcharacter)
 /// 3.CRUD
+/// 4.2021-1-26 Added Common Card(10)n,10-n
 /// </summary>
 public class DeckBuilder:MonoBehaviour{
 
     public GameObject CardNamePrefab;   //卡牌预制品
+    public GameObject CommonCardPrefab;
     public InputField DeckName;          //牌组名称
     public Transform Content;
 
     public DraftManager draftManager;
 
+
+
     public int sameCardLimit = 2;
-    public int amountOfCardsInDeck=10 ;
+    public int amountOfCardsInDeck=20 ;
 
     public Text total;
     public Text curr;
+    public TextMeshProUGUI atkNum;
+    public TextMeshProUGUI defNum;
     public int currentPackCardCount;
 
     public GameObject deckCompleteFrame;
 
     public List<CardAsset> deckList = new List<CardAsset>();
+    
+    
 
     public Dictionary<CardAsset, CardNameRibbon> ribbons = new Dictionary<CardAsset, CardNameRibbon>();
 
@@ -67,6 +76,7 @@ public class DeckBuilder:MonoBehaviour{
 
   
     public int cs;
+    
     public  void Awake()
     {
         instance = this;
@@ -220,6 +230,40 @@ public class DeckBuilder:MonoBehaviour{
             RemoveCard(deckList[0]);
         }
 
+      
+        //Add common by character
+        atkNum.text = asset.atkNum.ToString();
+        defNum.text=asset.defNum.ToString();
+        currentPackCardCount = 10;
+        //pre build pack build common card for current amount until cpc <=0
+        while (currentPackCardCount > 0)
+        {
+            //Build common
+            int damageCard = asset.atkNum;
+
+            while (damageCard > 0) {
+                //add damage card
+                //as spell card
+                GameObject common = Instantiate(CommonCardPrefab,Content) as GameObject ;
+                    damageCard--;
+                }
+            //
+            int armorCard = currentPackCardCount - damageCard;
+
+            while (armorCard > 0)
+            {
+
+                GameObject common = Instantiate(CommonCardPrefab, Content) as GameObject;
+
+                armorCard--;
+
+
+                   
+            }
+            //
+            currentPackCardCount--;
+        }
+
         
         DeckBuilderScreen.instance.tabScript.CreateClassTabs(asset.className);
         DeckBuilderScreen.instance.collectionBroswerScript.ShowCollectionForDeckBuilding(asset);
@@ -258,7 +302,7 @@ draftManager.StartDraft();
       
       if(BattleStartInfo.AtDungeon==false){
             Debug.Log("At town set Pack");
-            DeckInfo deckToSave = new DeckInfo(DeckName.text, buildingForCharacter, deckList);
+            DeckInfo deckToSave = new DeckInfo(DeckName.text, buildingForCharacter, deckList,buildingForCharacter.atkNum,buildingForCharacter.defNum);
             DeckStorge.instance.AllDecks.Add(deckToSave);
             Debug.Log("Add To Deck");
             //save to prefs
@@ -276,7 +320,7 @@ draftManager.StartDraft();
     }else{
         Debug.Log("Dungeon Pack Config");
           //At dungeon save tmp Collections
-          DeckInfo deckToSave = new DeckInfo(DeckName.text, buildingForCharacter, deckList);
+          DeckInfo deckToSave = new DeckInfo(DeckName.text, buildingForCharacter, deckList,buildingForCharacter.atkNum,buildingForCharacter.defNum);
           BattleStartInfo.SelectDeck=deckToSave;
           DungeonCardEdit.instance.DCBtn.enabled=true;
           DungeonCardEdit.instance.content.gameObject.SetActive(false);
