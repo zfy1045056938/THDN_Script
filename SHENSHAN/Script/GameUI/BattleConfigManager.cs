@@ -7,7 +7,7 @@ using PixelCrushers.DialogueSystem;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-
+//add progressing bar
 using TMPro;
 
 
@@ -26,7 +26,9 @@ public enum GameDifficult
 }
 
 
-
+/// <summary>
+/// 21-1-28 added difficult mode
+/// </summary>
 public class BattleConfigManager : MonoBehaviour
 {
     public static BattleConfigManager instance;
@@ -143,6 +145,10 @@ public class BattleConfigManager : MonoBehaviour
      
     }
 
+
+    /// <summary>
+    /// 
+    /// </summary>
     public void LoadConfig()
     {
         panel.Open();
@@ -153,6 +159,10 @@ public class BattleConfigManager : MonoBehaviour
         
                     LoadEnemyInfo();
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
     void LoadPlayerInfo()
     {
         if (players != null&& BattleStartInfo.SelectDeck!=null)
@@ -164,7 +174,9 @@ public class BattleConfigManager : MonoBehaviour
                 atkDurText.text = players.atkCount.ToString();
                 armorText.text = players.ArmorDef.ToString();
                 armorDurText.text = players.ArmorDur.ToString();
-            //TODO added card common 
+
+
+            //
             atkAmount.text = BattleStartInfo.SelectDeck.atkNum.ToString();
             armorAmount.text = BattleStartInfo.SelectDeck.defNum.ToString();
 

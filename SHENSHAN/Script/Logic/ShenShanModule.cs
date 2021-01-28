@@ -36,20 +36,25 @@ public class ShenShanModule : MonoBehaviour
 
 
     /// <summary>
+    /// when player mana>= 7 then active shenshan module
+    /// shen shan module active effect by dungeon event , it's will also effect for oppenent
     /// 
     /// </summary>
    public void Init(int round,int cardNum=3)
     {
         currentRound = round;
         //
-        while (cardList.Count>=3)
-        {
-            GameObject obj = Instantiate(scPrefab, scPos.position, Quaternion.identity) as GameObject;
 
-            obj.transform.SetParent(scPos);
-            //
-            // obj.GetComponent<DungeonCard>().dec =
+        Debug.Log("============ShenShan Module Active");
+        if (TurnManager.instance.WhoseTurn == GlobalSetting.instance.topPlayer)
+        {
+            //AI select
+            int selectIndex = Random.Range(0, 2);
+            DungeonEvent.instance.ShowDungeonEvent(round, cardNum,selectIndex);
+        }else
+        {
+            //player select
+            DungeonEvent.instance.ShowDungeonEvent(round, cardNum,-1);
         }
-        
     }
 }

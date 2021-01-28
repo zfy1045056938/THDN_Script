@@ -77,29 +77,37 @@ public class DungeonEvent : MonoBehaviour
     // }
    }
 
-  
 
-   void LoadDEFromGDE(){
-    //    List<GDEDungeonEventData> dvd = GDEDataManager.GetAllItems<GDEDungeonEventData>();
-        
-    //    for(int i=0;i< dvd.Count;i++){
-    //        DungeonEventClass dvc = new DungeonEventClass();
-    //        dvc.deID = dvd[i].DungeonID;
-    //        dvc.deName = dvd[i].DEName;
-    //        dvc.deDetail =dvd[i].DEDetail;
-    //        dvc.deAmount =dvd[i].DEAmount;
-    //        dvc.dePerc = dvd[i].DEPerc;
-    //       dvc.DEReward =dvd[i].DEReward;
-    //       dvc.DAAmount = dvd[i].DAAMoun;
-    //        dvc.deIcon = Utils.CreateSprite(dvd[i].DEIcon);
-    //        dvc.rarity = Utils.GetCardRarity(dvd[i].DERarity);
-    //        dvc.DET = GetDETFromGDE(dvd[i].DEType);
 
-    //        dungeonEvents.Add(dvc);
-    //    }
-   }
+    void LoadDEFromGDE()
+    {
+        List<GDEDungeonEventData> dvd = GDEDataManager.GetAllItems<GDEDungeonEventData>();
 
-   public void ShowDungeonEvent(){
+        for (int i = 0; i < dvd.Count; i++)
+        {
+            DungeonEventClass dvc = new DungeonEventClass();
+            dvc.deID = dvd[i].DungeonID;
+            dvc.deName = dvd[i].DEName;
+            dvc.deDetail = dvd[i].DEDetail;
+            dvc.deAmount = dvd[i].DEAmount;
+            dvc.dePerc = dvd[i].DEPerc;
+            //dvc.DEReward = dvd[i].DEReward;
+            //dvc.DAAmount = dvd[i].DAAMoun;
+            dvc.deIcon = Utils.CreateSprite(dvd[i].DEIcon);
+            dvc.rarity = Utils.GetCardRarity(dvd[i].DERarity);
+            dvc.DET = GetDETFromGDE(dvd[i].DEType);
+
+            dungeonEvents.Add(dvc);
+            //    }
+        }
+    }
+
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+   public void ShowDungeonEvent(int round,int num,int sIndex=-1){
        int counter =0;
        panel.gameObject.SetActive(true);
        if(dungeonEvents.Count!=0){
@@ -123,6 +131,9 @@ public class DungeonEvent : MonoBehaviour
                    counter++;
                    
                 dungeonObjs.Add(obj);
+
+                    //Network Module
+                    NetworkServer.Spawn(obj);
                     
                
                }else{
@@ -130,7 +141,13 @@ public class DungeonEvent : MonoBehaviour
                }
            }
        }
-   }
+        //for ai select rnd index
+        if (sIndex != -1)
+        {
+            selectCard = dungeonObjs[sIndex].GetComponent<DungeonCard>();
+            ActiveCardEffect();
+        }
+    }
 
    public DungeonEventClass GetIDByDE(string dName){
        if (deDic.ContainsKey(dName))
@@ -140,6 +157,12 @@ public class DungeonEvent : MonoBehaviour
        return null;
    }
 
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="card"></param>
+    /// <param name="sindex"></param>
    public void SelectthisCard(DungeonCard  card,int sindex){
        if(card==null && sindex==0){
            selectCard=null;
@@ -171,10 +194,11 @@ public class DungeonEvent : MonoBehaviour
        panel.gameObject.SetActive(false);
    }
 
-   public void ActiveCardEffect()
+   public void ActiveCardEffect(bool isTop =false)
    {
        if (selectCard != null)
        {
+            if (isTop) { 
            DungeonEventClass getDEC = deDic[selectCard.nText.text];
 
            if (getDEC != null)
@@ -215,7 +239,18 @@ public class DungeonEvent : MonoBehaviour
                }
 
            }
-       }
+
+            }
+            else
+            {
+                Debug.Log("AI Active ShenShan Module");
+                DungeonEventClass getDEC = deDic[selectCard.nText.text];
+                //
+                DungeonExplore.instance.AddBouns(getDEC);
+
+
+            }
+        }
        else
        {
            Debug.Log("UnSelect Card");

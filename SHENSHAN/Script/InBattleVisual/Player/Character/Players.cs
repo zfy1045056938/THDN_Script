@@ -7,7 +7,7 @@ using PixelCrushers.DialogueSystem;
 using DG.Tweening;
 using Mirror;
 using Random = System.Random;
-using Unity.Mathematics;
+//using Unity.Mathematics;
 using System.Linq;
 
 //
@@ -151,14 +151,47 @@ public class Players : MonoBehaviour, ICharacter
 
 
     //For Enemy Asset
-   public void LoadEnemyAssetFromVisual(Players p)
+   public void LoadEnemyAssetFromVisual(Players p,GameDifficult dif)
    {
+        //HARD MODE
+        var dBouns = 0;
+        //EVIL MODE
+        var evilDamage = 0;
+        var evilArmor = 0;
+        var evilHealth = 0;
+        //
+        switch (dif)
+        {
+            case GameDifficult.Normal:
+                p.MaxHealth = BattleStartInfo.SelectEnemyDeck.enemyAsset.Health;
+                break;
+            case GameDifficult.Hard:
+                dBouns = 5;
+                p.MaxHealth = BattleStartInfo.SelectEnemyDeck.enemyAsset.Health+dBouns;
+
+                break;
+            case GameDifficult.Evil:
+                //PVP Mode 
+                 evilDamage = 3;
+                 evilArmor = 10;
+                 evilHealth = 10;
+
+                //
+                p.MaxHealth = BattleStartInfo.SelectEnemyDeck.enemyAsset.Health + evilHealth;
+                p.CreatureAtk = BattleStartInfo.SelectEnemyDeck.enemyAsset.damage+evilDamage;
+                p.CreatureDef = BattleStartInfo.SelectEnemyDeck.enemyAsset.def +evilArmor;
+
+
+                break;
+        }
+        
       var e = BattleStartInfo.SelectEnemyDeck.enemyAsset;
        enemyArea.playerPortraitVisual.enemyAsset= BattleStartInfo.SelectEnemyDeck.enemyAsset;
-        p.MaxHealth = BattleStartInfo.SelectEnemyDeck.enemyAsset.Health ;
+        //
+        
       enemyArea.playerPortraitVisual.EnemyHead.sprite = e.Head;
       //DB
-      MaxHealth+= DungeonExplore.DUNGEONENEMYBOUNS;
+      //MaxHealth+= DungeonExplore.DUNGEONENEMYBOUNS;
        enemyArea.playerPortraitVisual.healthText.text=MaxHealth.ToString();
        enemyArea.playerPortraitVisual.enemyCardList = new List<CardAsset>(BattleStartInfo.SelectEnemyDeck.cards);
       
@@ -233,40 +266,14 @@ public class Players : MonoBehaviour, ICharacter
         }
     }
 
-    // private int _atkDur;
-
-    // public int atkDur
-    // {
-    //     get { return _atkDur; }
-    //     set { _atkDur = value; }
-    // }
-
-
 
     private int health;
     public int MaxHealth
     {
         get { return health; }
-        set
-        {
-            //Health = Equipment + effect  +base
-            // if (playerData.Strength % 3 == 0)
-            // {
-            //     health = value + Mathf.RoundToInt(playerData.Strength / 3);
-            // }
+        set {
 
-
-
-            //TODO 2011-1-18
-            var Equipmentslot = FindObjectsOfType<EquipmentSlot>();
-            
-            // var effect = FindObjectOfType<BuffList>();
-
-            // int eb=0;
-            // int effectb=0;
-            
-
-            // health = base.health + eb + effectcb;
+            health = value;
             if (value <= 0)
                 Die();
         }
@@ -309,7 +316,7 @@ public class Players : MonoBehaviour, ICharacter
 
 
     // ALL METHODS
-    void Awake()
+  public  void Awake()
     {
         
      
@@ -333,34 +340,30 @@ public class Players : MonoBehaviour, ICharacter
             StartTurnEvent.Invoke();
         }
         
-        //ability TODO
-        if(BattleStartInfo.DungeonDifficult=="困难" && BattleStartInfo.DungeonEventType!=DungeonEventType.None){
-        new DungeonEventCommand(this,BattleStartInfo.DungeonEventType,BattleStartInfo.DungeonExtraBouns).AddToQueue();
-        }
+       
        
         // add one mana crystal to the pool;
-        Debug.Log("In ONTURNSTART for " + gameObject.name);
-        usedHeroPowerThisTurn = false;
+        //Debug.Log("In ONTURNSTART for " + gameObject.name);
+        //usedHeroPowerThisTurn = false;
         //Check is first card
        TurnManager.instance.WhoseTurn.isFirstCard =true;
       TurnManager.instance.WhoseTurn.playCardThisTurn=0;
 
 
-        //if (TurnManager.instance.WhoseTurn == GlobalSetting.instance.lowPlayer)
-        //{
-        //    playerArea.playerPortraitVisual.weapon.WasUsed = false;
-        //}
+      
 
         ++manaThisTurn;
         manaLeft = manaThisTurn;
-        //TODO 123
+
+        Debug.Log("=======================ShenShan Module validate ");
         if(TurnManager.instance.WhoseTurn.manaLeft >=7){
+            Debug.Log("active the Shenshan module");
             GlobalSetting.instance.ShenShanModule();
         }
         
         //creature Buff Update
        for(int cl=0;cl<table.creatureOnTable.Count;cl++){
-            if (cl != null)
+            if (table.creatureOnTable[cl] != null)
             {
                 table.creatureOnTable[cl].OnTurnStart();
                 
@@ -385,6 +388,13 @@ public class Players : MonoBehaviour, ICharacter
                         objs.GetComponent<OneCreatureManager>().UpdateBuff(table.creatureOnTable[cl]);
                     }
                 }
+
+
+                
+            }
+            else
+            {
+                //
             }
 
         }
@@ -1157,14 +1167,27 @@ public void ShowCoinPanel(){
         // }
     }
 
-    #region Creature Effect interactive
 
-    public void ShowDiscoverCard(){
 
-    }
-    
+    /// <summary>
+    /// 
+    /// </summary>
+    public void ExtraSelect(Players p)
+    {
+        //AI Rnd select by rnd index
+        if (p == GlobalSetting.instance.topPlayer)
+        {
+            int sIndex = UnityEngine.Random.Range(0, 2);
 
-    #endregion
+
+            DiscoverManager.instance.ShowDiscover(GlobalSetting.instance.secondList,sIndex, DiscoverType.SecondPlayer);
+
+        }
+        else
+        {
+            DiscoverManager.instance.ShowDiscover(GlobalSetting.instance.secondList,-1, DiscoverType.SecondPlayer);
+        }
+        }
 }
 
 

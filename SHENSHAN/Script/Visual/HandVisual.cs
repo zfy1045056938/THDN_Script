@@ -20,7 +20,7 @@ public class HandVisual:MonoBehaviour{
     public SameDistanceChildren slots;
 
     private HandCardOperType  handCardOperType; 
-    private int _limitOfCardOfHand = 8;
+    private int _limitOfCardOfHand = 10;
     public int LmitOfCardOfHand{
         get { return _limitOfCardOfHand; }
 
@@ -47,7 +47,8 @@ public class HandVisual:MonoBehaviour{
     /// </summary>
     /// <param name="card">Card.</param>
     public void AddCard(GameObject card){
-        if (CardsInHand.Count <= 6)
+        //
+        if (CardsInHand.Count <= 7)
         {
             CardsInHand.Insert(0, card);
             //

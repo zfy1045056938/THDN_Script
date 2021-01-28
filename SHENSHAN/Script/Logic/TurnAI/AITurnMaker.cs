@@ -7,7 +7,7 @@ using Language.Lua;
 
 
 //AI CONTROL 
-//
+// when AI is second player. select rnd effect as card  that Ai can play 
 public class AITurnMaker : TurnMaker
 {
 
@@ -32,7 +32,12 @@ public class AITurnMaker : TurnMaker
                });
        
     }
-    //迭代器
+    //AI Logic Module
+    // ai auto play at turn will allow these logic that can make fake logic by difficult
+    //allow the difficult r different to player
+    // NORMAL MODE to AI have basic stats
+    // HARD MODE for AI will added extra stats by dungeon xlxs
+    // EVIL MODE for AI will added Common Card for AI  that make same as player(FAKE PVP)
     public IEnumerator MakeAITurn()
     {
         bool stratrgyAtkFirst = false;

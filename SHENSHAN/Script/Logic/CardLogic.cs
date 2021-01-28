@@ -144,7 +144,7 @@ public class CardLogic : IIdentifiable
                     //Common=>Damage Card
                     ca.SpecialSpellAmount = ps.CreatureAtk;
                 }
-                else if (ca.spellBuffType == SpellBuffType.Armor)
+                else if (ca.spellBuffType == SpellBuffType.CharacterArmor)
                 {
                     //Common=>Armor Card
                     ca.SpecialSpellAmount = ps.CreatureDef;

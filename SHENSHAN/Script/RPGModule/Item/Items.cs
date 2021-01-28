@@ -158,6 +158,7 @@ public class Items
     //common
     public bool useBattle;
     public string covName;
+    public string effectCardName;   //item effect set to deck 
     
     public Items(string itemName, string itemId, int width, int height, string iconName)
     {

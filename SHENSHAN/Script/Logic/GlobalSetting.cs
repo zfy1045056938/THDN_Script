@@ -141,6 +141,7 @@ public class GlobalSetting : MonoBehaviour
 
     [Header("Particle System Manager")]
     public ParticleSystem drawCardEffect;
+    //elemental
     public ParticleSystem burningEffect;
     public ParticleSystem freezeEffect;
     public ParticleSystem electronicEffect;
@@ -148,7 +149,33 @@ public class GlobalSetting : MonoBehaviour
     public ParticleSystem critEffect;
     public ParticleSystem healEffect;
     public ParticleSystem bloodEffect;
+    //Common
+    public ParticleSystem singleAttackEffect;
+    public ParticleSystem groupAttackEffect;
+    public ParticleSystem RangedAttackEffect;
+    public ParticleSystem cardInTableEffect;
+    public ParticleSystem cardAttackTailEffect;
+    public ParticleSystem cardDeadEffect;
 
+
+    //aborb
+    public ParticleSystem absorbEffect;
+    public ParticleSystem absorbArmorEffect;
+    public ParticleSystem absorbExtraEffect;
+
+    //card effect
+    public ParticleSystem tokenCardEffect;
+    public ParticleSystem extradamageEffect;
+
+    [Header("Effect Object")]
+    public GameObject ESDPrefab;
+    public GameObject BObj;
+    public GameObject killObj;
+
+    [Header("Second Player")]
+    public List<CardAsset> secondList;
+    
+      
     /// <summary>
     /// Awake this instance.
     /// </summary>
@@ -324,8 +351,10 @@ LoadCard();
     //TOOD 1-18
     // Show panel und active 3  effect util player select
     public void ShenShanModule(int defaultNum=3){
+        Debug.Log("ShenShan Module");
         int round = 0;
         shenshanPrefab.GetComponent<ShenShanModule>().Init(round,defaultNum);
+        round++;
     }
 
     //Set amount und logs to lp
@@ -364,5 +393,18 @@ LoadCard();
            }
         }
 
+
+
+    #region Effect Module
+    /// <summary>
+    /// when cast effect ,generate obj to target 
+    /// </summary>
+    /// <param name="pos"></param>
+    public void ESDBulletShoot(Vector3 pos)
+    {
+
+    }
+
+    #endregion
 }
 

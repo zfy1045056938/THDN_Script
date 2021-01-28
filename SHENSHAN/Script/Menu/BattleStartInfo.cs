@@ -15,15 +15,15 @@ public class BattleStartInfo
     //For Battle Leave state
     public static bool AtDungeon;
     public static bool IsWinner;
-    public static string DungeonDifficult;
+    //public static string DungeonDifficult;
     
     //player 
     public static Items Weapon;
     public static Items Armor;
     public static Items Ring;
-    public static Items Potion1;
-    public static Items Potion2;
-    public static Items Potion3;
+    //public static Items Potion1;
+    //public static Items Potion2;
+    //public static Items Potion3;
     
     //
     public static int DungeonExtraBouns =0;

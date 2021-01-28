@@ -121,6 +121,7 @@ public class TurnManager : MonoBehaviour {
         CardLogic.CardsCreatedThisInGame.Clear();
         CreatureLogic.creatureCreatedThisGame.Clear();
 
+        //
         foreach (Players p in Players)
         {
             p.manaThisTurn = 0;
@@ -138,9 +139,10 @@ public class TurnManager : MonoBehaviour {
                 p.LoadCharacterInfoFromAsset();
                 p.AddDungeonBouns();
                 p.LoadStatsFromdata();
-                //p.playerArea.playerPortraitVisual.weapon.LoadItems();
-                //p.playerArea.playerPortraitVisual.ring.LoadItems();
                 
+                p.playerArea.playerPortraitVisual.weapon.LoadItems(p);
+                p.playerArea.playerPortraitVisual.ring.LoadItems(p);
+
                 GlobalSetting.instance.lowPlayer.playerArea.playerPortraitVisual.LoadStatsFromAsset();
                 p.LoadBattleInfo(BattleStartInfo.player);
                 p.playerArea.playerPortraitVisual.LoadNames();
@@ -148,7 +150,9 @@ public class TurnManager : MonoBehaviour {
                 Debug.Log("Load Player Done");
             }
             else if(p==GlobalSetting.instance.topPlayer){
-             p.LoadEnemyAssetFromVisual(p);
+                //Set Value  to AI (DIFFICULT + STATS)
+                var difficlut = BattleStartInfo.GameDifficult;
+             p.LoadEnemyAssetFromVisual(p,difficlut);
              Debug.Log("Load Enemy Done");
                p.LoadBattleInfoEnemy(BattleStartInfo.SelectEnemyDeck.enemyAsset);
                 //   p.playerArea.playerPortraitVisual.weapon.LoadItems();
@@ -214,10 +218,13 @@ public class TurnManager : MonoBehaviour {
                //
 //               whoGoesSecond.GetACardNotFromDeck((CoinCard));
            }
-           
+
 
            // add one more card to second player`s hand
-           whoGoesSecond.DrawACard(true);
+           // for second player can discover the effect (damage card/armor card/health)
+           //TODO
+           //whoGoesSecond.DrawACard(true);
+           whoGoesSecond.ExtraSelect(whoGoesSecond);
             
            //
 //           GlobalSetting.instance.lowPlayer.GetACardNotFromDeck(CoinCard);

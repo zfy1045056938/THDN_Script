@@ -54,7 +54,14 @@ public class DiscoverManager : MonoBehaviour
 
     }
 
-    public void ShowDiscover(List<CardAsset> ca, int index, DiscoverType type)
+    /// <summary>
+    /// second player for player will select rnd ,player default selectIndex is -1
+    /// </summary>
+    /// <param name="ca"></param>
+    /// <param name="index"></param>
+    /// <param name="type"></param>
+    /// <param name="selectIndex"></param>
+    public void ShowDiscover(List<CardAsset> ca, int index, DiscoverType type, int selectIndex=-1)
     {
         showText.text = "选择" + index + "张牌";
         OpenBtn.gameObject.SetActive(true);
@@ -82,8 +89,20 @@ public class DiscoverManager : MonoBehaviour
         }else{
             
         }
+        //AI select rnd second card
+        if(selectIndex != -1)
+        {
+            Debug.Log("Second Player Select Card to hand");
+            ButtonHandler(selectIndex);
+        }
     }
 
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="cs"></param>
+    /// <param name="type"></param>
     public void ApplyLookToCards(List<CardAsset> cs = null, DiscoverType type = DiscoverType.None)
     {
 
@@ -107,6 +126,10 @@ public class DiscoverManager : MonoBehaviour
                 //tmp edit panel for player who can select card to pack und battle with enemy
                 cs = CardCollection.instance.allCardsArray.ToList();
                 SetDType(cards.ToList());
+                break;
+            case DiscoverType.SecondPlayer:
+                cs = GlobalSetting.instance.secondList.ToList();
+                SetDType(cs);
                 break;
            
             default:

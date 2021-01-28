@@ -56,33 +56,53 @@ public class WeaponSkill : MonoBehaviour,IPointerClickHandler
  }
  
  
-
- public void LoadItems()
+    /// <summary>
+    /// weapon exists , check effect card name und load card to the decklist
+    /// shuffle the pack 
+    /// </summary>
+ public void LoadItems(Players p)
     {
-        if (weapon != null&&weapon.damage>0)
+        if (weapon != null && weapon.effectCardName !=null)
         {
-           
-            atkText.text =Mathf.FloorToInt(weapon.damage).ToString();
-            atkDurText.text = weapon.weaponDur.ToString();
-            manaText.text = weapon.itemMana.ToString();
-           
-            //active effect
-            if (weapon.useEffectScriptName != "" && weapon.useEffectScriptName != null)
-            {
-                Debug.Log("Load Weapon");
-                spellEffect =
-                    System.Activator.CreateInstance(System.Type.GetType(weapon.useEffectScriptName)) as SpellEffect;
-                spellEffect.owner = GlobalSetting.instance.lowPlayer;
-                spellEffect.target = weapon.spellTarget;
-            }
-            
+            #region old item struct
+            //atkText.text =Mathf.FloorToInt(weapon.damage).ToString();
+            //atkDurText.text = weapon.weaponDur.ToString();
+            //manaText.text = weapon.itemMana.ToString();
+
+            ////active effect
+            //if (weapon.useEffectScriptName != "" && weapon.useEffectScriptName != null)
+            //{
+            //    Debug.Log("Load Weapon");
+            //    spellEffect =
+            //        System.Activator.CreateInstance(System.Type.GetType(weapon.useEffectScriptName)) as SpellEffect;
+            //    spellEffect.owner = GlobalSetting.instance.lowPlayer;
+            //    spellEffect.target = weapon.spellTarget;
+            //}
+
             //Check Effect of spellTarget
-//            if (weapon.spellTarget == TargetOptions.Creature)
-//            {
-//                content.AddComponent<DragSpellOnTarget>();
-//                content.AddComponent<Draggable>();
-//            }
-//            
+            //            if (weapon.spellTarget == TargetOptions.Creature)
+            //            {
+            //                content.AddComponent<DragSpellOnTarget>();
+            //                content.AddComponent<Draggable>();
+            //            }
+            //
+            #endregion
+            //has itemeffect then load card to deck
+            var card = CardCollection.instance.GetCardAssetByName(weapon.effectCardName);
+            if (card!=null) {
+                CardLogic ca = new CardLogic(p,card);
+                if (ca != null)
+                {
+                    //Add card to deck then shuffle it
+                    p.deck.cards.Add(card);
+                    p.deck.cards.Shuffle(); //shuffle the pack 
+                }
+
+                    }
+            else
+            {
+                Debug.Log("Can't got cardasset");
+            }
         }
         else
         {

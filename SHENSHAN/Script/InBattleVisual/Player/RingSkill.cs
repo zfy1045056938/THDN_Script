@@ -52,36 +52,42 @@ public class RingSkill : MonoBehaviour,IPointerClickHandler
          glow.gameObject.SetActive(hightLight);
      }
  }
-public void LoadItems()
+    public void LoadItems(Players p)
     {
         if (items != null && items.useEffectScriptName != "")
         {
-           
-           ringDur.text =Mathf.FloorToInt(items.ringDur).ToString();
 
-            manaText.text = items.itemMana.ToString();
-           
-            //active effect
-            if (items.useEffectScriptName != "" && items.useEffectScriptName != null)
+            #region old item struct 
+            //ringDur.text =Mathf.FloorToInt(items.ringDur).ToString();
+
+            //manaText.text = items.itemMana.ToString();
+
+            ////active effect
+            //if (items.useEffectScriptName != "" && items.useEffectScriptName != null)
+            //{
+            //    Debug.Log("Load items");
+            //    spellEffect =
+            //        System.Activator.CreateInstance(System.Type.GetType(items.useEffectScriptName)) as SpellEffect;
+            //    spellEffect.owner = GlobalSetting.instance.lowPlayer;
+            //    spellEffect.target = items.spellTarget;
+            //}
+            #endregion
+
+            var card = CardCollection.instance.GetCardAssetByName(items.effectCardName);
+            if (card != null)
             {
-                Debug.Log("Load items");
-                spellEffect =
-                    System.Activator.CreateInstance(System.Type.GetType(items.useEffectScriptName)) as SpellEffect;
-                spellEffect.owner = GlobalSetting.instance.lowPlayer;
-                spellEffect.target = items.spellTarget;
+                CardLogic ca = new CardLogic(p, card);
+                if (ca != null)
+                {
+                    //Add card to deck then shuffle it
+                    p.deck.cards.Add(card);
+                    p.deck.cards.Shuffle(); //shuffle the pack 
+                }
             }
-            
-            //Check Effect of spellTarget
-//            if (items.spellTarget == TargetOptions.Creature)
-//            {
-//                content.AddComponent<DragSpellOnTarget>();
-//                content.AddComponent<Draggable>();
-//            }
-//            
-        }
-        else
-        {
-            iconPanel.gameObject.SetActive(false);
+            else
+            {
+                iconPanel.gameObject.SetActive(false);
+            }
         }
     }
 

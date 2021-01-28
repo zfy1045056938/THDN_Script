@@ -554,7 +554,7 @@ public enum DiscoverType{
     Oppenent,
     HardMode,
     Dungeon,
-
+    SecondPlayer
 
 }
 
