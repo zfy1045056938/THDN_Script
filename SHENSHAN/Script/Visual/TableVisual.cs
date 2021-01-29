@@ -98,7 +98,7 @@ public class TableVisual : MonoBehaviour
             oneCreature.cardAsset = ca;
             oneCreature.ReadCreatureFromAsset();
             Debug.Log("Add DB For c==>"+oneCreature.cardAsset.name.ToString());
-           oneCreature.AddBouns();///
+        //    oneCreature.AddBouns();///
 
             creatures.transform.SetParent(slots.transform);
             creatures.transform.localScale = Vector3.one;

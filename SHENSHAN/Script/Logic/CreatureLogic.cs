@@ -113,7 +113,7 @@ public class CreatureLogic : ICharacter
     public CardType c = CardType.None; //默认为随从
 
     
-
+    
     public bool CanBeAtk
     {
         get
@@ -131,9 +131,10 @@ public class CreatureLogic : ICharacter
        set;
     }
 
-    public int Str { get; set; }
-    public int Dex { get; set; }
-    public int Inte { get; set; }
+//TODO
+    // public int Str { get; set; }
+    // public int Dex { get; set; }
+    // public int Inte { get; set; }
 
     public int FR { get; set; }
     public int IR { get; set; }
@@ -178,19 +179,10 @@ public event VoidWithNoArugment CreatureAtkEvent;
     /// <param name="owner">Owner.</param> 
     public CreatureLogic(Players owner, CardAsset ca)
     {
-        //Add Charater Ab 
-        //str  -> atk,hp 
-        //dex  -> armor,flash(Application)
-        //inte -> ED(players)
-        int healthBouns=0;
-        int atkBouns=0;
-        int armorBouns=0;
-        
+      
+      
         this.owner = owner;
         this.card = ca;
-
-       
-        
 
         //
         FR = ca.fireResistance;
@@ -368,12 +360,12 @@ defafter=0;
             CreatureAtkEvent.Invoke();
         }
         //Flash Check
-        float rnd = UnityEngine.Random.Range(0,1f);
-        if(rnd>(1-(TurnManager.instance.WhoseTurn.otherPlayer.flashPerc))){
-             GlobalSetting.instance.SETLogs(string.Format("闪避判定为{0},躲闪成功",rnd));
-            //NoAtk
-            DamageEffect.ShowBuffEffect(GlobalSetting.instance.lowPlayer.playerArea.playerPortraitVisual.transform.position,SpellBuffType.Block,0);
-        }else{
+        // float rnd = UnityEngine.Random.Range(0,1f);
+        // if(rnd>(1-(TurnManager.instance.WhoseTurn.otherPlayer.flashPerc))){
+        //      GlobalSetting.instance.SETLogs(string.Format("闪避判定为{0},躲闪成功",rnd));
+        //     //NoAtk
+        //     DamageEffect.ShowBuffEffect(GlobalSetting.instance.lowPlayer.playerArea.playerPortraitVisual.transform.position,SpellBuffType.Block,0);
+        // }else{
         
         //存在护甲攻击力优先伤害护甲,如果护甲<伤害总值则减少卡牌血量
         if (target.CreatureDef > 0 && CreatureDef > 0)
@@ -479,7 +471,7 @@ defafter=0;
         CreatureDef = atkdefAfter;
 
         GlobalSetting.instance.SETLogs(string.Format("{0}对{1}造成{1}点伤害",card.name,target.card.name,CreatureAtk));
-        }
+        
 
 
         

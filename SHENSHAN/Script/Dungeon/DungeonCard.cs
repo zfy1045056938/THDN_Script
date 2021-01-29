@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
 using UnityEngine.EventSystems;
-
+using TMPro;
 public enum DungeonEventType
 {
     None,
@@ -61,11 +61,12 @@ public class DungeonEventClass{
 [System.Serializable]
 public class DungeonCard : MonoBehaviour,IPointerEnterHandler,IPointerClickHandler,IPointerExitHandler
 {
+    public CardAsset card;  //for second
 
- public DungeonEventClass dec;
-  public Text nText;
-  public Text ddText;
-  public Text drText;
+ public DungeonEventClass dec;  //f
+  public TextMeshProUGUI nText;
+  public TextMeshProUGUI ddText;
+  public TextMeshProUGUI drText;
   public Image glow;
   public Image select;
   public Image iconSprite;

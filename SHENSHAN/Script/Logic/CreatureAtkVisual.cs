@@ -37,52 +37,7 @@ public  class CreatureAtkVisual :MonoBehaviour
                                     int targetArmorAfter,
                                      CardEffects cardEffects=CardEffects.None){
  
-        #region oldAtk
-        //Debug.Log("attack by uniqueID");
-        //manager.CanAtkNow = true;
-        ////查找目标ID
-        //GameObject target = IDHolder.GetComponentWithID(targetUniqueID);
-        ////set order=> front order
-        ////whereIsTheCreature.BringToFront();
-        //whereIsTheCreature.transform.SetAsFirstSibling();
-        ////set visualState
-        //VisualStates tempStates = whereIsTheCreature.visualState;
-        //whereIsTheCreature.visualState = VisualStates.Transition;
-        ////action in game
-        //transform.DOMove(target.transform.position, 0.5f).SetLoops(2, LoopType.Yoyo).SetEase(Ease.InCubic).
-        //         OnComplete(() =>
-        //         {
-        //    //场面存在攻击对象
-        //    if (damageTakenByTarget>0)
-        //             {
-        //        DamageEffect.CreateDamageEffect(target.transform.position, damageTakenByTarget);      
-        //             }
-        //    if (damageTakenByAttack>0){
-        //        DamageEffect.CreateDamageEffect(transform.position, damageTakenByAttack);
-        //    }
-
-        //    ////获取玩家ID
-        //    if (GlobalSetting.instance.IsPlayer(targetUniqueID)){
-        //                 target.GetComponent<PlayerPortraitVisual>().healthText.text = targetHealthAfter.ToString();
-        //    }else{
-        //                 target.GetComponent<OneCreatureManager>().healthText.text = targetHealthAfter.ToString();
-        //    }
-
-        //    //
-        //             whereIsTheCreature.SetTableSortingOrder();
-        //             whereIsTheCreature.visualState = tempStates;
-
-        //             //
-        //             manager.healthText.text = attackHealthAfter.ToString();
-
-        //             //sequence 
-        //             Sequence s = DOTween.Sequence();
-        //             s.AppendInterval(1f);
-        //             s.OnComplete(Command.CommandExecutionComplete);
-
-        //         });
-#endregion
-
+       
         
        
         manager.CanAtkNow = false;
@@ -104,6 +59,8 @@ public  class CreatureAtkVisual :MonoBehaviour
 //          fbx.GetComponent<ParticleSystem>().Play();
 //          
            
+
+           //Damege popup
             if (damageTakenByTarget>0)
             {
                 DamageEffect.CreateDamageEffect(target.transform.position, damageTakenByTarget);

@@ -350,11 +350,17 @@ LoadCard();
 
     //TOOD 1-18
     // Show panel und active 3  effect util player select
-    public void ShenShanModule(int defaultNum=3){
+    public void ShenShanModule(int defaultNum=3,bool secondPart=false){
         Debug.Log("ShenShan Module");
+        if(secondPart==false){
         int round = 0;
         shenshanPrefab.GetComponent<ShenShanModule>().Init(round,defaultNum);
         round++;
+        }else{
+            //
+            GameDebug.Log("Second Player Select Part");
+            shenshanPrefab.GetComponent<ShenShanModule>().ShenShanModule(secondPart);
+        }
     }
 
     //Set amount und logs to lp

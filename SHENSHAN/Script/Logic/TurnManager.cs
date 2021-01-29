@@ -57,7 +57,7 @@ public class TurnManager : MonoBehaviour {
     }
 
 
-    // METHODS
+    // METHODSTp
 //    void Awake()
 //    {
 //        Players = GameObject.FindObjectsOfType<Players>();
@@ -137,13 +137,13 @@ public class TurnManager : MonoBehaviour {
                 // weapon equals atk card
                 //armor not equals def card und it's  will increase by card effect(Armor)
                 p.LoadCharacterInfoFromAsset();
-                p.AddDungeonBouns();
+                // p.AddDungeonBouns();
                 p.LoadStatsFromdata();
                 
                 p.playerArea.playerPortraitVisual.weapon.LoadItems(p);
                 p.playerArea.playerPortraitVisual.ring.LoadItems(p);
 
-                GlobalSetting.instance.lowPlayer.playerArea.playerPortraitVisual.LoadStatsFromAsset();
+                // GlobalSetting.instance.lowPlayer.playerArea.playerPortraitVisual.LoadStatsFromAsset();
                 p.LoadBattleInfo(BattleStartInfo.player);
                 p.playerArea.playerPortraitVisual.LoadNames();
                 //
@@ -197,9 +197,11 @@ public class TurnManager : MonoBehaviour {
            Debug.Log("rnd is "+rnd);
            // Debug.Log(Players.Playerss.Length);
            Players whoGoesFirst = Players[rnd];
+           whoGoesFirst.isSecond=false;
            Debug.Log(whoGoesFirst);
            Players whoGoesSecond = whoGoesFirst.otherPlayer;
            Debug.Log(whoGoesSecond);
+           whoGoesSecond.isSecond=true;
 
            // draw 4 cards for first player and 5 for second player
            //changelog 123  ->lastest card module
@@ -224,7 +226,7 @@ public class TurnManager : MonoBehaviour {
            // for second player can discover the effect (damage card/armor card/health)
            //TODO
            //whoGoesSecond.DrawACard(true);
-           whoGoesSecond.ExtraSelect(whoGoesSecond);
+        //    whoGoesSecond.ExtraSelect(whoGoesSecond);
             
            //
 //           GlobalSetting.instance.lowPlayer.GetACardNotFromDeck(CoinCard);

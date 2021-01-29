@@ -146,7 +146,7 @@ public class Players : MonoBehaviour, ICharacter
 
     //TODO 2021-1-18
     public bool shenshanModule; //active the module when mana>=7 
-
+    public bool isSecond;   //different of the first player
 
 
 
@@ -340,7 +340,13 @@ public class Players : MonoBehaviour, ICharacter
             StartTurnEvent.Invoke();
         }
         
-       
+        //TODO the second player has active the extra card needs select in the selectCard with the limit time (10s)
+        //how's check who's the second players , use bool to declare the different
+       if(TurnManager.instance.WhoseTurn.isSecond==true){
+           //Select Part then set false
+            GlobalSetting.instance.ShenShanModule();
+           TurnManager.instance.WhoseTurn.isSecond=false;
+       }
        
         // add one mana crystal to the pool;
         //Debug.Log("In ONTURNSTART for " + gameObject.name);

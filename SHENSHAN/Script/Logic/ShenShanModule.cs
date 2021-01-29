@@ -4,7 +4,9 @@ using System.Linq;
 using GameDataEditor;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
-
+using Mirror;
+using UnityEngine.UI;
+using TMPro;
 
 [System.Serializable]
 public class ShenShanModule : MonoBehaviour
@@ -16,6 +18,9 @@ public class ShenShanModule : MonoBehaviour
     public GameObject scPrefab;
     public Transform scPos;
     public List<GameObject> cardList;
+    public  TextMeshProUGUI selectnameText;
+    public TextMeshProUGUI detailText;
+
     public int index = -1;
     public int currentRound = -1;
     
@@ -55,6 +60,32 @@ public class ShenShanModule : MonoBehaviour
         {
             //player select
             DungeonEvent.instance.ShowDungeonEvent(round, cardNum,-1);
+        }
+    }
+
+    ///
+    public void ShenShanModules(bool isSecond){
+        var secondList= CardCollection.instance.allCardsArray.FindAll(ct=>ct.tags=="second").ToList();
+        if(secondList.Count>0){
+            //
+            for(int i=0;i<secondList.Count;i++){
+                GameObject obj = Instantiate(SSObj,scPos.position,Quaternion.identity)as GameObject;
+                obj.transform.SetParent(scPos);
+                //
+                var dc =obj.GetComponent<DungeonCard>();
+                obj.GetComponent<DungeonCard>().card = secondList[i];
+                dc.nText.text = secondList[i].card.name.ToString();
+                dc.ddText.text =secondList[i].card.cardDef.ToString();
+                //TODO
+                
+
+                //
+
+                cardList.Add(obj);
+
+                //Network
+                NetworkServer.Spawn(obj);
+            }
         }
     }
 }

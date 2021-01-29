@@ -343,6 +343,7 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
     }
 
     //Add creature extra bouns for player
+    //TODO Removed 
     public void AddBouns(){
 
         Debug.Log("Add Bouns For DB");
