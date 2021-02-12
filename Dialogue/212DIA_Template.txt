@@ -1,0 +1,96 @@
+Required Chat Mapper Template Fields for: D:\THDN_Script\Dialogue\212DIA.xml
+
+ACTORS (in this order):
+[1] Name: Text
+[2] Pictures: Files
+[3] Description: Text
+[4] IsPlayer: Boolean
+[5] NodeColor: Text
+[6] SpritePortrait: Text
+[7] AltSpritePortraits: Text
+[8] en: Localization
+
+ITEMS (in this order):
+[1] Name: Text
+[2] Pictures: Files
+[3] Description: Text
+[4] Is Item: Boolean
+[5] Success Description: Text
+[6] Failure Description: Text
+[7] State: Text
+[8] Locations: Text
+[9] Display Name: Text
+[10] Trackable: Boolean
+[11] Track: Boolean
+[12] XP Reward: Number
+[13] Scrap Reward: Number
+[14] Item Reward Amount: Number
+[15] Item Reward: Text
+[16] Entry Count: Number
+[17] Entry 1: Text
+[18] Entry 1 State: Text
+[19] Entry 1 Display Name: Text
+[20] Entry 1 Active: Text
+[21] Entry 1 Success: Text
+[22] Entry 1 CurrentAmount: Number
+[23] Entry 1 GoalAmount: Number
+[24] Entry 2: Text
+[25] Entry 2 State: Text
+[26] Entry 2 Display Name: Text
+[27] Entry 2 Active: Text
+[28] Entry 2 Success: Text
+[29] Entry 2 CurrentAmount: Number
+[30] Entry 2 GoalAmount: Number
+[31] Entry 3: Text
+[32] Entry 3 State: Text
+[33] Entry 3 Display Name: Text
+[34] Entry 3 Active: Text
+[35] Entry 3 Success: Text
+[36] Entry 3 CurrentAmount: Number
+[37] Entry 3 Goal Amount: Number
+[38] Abandonable: Boolean
+[39] Group: Text
+[40] Entry 1 Target: Actor
+[41] en QuestName: Localization
+[42] en QuestDetails: Localization
+[43] QuestMan: Actor
+[44] enQuestName: Text
+[45] enQuestDetails: Text
+
+LOCATIONS (in this order):
+[1] Name: Text
+[2] Pictures: Files
+[3] Description: Text
+
+USER VARIABLES (in this order):
+[1] Name: Text
+[2] Initial Value: Text
+[3] Description: Text
+
+CONVERSATIONS (in this order):
+[1] Title: Text
+[2] Pictures: Files
+[3] Description: Text
+[4] Actor: Actor
+[5] Conversant: Actor
+[6] enTitle: Localization
+[7] enDetails: Localization
+
+DIALOGUE NODES (in this order):
+[1] Title: Text
+[2] Pictures: Files
+[3] Description: Text
+[4] Actor: Actor
+[5] Conversant: Actor
+[6] Menu Text: Text
+[7] Dialogue Text: Text
+[8] Parenthetical: Text
+[9] Audio Files: Files
+[10] Video File: Text
+[11] Sequence: Text
+[12] Response Menu Sequence: Text
+[13] Portraits Visible: Boolean
+[14] canvasRect: Text
+[15] en: Localization
+[16] en QuestName: Localization
+[17] en QuestDetails: Localization
