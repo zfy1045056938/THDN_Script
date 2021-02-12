@@ -4,100 +4,100 @@ ShenShan 1,1.5.1.0,richard,,#ffffffff ---,#ff0000ff ---,#00ff00ff ---,#0000ffff 
 Global User Script
 
 Actors
-ID,Portrait,AltPortraits,SpritePortrait,AltSpritePortraits,Name,Pictures,Description,IsPlayer,SpritePortrait,AltSpritePortraits,en,NodeColor
-Number,Special,Special,Special,Special,Text,Files,Text,Boolean,Text,Text,Localization,Text
-1,,[],,[],Player,[],,True,,[],,Blue
-2,,[],,[],瑞奇,[],瑞奇党的头目,False,,[],,{{omit}}
-3,,[],,[],托奇,[],肯托阵营负责与奎卡交易的 大使,False,,[],,Gray
-4,,[],,[],地下列车,[],年久失修的列车,False,,[],,Gray
-5,,[],,[],地底爬虫,[],列车地下城生物.,False,,[],,Gray
-6,,[],,[],所多提斯士兵,[],"洛斯据点,瑞奇希望占领此地获得高信号传输",False,,[],,Gray
-7,,[],,[],所多提斯士兵队长,[],"洛斯据点,瑞奇希望占领此地获得高信号传输",False,,[],,Gray
-8,,[],,[],特律,[],"Guy who is union of free ranger,came to qika save them.",False,,[],,Gray
-9,,[],,[],所多提斯射手,[],屠杀奎卡族人的士兵,False,,[],,Gray
-10,,[],,[],黑色史密斯,[],"奎卡营地的铁匠,用于制作强化武器以及装备",FALSE,,[],,
-11,,[],,[],莱曼,[],,False,,[],,{{omit}}
-12,,[],,[],李,[],"Chap04 begin und first meet , bar manager",FALSE,,[],,
-13,,[],,[],平克,[],,False,,[],,Gray
-14,,[],,[],弗伊,[],,False,,[],,Gray
-15,,[],,[],所多提斯船长,[],交接船长,False,,[],,Gray
-16,,[],,[],莱尼,[],,False,,[],,{{omit}}
-19,,[],,[],信号放大器,[],,False,,[],,Gray
-20,,[],,[],所多提斯军官,[],,FALSE,,[],,
-21,,[],,[],奎卡地下列车,[],车站中有一辆年久失修的列车被藤曼包裹着.,False,,[],,
-22,,[],,[],爬虫网,[],爬虫母体衍生出来的网企图阻拦列车行驶的路线,FALSE,,[],,
-23,,[],,[],滴滴露,[],,FALSE,,[],,
-24,,[],,[],莱曼,[],路德亚看门人,False,,[],,Gray
-25,,[],,[],托,[],,False,,[],,
-26,,[],,[],南,[],,False,,[],,
-27,,[],,[],金,[],,False,,[],Kim,
-28,,[],,[],方向,[],,False,,[],,{{omit}}
-29,,[],,[],古代武器控制装置,[],,False,,[],,Gray
-30,,[],,[],莱德尼列车,[],莱德尼用来逃脱的工具,False,,[],,Gray
-31,,[],,[],生命通道,[],,False,,[],,
-32,,[],,[],沃利达酒馆门,[],,False,,[],,
-33,,[],,[],海轮党水手,[],,False,,[],,
-34,,[],,[],海轮党参谋,[],,False,,[],,
-35,,[],,[],海轮党首领,[],,False,,[],,
-36,,[],,[],凯,[],,False,,[],,
-37,,[],,[],沃里达酒馆大门,[],,FALSE,,[],,
-38,,[],,[],生命通道,[],,False,,[],,Gray
-39,,[],,[],缇娜,[],,False,,[],,
-40,,[],,[],海轮党海盗,[],,False,,[],,
-41,,[],,[],海轮党船长,[],,FALSE,,[],,
-42,,[],,[],老瘸子先知,[],,FALSE,,[],,
-43,,[],,[],灵视老瘸子,[],,FALSE,,[],,
-44,,[],,[],武装代理人员,[],,FALSE,,[],,
-45,,[],,[],武装挖掘人员,[],,FALSE,,[],,
-46,,[],,[],戈林核心,[],,FALSE,,[],,
-47,,[],,[],沃克,[],,FALSE,,[],,
-48,,[],,[],失落海盗,[],,FALSE,,[],,
-49,,[],,[],矿石蜘蛛,[],,FALSE,,[],,
-51,,[],,[],海底管理密令,[],Got Safe Code from codex (kill),FALSE,,[],,
-52,,[],,[],海底核心终端,[],OceanTerminal,False,,[],,
-53,,[],,[],暗街商人,[],,FALSE,,[],,
-54,,[],,[],缇娜的信条,[],,FALSE,,[],,
-55,,[],,[],帕热,[],,FALSE,,[],,
-56,,[],,[],海底终端,[],,FALSE,,[],,
-57,,[],,[],Chap07,[],,FALSE,,[],,
-58,,[],,[],飞船操作手册,[],Chap07 tina und me came to spaceship und found eine book und dialogue with it,FALSE,,[],,
-59,,[],,[],刀锋,[],,False,,[],,{{omit}}
-60,,[],,[],Chap08,[],,FALSE,,[],,
-61,,[],,[],伏尔图斯元素,[],,False,,[],,Gray
-62,,[],,[],伏尔图斯侵蚀体,[],,FALSE,,[],,
-63,,[],,[],高级所多提斯战士,[],,False,,[],,{{omit}}
-68,,[],,[],圣山之门,[],,FALSE,,[],,
-69,,[],,[],查克,[],,False,,[],Chuck,Gray
-71,,[],,[],矩石,[],Start Matches Games,False,,[],,Gray
-72,,[],,[],暗街杀手,[],,False,,[],,Gray
-73,,[],,[],暗街商人,[],,False,,[],,{{omit}}
-74,,[],,[],帕洛尔元素,[],,FALSE,,[],,
-75,,[],,[],帕洛尔侵蚀体,[],,FALSE,,[],,
-76,,[],,[],伏尔侵蚀体,[],Chap08,False,,[],,
-77,,[],,[],伏尔元素,[],,FALSE,,[],,
-80,,[],,[],所多提斯侵蚀体,[],Chap09 Final Chap At Sodtyx End with Chaos,False,,[],,
-81,,[],,[],托尼,[],Uncle Montana,FALSE,,[],,
-82,,[],,[],所多提斯协议,[],,FALSE,,[],,
-83,,[],,[],狱魔,[],,False,,[],,{{omit}}
-84,,[],,[],蒙大拿,[],Who jail by Toni,FALSE,,[],,
-86,,[],,[],真理之门,[],Final Battle with Chaos,FALSE,,[],,
-87,,[],,[],战争,[],,FALSE,,[],,
-88,,[],,[],痛苦,[],,FALSE,,[],,
-89,,[],,[],死亡,[],,FALSE,,[],,
-90,,[],,[],饥饿,[],,FALSE,,[],,
-91,,[],,[],凯奥斯,[],,FALSE,,[],,
-92,,[],,[],生命地图,[],,FALSE,,[],,
-93,,[],,[],肯,[],,FALSE,,[],,
-97,,[],,[],回滚,[],,False,,[],,
-98,,[],,[],瑞奇成员,[],,FALSE,,[],,
-99,,[],,[],矩石,[],,False,,[],,Gray
-100,,[],,[],戈林皇冠,[],,FALSE,,[],,
-101,,[],,[],戈林幽魂,[],,FALSE,,[],,
-102,,[],,[],湖门,[],"When DungeonBoss>=1 at SodtyxBreak,  can change dungeon to ""HU"" as Dungeon(needs battle)",False,,[],,
-103,,[],,[],所多提斯侵蚀体,[],,False,,[],,Gray
-104,,[],,[],真理之门,[],,False,,[],,
-105,,[],,[],奎里姆,[],,False,,[],,
-106,,[],,[],奎卡迷失者,[],,False,,,,Gray
+ID,Portrait,AltPortraits,SpritePortrait,AltSpritePortraits,Name,Pictures,Description,IsPlayer,NodeColor,SpritePortrait,AltSpritePortraits,en
+Number,Special,Special,Special,Special,Text,Files,Text,Boolean,Text,Text,Text,Localization
+1,,[],,[],Player,[],,True,,,[],
+2,,[],,[],瑞奇,[],瑞奇党的头目,False,{{omit}},,[],
+3,,[],,[],托奇,[],肯托阵营负责与奎卡交易的 大使,False,Gray,,[],
+4,,[],,[],地下列车,[],年久失修的列车,False,Gray,,[],
+5,,[],,[],地底爬虫,[],列车地下城生物.,False,Gray,,[],
+6,,[],,[],所多提斯士兵,[],"洛斯据点,瑞奇希望占领此地获得高信号传输",False,Gray,,[],
+7,,[],,[],所多提斯士兵队长,[],"洛斯据点,瑞奇希望占领此地获得高信号传输",False,Gray,,[],
+8,,[],,[],特律,[],"Guy who is union of free ranger,came to qika save them.",False,Gray,,[],
+9,,[],,[],所多提斯射手,[],屠杀奎卡族人的士兵,False,Gray,,[],
+10,,[],,[],黑色史密斯,[],"奎卡营地的铁匠,用于制作强化武器以及装备",FALSE,,,[],
+11,,[],,[],莱曼,[],,False,{{omit}},,[],
+12,,[],,[],李,[],"Chap04 begin und first meet , bar manager",FALSE,,,[],
+13,,[],,[],平克,[],,False,Gray,,[],
+14,,[],,[],弗伊,[],,False,Gray,,[],
+15,,[],,[],所多提斯船长,[],交接船长,False,Gray,,[],
+16,,[],,[],莱尼,[],,False,{{omit}},,[],
+19,,[],,[],信号放大器,[],,False,Gray,,[],
+20,,[],,[],所多提斯军官,[],,FALSE,,,[],
+21,,[],,[],奎卡地下列车,[],车站中有一辆年久失修的列车被藤曼包裹着.,False,,,[],
+22,,[],,[],爬虫网,[],爬虫母体衍生出来的网企图阻拦列车行驶的路线,FALSE,,,[],
+23,,[],,[],滴滴露,[],,FALSE,,,[],
+24,,[],,[],莱曼,[],路德亚看门人,False,Gray,,[],
+25,,[],,[],托,[],,False,,,[],
+26,,[],,[],南,[],,False,,,[],
+27,,[],,[],金,[],,False,,,[],Kim
+28,,[],,[],方向,[],,False,{{omit}},,[],
+29,,[],,[],古代武器控制装置,[],,False,Gray,,[],
+30,,[],,[],莱德尼列车,[],莱德尼用来逃脱的工具,False,Gray,,[],
+31,,[],,[],生命通道,[],,False,,,[],
+32,,[],,[],沃利达酒馆门,[],,False,,,[],
+33,,[],,[],海轮党水手,[],,False,,,[],
+34,,[],,[],海轮党参谋,[],,False,,,[],
+35,,[],,[],海轮党首领,[],,False,,,[],
+36,,[],,[],凯,[],,False,,,[],
+37,,[],,[],沃里达酒馆大门,[],,FALSE,,,[],
+38,,[],,[],生命通道,[],,False,Gray,,[],
+39,,[],,[],缇娜,[],,False,,,[],
+40,,[],,[],海轮党海盗,[],,False,,,[],
+41,,[],,[],海轮党船长,[],,FALSE,,,[],
+42,,[],,[],老瘸子先知,[],,FALSE,,,[],
+43,,[],,[],灵视老瘸子,[],,FALSE,,,[],
+44,,[],,[],武装代理人员,[],,FALSE,,,[],
+45,,[],,[],武装挖掘人员,[],,FALSE,,,[],
+46,,[],,[],戈林核心,[],,FALSE,,,[],
+47,,[],,[],沃克,[],,FALSE,,,[],
+48,,[],,[],失落海盗,[],,FALSE,,,[],
+49,,[],,[],矿石蜘蛛,[],,FALSE,,,[],
+51,,[],,[],海底管理密令,[],Got Safe Code from codex (kill),FALSE,,,[],
+52,,[],,[],海底核心终端,[],OceanTerminal,False,,,[],
+53,,[],,[],暗街商人,[],,FALSE,,,[],
+54,,[],,[],缇娜的信条,[],,FALSE,,,[],
+55,,[],,[],帕热,[],,FALSE,,,[],
+56,,[],,[],海底终端,[],,FALSE,,,[],
+57,,[],,[],Chap07,[],,FALSE,,,[],
+58,,[],,[],飞船操作手册,[],Chap07 tina und me came to spaceship und found eine book und dialogue with it,FALSE,,,[],
+59,,[],,[],刀锋,[],,FALSE,,,[],
+60,,[],,[],Chap08,[],,FALSE,,,[],
+61,,[],,[],伏尔图斯元素,[],,FALSE,,,[],
+62,,[],,[],伏尔图斯侵蚀体,[],,FALSE,,,[],
+63,,[],,[],高级所多提斯战士,[],,FALSE,,,[],
+68,,[],,[],圣山之门,[],,FALSE,,,[],
+69,,[],,[],查克,[],,False,Gray,,[],Chuck
+71,,[],,[],矩石,[],Start Matches Games,FALSE,,,[],
+72,,[],,[],暗街杀手,[],,FALSE,,,[],
+73,,[],,[],暗街商人,[],,FALSE,,,[],
+74,,[],,[],帕洛尔元素,[],,FALSE,,,[],
+75,,[],,[],帕洛尔侵蚀体,[],,FALSE,,,[],
+76,,[],,[],伏尔侵蚀体,[],Chap08,False,,,[],
+77,,[],,[],伏尔元素,[],,FALSE,,,[],
+80,,[],,[],所多提斯侵蚀体,[],Chap09 Final Chap At Sodtyx End with Chaos,False,,,[],
+81,,[],,[],托尼,[],Uncle Montana,FALSE,,,[],
+82,,[],,[],所多提斯协议,[],,FALSE,,,[],
+83,,[],,[],狱魔,[],,FALSE,,,[],
+84,,[],,[],蒙大拿,[],Who jail by Toni,FALSE,,,[],
+86,,[],,[],真理之门,[],Final Battle with Chaos,FALSE,,,[],
+87,,[],,[],战争,[],,FALSE,,,[],
+88,,[],,[],痛苦,[],,FALSE,,,[],
+89,,[],,[],死亡,[],,FALSE,,,[],
+90,,[],,[],饥饿,[],,FALSE,,,[],
+91,,[],,[],凯奥斯,[],,FALSE,,,[],
+92,,[],,[],生命地图,[],,FALSE,,,[],
+93,,[],,[],肯,[],,FALSE,,,[],
+97,,[],,[],回滚,[],,False,,,[],
+98,,[],,[],瑞奇成员,[],,FALSE,,,[],
+99,,[],,[],矩石,[],,FALSE,,,[],
+100,,[],,[],戈林皇冠,[],,FALSE,,,[],
+101,,[],,[],戈林幽魂,[],,FALSE,,,[],
+102,,[],,[],湖门,[],"When DungeonBoss>=1 at SodtyxBreak,  can change dungeon to ""HU"" as Dungeon(needs battle)",False,,,[],
+103,,[],,[],所多提斯侵蚀体,[],,False,,,[],
+104,,[],,[],真理之门,[],,False,,,[],
+105,,[],,[],奎里姆,[],,False,,,[],
+106,,[],,[],奎卡迷失者,[],,False,,,,
 107,,[],,[],奎卡迷失者头目,[],,False,,,,
 108,,[],,[],TheWho,[],,False,,,,
 109,,[],,[],LostEntity,[],,False,,,,
@@ -179,7 +179,6 @@ Number,Text,Files,Text,Boolean,Text,Text,Text,Text,Text,Boolean,Boolean,Number,N
 74,生存技巧,[],收集物品并制作抵抗侵蚀的物品(制作一个探险者项链),False,,,unassigned,,,False,False,0,0,0,,0,,(None),,,,,,,(None),,,,,,,(None),,,,,,False,,,,,,,
 75,钻木取火,[],找到抵御寒冷的方法,False,,,unassigned,,,False,False,0,0,0,,0,,(None),,,,,,,(None),,,,,,,(None),,,,,,False,,,,,,,
 77,苏醒,[],,False,,,unassigned,,,False,False,0,0,0,,0,,(None),,,,,,,(None),,,,,,,(None),,,,,,False,,,,,,,
-78,生为何体,[],"To be or not to be ,that was a question (Fin)",False,,,unassigned,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},,,{{omit}},{{omit}},{{omit}}
 Locations
 ID,Name,Pictures,Description
 Number,Text,Files,Text
@@ -285,7 +284,7 @@ Number,Text,Files,Text,Actor,Actor,Localization,Localization
 72,BladeTrain,[],,1,59,,
 73,FlameAE,[],,1,76,,
 74,FlameE,[],,1,77,,
-75,HyperSodtyx,[],At Chap09 Fiest met enemy defeat them und unlock the sodtyx outside \nFirst Quest :最后一跳,1,63,,
+75,HyperSodtyx,[],At Chap09 Fiest met enemy defeat them und unlock the sodtyx outside \nFirst Quest :最后一跳,1,1,,
 76,SodtyxProtocol,[],,1,82,,
 77,Toni,[],as boss und defeat him,1,81,,
 78,Montana,[],"the goal  for sodyux ist save montana und exile toni ,who deal with the outworld evil .",1,84,,
@@ -293,7 +292,7 @@ Number,Text,Files,Text,Actor,Actor,Localization,Localization
 80,Pain,[],,1,88,,
 81,Hunger,[],,1,90,,
 82,Death,[],,1,89,,
-83,Hevil,[],,1,83,,
+83,Hevil,[],,1,1,,
 84,MatrixSpider,[],,1,1,,
 85,SodAE,[],,1,80,,
 88,Chaos,[],,1,1,,
@@ -666,29 +665,29 @@ Player_23_20,23,20,1,3,,,我会去想办法帮你弄到协议的,False,Block,Nor
 Player_23_21,23,21,1,3,,,我已经拿到签名了,False,Block,Normal,"CurrentQuestState(""尝试获取瑞奇的信任"")==""success""",,,[],,,[],,,,I  got the signature,,,855.0681;300.068
 托奇_23_24,23,24,3,1,,,"将伪造的签名协议和克农交给我,我们就可以从地下线路离开了.",False,Block,Normal,,"SetQuestState(""与托奇对话"",""success"");\nSetQuestState(""设法找到瑞奇党的据点"",""active"");",,[],,,[],,,,"Give me the forged signature agreement and conon, and we can leave on the underground line.",,,456.7428;619.5087
 托奇_23_27,23,27,3,1,,,"太好了,那我们尽快离开奎卡吧,我们需要穿过恐惧丛林抵达地下车站,在丛林中会遇上奎卡伊芙林\n""解锁新地点""",False,Block,Normal,,"AddExp(220);\nSetQuestState(""托奇的需求"",""success"");\nUnlockLoc(""恐惧丛林_1"");\nRemoveItem(""瑞奇通讯装置"");",,[],,,[],,,,"Great. Let's leave quika as soon as possible. I've marked the location of the underground train for you\n\n""Unlock New Location""",,,867.0362;383.3985
-Player_23_28,23,28,1,3,,,"爬虫已经离开了,我们还有多久能到沃利达",False,Block,Normal,"CurrentQuestState(""保护列车"")==""active"" and Variable[""DungeonBoss""]>=1",,,[],,,[],,,,The reptiles are gone. How long do we have to get to Wallida,,,1235.527;258.5003
+Player_23_28,23,28,1,3,,,"爬虫已经离开了,我们还有多久能到沃利达",False,Block,Normal,"CurrentQuestState(""保护列车"")==""active"" and Variable[""DungeonBoss""]>=1",,,[],,,[],,,,The reptiles are gone. How long do we have to get to Wallida,,,1346.638;254.4963
 托奇_23_29,23,29,3,1,,,"一旦爬虫网被驱赶跑,爬虫就会离开,做的好,我们快到中转站了,到了那边我们需要找到通向沃利达的列车才行.",False,Block,Normal,,"SetQuestState(""保护列车"",""success"");\nAddExp(40);\nGiveMoney(1000);",,[],,,[],,,,"Once the crawler has been driven away, the crawler will leave, well done, we are almost at the transfer station, where we need to find the train to wolida.",,,1220.134;294.793
 托奇_23_30,23,30,3,1,,,"突然,列车的速度开始慢了下来,一股神秘之力把列车的速度抵消了,托奇疑惑了一下,叹了口气",False,Block,Normal,,,,[],,,[],,,,"Suddenly, the train began to slow down, and a mysterious force counteracted its speed. Quoki wondered and sighed",,,1333.453;346.9055
 托奇_23_31,23,31,3,1,,,"是路德亚,他们占领了南部的地下线路.",False,Block,Normal,,,,[],,,[],,,,t's the Ludya. They've captured the southern underground lines.,,,1208.457;404.4176
 Player_23_32,23,32,1,3,,,他们是谁,False,Block,Normal,,,,[],,,[],,,,who's them?,,,1257.531;460.0007
 托奇_23_34,23,34,3,1,,,"以前是圣山的拾荒者,善于利用废弃资源制作机械装置售卖给各个势力作为能力补充.在肯托弃用了地下线路后,他们与莱德尼分别占据了以沃利达为中间线的南北线路,前面有个看门的你去和他谈谈.",False,Block,Normal,,,,[],,,[],,,,"Formerly a scavenger of the holy mountains, he is adept at making mechanical devices from waste resources and selling them to various powers to supplement his abilities. After Canto abandoned the underground line, they and Radney occupy the north-south line with Wallida as the middle line. There's a gatekeeper in front you can talk to him.",,,1153.55;520.678
 Player_23_35,23,35,1,3,,,"我去和他谈谈,他应该知道些什么?",False,Block,Normal,,"SetQuestState(""与莱曼交谈"",""active"");",,[],,,[],,,,I'll talk to him. What should he know,,,1243.996;584.5333
-托奇_23_36,23,36,3,1,New Dialogue Entry,,,True,Block,Normal,,,Continue(),[],,,[],,,,,,,788.1675;83.54022
-托奇_23_37,23,37,3,1,,,我们需要赶快前往沃利达,False,Block,Normal,"CurrentQuestState(""保护地下列车"")==""active""",,,[],,,[],,,,We need to get to Wallida quickly,,,1051.064;219.385
-托奇_23_38,23,38,3,1,,,"托正在埋头工作着,并没有注意到你们的到来",False,Block,Normal,"CurrentQuestState(""前往肯托"")==""active""",,,[],Chap07 Reborn To Kenquo Union,,[],,,,Thor was immersed in his work and did not notice your arrival,,,1039.287;108.7346
-Player_23_39,23,39,1,3,,,你知道如何抵达所多提斯吗?,False,Block,Normal,,,,[],,,[],,,,Do you know how to get to Sodtyx?,,,1161.889;11.33057
-Player_23_40,23,40,1,3,,,有什么事情可以做,False,Block,Normal,,,,[],,,[],,,,Is there anything you can do?,,,1263.34;89.10906
-Player_23_41,23,41,1,3,,,离开,False,Block,Normal,,,,[],,,[],,,,Exit,,,1316.267;166.4759
+托奇_23_36,23,36,3,1,New Dialogue Entry,,,True,Block,Normal,,,Continue(),[],,,[],,,,,,,678.0573;83.54021
+托奇_23_37,23,37,3,1,,,我们需要赶快前往沃利达,False,Block,Normal,"CurrentQuestState(""保护地下列车"")==""active""",,,[],,,[],,,,We need to get to Wallida quickly,,,1183.196;220.386
+托奇_23_38,23,38,3,1,,,"托正在埋头工作着,并没有注意到你们的到来",False,Block,Normal,"CurrentQuestState(""前往肯托"")==""active""",,,[],Chap07 Reborn To Kenquo Union,,[],,,,Thor was immersed in his work and did not notice your arrival,,,978.226;102.7286
+Player_23_39,23,39,1,3,,,你知道如何抵达所多提斯吗?,False,Block,Normal,,,,[],,,[],,,,Do you know how to get to Sodtyx?,,,1162.89;11.33057
+Player_23_40,23,40,1,3,,,有什么事情可以做,False,Block,Normal,,,,[],,,[],,,,Is there anything you can do?,,,1214.291;92.11205
+Player_23_41,23,41,1,3,,,离开,False,Block,Normal,,,,[],,,[],,,,Exit,,,1298.249;157.4669
 托奇_23_42,23,42,3,1,,,"目前线路已经被封锁你们无法从陆地抵达,需要另外的方法闯入",False,Block,Normal,,,,[],,,[],,,,The line is now blocked and you can't reach it by land. You need another way in,,,1400.89;29.33057
-托奇_23_43,23,43,3,1,,,"我有一个遗弃的列车需要处理,你们帮我找到买家吧.",False,Block,Normal,,,,[],,,[],,,,I have an abandoned train that needs to be disposed of. You can help me find a buyer.,,,1466.909;97.33157
+托奇_23_43,23,43,3,1,,,"我有一个遗弃的列车需要处理,你们帮我找到买家吧.",False,Block,Normal,,,,[],,,[],,,,I have an abandoned train that needs to be disposed of. You can help me find a buyer.,,,1447.89;96.33057
 Player_23_44,23,44,1,3,,,我们需要到所多提斯,False,Block,Normal,,,,[],,,[],,,,We need to get to Sodtyx.,,,1632.328;55.33057
-托奇_23_45,23,45,3,1,,,"我有一辆列车可以卖给你们,但是需要额外注入额外的能量,只要10000 就行",False,Block,Normal,,,,[],,,[],,,,"I have a train that I can sell you, but it will take extra energy, only 10,000",,,1853.23;117.0122
+托奇_23_45,23,45,3,1,,,"我有一辆列车可以卖给你们,但是需要额外注入额外的能量,只要10000 就行",False,Block,Normal,,,,[],,,[],,,,"I have a train that I can sell you, but it will take extra energy, only 10,000",,,1853.23;118.0132
 Player_23_47,23,47,1,3,,,购买,False,Block,Normal,,,,[],,,[],,,,,,,2178.089;103.3475
-托奇_23_49,23,49,3,1,,,"在这份文件上签名,他就是你们的了,但是你们去的地方比较特殊,所以你们先要到伏尔图斯山顶找到肯去制作高浓缩克农燃料,我们需要利用刀锋列车飞到所多提斯上去.",False,Block,Normal,,,,[],,,[],,,,"Sign this document, he's yours, But you're going to a special place, So first you need to go to the top of Voltus to find Ken To make the high-concentration conon fuel, We need to fly the Blade Train to Sodotis.",,,2299.665;377.617
+托奇_23_49,23,49,3,1,,,"在这份文件上签名,他就是你们的了,但是你们去的地方比较特殊,所以你们先要到伏尔图斯山顶找到肯去制作高浓缩克农燃料,我们需要利用刀锋列车飞到所多提斯上去.",False,Block,Normal,,,,[],,,[],,,,"Sign this document, he's yours, But you're going to a special place, So first you need to go to the top of Voltus to find Ken To make the high-concentration conon fuel, We need to fly the Blade Train to Sodotis.",,,2298.663;377.617
 托奇_23_50,23,50,3,1,,,钱不够,False,Block,Normal,"Variable[""BladeTrain""]~=10000",,,[],,,[],,,,,,,2484.714;114.1883
-Player_23_51,23,51,1,3,,,将瑞奇的计划告诉托奇,False,Block,Normal,,,,[],,,[],,,,Tell Torch about Ricky's plans,,,1898.191;266.6543
-托奇_23_52,23,52,3,1,,,"哦吼,不错,我加入,",False,Block,Normal,,"\nSetQuestState(""借克农记"",""success"");\nGiveMoney(3000);\nAddExp(400);",,[],,,[],,,,"Oh ho, good, I'm in",,,1971.894;427.111
-Player_23_53,23,53,1,3,,,前往刀锋,False,Block,Normal,,"\nUnlockLoc(""刀锋控制室"");\n",,[],,,[],,,,To the blade,,,2378.615;270.5734
+Player_23_51,23,51,1,3,,,将瑞奇的计划告诉托奇,False,Block,Normal,,,,[],,,[],,,,Tell Torch about Ricky's plans,,,1897.189;268.6583
+托奇_23_52,23,52,3,1,,,"哦吼,不错,我加入,",False,Block,Normal,,"\nSetQuestState(""借克农记"",""success"");\nGiveMoney(3000);\nAddExp(400);",,[],,,[],,,,"Oh ho, good, I'm in",,,1969.89;427.111
+Player_23_53,23,53,1,3,,,前往刀锋,False,Block,Normal,,"\nChangeDungeon(""刀锋控制室"");\nUnlockLoc(""刀锋控制室"");\n",,[],,,[],,,,To the blade,,,2577.211;346.8021
 托奇_23_54,23,54,3,1,New Dialogue Entry,,,True,Block,Normal,,,Continue(),[],,,[],,,,,,,2202.753;188.8859
 瑞奇_24_0,24,0,2,2,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,463.989;5.631584
 瑞奇_24_1,24,1,2,1,,,唧唧叽唧唧巴卜比卜,False,Block,Normal,,,,[],,,[],,,,#$%^&*,,,547.3887;79.57788
@@ -814,7 +813,7 @@ Player_30_0,30,0,1,9,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,212;83
 Player_30_2,30,2,1,9,,,对战,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,,,,274;277
 Player_31_0,31,0,1,23,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,226;19
 滴滴露_31_9,31,9,23,1,,,"巨大的滴虫驻留在此,不断有新的滴虫滑出。",False,Block,Normal,,,,[],,,[],,,TRUE,,,,235;150
-Player_31_10,31,10,1,23,,,对战,False,Block,Normal,,,,[],,,[],,,,,,,205;287
+Player_31_10,31,10,1,23,,,对战,False,Block,Normal,,,,[],,,[],,,,,,,161;285
 滴滴露_31_13,31,13,23,1,New Dialogue Entry,,,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,,,,221;424
 Player_32_0,32,0,1,22,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,94;58
 爬虫网_32_1,32,1,22,1,,,"前方突然出现一张由爬虫组成的网,企图拦截列车的行驶道路,爬虫的通过网来生成新的衍生体.",False,Block,Normal,,,,[],,,[],,,,"A web composed of crawlers suddenly appears in front of the train, trying to intercept the train's road",,,211;129
@@ -1164,14 +1163,14 @@ Player_43_290,43,290,1,69,,,武装力量,False,Block,Normal,,,,[],,,[],,,,,,,333
 查克_43_291,43,291,69,1,,,"武装力量组织,垄断了达安洞穴的的挖掘权限,掌握精明的挖掘技术",False,Block,Normal,,,,[],,,[],,,,,,,3240.093;449.8699
 查克_43_292,43,292,69,1,,,"老瘸子,管理圣山的元素资源生成以及生物序列号的产生权限，由于长时间坐着导致大腿肌肉萎缩,鉴于你并没有序列号认证,或许这次运送能帮你更改身份避免所多提斯的验证.",False,Block,Normal,,,,[],,,[],,,,,,,3498.313;419.1819
 查克_43_293,43,293,69,1,,,"路德亚,掌握着整个地下线路的运输网,拥有庞大的黑市市场网,相传,他们掌握着现实世界的交易行情,而且就在""生命通道""里.",False,Block,Normal,,,,[],,,[],,,,,,,3732.087;426.7938
-查克_43_294,43,294,69,1,,,"海轮党,负责海上航业的行会,有所多提斯资助产生的,所以说他们一半是所多提斯的走狗,背后还有很多行当不为人知.",False,Block,Normal,,,,[],,,[],,,,"The SeaWheel , the guilds responsible for the navigation of the sea, were partly sponsored by Dottis, so they were half of Sodotis's henchmen, and there was a lot of trade behind them that was not known.",,,3988.586;393.497
+查克_43_294,43,294,69,1,,,"海轮党,负责海上航业的行会,有所多提斯资助产生的,所以说他们一半是所多提斯的走狗,背后还有很多行当不为人知.",False,Block,Normal,,,,[],,,[],,,,"The SeaWheel , the guilds responsible for the navigation of the sea, were partly sponsored by Dottis, so they were half of Sodotis's henchmen, and there was a lot of trade behind them that was not known.",,,3985.408;391.9053
 Player_43_295,43,295,1,69,,,运送武装力量物品,False,Block,Normal,,"SetQuestState(""不见天日"",""active"");\nUnlockLoc(""武装代理中心"");\nChangeDungeon(""武装代理中心"");",,[],,,[],,,,,,,3336.473;638.4286
 Player_43_296,43,296,1,69,,,运送老瘸子物品,False,Block,Normal,,"SetQuestState(""久坐成疾"",""active"");\nUnlockLoc(""老瘸子协会"");\nChangeDungeon(""老瘸子协会"");",,[],,,[],,,,,,,3534.448;649.5721
 Player_43_297,43,297,1,69,,,运送路德亚物品,False,Block,Normal,,"SetQuestState(""生命行情"",""active"");\nUnlockLoc("""")\nChangeDungeon(""WolvdaBar"");",,[],,,[],,,,,,,3737.117;657.6664
-Player_43_298,43,298,1,69,,,运送海轮党物品\n(解锁新地点)\n,False,Block,Normal,,"SetQuestState(""老海盗"",""active"");\nUnlockLoc(""沃里达港口"");\n",,[],,,[],,,,"Transporting cargo to sea ships\n""Unlock Location""",,,3952.446;681.4832
+Player_43_298,43,298,1,69,,,运送海轮党物品\n(解锁新地点)\n,False,Block,Normal,,"SetQuestState(""老海盗"",""active"");\nUnlockLoc(""沃里达港口"");\n",,[],,,[],,,,"Transporting cargo to sea ships\n""Unlock Location""",,,3952.446;678.2996
 Player_43_299,43,299,1,69,,,其他货物,False,Block,Normal,,,,[],,,[],,,,,,,4250.168;487.5974
 Player_43_300,43,300,1,69,,,构筑卡牌,False,Block,Normal,,,,[],,,[],,,,,,,643.5778;2233.05
-查克_43_301,43,301,69,1,New Dialogue Entry,,,False,Block,Normal,,"SetQuestState(""前往查克商店"",""success"");",,[],,,[],,,,,,,3644.137;831.8083
+查克_43_301,43,301,69,1,New Dialogue Entry,,,False,Block,Normal,,"SetQuestState(""前往查克商店"",""success"");",,[],,,[],,,,,,,3625.036;814.2988
 查克_43_302,43,302,69,1,,,"你需要通过海轮党管理的码头区登船前往,但是似乎有传言他们与暗街的人有肮脏的勾当.",False,Block,Normal,,,,[],,,[],,,,,,,3671.965;66.72722
 Player_43_303,43,303,1,69,,,海轮党,False,Block,Normal,,,,[],update by 210212,,[],,,,SeaWheel,,,4047.79;196.8867
 Player_43_304,43,304,1,69,New Dialogue Entry,,,False,Block,Normal,,,,[],,,[],,,,,,,3748.42;342.6593
@@ -1208,7 +1207,7 @@ Player_46_9,46,9,1,27,,,我们应该怎么前往沃利达,False,Block,Normal,,,,
 Player_47_0,47,0,1,36,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,238;1
 凯_47_1,47,1,36,1,,,有好的合作机会吗?,False,Block,Normal,,,,[],,,[],,,,Is there a good opportunity for cooperation?,,,254.1089;88.0304
 Player_47_2,47,2,1,36,,,"我们是奎卡难民,金跟我们说你们会提供帮助(交出介绍信)",False,Block,Normal,"CurrentQuestState(""重获新生"")==""active"";","RemoveItem(""10018"",""1"");",,[],,,[],,,,We're Qika refugees. Kim told us you'd help,,,91.24274;181.7199
-Player_47_6,47,6,1,36,,,离开,False,Block,Normal,,,,[],,,[],,,,Exit,,,445.378;264.869
+Player_47_6,47,6,1,36,,,离开,False,Block,Normal,,,,[],,,[],,,,Exit,,,445.378;266.3302
 凯_47_7,47,7,36,1,,,"太好了,地下线路的全线控制可以让我们更快的进行货物运输，我会帮助你们,你们需要什么",False,Block,Normal,,"SetQuestState(""重获新生"",""success"");\nAddExp(500);",,[],,,[],,,,,,,159.4868;273.027
 Player_47_8,47,8,1,36,,,你知道缇娜吗?,False,Block,Normal,,,,[],,,[],,,,Do you know Tina?,,,238.8028;370.718
 凯_47_10,47,10,36,1,,,"她来过这里,应该在查克的商店里,你可以去那里看看\n""解锁地点""",False,Block,Normal,,"UnlockLoc(""ChuckShop"");\nSetQuestState(""前往查克商店"",""active"");",,[],,,[],,,,"She's been here. She should be in chuck's shop. You can go there and have a look\n\n""Unlock location""\n",,,426.0871;461.4465
@@ -1219,20 +1218,20 @@ Player_47_15,47,15,1,36,,,拒绝,False,Block,Normal,,,,[],,,[],,,,,,,918.6655;31
 凯_47_16,47,16,36,1,,,"进入生命通道,那里会有人与你接应",False,Block,Normal,,"SetQuestState(""生命通道"",""success"");\nAddExp(300);\nAddMoney(1000);\nSetQuestState(""地下交易"",""active"");",,[],,,[],,,,"Great, the whole line control of underground lines can make us transport goods faster. I will help you. What do you need",,,694.9976;413.2439
 Player_48_0,48,0,1,2,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,20;30
 Player_51_0,51,0,1,37,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,484;51
-沃里达酒馆大门_51_1,51,1,37,1,,,酒馆大门敞开着,False,Block,Normal,,,,[],,,[],,,,The bar door has open,,,465.8146;168.5668
-Player_51_2,51,2,1,37,,,离开,False,Block,Normal,,LeaveTown();,,[],,,[],,,,Exit,,,707;258
-Player_51_3,51,3,1,37,,,行政区,False,Block,Normal,,"ChangeDungeon(""OT"")",,[],,,[],,,,,,,212;286
-Player_51_4,51,4,1,37,,,查克商店,False,Block,Normal,,"ChangeDungeon(""ChuckShop"");",,[],,,[],,,,,,,367.8075;299.7238
-Player_51_5,51,5,1,37,,,老瘸子,False,Block,Normal,,"ChangeDungeon(""OT"")",,[],,,[],,,,,,,550.7991;312.0251
-Player_51_6,51,6,1,37,,,海轮码头,False,Block,Normal,,"ChangeDungeon(""SeaWheel"")",,[],,,[],,,,Seawheel harbor,,,210;236
+沃里达酒馆大门_51_1,51,1,37,1,,,酒馆大门敞开着,False,Block,Normal,,,,[],,,[],,,,,,,454.8146;179.5668
+Player_51_2,51,2,1,37,,,离开,False,Block,Normal,,LeaveTown();,,[],,,[],,,,,,,707;205
+Player_51_3,51,3,1,37,,,行政区,False,Block,Normal,,"ChangeDungeon(""OT"")",,[],,,[],,,,,,,179;244
+Player_51_4,51,4,1,37,,,查克商店,False,Block,Normal,,"ChangeDungeon(""ChuckShop"");",,[],,,[],,,,,,,366.8075;268.7238
+Player_51_5,51,5,1,37,,,老瘸子,False,Block,Normal,,"ChangeDungeon(""OT"")",,[],,,[],,,,,,,539.7991;286.0251
+Player_51_6,51,6,1,37,,,海轮码头,False,Block,Normal,,"ChangeDungeon(""SeaWheel"")",,[],,,[],,,,,,,126;134
 Player_52_0,52,0,1,40,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,259;40
-海轮党海盗_52_1,52,1,40,1,,,"忙碌的水手们正在搬运货物,似乎是在准备一次长途海程",False,Block,Normal,,,,[],,,[],,,,"The busy sailors were carrying cargo, as if preparing for a long sea voyage",,,304.786;106.1567
-Player_52_2,52,2,1,40,,,这是你们的货物吗? ,False,Block,Normal,,,,[],,,[],,,,Are these your goods? (Delivery of Goods),,,209.8508;186.3703
+海轮党海盗_52_1,52,1,40,1,,,"忙碌的水手们正在搬运货物,似乎是在准备一次长途海程",False,Block,Normal,,,,[],,,[],,,,"The busy sailors were carrying cargo, as if preparing for a long sea voyage",,,304.786;114.1567
+Player_52_2,52,2,1,40,,,这是你们的货物吗? (提交货物),False,Block,Normal,,,,[],,,[],,,,Are these your goods? (Delivery of Goods),,,288.8508;206.3703
 Player_52_3,52,3,1,40,,,前往帕洛尔需要多少钱?,False,Block,Normal,,,,[],,,[],,,,,,,587.532;275.3018
-Player_52_4,52,4,1,40,,,离开,False,Block,Normal,,,,[],,,[],,,,Exit,,,563.0604;192.2884
-海轮党海盗_52_5,52,5,40,1,,,"有人找到了我们的货物了,你可以加入我们了,这趟航程可以为我们带来无尽的财富",False,Block,Normal,,"SetQuestState(""老海盗"",""success"");",,[],,,[],,,,Someone has found our cargo. You can join us. This voyage will bring us endless riches,,,130.5557;268.6378
+Player_52_4,52,4,1,40,,,离开,False,Block,Normal,,,,[],,,[],,,,Exit,,,536.0604;184.2884
+海轮党海盗_52_5,52,5,40,1,,,"有人找到了我们的货物了,你可以加入我们了,这趟航程可以为我们带来无尽的财富",False,Block,Normal,,,,[],,,[],,,,Someone has found our cargo. You can join us. This voyage will bring us endless riches,,,116.5557;265.6388
 海轮党海盗_52_6,52,6,40,1,,,"一边去,我们不接.",False,Block,Normal,,,,[],,,[],,,,,,,626.9359;290.32
-Player_52_7,52,7,1,40,,,加入,False,Block,Normal,,,,[],,,[],,,,Join,,,46.06421;340.3661
+Player_52_7,52,7,1,40,,,加入,False,Block,Normal,,,,[],,,[],,,,Join,,,20.06421;363.3661
 海轮党海盗_52_9,52,9,40,1,,,跟我们上船,False,Block,Normal,,"ChangeDungeon(""BMCave"");\nSetQuestState(""老海盗"",""success"");",,[],,,[],,,,Come aboard with us.,,,102.5694;432.6021
 Player_53_0,53,0,1,42,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,505.7033;30.08833
 老瘸子先知_53_1,53,1,42,1,,,"神圣的讲堂里一群人正在做着办公,卷宗盖过了他们",False,Block,Normal,,,,[],,,[],,,,,,,527.222;96.5527
@@ -1314,55 +1313,55 @@ Player_60_0,60,0,1,53,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,300;17
 暗街商人_60_2,60,2,53,1,New Dialogue Entry,,,False,Block,Normal,"CurrentQuestState(""生命行情"")==""success""",,,[],,,[],,,,,,,756.6704;175.0676
 暗街商人_60_4,60,4,53,1,New Dialogue Entry,,,False,Block,Normal,"CurrentQuestState(""老海盗"")==""success""",,,[],,,[],,,,,,,553.3152;386.2544
 暗街商人_60_5,60,5,53,1,,,暗街应有尽有,False,Block,Normal,"CurrentQuestState(""不见天日"")==""success""",,,[],,,[],,,,Dark Street has it all,,,186.2684;285.9928
-Player_60_6,60,6,1,53,,,战斗,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,Battle,,,742.942;530.6042
-Player_60_7,60,7,1,53,,,有什么好货色？,False,Block,Normal,,,,[],,,[],,,,What's good,,,278.204;360.2555
+Player_60_6,60,6,1,53,,,战斗,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,Battle,,,740.942;531.6042
+Player_60_7,60,7,1,53,,,有什么好货色？,False,Block,Normal,,,,[],,,[],,,,What's good,,,275.204;357.2555
 暗街商人_60_8,60,8,53,1,,,"嘿嘿嘿,大爷这次的份量可不轻嘞,它指向远处那个有点臃肿的女人.",False,Block,Normal,,,,[],,,[],,,,"Heh heh heh, the big man this weight is not light, it points to the distance that a little fat woman.",,,128.6212;429.1504
-Player_60_9,60,9,1,53,,,你们从哪里得到的？,False,Block,Normal,,,,[],,,[],,,,Where did you get it,,,79.58063;533.788
-Player_60_10,60,10,1,53,,,多少钱?,False,Block,Normal,,,,[],,,[],,,,How much?,,,381.9504;508.1115
+Player_60_9,60,9,1,53,,,你们从哪里得到的？,False,Block,Normal,,,,[],,,[],,,,Where did you get it,,,43.58063;515.788
+Player_60_10,60,10,1,53,,,多少钱?,False,Block,Normal,,,,[],,,[],,,,How much?,,,381.9504;507.1115
 暗街商人_60_11,60,11,53,1,,,大爷 不多不少，10000，宁带走嘞,False,Block,Normal,,,,[],,,[],,,,"No more, no less. 10000, Better take it away",,,442.6727;616.6519
 暗街商人_60_12,60,12,53,1,,,"嘻嘻嘻,上了海轮党的当被送到了这里,看来她还不清楚海轮党的勾当",False,Block,Normal,,"SetQuestState(""解救缇娜"",""active"");",,[],,,[],,,,"Hee hee hee hee, on the sea wheel party when be sent here, it seems that she still does not know the sea wheel party's business",,,133.6275;625.0716
-Player_60_13,60,13,1,53,,,购买,False,Block,Normal,,GiveMoney(-1000);-\nCheckMoneyEnough(1000);,,[],,,[],,,, purchase ,,,362.9863;700.7023
-暗街商人_60_15,60,15,53,1,New Dialogue Entry,,,True,Block,Normal,,,Continue(),[],,,[],,,,,,,347.8381;793.814
-暗街商人_60_16,60,16,53,1,,,大爷宁带走,False,Block,Normal,"(Variable[""MoneyEnough""]~=false )","SetQuestState(""解救缇娜"",""success"");\n",,[],,,[],,,,take it,,,266.8553;869.0618
-暗街商人_60_17,60,17,53,1,,,不够,False,Block,Normal,"(Variable[""MoneyEnough""]~=true )",,,[],,,[],,,, Not enough,,,658.9521;716.1022
+Player_60_13,60,13,1,53,,,购买,False,Block,Normal,,GiveMoney(-1000);-\nCheckMoneyEnough(1000);,,[],,,[],,,, purchase ,,,357.9863;693.7023
+暗街商人_60_15,60,15,53,1,New Dialogue Entry,,,True,Block,Normal,,,Continue(),[],,,[],,,,,,,296.8381;792.814
+暗街商人_60_16,60,16,53,1,,,大爷宁带走,False,Block,Normal,"(Variable[""MoneyEnough""]~=false )","SetQuestState(""解救缇娜"",""success"");\n",,[],,,[],,,,take it,,,267.8553;868.0618
+暗街商人_60_17,60,17,53,1,,,不够,False,Block,Normal,"(Variable[""MoneyEnough""]~=true )",,,[],,,[],,,, Not enough,,,653.9521;717.1022
 Player_61_0,61,0,1,72,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,277;29
-暗街杀手_61_1,61,1,72,1,,,达安刺客向你扑来,False,Block,Normal,,,,[],,,[],,,,,,,253;128
-Player_61_2,61,2,1,72,,,战斗,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,,,,243;253
-Player_61_3,61,3,1,72,,,我们是从武装代理中心来的,False,Block,Normal,"CurrentQuestState(""帮助武装力量获得戈林核心"")==""success""",,,[],,,[],,,,,,,501;222
+暗街杀手_61_1,61,1,72,1,,,达安刺客向你扑来,False,Block,Normal,,,,[],,,[],,,,,,,279;111
+Player_61_2,61,2,1,72,,,战斗,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,,,,242;253
+Player_61_3,61,3,1,72,,,我们是从武装代理中心来的,False,Block,Normal,"CurrentQuestState(""帮助武装力量获得戈林核心"")==""success""",,,[],,,[],,,,,,,483;174
 暗街杀手_61_4,61,4,72,1,,,"买卖来了,直接跟老板谈吧",False,Block,Normal,,"Variable[""DungeonMonster""]=3",,[],,,[],,,,,,,493;291
 Player_63_0,63,0,1,39,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,646.6049;12.41351
 缇娜_63_1,63,1,39,1,New Dialogue Entry,,,True,Block,Normal,,,Continue(),[],,,[],,,,,,,642.0905;97.23083
-缇娜_63_2,63,2,39,1,,,[lua(GetPlayerName())]你终于来了,False,Block,Normal,"CurrentQuestState(""天国阶梯"")==""unassigned""","Variable[""DungeonBoss""]=0;",,[],,,[],,,,[lua(GetPlayerName())]  you came,,,556.434;210.3082
+缇娜_63_2,63,2,39,1,,,[lua(GetPlayerName())]你终于来了,False,Block,Normal,"CurrentQuestState(""天国阶梯"")==""unassigned""",,,[],,,[],,,,[lua(GetPlayerName())]  you came,,,550.9463;196.3082
 缇娜_63_3,63,3,39,1,,,"做得好,现在我可以灵迁到帕洛尔宫殿了",False,Block,Normal,,AddExp(300);\nGiveMoney(2000);,,[],,,[],,,,Well done. Now I can move to Palor's palace,,,765.9155;394.0311
-缇娜_63_4,63,4,39,1,,, 暗街商人阻挡了你向前的方向,False,Block,Normal,"CurrentQuestState(""解救缇娜"")==""unassigned""",,,[],,,[],,,,The black marketeer is blocking your way,,,30.72047;200.0295
-Player_63_5,63,5,1,39,,,你是谁,False,Block,Normal,"CurrentQuestState(""重置海域"")==""unassigned""",,,[],,,[],,,,who are you?,,,174.9777;389.4624
-Player_63_6,63,6,1,39,,,你从哪里发现我的,False,Block,Normal,"CurrentQuestState(""重置海域"")==""unassigned""",,,[],,,[],,,,Where did you find me?,,,538.931;344.7374
-缇娜_63_7,63,7,39,1,,,"我是圣山的管理员之一,负责对圣山的危机进行处理.在从先知预知了所多提斯的背叛后,我需要到帕洛尔的海底终端去更新灵视安全网,但是被海轮党给堵截,我们需要赶紧到帕洛尔海底核心去重置海域",False,Block,Normal,,,,[],,,[],,,,,,,222.5477;511.2009
-缇娜_63_8,63,8,39,1,,,"我们接受了你,等解救帕洛尔后我会带你到你的诞生之地",False,Block,Normal,,,,[],,,[],,,,"We accept you, and when Parlour is freed I will take you to the land of your birth.",,,512.7138;417.0775
-Player_63_9,63,9,1,39,,,前往,False,Block,Normal,,"SetQuestState(""重置海域"",""active"");\nUnlockLoc(""帕洛尔流式通道_1"");",,[],,,[],,,,To the Ocean Core,,,363.9077;650.8036
-Player_63_10,63,10,1,39,,,我们现在应该做什么?,False,Block,Normal,,,,[],,,[],,,,What should we do now?,,,546.8235;474.0496
-缇娜_63_11,63,11,39,1,,,"穿过帕洛尔流式通道前往终端控制室重置海域,之后前往帕洛尔宫殿解救帕洛尔",False,Block,Normal,,,,[],,,[],,,,Go to the seafloor core to reset the sea.,,,603.5843;558.4691
-Player_63_12,63,12,1,39,,,灵迁到帕洛尔宫殿,False,Block,Normal,,"SetQuestState(""拯救帕热"",""active"");\nUnlockLoc(""帕罗宫殿"");\nChangeDungeon(""帕罗宫殿"");",,[],,,[],,,,The spirit moved to the palace of Palor,,,836.8018;507.1079
+缇娜_63_4,63,4,39,1,,, 暗街商人阻挡了你向前的方向,False,Block,Normal,"CurrentQuestState(""解救缇娜"")==""unassigned""",,,[],,,[],,,,The black marketeer is blocking your way,,,29.72047;199.0295
+Player_63_5,63,5,1,39,,,你是谁,False,Block,Normal,"CurrentQuestState(""重置海域"")==""unassigned""",,,[],,,[],,,,who are you?,,,221.9777;392.4624
+Player_63_6,63,6,1,39,,,你从哪里发现我的,False,Block,Normal,"CurrentQuestState(""重置海域"")==""unassigned""",,,[],,,[],,,,Where did you find me?,,,558.9589;340.7083
+缇娜_63_7,63,7,39,1,,,"我是圣山的管理员之一,负责对圣山的危机进行处理.在从先知预知了所多提斯的背叛后,我需要到帕洛尔的海底终端去更新灵视安全网,但是被海轮党给堵截,我们需要赶紧到帕洛尔海底核心去重置海域",False,Block,Normal,,,,[],,,[],,,,"I am one of the rangers of Mount Sant, responsible for the crisis management of Mount Sant. After anticipating the betrayal of Sodotis from the seers, I needed to go to the undersea terminal of Palor to update the vision safety net, but it was intercepted by the seagoing party, and we needed to go to the undersea core of Palor to reset the sea",,,167.5477;511.2009
+缇娜_63_8,63,8,39,1,,,"我们接受了你,等解救帕洛尔后我会带你到你的诞生之地",False,Block,Normal,,,,[],,,[],,,,"We accept you, and when Parlour is freed I will take you to the land of your birth.",,,449.7138;432.0765
+Player_63_9,63,9,1,39,,,传送到海底核心,False,Block,Normal,,"SetQuestState(""重置海域"",""active"");\nUnlockLoc(""终端控制室"");",,[],,,[],,,,To the Ocean Core,,,270.9077;620.8036
+Player_63_10,63,10,1,39,,,我们现在应该做什么?,False,Block,Normal,,,,[],,,[],,,,What should we do now?,,,542.8235;499.0496
+缇娜_63_11,63,11,39,1,,,前往海底核心去重置海域,False,Block,Normal,,,,[],,,[],,,,Go to the seafloor core to reset the sea.,,,509.5894;581.4741
+Player_63_12,63,12,1,39,,,灵迁到帕洛尔宫殿,False,Block,Normal,,"SetQuestState(""拯救帕热"",""active"");\nUnlockLoc(""帕罗宫殿"");\nChangeDungeon(""帕罗宫殿"");",,[],,,[],,,,The spirit moved to the palace of Palor,,,835.8008;492.093
 Player_63_14,63,14,1,39,,,敌人已经击退了,False,Block,Normal,"Variable[""DungeonBoss""]>=1",,,[],,,[],,,,The enemy has beaten back,,,176.1601;288.8875
-缇娜_63_15,63,15,39,1,,,"大门已经成功关闭,但是所造成的损失是需要我们去重新修复的.我们需要重新建立新的势力去保证圣山资源的平衡分配,",False,Block,Normal,"CurrentQuestState(""新的选择"")==""active""",,,[],"Last dialogue at qika with tina, the gate has close und dialoguetina for next choice , as player with dlc can do these things\n1.rebuild qika\n2.spaceship line\nTODO",,[],,,,"The door has been successfully closed, but we need to repair the damage caused. We need to re-establish new powers to ensure a balanced distribution of the resources of the sacred mountain",,,878.3802;193.1577
-Player_63_16,63,16,1,39,,,水域已经重置,False,Block,Normal,"CurrentQuestState(""重置海域"")==""active""",,,[],,,[],,,,Waters have been reset,,,777.2891;302.8916
-Player_63_17,63,17,1,39,,,关于世界服务器,False,Block,Normal,,,,[],,,[],,,,About the World Server,,,960.2106;306.2538
+缇娜_63_15,63,15,39,1,,,"大门已经成功关闭,但是所造成的损失是需要我们去重新修复的.我们需要重新建立新的势力去保证圣山资源的平衡分配,",False,Block,Normal,"CurrentQuestState(""新的选择"")==""active""",,,[],"Last dialogue at qika with tina, the gate has close und dialoguetina for next choice , as player with dlc can do these things\n1.rebuild qika\n2.spaceship line\nTODO",,[],,,,"The door has been successfully closed, but we need to repair the damage caused. We need to re-establish new powers to ensure a balanced distribution of the resources of the sacred mountain",,,856.3802;124.1577
+Player_63_16,63,16,1,39,,,水域已经重置,False,Block,Normal,"CurrentQuestState(""重置海域"")==""active""",,,[],,,[],,,,Waters have been reset,,,751.2881;276.8916
+Player_63_17,63,17,1,39,,,关于世界服务器,False,Block,Normal,,,,[],,,[],,,,About the World Server,,,957.2106;306.2538
 Player_63_18,63,18,1,39,,,我该何去何从？,False,Block,Normal,,,,[],,,[],,,,,,,1276.904;260.2198
 缇娜_63_20,63,20,39,1,,,"是的,不止一个圣山存在着,这是在我们长期对圣山监控得出来的结论,外界的恶魔也许同样知道了这个结论才窃取圣山资源去打开真理之门",False,Block,Normal,,,,[],,,[],,,,"Yes, there is more than one mountain, this is the conclusion we have long been monitoring the mountain, the outside demons may also know this conclusion to steal the mountain resources to open the door of truth",,,1042.079;417.8757
-缇娜_63_21,63,21,39,1,,,"有两个选择,利用你现存的新身份去重新建立奎卡,这可以帮助你强化你的个人身份,第二个则是继续化为原先的身份去新的圣山,但是我们需要对新的圣山位置进行追踪这需要花费一段时间,你觉得呢?",False,Block,Normal,,"SetQuestState(""新的选择"",""success"");",,[],,,[],,,,,,,1335.834;379.6752
+缇娜_63_21,63,21,39,1,,,"有两个选择,利用你现存的新身份去重新建立奎卡,这可以帮助你强化你的个人身份,第二个则是继续化为原先的身份去新的圣山,但是我们需要对新的圣山位置进行追踪这需要花费一段时间,你觉得呢?",False,Block,Normal,,"SetQuestState(""新的选择"",""success"");",,[],,,[],,,,,,,1337.212;381.0533
 Player_63_22,63,22,1,39,,,"生存还是毁灭,这是一个问题.(剧情结束)",False,Block,Normal,,"SetQuestState(""生为何体"",""active"");",,[],,,[],,,,,,,1292.041;503.6428
-Player_63_23,63,23,1,39,New Dialogue Entry,,,True,Block,Normal,,,Continue(),[],,,[],,,False,,,,163.6432;90.4912
-缇娜_63_24,63,24,39,1,,,提娜望向你,False,Block,Normal,"CurrentQuestState(""解救缇娜"")==""success""",,,[],,,[],,,False,Tina look at you,,,269.5649;189.6378
+Player_63_23,63,23,1,39,New Dialogue Entry,,,True,Block,Normal,,,Continue(),[],,,[],,,False,,,,122.6432;91.4912
+缇娜_63_24,63,24,39,1,,,提娜望向你,False,Block,Normal,"CurrentQuestState(""解救缇娜"")==""success""",,,[],,,[],,,False,Tina look at you,,,269.5649;188.6378
 Player_64_0,64,0,1,52,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,208;25
-海底核心终端_64_1,64,1,52,1,,,::The Doors Parlo Terminal System::,False,Block,Normal,,,,[],,,[],,,,,,,244;109
-Player_64_2,64,2,1,52,,,管理员模式,False,Block,Normal,,,,[],,,[],,,,GUEST MODE,,,137.8283;267.1587
-海底核心终端_64_3,64,3,52,1,,,验证,False,Block,Normal,,,,[],,,[],,,,.....,,,219.5579;416.1158
-海底核心终端_64_5,64,5,52,1,,,输入密令,False,Block,Normal,,,"TextInput(Text Field UI,""终端密令"",OceanCode);",[],,,[],,,,ENTER CODE...,,,180.1116;351.5792
-海底核心终端_64_7,64,7,52,1,,,成功,False,Block,Normal,"Variable[""OceanCode""]==""oceanguest""",,,[],,,[],,,,success,,,94.03483;500.5648
-海底核心终端_64_8,64,8,52,1,,,验证失败请重新登陆,False,Block,Normal,"Variable[""OceanCode""]~=""oceanguest""",,,[],,,[],,,,login failed ....,,,346.0854;488.1837
-Player_64_9,64,9,1,52,,,重置海域,False,Block,Normal,,,,[],,,[],,,,Reset Ocean.,,,332.3077;296.9346
-Player_64_10,64,10,1,52,,,离开,False,Block,Normal,,,,[],,,[],,,,,,,621.0469;339.3862
-海底核心终端_64_11,64,11,52,1,,,"数据初始化,重置成功",False,Block,Normal,,"SetQuestState(""重置海域"",""success"");",,[],,,[],,,,Data initialized and reset successfully.,,,507.4669;409.8733
+海底核心终端_64_1,64,1,52,1,,,::The Doors Parlo Terminal System::,False,Block,Normal,,,,[],,,[],,,,,,,219;108
+Player_64_2,64,2,1,52,,,管理员模式,False,Block,Normal,,,,[],,,[],,,,GUEST MODE,,,128;210
+海底核心终端_64_3,64,3,52,1,,,验证,False,Block,Normal,,,,[],,,[],,,,.....,,,208;413
+海底核心终端_64_5,64,5,52,1,,,输入密令,False,Block,Normal,,,"TextInput(Text Field UI,""终端密令"",OceanCode);",[],,,[],,,,ENTER CODE...,,,134.1675;306.5922
+海底核心终端_64_7,64,7,52,1,,,成功,False,Block,Normal,"Variable[""OceanCode""]==""oceanguest""",,,[],,,[],,,,success,,,69.00494;487.007
+海底核心终端_64_8,64,8,52,1,,,验证失败请重新登陆,False,Block,Normal,"Variable[""OceanCode""]~=""oceanguest""",,,[],,,[],,,,login failed ....,,,343.9996;507.999
+Player_64_9,64,9,1,52,,,重置海域,False,Block,Normal,,,,[],,,[],,,,Reset Ocean.,,,129.9827;566.0062
+Player_64_10,64,10,1,52,,,离开,False,Block,Normal,,,,[],,,[],,,,,,,547;330
+海底核心终端_64_11,64,11,52,1,,,"数据初始化,重置成功",False,Block,Normal,,"SetQuestState(""重置海域"",""success"");",,[],,,[],,,,Data initialized and reset successfully.,,,284.2835;639.3143
 Player_65_0,65,0,1,75,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,225;85
 帕洛尔侵蚀体_65_1,65,1,75,1,,,帕洛尔侵蚀体正在蔓延整个宫殿,False,Block,Normal,,,,[],,,[],,,,Pallor is spreading through the palace,,,333;188
 Player_65_2,65,2,1,75,,,战斗,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,Battle,,,316;284
@@ -1373,65 +1372,64 @@ Player_67_0,67,0,1,51,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,326;87
 海底管理密令_67_1,67,1,51,1,,,"你获取到了管理员密码上面显示""oceanguest""",False,Block,Normal,,,,[],,,[],,,,"You got the administrator password as shown above ""oceanguest""",,,423;198
 Player_68_0,68,0,1,54,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,20;30
 Player_69_0,69,0,1,55,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,272;89
-帕热_69_1,69,1,55,1,,,帕热已经被侵蚀体所覆盖失去了意识,False,Block,Normal,,,,[],,,[],,,,Pareu had been covered with eroding bodies and was unconscious,,,334;183
-Player_69_2,69,2,1,55,,解除,Clear,False,Block,Normal,"(Variable[""DungeonBoss""]>=1) and \n(CurrentQuestState(""解救帕热"")==“active”;)",,,[],,,[],,,,,,,161.0605;245
-帕热_69_3,69,3,55,1,,,帕热恢复了意识并认出了缇娜,False,Block,Normal,,"SetQuestState(""拯救帕热"",""success"");\nAddExp(400);",,[],,,[],,,,Pareu regained consciousness and recognized Tina,,,377;309.9397
+帕热_69_1,69,1,55,1,,,帕热已经被侵蚀体所覆盖失去了意识,False,Block,Normal,,,,[],,,[],,,,Pareu had been covered with eroding bodies and was unconscious,,,329;178
+Player_69_2,69,2,1,55,,,Clear,False,Block,Normal,"(Variable[""DungeonBoss""]>=1) and \n(CurrentQuestState(""解救帕热"")==“active”;)",,,[],,,[],,,,,,,122.0605;238
+帕热_69_3,69,3,55,1,,,帕热恢复了意识并认出了缇娜,False,Block,Normal,,"SetQuestState(""拯救帕热"",""success"");\nAddExp(400);",,[],,,[],,,,Pareu regained consciousness and recognized Tina,,,373;299.9397
 帕热_69_4,69,4,55,1,,,"你们需要尽快解除协议的生效,不然恶魔之门的生物会将圣山核心给侵占了.",False,Block,Normal,,,,[],,,[],,,,"You need to get the agreement in place as soon as possible, or the demongate creatures will overrun the core of the sacred mountain.",,,149;382
-缇娜_69_5,69,5,39,55,,,"是的,海域的重置可以降低了侵蚀体的蔓延,我们需要尽快去破坏协议的收发器.",False,Block,Normal,,,,[],,,[],,,,"Yes, the resetting of the sea area can reduce the spread of erosion bodies, we need to destroy the protocol transceivers as soon as possible.",,,442;444
+缇娜_69_5,69,5,39,55,,,"是的,海域的重置可以降低了侵蚀体的蔓延,我们需要尽快去破坏协议的收发器.",False,Block,Normal,,,,[],,,[],,,,"Yes, the resetting of the sea area can reduce the spread of erosion bodies, we need to destroy the protocol transceivers as soon as possible.",,,440;441
 帕热_69_6,69,6,55,1,,,你们可以去肯托联合公司看看他们有什么办法将你们送到所多提斯.,False,Block,Normal,,"SetQuestState(""前往肯托"",""active"");",,[],,,[],,,,You can go to KenQuo Consolidated and see what they can do to get you to Sodotis.,,,202.2735;493.0544
 缇娜_69_7,69,7,39,1,,,"是的,但是我们首先要去解决下私人事情,",False,Block,Normal,,,,[],,,[],,,,"Yes, but we have to settle some personal matters first",,,436.641;552.7926
 Player_69_8,69,8,1,55,,,跟随缇娜进行灵迁,False,Block,Normal,,"SetQuestState(""创始之初"",""active"");\nUnlockLoc(""初始之地"");\nChangeDungeon(""初始之地"");",,[],,,[],,,,Follow Tina as she moves,,,375.822;637.4271
 Player_70_0,70,0,1,58,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,339;55
-飞船操作手册_70_1,70,1,58,1,,,"在一片空旷的平原里一艘破损的飞船,零件以及舱内的物件散落到周围",False,Block,Normal,,,,[],,,[],,,,"In an empty plain, a broken ship, parts and its contents scattered all around",,,292.999;133.003
-Player_70_2,70,2,1,58,,,捡起一本完好无损的书,False,Block,Normal,,,,[],,,[],,,,Pick up an undamaged book,,,69.99298;238.9128
+飞船操作手册_70_1,70,1,58,1,,,"在一片空旷的平原里一艘破损的飞船,零件以及舱内的物件散落到周围",False,Block,Normal,,,,[],,,[],,,,"In an empty plain, a broken ship, parts and its contents scattered all around",,,307;142
+Player_70_2,70,2,1,58,,,捡起一本完好无损的书,False,Block,Normal,,,,[],,,[],,,,Pick up an undamaged book,,,70.99399;239.9138
 Player_70_3,70,3,1,58,,,尝试进入飞船,False,Block,Normal,,,,[],,,[],,,,Trying to get into the ship,,,305.966;241.9359
 Player_70_4,70,4,1,58,,,离开,False,Block,Normal,,,,[],,,[],,,,,,,542.022;241.01
-飞船操作手册_70_5,70,5,58,1,,,"你被舱内无数个复杂的仪表盘吸引,似乎你曾经精通于操作这些装置,你尝试与回滚产生联系",False,Block,Normal,,,,[],,,[],,,,,,,427.7255;325.9188
-飞船操作手册_70_6,70,6,58,1,,,"打开后你认出了上面的标题""大门公司传送仓"".你看到了目录页",False,Block,Normal,,,,[],,,[],,,,"When you open it, you recognize the title ""Gate Company Delivery Warehouse "". You see the contents page",,,124.4032;349.4433
-Player_70_8,70,8,1,58,,,系统,False,Block,Normal,,,,[],,,[],,,,System,,,270.1219;604.5071
-Player_70_9,70,9,1,58,,,与回滚交谈,False,Block,Normal,,,,[],,,[],,,,,,,550.0051;422.9479
+飞船操作手册_70_5,70,5,58,1,,,"你被舱内无数个复杂的仪表盘吸引,似乎你曾经精通于操作这些装置,你尝试与回滚产生联系",False,Block,Normal,,,,[],,,[],,,,,,,424.7225;328.9218
+飞船操作手册_70_6,70,6,58,1,,,"打开后你认出了上面的标题""大门公司传送仓"".你看到了目录页",False,Block,Normal,,,,[],,,[],,,,"When you open it, you recognize the title ""Gate Company Delivery Warehouse "". You see the contents page",,,106.3852;351.4453
+Player_70_8,70,8,1,58,,,系统,False,Block,Normal,,,,[],,,[],,,,System,,,222.9915;614.5362
+Player_70_9,70,9,1,58,,,与回滚交谈,False,Block,Normal,,,,[],,,[],,,,,,,549.0021;421.9449
 Player_70_10,70,10,1,58,,,概要,False,Block,Normal,,,,[],,,[],,,,Details,,,16.83657;450.927
 飞船操作手册_70_11,70,11,58,1,,,"大门公司旗下产品传送仓利用最新空间碰撞技术将物品挤压到对应方位,适用于将物体发射入圣山,检测物质稳定性. 目的与对稳定性侦测以及解决方案,当物体正确抵达目标方位时,自动将数据发送入""世界""服务器",False,Block,Normal,,,,[],,,[],,,,"The product transfer chamber of Damen Company uses the latest space collision technology to squeeze the items to the corresponding position, which is suitable for launching the object into the sacred mountain and testing the stability of the material. Aimed at stability detection and a solution that automatically sends data to the ""world"" server when an object correctly reaches its target location",,,30.65639;533.4666
 Player_70_12,70,12,1,58,,,世界服务器是什么?,False,Block,Normal,,,,[],,,[],,,,What is a world server?,,,61.04618;712.5981
-飞船操作手册_70_14,70,14,58,1,,,"负责组织圣山的环境网,在长久以来对圣山的不断监视中,我们在圣山层结构里发现了一个被压缩成未知格式的报文被发送.我们怀疑不止一个圣山存在着.我们应该尝试去与真理之门建立连接.利用真理之门关闭之刻发射爬虫.",False,Block,Normal,,,,[],,,[],,,,"It is responsible for organizing the environment network of the holy mountain. During the long-term monitoring of the holy mountain, we found that a message was sent compressed into an unknown format in the structure of the holy mountain layer. We suspect that more than one holy mountain exists. We should try to connect with the gate of truth. Launch the reptile at the moment the door of truth closes.",,,116.088;866.3294
-回滚_70_15,70,15,97,1,,,"我在,这是我存在过且为之奋斗过的地方,尝试去修复飞船,当飞船重新启动时正是我的唤醒之时",False,Block,Normal,,"SetQuestState(""修复飞船"",""active"");",,[],,,[],,,,,,,615.0919;537.0569
+飞船操作手册_70_14,70,14,58,1,,,"负责组织圣山的环境网,在长久以来对圣山的不断监视中,我们在圣山层结构里发现了一个被压缩成未知格式的报文被发送.我们怀疑不止一个圣山存在着.我们应该尝试去与真理之门建立连接.利用真理之门关闭之刻发射爬虫.",False,Block,Normal,,,,[],,,[],,,,"It is responsible for organizing the environment network of the holy mountain. During the long-term monitoring of the holy mountain, we found that a message was sent compressed into an unknown format in the structure of the holy mountain layer. We suspect that more than one holy mountain exists. We should try to connect with the gate of truth. Launch the reptile at the moment the door of truth closes.",,,121.093;900.3635
+回滚_70_15,70,15,97,1,,,"我在,这是我存在过且为之奋斗过的地方,尝试去修复飞船,当飞船重新启动时正是我的唤醒之时",False,Block,Normal,,"SetQuestState(""修复飞船"",""active"");",,[],,,[],,,,,,,622.113;544.078
 Player_70_16,70,16,1,58,,,检测完整性,False,Block,Normal,,,,[],,,[],,,,Test integrity,,,511.1149;696.1611
-Player_70_17,70,17,1,58,,,我们现在应该做什么?,False,Block,Normal,,,,[],,,[],,,,What should we do now?,,,507.5693;931.5073
+Player_70_17,70,17,1,58,,,我们现在应该做什么?,False,Block,Normal,,,,[],,,[],,,,What should we do now?,,,502.5462;893.4643
 Player_70_18,70,18,1,58,,,舱员信息,False,Block,Normal,,,,[],,,[],,,,Class member information,,,284.6031;699.5556
 Player_70_19,70,19,1,58,,,联系中心,False,Block,Normal,,,,[],,,[],,,,CONTACT CENTER,,,687.2913;678.143
-飞船操作手册_70_20,70,20,58,1,,,"信号受阻,系统中断",False,Block,Normal,,,,[],,,[],,,,The signal is blocked and the system is down,,,840.0484;788.9698
+飞船操作手册_70_20,70,20,58,1,,,"信号受阻,系统中断",False,Block,Normal,,,,[],,,[],,,,The signal is blocked and the system is down,,,835.0463;752.9178
 飞船操作手册_70_21,70,21,58,1,,,"燃料核心生成受阻,暗能推动装置受损",False,Block,Normal,,,,[],,,[],,,,The generation of fuel core is blocked and the dark energy propulsion unit is damaged,,,538.527;817.4141
 飞船操作手册_70_22,70,22,58,1,,,编号:0x010FFFFF\n   姓名;纪尧姆.里瑟\n   状态:死亡\n   干扰状态:注入\n    批准日期：x0\n    载体状态:释放,False,Block,Normal,,,,[],,,[],,,,Number :0x010FFFFF \nName; Guillaume \nReese Status: \nDead Disturbance \nStatus: Injection \nDate of Approval: X0 \nCarrier Status: Release,,,318.967;820.9722
-缇娜_70_23,70,23,39,1,,,"前往肯托,我们需要一辆可以到达所多提斯的列车.穿过凯安丛林就能抵达,但是要提防凯安人.",False,Block,Normal,,"\nSetQuestState(""创始之初"",""success"");\nSetQuestState(""前往肯托"",""active"");\nUnlockLoc(""凯安丛林_1"");\n\n",,[],,,[],,,,"To get to KenQuo, we need a train to Sodtyx.",,,730.9424;978.7047
-Player_70_24,70,24,1,58,,,前往,False,Block,Normal,,,,[],,,[],,,,Enter,,,936.7374;913.5992
+缇娜_70_23,70,23,39,1,,,"前往肯托,我们需要一辆可以到达所多提斯的列车.",False,Block,Normal,,"\nSetQuestState(""创始之初"",""success"");\nSetQuestState(""前往肯托"",""active"");\nUnlockLoc(""托奇办公室"");\n\n",,[],,,[],,,,"To get to KenQuo, we need a train to Sodtyx.",,,781.9934;845.5714
+Player_70_24,70,24,1,58,,,前往,False,Block,Normal,,"\nUnlockLoc(""托奇办公室"");",,[],,,[],,,,Enter,,,887.6883;910.5962
 Player_71_0,71,0,1,93,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,419.5869;5.17662
-肯_71_1,71,1,93,1,,,"噢,是刀锋,想必你们需要一次特殊的旅行把.",False,Block,Normal,"CurrentQuestState(""与肯交谈"")==""active""",,,[],BladeGas Show at others storge UI (needs others single UI),,[],,,,"Oh, it's a blade. I'm sure you'll need a special traveling handle",,,258.4137;151.8745
-Player_71_2,71,2,1,93,,,"我们需要到所多提斯去,如何能抵达目的地?",False,Block,Normal,,,,[],,,[],,,,We need to get to Sodtyx. How do we get there,,,188.4433;219.9596
+肯_71_1,71,1,93,1,,,"噢,是刀锋,想必你们需要一次特殊的旅行把.",False,Block,Normal,"CurrentQuestState(""与肯交谈"")==""active""",,,[],BladeGas Show at others storge UI (needs others single UI),,[],,,,"Oh, it's a blade. I'm sure you'll need a special traveling handle",,,270.4137;173.8745
+Player_71_2,71,2,1,93,,,"我们需要到所多提斯去,如何能抵达目的地?",False,Block,Normal,,,,[],,,[],,,,We need to get to Sodtyx. How do we get there,,,186.4413;218.9586
 Player_71_3,71,3,1,93,,,"废话少说,你开个价把我们带到所多提斯.",False,Block,Normal,,,,[],"avoid the battle und start chap09 ,battle at the sodtyx(hyper  sodtyx)",,[],,,,,,,712.7736;467.3629
-肯_71_4,71,4,93,1,,,"帮我到烈火轨道去获取3个""火焰核心浓缩体"",你可以从伏尔侵蚀体上获得\n""解锁地点""",False,Block,Normal,,"SetQuestState(""丛林泰山"",""active"");\nSetQuestState(""与肯交谈"",""success"");\nUnlockLoc(""烈火轨道_1"");",,[],,,[],,,,"Help me go to the fire orbit to get the three ""fire core concentrates"". You can get the ""unlock location"" from the Vlutus erosion body\n""Unlock Location""",,,174.8797;312.0636
+肯_71_4,71,4,93,1,,,"帮我到烈火轨道去获取3个""火焰核心浓缩体"",你可以从伏尔侵蚀体上获得\n""解锁地点""",False,Block,Normal,,"SetQuestState(""丛林泰山"",""active"");\nSetQuestState(""与肯交谈"",""success"");\nUnlockLoc(""烈火轨道"");",,[],,,[],,,,"Help me go to the fire orbit to get the three ""fire core concentrates"". You can get the ""unlock location"" from the Vlutus erosion body",,,175.8807;314.0656
 肯_71_5,71,5,93,1,,,"30000一口价,外赠10个刀锋燃料核心",False,Block,Normal,,,,[],,,[],,,,,,,869.0057;508.9699
 Player_71_6,71,6,1,93,,,购买,False,Block,Normal,,CheckMoneyEnough(30000);,,[],,,[],,,,,,,882.3049;609.0589
 Player_71_7,71,7,1,93,,,"钱包忘带了,你需要什么帮助",False,Block,Normal,,,,[],,,[],,,,,,,696.7747;597.8181
 肯_71_8,71,8,93,1,,,大爷宁走好,False,Block,Normal,"Variable[""MoneyEnough""]>=false","GiveMoney(-30000);\nSetQuestState(""丛林泰山"",""success"");\nSetQuestState(""最后一跃"",""active"");",,[],,,[],,,,,,,780.8314;687.4685
-肯_71_9,71,9,93,1,,,需要什么,False,Block,Normal,"CurrentQuestState(""丛林泰山"")==""active""",,,[],,,[],,,,ya?,,,628.6149;124.9344
+肯_71_9,71,9,93,1,,,需要什么,False,Block,Normal,"CurrentQuestState(""丛林泰山"")==""active""",,,[],,,[],,,,ya?,,,625.6149;113.9344
 肯_71_10,71,10,93,1,,,钱不够,False,Block,Normal,"Variable[""MoneyEnough""]>=true",,,[],,,[],,,,,,,1033.384;686.2315
 Player_71_11,71,11,1,93,,,"飞往所多提斯\n""解锁新地点""",False,Block,Normal,,"\nUnlockLoc(""所多提斯外部"");\nSetQuestState(""最后一跃"",""active"");",,[],,,[],,,,,,,916.6046;744.072
-Player_71_13,71,13,1,93,,,交出火焰核心浓缩体,False,Block,Normal,,"CheckItemEnough(""火焰核心浓缩体"",3);",,[],,,[],,,,Give the flame core concentrate,,,734.0801;185.2941
-肯_71_14,71,14,93,1,New Dialogue Entry,,,True,Block,Normal,,,Continue(),[],,,[],,,,,,,890.4746;234.3907
-肯_71_15,71,15,93,1,,,"这样刀锋就有足够的能量冲破所多提斯了,大爷宁走好嘞",False,Block,Normal,"Variable[""ItemEnough""]~=false","SetQuestState(""丛林泰山"",""active"");\nSetItemAmount(10038,3)",,[],,,[],,,,Then the blade has enough power to break through Sodtyx,,,799.2618;325.5714
+Player_71_13,71,13,1,93,,,交出火焰核心浓缩体,False,Block,Normal,,"CheckItemEnough(""火焰核心浓缩体"",3);",,[],,,[],,,,Give the flame core concentrate,,,733.0781;186.2961
+肯_71_14,71,14,93,1,New Dialogue Entry,,,True,Block,Normal,,,Continue(),[],,,[],,,,,,,872.4384;238.3987
+肯_71_15,71,15,93,1,,,"这样刀锋就有足够的能量冲破所多提斯了,大爷宁走好嘞",False,Block,Normal,"Variable[""ItemEnough""]~=false","SetQuestState(""丛林泰山"",""active"");\nSetItemAmount(10038,3)",,[],,,[],,,,Then the blade has enough power to break through Sodtyx,,,798.2598;325.5714
 肯_71_16,71,16,93,1,,,数量不够,False,Block,Normal,"Variable[""ItemEnough""]~=true",,,[],,,[],,,,Not Enough.,,,1178.569;258.774
-Player_71_17,71,17,1,93,,,"""解锁新地点""",False,Block,Normal,,"SetQuestState(""最后一跃"",""active"");\n\nUnlockLoc(""所多提斯外部"");\nVariable[""ItemEnough""]=false",,[],,,[],,,,Exit,,,1048.256;420.6765
-肯_71_18,71,18,93,1,New Dialogue Entry,,,True,Block,Normal,,,Continue(),[],,,[],,,,,,,403.8501;67.01873
-Player_71_19,71,19,1,93,,,行驶到烈火轨道,False,Block,Normal,,\nCheckHasPack();,,[],,,[],,,,Drive to the track of fire,,,256.5946;454.8035
+Player_71_17,71,17,1,93,,,"""解锁新地点""",False,Block,Normal,,"SetQuestState(""最后一跃"",""active"");\n\nUnlockLoc(""所多提斯外部"");\nVariable[""ItemEnough""]=false",,[],,,[],,,,Exit,,,1048.256;418.6725
+肯_71_18,71,18,93,1,New Dialogue Entry,,,True,Block,Normal,,,Continue(),[],,,[],,,,,,,424.8501;70.01873
+Player_71_19,71,19,1,93,,,行驶到烈火轨道,False,Block,Normal,,\nCheckHasPack();,,[],,,[],,,,Drive to the track of fire,,,225.5636;425.7744
 肯_71_20,71,20,93,1,New Dialogue Entry,,,False,Block,Normal,"Variable[""HasPack""]~=false","UnlockLoc(""烈火轨道"");\n\nVariable[""HasPack""]=false",,[],,,[],,,,,,,147.9839;547.2938
 肯_71_21,71,21,93,1,,,卡组不足,False,Block,Normal,"Variable[""HasPack""]~=true",,,[],,,[],,,,,,,369.626;540.4366
-Player_71_22,71,22,1,93,New Dialogue Entry,,,False,Block,Normal,,,,[],,,[],,,False,,{{omit}},{{omit}},323.0279;369.0706
 Player_72_0,72,0,1,59,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,351;14
-刀锋_72_1,72,1,59,1,,,列车虽然成旧但设备依然完好无损,False,Block,Normal,,,,[],,,[],,,,The train is old but its equipment is still intact,,,335.9634;117
+刀锋_72_1,72,1,59,1,,,列车虽然成旧但设备依然完好无损,False,Block,Normal,,,,[],,,[],,,,The train is old but its equipment is still intact,,,321.9634;115
 Player_72_2,72,2,1,59,,,如何启动刀锋列车,False,Block,Normal,"CurrentQuestState(""首次使用刀锋"")==""unassigned""",,,[],,,[],,,,How do I start the Blade?,,,174.6799;218.3295
-Player_72_3,72,3,1,59,,,行驶(消耗刀锋核心),False,Block,Normal,"CurrentQuestState(""首次使用刀锋"")==""success""","CheckItemEnough(刀锋核心"""",1);",,[],,,[],,,,Ride (consumes Blade Core),,,584.979;207.0897
-刀锋_72_4,72,4,59,1,,,"由于刀锋的特殊构造,肯托利用了独特的核心,需要单独的装置去嵌入产油器,但首次行驶我们还有剩余的能源可以使用.",False,Block,Normal,,,,[],,,[],,,,"Due to the special configuration of the blade, the Canto takes advantage of a unique core that requires a separate device to insert into the oil generator, but we still have a surplus of energy to use for the first drive.",,,231;308.8248
-Player_72_5,72,5,1,59,,,前往伏尔山顶,False,Block,Normal,,"SetQuestState(""首次使用刀锋"",""success"");\nSetQuestState(""与肯交谈"",""active"");\n\nUnlockLoc(""""伏尔山之路_1"""");",,[],,,[],,,,Head to the Vultus Top,,,278;440
+Player_72_3,72,3,1,59,,,行驶(消耗刀锋核心),False,Block,Normal,"CurrentQuestState(""首次使用刀锋"")==""success""","CheckItemEnough(刀锋核心"""",1);",,[],,,[],,,,Ride (consumes Blade Core),,,577.979;188.0897
+刀锋_72_4,72,4,59,1,,,"由于刀锋的特殊构造,肯托利用了独特的核心,需要单独的装置去嵌入产油器,但首次行驶我们还有剩余的能源可以使用.",False,Block,Normal,,,,[],,,[],,,,"Due to the special configuration of the blade, the Canto takes advantage of a unique core that requires a separate device to insert into the oil generator, but we still have a surplus of energy to use for the first drive.",,,232;307.8248
+Player_72_5,72,5,1,59,,,前往伏尔山顶,False,Block,Normal,,"SetQuestState(""首次使用刀锋"",""success"");\nSetQuestState(""与肯交谈"",""active"");\nChangeDungeon(""伏尔山顶"");\nUnlockLoc(""伏尔山顶"");",,[],,,[],,,,Head to the Vultus Top,,,275;440
 刀锋_72_6,72,6,59,1,,,注入成功,False,Block,Normal,"Variable[""ItemEnough""]~=false","CheckItemEnough(""刀锋核心"",1);\nSetItemAmount(""刀锋核心"",1);\nVariable[""ItemEnough""]=false ",,[],,,[],,,,Injection of success,,,549.5044;406.4208
 刀锋_72_7,72,7,59,1,,,核心不足,False,Block,Normal,"Variable[""ItemEnough""]~=true",,,[],,,[],,,,Not enough the core,,,742.5996;363.7589
 刀锋_72_8,72,8,59,1,New Dialogue Entry,,,False,Block,Normal,,,,[],,,[],,,,,,,627.7648;291.6805
@@ -1441,47 +1439,47 @@ Player_73_2,73,2,1,76,,,驱散,False,Block,Normal,,OpenPackSelection();,,[],,,[]
 Player_74_0,74,0,1,77,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,220;44
 伏尔元素_74_1,74,1,77,1,,,伏尔图斯元素化为实体向你攻击,False,Block,Normal,,,,[],,,[],,,,The Voltus elements materialize and attack you,,,333;153
 Player_74_2,74,2,1,77,,,抵抗,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,, resist ,,,285;259
-高级所多提斯战士_75_0,75,0,63,63,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,428.8873;57.77464
-高级所多提斯战士_75_1,75,1,63,1,,,奎卡人你们的末日来了,False,Block,Normal,,,,[],,,[],,,,Qika goes die!!!,,,394.6222;166.3852
-高级所多提斯战士_75_3,75,3,63,63,,,欲擒故纵,False,Block,Normal,"Variable[""DungeonMonster""]>=3",,,[],,,[],,,,,,,587.1448;231.6573
-高级所多提斯战士_75_4,75,4,63,63,New Dialogue Entry,,,False,Block,Normal,,"ChangeDungeon(""湖"");\nUnlockLoc(""湖"");\nSetQuestState(""湖中人"",""active"");\nSetQuestState(""最后一跃"",""success"");",,[],,,[],,,,,,,658.1924;302.3655
-Player_75_5,75,5,1,63,,,战斗,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,Battle,,,355.6823;311.4153
+Player_75_0,75,0,1,1,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,428.8873;57.77464
+Player_75_1,75,1,1,1,,,奎卡人你们的末日来了,False,Block,Normal,,,,[],,,[],,,,Qika goes die!!!,,,381.5882;132.3662
+Player_75_3,75,3,1,1,,,欲擒故纵,False,Block,Normal,"Variable[""DungeonMonster""]>=3",,,[],,,[],,,,,,,587.1448;231.6573
+Player_75_4,75,4,1,1,New Dialogue Entry,,,False,Block,Normal,,"ChangeDungeon(""湖"");\nUnlockLoc(""湖"");\nSetQuestState(""湖中人"",""active"");\nSetQuestState(""最后一跃"",""success"");",,[],,,[],,,,,,,658.1924;302.3655
+Player_75_5,75,5,1,1,,,战斗,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,Battle,,,261.5882;262.3662
 Player_76_0,76,0,1,82,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,314;27
-Player_76_3,76,3,1,82,,解除,Destory it!,False,Block,Normal,"Variable[""DungeonBoss""]>=1",,,[],,,[],,,,,,,272.7437;272.2485
-所多提斯协议_76_5,76,5,82,1,,,"协议成功关闭,现在只要将真理之门关闭就可以制止",False,Block,Normal,,"SetQuestState(""天国阶梯"",""active"");\nSetQuestState(""破坏外界协议"",""success"");\nUnlockLoc(""天国阶梯"");\n",,[],,,[],,,,The agreement has been successfully closed. Now it can be stopped by closing the door of truth,,,514.6205;399.5626
+Player_76_3,76,3,1,82,,,Destory it!,False,Block,Normal,"Variable[""DungeonBoss""]>=1",,,[],,,[],,,,,,,271.7437;272.2485
+所多提斯协议_76_5,76,5,82,1,,,"协议成功关闭,现在只要将真理之门关闭就可以制止",False,Block,Normal,,"SetQuestState(""天国阶梯"",""active"");\nSetQuestState(""破坏外界协议"",""success"");\nUnlockLoc(""天国阶梯"");\nChangeDungeon(""天国阶梯"");",,[],,,[],,,,The agreement has been successfully closed. Now it can be stopped by closing the door of truth,,,514.6205;399.5626
 Player_76_6,76,6,1,82,,,破坏供电设备,False,Block,Normal,"Variable[""DungeonBoss""]>=1",,,[],,,[],,,,,,,577;228
-所多提斯协议_76_7,76,7,82,1,,,"与外界恶魔签订的关口协议存储在实体装置中,只需要关闭供电设备即可解除协议的生成有效性.",False,Block,Normal,"CurrentQuestState(""乘胜追击"")==""success""",,,[],,,[],,,,Gateway agreements with external demons are stored in the physical device and can be deactivated by simply turning off the power supply.,,,332.1985;156.7688
+所多提斯协议_76_7,76,7,82,1,,,"与外界恶魔签订的关口协议存储在实体装置中,只需要关闭供电设备即可解除协议的生成有效性.",False,Block,Normal,"CurrentQuestState(""乘胜追击"")==""success""",,,[],,,[],,,,Gateway agreements with external demons are stored in the physical device and can be deactivated by simply turning off the power supply.,,,317.1985;166.7688
 Player_77_0,77,0,1,81,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,393.6908;40.90199
 托尼_77_7,77,7,81,1,,,"奎卡人,你们已经成为了历史,",False,Block,Normal,"(Variable[""DungeonBoss""]>=1) and \n(CurrentQuestState(""乘胜追击"")==""active"")",,,[],,,[],,,,"Qika, you are history",,,213.5334;283.711
 Player_77_8,77,8,1,81,,,你的目的是什么?,False,Block,Normal,,,,[],,,[],,,, What is your purpose? ,,,56.27969;387.8162
 托尼_77_9,77,9,81,1,,,"圣山对于整个""世界""不值一提.",False,Block,Normal,,,,[],,,[],,,,The ShenShan is not worth mentioning to the whole world.,,,165.005;510.3974
 Player_77_10,77,10,1,81,,,你和凯奥斯有什么勾当?,False,Block,Normal,,,,[],,,[],,,,What do you do with Chaos,,,589.3632;369.7516
 Player_77_11,77,11,1,81,,,战斗,False,Block,Normal,,"SetQuestState(""乘胜追击"",""success"");\nOpenPackSelection();",,[],,,[],,,,Battle,,,466.8921;607.4385
-托尼_77_12,77,12,81,1,,,"我们将带领圣山开创新的纪元,我们将会摆脱虚拟的存在,迈入真实世界.",False,Block,Normal,,,,[],,,[],,,,We will lead the mountain into a new era. We will move out of our virtual existence and into the real world.,,,613.6531;494.1225
+托尼_77_12,77,12,81,1,,,"我们将带领圣山开创新的纪元,我们将会摆脱虚拟的存在,迈入真实世界.",False,Block,Normal,,,,[],,,[],,,,We will lead the mountain into a new era. We will move out of our virtual existence and into the real world.,,,612.6531;494.1225
 托尼_77_13,77,13,81,1,New Dialogue Entry,,,True,Block,Normal,,,Continue(),[],,,[],,,,,,,289.6131;160.9536
 托尼_77_14,77,14,81,1,,,托尼被侵蚀体包围着无法接近,False,Block,Normal,,,,[],,,[],,,,Tony is surrounded by erosions and inaccessible,,,786.9124;225.4291
 Player_78_0,78,0,1,84,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,157.1732;30.18716
-蒙大拿_78_1,78,1,84,1,,,蒙大拿看到了你们,False,Block,Normal,,,,[],,,[],,,,Montana sawyou,,,340.307;87.48698
-Player_78_2,78,2,1,84,,,是谁背叛了圣山,False,Block,Normal,,,,[],,,[],,,,Who betrayed the ShenShan,,,135.4795;128.4769
+蒙大拿_78_1,78,1,84,1,,,蒙大拿看到了你们,False,Block,Normal,,,,[],,,[],,,,Montana sees you,,,337.307;87.48698
+Player_78_2,78,2,1,84,,,是谁背叛了圣山,False,Block,Normal,,,,[],,,[],,,,Who betrayed the ShenShan,,,135.4795;129.4769
 蒙大拿_78_3,78,3,84,1,,,"托尼,他与外界签订了协议导致大门打开,他与恶魔预谋闯进真理之门进行状态的转换.",False,Block,Normal,,,,[],,,[],,,,"Tony, he made a pact with the outside world that caused the gate to open, and he and the demon premeditatively broke into the door of truth for a state switch.",,,351.1447;203.9677
-Player_78_4,78,4,1,84,,,他在哪里?,False,Block,Normal,,,,[],,,[],,,,Where is he?,,,169.1989;275.0302
-蒙大拿_78_5,78,5,84,1,,,"在深渊,协议的收发地址以实体装置保存呢着,只需要关闭电源或者直接破坏即可",False,Block,Normal,,,,[],,,[],,,,"In the Abyss, the protocol's send and receive addresses are stored in a physical device, which can be powered off or destroyed",,,325.6855;348.5568
-Player_78_6,78,6,1,84,,,前往深渊,False,Block,Normal,,"SetQuestState(""乘胜追击"",""active"");\nUnlockLoc(""深渊"");\n",,[],,,[],,,,To the deep,,,267.7142;427.9061
+Player_78_4,78,4,1,84,,,他在哪里?,False,Block,Normal,,,,[],,,[],,,,Where is he?,,,173.1989;275.0302
+蒙大拿_78_5,78,5,84,1,,,"在深渊,协议的收发地址以实体装置保存呢着,只需要关闭电源或者直接破坏即可",False,Block,Normal,,,,[],,,[],,,,"In the Abyss, the protocol's send and receive addresses are stored in a physical device, which can be powered off or destroyed",,,331.6855;338.5568
+Player_78_6,78,6,1,84,,,前往深渊,False,Block,Normal,,"SetQuestState(""乘胜追击"",""active"");\nUnlockLoc(""深渊"");\nChangeDungeon(""深渊"");",,[],,,[],,,,To the deep,,,253.7142;412.9061
 Player_79_0,79,0,1,87,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,406;50
 战争_79_3,79,3,87,1,,,战争正在蔓延,False,Block,Normal,,,"CinemachinePriority(Camera,600)",[],,,[],,,,The war is spreading,,,273.2863;149
 Player_79_4,79,4,1,76,,,驱散,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,disperse,,,407.7137;254.3027
 Player_80_0,80,0,1,88,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,244;36
-痛苦_80_3,80,3,88,1,,,痛苦持续作用着,False,Block,Normal,,,,[],,,[],,,,,,,302.2863;164
+痛苦_80_3,80,3,88,1,,,痛苦持续作用着,False,Block,Normal,,,"CinemachinePriority(Camera,600)",[],,,[],,,,,,,302.2863;164
 Player_80_4,80,4,1,76,,,驱散,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,,,,517.7136;257.3027
 Player_81_0,81,0,1,90,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,20;30
-饥饿_81_3,81,3,90,1,,,饥饿蔓延了你的身心,False,Block,Normal,,,,[],,,[],,,,Hunger pervades your mind and body,,,214.2863;168
+饥饿_81_3,81,3,90,1,,,饥饿蔓延了你的身心,False,Block,Normal,,,"CinemachinePriority(Camera,600)",[],,,[],,,,Hunger pervades your mind and body,,,144.2863;159
 Player_81_4,81,4,1,90,,,驱散,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,, disperse,,,249.7137;346.3027
 Player_82_0,82,0,1,89,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,273;66
-死亡_82_3,82,3,89,1,,,死亡靠近了你,False,Block,Normal,,,,[],,,[],,,,Death is close to you,,,357.2863;225
+死亡_82_3,82,3,89,1,,,死亡靠近了你,False,Block,Normal,,,"CinemachinePriority(vcam,600)",[],,,[],,,,Death is close to you,,,357.2863;225
 Player_82_4,82,4,1,76,,,驱散,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,, disperse ,,,386.7137;345.3027
-狱魔_83_0,83,0,83,83,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,183;38
-狱魔_83_5,83,5,83,83,,,伏尔侵蚀体以及高度蔓延了,False,Block,Normal,,,,[],,,[],,,,,,,305.2864;152
-Player_83_6,83,6,1,83,,,驱散,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,,,,455.7137;233.3027
+Player_83_0,83,0,1,1,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,183;38
+Player_83_5,83,5,1,1,,,伏尔侵蚀体以及高度蔓延了,False,Block,Normal,,,,[],,,[],,,,,,,273.2864;145
+Player_83_6,83,6,1,1,,,驱散,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,,,,455.7137;233.3027
 Player_84_0,84,0,1,1,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,311;68
 Player_84_3,84,3,1,1,,,伏尔侵蚀体以及高度蔓延了,False,Block,Normal,,,,[],,,[],,,,,,,346.2863;174
 Player_84_4,84,4,1,1,,,驱散,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,,,,333.7137;282.3027
@@ -1489,12 +1487,12 @@ Player_85_0,85,0,1,80,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,105.1389
 所多提斯侵蚀体_85_5,85,5,80,1,,,奎卡人你们的末日来了,False,Block,Normal,,,,[],,,[],,,,,,,244.9832;106.9256
 Player_85_6,85,6,1,80,,,对战,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,,,,244.9832;156.9256
 Player_88_0,88,0,1,1,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,301;38
-凯奥斯_88_3,88,3,91,1,,,凯奥斯企图跟随大门关闭时逃离,False,Block,Normal,,,,[],,,[],,,,,,,487.2863;139
-Player_88_4,88,4,1,91,,,抓捕,False,Block,Normal,,,,[],,,[],,,,,,,450.7137;230.3027
+凯奥斯_88_3,88,3,91,1,,,凯奥斯企图跟随大门关闭时逃离,False,Block,Normal,,,,[],,,[],,,,,,,486.2863;128
+Player_88_4,88,4,1,91,,,抓捕,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,,,,370.7137;211.3027
 伏尔侵蚀体_88_5,88,5,76,1,,,伏尔侵蚀体以及高度蔓延了,False,Block,Normal,,,,[],,,[],,,,,,,123.2863;297
 凯奥斯_88_6,88,6,91,1,,,驱散,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,,,,180.7137;296.3027
-Player_88_7,88,7,1,91,,,放走,False,Block,Normal,,,,[],,,[],,,,,,,666.2864;213
-凯奥斯_88_8,88,8,91,1,New Dialogue Entry,,,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,,,,512.7136;306.3027
+Player_88_7,88,7,1,91,,,放走,False,Block,Normal,,,,[],,,[],,,,,,,634.2864;206
+凯奥斯_88_8,88,8,91,1,New Dialogue Entry,,,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,,,,515.7136;306.3027
 Player_91_0,91,0,1,42,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,205;29
 老瘸子先知_91_1,91,1,42,1,,,戈林核心被放在最显眼的地方,False,Block,Normal,,,,[],,,[],,,,,,,213;124
 Player_91_2,91,2,1,42,,,帮助老瘸子取回戈尔核心,False,Block,Normal,"CurrentQuestState(""帮助老瘸子获得戈林核心"")==“active”;",,,[],,,[],,,,,,,91;241
@@ -1540,10 +1538,10 @@ Player_101_0,101,0,1,83,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,269;50
 Player_101_2,101,2,1,83,,,战斗,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,Battle,,,305;323
 Player_103_0,103,0,1,104,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,425;28
 真理之门_103_1,103,1,104,1,,,"外界大门敞开着,外界生物放肆地闯进圣山.",False,Block,Normal,,,,[],,,[],,,,"The outer gate was wide open, and the creatures of the outside world invaded the sacred mountain with impudence.",,,394;118
-Player_103_2,103,2,1,104,,,关闭大门,False,Block,Normal,"Variable[""DungeonBoss""]>=1",,,[],,,[],,,,Close the GATE,,,301;235
-Player_103_3,103,3,1,104,,,进入大门,False,Block,Normal,"Variable[""DungeonBoss""]>=1",,,[],,,[],,,,Enter the GATE,,,652;228
+Player_103_2,103,2,1,104,,,关闭大门,False,Block,Normal,"Variable[""DungeonBoss""]>=1",,,[],,,[],,,,Close the GATE,,,265;233
+Player_103_3,103,3,1,104,,,进入大门,False,Block,Normal,"Variable[""DungeonBoss""]>=1",,,[],,,[],,,,Enter the GATE,,,650;221
 真理之门_103_4,103,4,104,1,,,"大门已经成功关闭,虽然阻止了新的外界生物入侵,但是残留的后果是需要解决的问题,前往重生之地与缇娜讨论后面的方向.",False,Block,Normal,,"SetQuestState(""天国阶梯"",""success"");\nSetQuestState(""新的选择"",""active"");",,[],,,[],,,,"The gate has been successfully closed, although the new outside biological invasion has been prevented, but the residual consequences are problems that need to be solved. Head to the place of rebirth to discuss the direction behind with Tina.",,,333;356
-真理之门_103_5,103,5,104,1,,,"你陷入了虚无当中,你违反了固有实体法则,浑沌中的时间流正在缓慢地推动因子.你开始了漫长的流动.(请等待后续故事包...)",False,Block,Normal,,,FadeIn(100),[],,,[],,,,"You have fallen into nothingness, you have violated the laws of the inherent entity, and the flow of time in chaos is slowly pushing the factors. You start the long flow.",,,648;307
+真理之门_103_5,103,5,104,1,,,"你陷入了虚无当中,你违反了固有实体法则,浑沌中的时间流正在缓慢地推动因子.你开始了漫长的流动.(请等待后续故事包...)",False,Block,Normal,,,FadeIn(100),[],,,[],,,,"You have fallen into nothingness, you have violated the laws of the inherent entity, and the flow of time in chaos is slowly pushing the factors. You start the long flow.",,,649;307
 Player_104_0,104,0,1,107,START,,,False,Block,Normal,,,None(),[],,,[],,,False,,,,20;30
 Player_105_0,105,0,1,97,START,,,False,Block,Normal,,,None(),[],,,[],,,False,,,,602.8082;50.45206
 回滚_105_1,105,1,97,1,,,"你在一个看似驾驶舱的地方恢复了意识,眼前尽是一堆复杂的仪表盘和一具骨骸,看起来这个驾驶舱已经停止工作了许久",False,Block,Normal,"CurrentQuestState(""苏醒"")==""unassigned""",,,[],,,[],,,False,,,,383.7808;157.0274
@@ -2477,6 +2475,9 @@ Number,Number,Number,Number,Special
 47,14,47,16,Normal
 51,0,51,1,Normal
 51,1,51,2,Normal
+51,1,51,3,Normal
+51,1,51,4,Normal
+51,1,51,5,Normal
 51,1,51,6,Normal
 52,0,52,1,Normal
 52,1,52,2,Normal
@@ -2576,6 +2577,7 @@ Number,Number,Number,Number,Special
 60,17,60,6,Normal
 61,0,61,1,Normal
 61,1,61,2,Normal
+61,1,61,3,Normal
 61,3,61,4,Normal
 63,0,63,1,Normal
 63,1,63,15,Normal
@@ -2605,12 +2607,13 @@ Number,Number,Number,Number,Special
 63,23,63,24,Normal
 63,24,63,14,Normal
 64,0,64,1,Normal
+64,1,64,2,Normal
 64,1,64,10,Normal
-64,1,64,9,Normal
 64,2,64,5,Normal
 64,3,64,7,Normal
 64,3,64,8,Normal
 64,5,64,3,Normal
+64,7,64,9,Normal
 64,9,64,11,Normal
 65,0,65,1,Normal
 65,1,65,2,Normal
@@ -2661,7 +2664,6 @@ Number,Number,Number,Number,Special
 71,1,71,2,Normal
 71,2,71,4,Normal
 71,3,71,5,Normal
-71,4,71,22,Normal
 71,5,71,6,Normal
 71,5,71,7,Normal
 71,6,71,8,Normal
@@ -2678,6 +2680,7 @@ Number,Number,Number,Number,Special
 71,19,71,21,Normal
 72,0,72,1,Normal
 72,1,72,2,Normal
+72,1,72,3,Normal
 72,2,72,4,Normal
 72,3,72,8,Normal
 72,4,72,5,Normal
