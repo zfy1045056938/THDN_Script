@@ -1,113 +1,113 @@
 ﻿Database
 Name,Version,Author,Description,Emphasis1,Emphasis2,Emphasis3,Emphasis4
-ShenShan220,1.5.1.0,richard,,#ffffffff ---,#ff0000ff ---,#00ff00ff ---,#0000ffff ---
+ShenShan,1.5.1.0,richard,,#ffffffff ---,#ff0000ff ---,#00ff00ff ---,#0000ffff ---
 Global User Script
 
 Actors
-ID,Portrait,AltPortraits,SpritePortrait,AltSpritePortraits,Name,Pictures,Description,IsPlayer,en,NodeColor
-Number,Special,Special,Special,Special,Text,Files,Text,Boolean,Localization,Text
-1,,[],,[],我,[],,TRUE,me,{{omit}}
-2,,[],,[],瑞奇,[],瑞奇党的头目,FALSE,Ruiki,Gray
-3,,[],,[],托奇,[],肯托阵营负责与奎卡交易的 大使,FALSE,Quoki,Gray
-4,,[],,[],地下列车,[],年久失修的列车,FALSE,The underground train,Gray
-5,,[],,[],地底爬虫,[],列车地下城生物.,FALSE,Underground crawler,Gray
-6,,[],,[],所多提斯士兵,[],"洛斯据点,瑞奇希望占领此地获得高信号传输",FALSE,Soldier of Sodtyx,Gray
-7,,[],,[],所多提斯士兵队长,[],"洛斯据点,瑞奇希望占领此地获得高信号传输",FALSE,Captain of the soldiers of Sodtyx,Gray
-8,,[],,[],特律,[],"Guy who is union of free ranger,came to qika save them.",FALSE,Detroit,Gray
-9,,[],,[],所多提斯射手,[],屠杀奎卡族人的士兵,False,The Archer of Sodtyx,Gray
-10,,[],,[],黑色史密斯,[],"奎卡营地的铁匠,用于制作强化武器以及装备",FALSE,Black Smith,Gray
-11,,[],,[],莱曼,[],,FALSE,lehmann,
-12,,[],,[],李,[],"Chap04 begin und first meet , bar manager",FALSE,li,
-13,,[],,[],平克,[],,FALSE,Pink,Gray
-14,,[],,[],弗伊,[],,FALSE,faye,Gray
-15,,[],,[],所多提斯船长,[],交接船长,FALSE,Captain Sodtyx,Gray
-16,,[],,[],莱尼,[],,FALSE,lenny,Gray
-19,,[],,[],信号放大器,[],,FALSE,Signal amplifier,Gray
-20,,[],,[],所多提斯军官,[],,FALSE,Officer Sodtyx,
-21,,[],,[],奎卡地下列车,[],车站中有一辆年久失修的列车被藤曼包裹着.,FALSE,The Qika Underground,
-22,,[],,[],爬虫网,[],爬虫母体衍生出来的网企图阻拦列车行驶的路线,FALSE,The crawler network,
-23,,[],,[],滴滴露,[],,FALSE,Dew drops,
-24,,[],,[],莱曼,[],路德亚看门人,FALSE,lehmann,Gray
-25,,[],,[],托,[],,FALSE,tora,Gray
-26,,[],,[],南,[],,FALSE,south,Gray
-27,,[],,[],金,[],,FALSE,gold,
-28,,[],,[],方向,[],,FALSE,The direction of,
-29,,[],,[],古代武器控制装置,[],,FALSE,Ancient weapon control devices,Gray
-30,,[],,[],莱德尼列车,[],莱德尼用来逃脱的工具,FALSE,Ladney train,Gray
-31,,[],,[],生命通道,[],,FALSE,Life channel,Gray
-32,,[],,[],沃利达酒馆门,[],,FALSE,The door of the Wolvda Tavern,
-33,,[],,[],海轮党水手,[],,FALSE,A seagoing crew,
-34,,[],,[],海轮党参谋,[],,FALSE,Consigliere of the seagoing ship,
-35,,[],,[],海轮党首领,[],,FALSE,The captain of the seagoing party,
-36,,[],,[],凯,[],,FALSE,kay,Gray
-37,,[],,[],沃里达酒馆大门,[],,FALSE,The door of the Volida Tavern,Gray
-38,,[],,[],生命通道,[],,FALSE,Life channel,Gray
-39,,[],,[],缇娜,[],,FALSE,Tina,Gray
-40,,[],,[],海轮党海盗,[],,FALSE,A seagoing pirate,
-41,,[],,[],海轮党船长,[],,FALSE,Captain of the seagoing ship,
-42,,[],,[],老瘸子先知,[],,FALSE,The old lame prophet,Gray
-43,,[],,[],灵视老瘸子,[],,FALSE,The old gimp,Gray
-44,,[],,[],武装代理人员,[],,FALSE,Armed agent,
-45,,[],,[],武装挖掘人员,[],,FALSE,Armed excavator,
-46,,[],,[],戈林核心,[],,FALSE,Goering core,
-47,,[],,[],沃克,[],,FALSE,walker,
-48,,[],,[],失落海盗,[],,FALSE,Lost the pirates,
-49,,[],,[],矿石蜘蛛,[],,FALSE,Ore spider,
-51,,[],,[],海底管理密令,[],Got Safe Code from codex (kill),FALSE,Seabed Management Order,
-52,,[],,[],海底核心终端,[],OceanTerminal,FALSE,Subsea core terminal,Gray
-53,,[],,[],暗街商人,[],,FALSE,Dark street merchants,Gray
-54,,[],,[],缇娜的信条,[],,FALSE,Tina's creed,Gray
-55,,[],,[],帕热,[],,FALSE,Palmer hot,
-56,,[],,[],海底终端,[],,FALSE,The bottom of the sea terminal,
-57,,[],,[],Chap07,[],,FALSE,Chap07,
-58,,[],,[],飞船操作手册,[],Chap07 tina und me came to spaceship und found eine book und dialogue with it,FALSE,Spacecraft operation manual,
-59,,[],,[],刀锋,[],,FALSE,The blade,
-60,,[],,[],Chap08,[],,FALSE,Chap08,
-61,,[],,[],伏尔图斯元素,[],,FALSE,The Voltus element,Gray
-62,,[],,[],伏尔图斯侵蚀体,[],,FALSE,Voltus erosive body,
-63,,[],,[],高级所多提斯战士,[],,FALSE,The superior soldier of Sodtyx,Gray
-68,,[],,[],圣山之门,[],,FALSE,The door of the ShenShan,
-69,,[],,[],查克,[],,FALSE,chuck,
-71,,[],,[],矩石,[],Start Matches Games,FALSE,Moment of stone,Gray
-72,,[],,[],暗街杀手,[],,FALSE,Dark street killer,Gray
-73,,[],,[],暗街商人,[],,FALSE,Dark street merchants,
-74,,[],,[],帕洛尔元素,[],,FALSE,Parlo element,
-75,,[],,[],帕洛尔侵蚀体,[],,FALSE,Parlo erosion body,
-76,,[],,[],伏尔侵蚀体,[],Chap08,FALSE,Voltaire erosion body,
-77,,[],,[],伏尔元素,[],,FALSE,Vor elements,
-80,,[],,[],所多提斯侵蚀体,[],Chap09 Final Chap At Sodtyx End with Chaos,FALSE,Sodotes erosive body,
-81,,[],,[],托尼,[],Uncle Montana,FALSE,Tony,
-82,,[],,[],所多提斯协议,[],,FALSE,The agreement of Sodtyx,
-83,,[],,[],狱魔,[],,FALSE,Prison magic,
-84,,[],,[],蒙大拿,[],Who jail by Toni,FALSE,Montana,
-86,,[],,[],真理之门,[],Final Battle with Chaos,FALSE,The door of truth,
-87,,[],,[],战争,[],,FALSE,The war,
-88,,[],,[],痛苦,[],,FALSE,pain,
-89,,[],,[],死亡,[],,FALSE,death,
-90,,[],,[],饥饿,[],,FALSE,hunger,
-91,,[],,[],凯奥斯,[],,FALSE,"Koko,",
-92,,[],,[],生命地图,[],,FALSE,Map of life,
-93,,[],,[],肯,[],,FALSE,Ken,
-97,,[],,[],回滚,[],,FALSE,The rollback,
-98,,[],,[],瑞奇成员,[],,FALSE,Members of the rich,
-99,,[],,[],矩石,[],,FALSE,Moment of stone,Gray
-100,,[],,[],戈林皇冠,[],,FALSE,Goering crown,
-101,,[],,[],戈林幽魂,[],,FALSE,Goering ghosts,
-102,,[],,[],湖门,[],"When DungeonBoss>=1 at SodtyxBreak,  can change dungeon to ""HU"" as Dungeon(needs battle)",FALSE,Lake door,
-103,,[],,[],所多提斯侵蚀体,[],,FALSE,Sodotes erosive body,Gray
-104,,[],,[],真理之门,[],,FALSE,The door of truth,
-105,,[],,[],奎里姆,[],,FALSE,Kratos in,
-106,,[],,[],奎卡迷失者,[],,FALSE,The Qika Lost,Gray
-107,,[],,[],奎卡迷失者头目,[],,FALSE,Qika lost leader,
-108,,[],,[],谁人,[],,FALSE,The who,{{omit}}
-109,,[],,[],迷失实体,[],,FALSE,Lost entity,
-110,,[],,[],奎卡盗猎者,[],,FALSE,The Qika poacher,
+ID,Portrait,AltPortraits,Name,Pictures,Description,IsPlayer,NodeColor,SpritePortrait,AltSpritePortraits,en
+Number,Special,Special,Text,Files,Text,Boolean,Text,Text,Text,Localization
+1,,[],我,[],,True,,,[],me
+2,,[],瑞奇,[],瑞奇党的头目,FALSE,Gray,,[],Ruiki
+3,,[],托奇,[],肯托阵营负责与奎卡交易的 大使,FALSE,Gray,,[],Quoki
+4,,[],地下列车,[],年久失修的列车,FALSE,Gray,,[],The underground train
+5,,[],地底爬虫,[],列车地下城生物.,FALSE,Gray,,[],Underground crawler
+6,,[],所多提斯士兵,[],"洛斯据点,瑞奇希望占领此地获得高信号传输",FALSE,Gray,,[],Soldier of Sodtyx
+7,,[],所多提斯士兵队长,[],"洛斯据点,瑞奇希望占领此地获得高信号传输",False,Gray,,[],Captain of the soldiers of Sodtyx
+8,,[],特律,[],"Guy who is union of free ranger,came to qika save them.",FALSE,Gray,,[],Detroit
+9,,[],所多提斯射手,[],屠杀奎卡族人的士兵,False,Gray,,[],The Archer of Sodtyx
+10,,[],黑色史密斯,[],"奎卡营地的铁匠,用于制作强化武器以及装备",FALSE,Gray,,[],Black Smith
+11,,[],莱曼,[],,FALSE,,,[],lehmann
+12,,[],李,[],"Chap04 begin und first meet , bar manager",FALSE,,,[],li
+13,,[],平克,[],,FALSE,Gray,,[],Pink
+14,,[],弗伊,[],,FALSE,Gray,,[],faye
+15,,[],所多提斯船长,[],交接船长,FALSE,Gray,,[],Captain Sodtyx
+16,,[],莱尼,[],,FALSE,Gray,,[],lenny
+19,,[],信号放大器,[],,FALSE,Gray,,[],Signal amplifier
+20,,[],所多提斯军官,[],,FALSE,,,[],Officer Sodtyx
+21,,[],奎卡地下列车,[],车站中有一辆年久失修的列车被藤曼包裹着.,FALSE,,,[],The Qika Underground
+22,,[],爬虫网,[],爬虫母体衍生出来的网企图阻拦列车行驶的路线,FALSE,,,[],The crawler network
+23,,[],滴滴露,[],,FALSE,,,[],Dew drops
+24,,[],莱曼,[],路德亚看门人,FALSE,Gray,,[],lehmann
+25,,[],托,[],,FALSE,Gray,,[],tora
+26,,[],南,[],,FALSE,Gray,,[],south
+27,,[],金,[],,FALSE,,,[],gold
+28,,[],方向,[],,FALSE,,,[],The direction of
+29,,[],古代武器控制装置,[],,FALSE,Gray,,[],Ancient weapon control devices
+30,,[],莱德尼列车,[],莱德尼用来逃脱的工具,FALSE,Gray,,[],Ladney train
+31,,[],生命通道,[],,FALSE,Gray,,[],Life channel
+32,,[],沃利达酒馆门,[],,FALSE,,,[],The door of the Wolvda Tavern
+33,,[],海轮党水手,[],,FALSE,,,[],A seagoing crew
+34,,[],海轮党参谋,[],,FALSE,,,[],Consigliere of the seagoing ship
+35,,[],海轮党首领,[],,FALSE,,,[],The captain of the seagoing party
+36,,[],凯,[],,FALSE,Gray,,[],kay
+37,,[],沃里达酒馆大门,[],,FALSE,Gray,,[],The door of the Volida Tavern
+38,,[],生命通道,[],,FALSE,Gray,,[],Life channel
+39,,[],缇娜,[],,FALSE,Gray,,[],Tina
+40,,[],海轮党海盗,[],,FALSE,,,[],A seagoing pirate
+41,,[],海轮党船长,[],,FALSE,,,[],Captain of the seagoing ship
+42,,[],老瘸子先知,[],,FALSE,Gray,,[],The old lame prophet
+43,,[],灵视老瘸子,[],,FALSE,Gray,,[],The old gimp
+44,,[],武装代理人员,[],,FALSE,,,[],Armed agent
+45,,[],武装挖掘人员,[],,FALSE,,,[],Armed excavator
+46,,[],戈林核心,[],,FALSE,,,[],Goering core
+47,,[],沃克,[],,FALSE,,,[],walker
+48,,[],失落海盗,[],,FALSE,,,[],Lost the pirates
+49,,[],矿石蜘蛛,[],,FALSE,,,[],Ore spider
+51,,[],海底管理密令,[],Got Safe Code from codex (kill),FALSE,,,[],Seabed Management Order
+52,,[],海底核心终端,[],OceanTerminal,FALSE,Gray,,[],Subsea core terminal
+53,,[],暗街商人,[],,FALSE,Gray,,[],Dark street merchants
+54,,[],缇娜的信条,[],,FALSE,Gray,,[],Tina's creed
+55,,[],帕热,[],,FALSE,,,[],Palmer hot
+56,,[],海底终端,[],,FALSE,,,[],The bottom of the sea terminal
+57,,[],Chap07,[],,FALSE,,,[],Chap07
+58,,[],飞船操作手册,[],Chap07 tina und me came to spaceship und found eine book und dialogue with it,FALSE,,,[],Spacecraft operation manual
+59,,[],刀锋,[],,FALSE,,,[],The blade
+60,,[],Chap08,[],,FALSE,,,[],Chap08
+61,,[],伏尔图斯元素,[],,FALSE,Gray,,[],The Voltus element
+62,,[],伏尔图斯侵蚀体,[],,FALSE,,,[],Voltus erosive body
+63,,[],高级所多提斯战士,[],,FALSE,Gray,,[],The superior soldier of Sodtyx
+68,,[],圣山之门,[],,FALSE,,,[],The door of the ShenShan
+69,,[],查克,[],,False,,,[],chuck
+71,,[],矩石,[],Start Matches Games,False,Gray,,[],Moment of stone
+72,,[],暗街杀手,[],,FALSE,Gray,,[],Dark street killer
+73,,[],暗街商人,[],,FALSE,,,[],Dark street merchants
+74,,[],帕洛尔元素,[],,FALSE,,,[],Parlo element
+75,,[],帕洛尔侵蚀体,[],,FALSE,,,[],Parlo erosion body
+76,,[],伏尔侵蚀体,[],Chap08,FALSE,,,[],Voltaire erosion body
+77,,[],伏尔元素,[],,FALSE,,,[],Vor elements
+80,,[],所多提斯侵蚀体,[],Chap09 Final Chap At Sodtyx End with Chaos,FALSE,,,[],Sodotes erosive body
+81,,[],托尼,[],Uncle Montana,FALSE,,,[],Tony
+82,,[],所多提斯协议,[],,FALSE,,,[],The agreement of Sodtyx
+83,,[],狱魔,[],,FALSE,,,[],Prison magic
+84,,[],蒙大拿,[],Who jail by Toni,FALSE,,,[],Montana
+86,,[],真理之门,[],Final Battle with Chaos,FALSE,,,[],The door of truth
+87,,[],战争,[],,FALSE,,,[],The war
+88,,[],痛苦,[],,FALSE,,,[],pain
+89,,[],死亡,[],,FALSE,,,[],death
+90,,[],饥饿,[],,FALSE,,,[],hunger
+91,,[],凯奥斯,[],,FALSE,,,[],"Koko,"
+92,,[],生命地图,[],,FALSE,,,[],Map of life
+93,,[],肯,[],,FALSE,,,[],Ken
+97,,[],回滚,[],,False,,,[],The rollback
+98,,[],瑞奇成员,[],,FALSE,,,[],Members of the rich
+99,,[],矩石,[],,FALSE,Gray,,[],Moment of stone
+100,,[],戈林皇冠,[],,FALSE,,,[],Goering crown
+101,,[],戈林幽魂,[],,FALSE,,,[],Goering ghosts
+102,,[],湖门,[],"When DungeonBoss>=1 at SodtyxBreak,  can change dungeon to ""HU"" as Dungeon(needs battle)",FALSE,,,[],Lake door
+103,,[],所多提斯侵蚀体,[],,FALSE,Gray,,[],Sodotes erosive body
+104,,[],真理之门,[],,FALSE,,,[],The door of truth
+105,,[],奎里姆,[],,FALSE,,,[],Kratos in
+106,,[],奎卡迷失者,[],,FALSE,Gray,,[],The Qika Lost
+107,,[],奎卡迷失者头目,[],,FALSE,,,[],Qika lost leader
+108,,[],谁人,[],,False,,,[],The who
+109,,[],迷失实体,[],,False,,,[],Lost entity
+110,,[],奎卡盗猎者,[],,FALSE,,,[],The Qika poacher
 Items
 ID,Name,Pictures,Description,Is Item,Success Description,Failure Description,State,Locations,Display Name,Trackable,Track,XP Reward,Scrap Reward,Item Reward Amount,Item Reward,Entry Count,Entry 1,Entry 1 State,Entry 1 Display Name,Entry 1 Active,Entry 1 Success,Entry 1 CurrentAmount,Entry 1 GoalAmount,Entry 2,Entry 2 State,Entry 2 Display Name,Entry 2 Active,Entry 2 Success,Entry 2 CurrentAmount,Entry 2 GoalAmount,Entry 3,Entry 3 State,Entry 3 Display Name,Entry 3 Active,Entry 3 Success,Entry 3 CurrentAmount,Entry 3 Goal Amount,Abandonable,Group,Entry 1 Target,en QuestName,en QuestDetails,QuestMan,enQuestName,enQuestDetails
 Number,Text,Files,Text,Boolean,Text,Text,Text,Text,Text,Boolean,Boolean,Number,Number,Number,Text,Number,Text,Text,Text,Text,Text,Number,Number,Text,Text,Text,Text,Text,Number,Number,Text,Text,Text,Text,Text,Number,Number,Boolean,Text,Actor,Localization,Localization,Actor,Text,Text
 1,尝试获取瑞奇的信任,[],瑞奇或许有办法弄到克农协议,FALSE,,,unassigned,,,FALSE,TRUE,0,0,0,,0,,(None),,,,,,,(None),,,,,,,(None),,,,,,FALSE,,,Try to gain Ricky's trust,Ricky might have a way to get the Canon agreement,,,
 2,洛斯据点插入信号放大器,[],"瑞奇党的信号被所多提斯屏蔽了,需要在洛斯据点插入放大器越过所多提斯人的屏障",FALSE,,,unassigned,,,FALSE,TRUE,0,0,0,,0,,(None),,,,0,1,,(None),,,,0,1,,(None),,,,0,1,FALSE,,,Ross stronghold insertion signal amplifier,"The rich signal is blocked by sodotis, and an amplifier needs to be inserted at the los stronghold to bypass the sodotis barrier",,,
-3,托奇的需求,[],托奇需要克农以及虚假的协议带回肯托,FALSE,,,unassigned,,,FALSE,TRUE,0,0,0,,0,,(None),,,,0,1,,(None),,,,0,1,,(None),,,,0,1,,,,Totchy's needs,Torch needs Kenon and a bogus deal to bring back Kento,,,
+3,托奇的需求,[],托奇需要克农以及虚假的协议带回肯托,False,,,unassigned,,,False,True,0,0,0,,0,,(None),,,,0,1,,(None),,,,0,1,,(None),,,,0,1,False,,,Totchy's needs,Torch needs Kenon and a bogus deal to bring back Kento,,,
 4,前往地下列车,[],,FALSE,,,unassigned,,,FALSE,TRUE,0,0,0,,0,,(None),,,,0,1,,(None),,,,0,1,,(None),,,,0,1,,,,To the subway,,,,
 5,油管堵塞,[],列车输油管堵塞需要疏油剂疏通管道.,FALSE,,,unassigned,,,FALSE,TRUE,0,0,0,,0,,(None),,,,,,,(None),,,,,,,(None),,,,,,FALSE,,,The tubing plug,A clogged train pipeline needs a grease trap to unclog it.,,,
 6,前往沃里达,[],"奎里姆告诉我提娜的方向,告诉我赶紧逃离奎卡",False,,,unassigned,,,False,True,0,0,0,,0,,(None),,,,0,1,,(None),,,,0,1,,(None),,,,0,1,False,,,To woreda,Quelim gave me directions for Tina and told me to get away from queoka,,,
@@ -135,7 +135,7 @@ Number,Text,Files,Text,Boolean,Text,Text,Text,Text,Text,Boolean,Boolean,Number,N
 29,与凯交谈,[],"成功占领了地下线路后,金告诉我们去沃里达由路德亚控制的酒馆",FALSE,,,unassigned,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Talk to kay,"After successfully capturing the underground line, King tells us to go to the Woreda tavern controlled by Luthera",,,
 30,前往查克商店,[],前往查克的商店寻找缇娜的踪迹,FALSE,,,unassigned,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Head to Chuck's Store,Head to Chuck's store and look for Tina,,,
 31,生命行情,[],路德亚控制的生命道路似乎有利可图,FALSE,,,unassigned,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Life on,The path of life that Luthera controls seems to be profitable,,,
-32,久坐成疾,[],聪明的智商占领高地导致下半身瘫痪是个值得研究的问题,FALSE,,,unassigned,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Sedentary into a disease,Clever IQ to occupy the high ground resulting in lower body paralysis is worth studying the problem,,,
+32,久坐成疾,[],聪明的智商占领高地导致下半身瘫痪是个值得研究的问题,False,,,unassigned,,,False,False,0,0,0,,0,,(None),,,,,,,(None),,,,,,,(None),,,,,,False,,,Sedentary into a disease,Clever IQ to occupy the high ground resulting in lower body paralysis is worth studying the problem,,,
 33,老海盗,[],"海轮党,一群狡猾的海盗",FALSE,,,unassigned,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,The old pirate,"Seafarers, a group of cunning pirates",,,
 34,不见天日,[],,FALSE,,,unassigned,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,under the dark rule,,,,
 35,与沃克谈论身份验证,[],,FALSE,,,unassigned,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Talk to Walker about authentication,,,,
@@ -985,10 +985,10 @@ Text,Number,Number,Number,Number,Text,Text,Text,Boolean,Special,Special,Text,Tex
 奎卡地下列车_42_45,42,45,21,1,New Dialogue Entry,,,True,Block,Normal,,,Continue(),[],,,[],,,,,,,508;114
 我_43_0,43,0,1,69,START,,,False,Block,Normal,,,None(),[],,,[],,,,,,,1680.849;45.24603
 我_43_148,43,148,1,69,,,你是谁?,False,Block,Normal,,,,[],,,[],,,,who are you ? (main),,,377.2514;509.21
-我_43_149,43,149,1,69,,,商店,False,Block,Normal,,,,[],,,[],,,,Shop,,,782.1088;485.1501
-我_43_150,43,150,1,69,,,对战,False,Block,Normal,"CurrentQuestState(""对战"")==""active"";",,,[],,,[],,,FALSE,Battle,,,1033.822;424.0258
-查克_43_151,43,151,69,69,,,磨练技巧战胜对方吧！,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,Battle with me!!!,,,1047.286;645.7574
-查克_43_152,43,152,69,69,,,我这里来自世界,False,Block,Normal,,OpenShop();,,[],,,[],,,,,,,969.1812;749.4452
+我_43_149,43,149,1,69,,,商店,False,Block,Normal,,,,[],,,[],,,,Shop,,,808.1362;516.6569
+我_43_150,43,150,1,69,,,对战,False,Block,Normal,"CurrentQuestState(""对战"")==""active"";",,,[],,,[],,,FALSE,Battle,,,1035.192;424.0258
+查克_43_151,43,151,69,69,,,磨练技巧战胜对方吧！,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,Battle with me!!!,,,1041.807;641.6478
+查克_43_152,43,152,69,69,,,我这里来自世界,False,Block,Normal,,OpenShop();,,[],,,[],,,,....,,,969.1812;749.4452
 查克_43_153,43,153,69,69,,,"我是商人查克,从沃利达赶来收集克农,奎卡的新技术使产量翻倍,我前来采购.",False,Block,Normal,,"SetQuestState(""与查克交谈"",""success"");",,[],,,[],,,,"I'm Chuck, a businessman. I've come from vorida to collect Kenon. Quika's new technology has doubled the output. I've come to purchase\n",,,242.1279;608.8121
 我_43_154,43,154,1,69,,,你知道缇娜在哪里吗?,False,Block,Normal,,,,[],,,[],,,FALSE,Did you know where Tina is?,,,365.1316;707.9211
 我_43_155,43,155,1,69,,,这里是奎卡?,False,Block,Normal,,,,[],,,[],,,,QIKA?\n,,,145.8152;726.7038
@@ -1012,15 +1012,15 @@ Text,Number,Number,Number,Number,Text,Text,Text,Boolean,Special,Special,Text,Tex
 我_43_173,43,173,1,69,,,那我们开始吧.,False,Block,Normal,,,,[],,,[],,,,Let's get start!!!!,,,547.4612;1366.929
 查克_43_174,43,174,69,1,,,"可以通过这些卡牌来尝试回忆你的过去,组成卡组和我对战吧,如果战胜了我会告诉你该怎么办.",False,Block,Normal,,"SetQuestState(""对战"",""active"");\nOpenPackSelection();",,[],,,[],,,,"Use these cards to try to remember your past. Form a deck and fight me. If you win, I'll tell you what to do.",,,546.407;1449.9
 查克_43_175,43,175,69,69,,,"相传沃恩在圣山卡牌形成之初就发现了时代的动向,他开始前往各个部族以低廉的物资交换人们从先知们那领取的卡牌,通过将收购的卡牌囤积在沃利达,当人们开始意识到圣山卡牌的作用时只能通过物资前往沃利达换取高价卡牌,逐渐地沃利达成为了圣山重要的贸易十字路口,沃恩成为了圣山中最富有的人,尔后,先知们将信息传递给圣山,圣山的仙灵们通过协商决定开放卡牌制作的规则,并传达给了沃恩,沃恩欣然地接受了协议.在协议生效后,人们就可以私自制作卡牌了.",False,Block,Normal,,,,[],,,[],,,,"  ""Vaughn"" mouth formed in the ShenShan card is found at the beginning of the trend of The Times, he began to exchange with cheap materials to various tribes people receive a card from the prophets, by the acquisition card hoarding in lida, when people began to realize the role of the ShenShan card when only through supplies to lida for expensive card, walter lida gradually became the important trade crossroads, ShenShan vaughn became the richest man in the ShenShan, and then transfer the information to the ShenShan prophets, ShenShan fairy people through consultation decided to open the card production rules, and conveyed to the Vaughan, vaughn willingly accept the agreement. After the agreement comes into effect, people can make their own cards.",,,1024.345;1245.248
-查克_43_176,43,176,69,1,,,准备好对战了吗,False,Block,Normal,"CurrentQuestState(""对战"")==""active"" and Variable[""isKill""]~=true;",,,[],,,[],,,FALSE,Are you ready for battle?,,,925.6608;298.3621
+查克_43_176,43,176,69,1,,,准备好对战了吗,False,Block,Normal,"CurrentQuestState(""对战"")==""active"" and Variable[""isKill""]~=true;",,,[],,,[],,,FALSE,Are you ready for battle?,,,942.0992;309.321
 查克_43_177,43,177,69,69,,,在这些基础上通过在各地收集卡牌组合便会产生无限的能力.我将额外的一下基本回忆传递给你.,False,Block,Normal,"(CurrentQuestState(""对战"")==""active"") and (Variable[""isKill""]~=false);","SetQuestState(""对战"",""success"");\nVariable[""isKill""]=false;",,[],,,[],,,FALSE,"On this basis, by collecting card combinations from all over the world, you will have unlimited ability. I will pass on an additional basic memory to you\n",,,1282.538;330.2888
 我_43_178,43,178,1,69,,,那我应该找谁,False,Block,Normal,,,,[],,,[],,,FALSE,What should i needs found??,,,1234.489;603.8398
-查克_43_179,43,179,69,69,,,"你可以去问问奎卡的先知奎利姆,看他知道些什么,我指给你方向,这个你拿着,这是""提娜的项链"",请帮我转交给她\n“获得物品”",False,Block,Normal,,"SetQuestState(""找到奎卡"",""active"");\nAddItemAmount(""20001"",""1"");",,[],,,[],,,FALSE,"You can ask quillim, the prophet of queika, what he knows, I'll show you the way, you take this, this is Tina's necklace, please help me give it to her to \n""get the item""",,,1211.477;794.6907
+查克_43_179,43,179,69,69,,,"你可以去问问奎卡的先知奎利姆,看他知道些什么,我指给你方向,这个你拿着,这是""提娜的项链"",请帮我转交给她\n“获得物品”",False,Block,Normal,,"SetQuestState(""找到奎卡"",""active"");\nDungeon_GetItems(20001,1);",,[],,,[],,,FALSE,"You can ask quillim, the prophet of queika, what he knows, I'll show you the way, you take this, this is Tina's necklace, please help me give it to her to \n""get the item""",,,1211.477;794.6907
 查克_43_180,43,180,69,1,,,你需要什么?,False,Block,Normal,"CurrentQuestState(""对战"")==""unassigned""",,,[],,,[],,,FALSE,Good Day!,,,571.4955;166.9664
 查克_43_181,43,181,69,1,,,"万物最开始的地方,坐落在大陆的最中央,相传是外界的生物尝试入侵圣山窃取资源,圣山产生应急性反应发生了大爆炸，将蕴含在核心里的能源散播到大陆的各个角落从而使外界的生物无法获取到核心的资源生成机制.",False,Block,Normal,,,,[],,,[],,,,"   The place where all things start is located in the central part of the continent. According to legend, the outside creatures try to invade the ShenShan to steal resources. The ShenShan produces an emergency reaction and a big explosion, spreading the energy contained in the core to all corners of the continent, so that the outside creatures cannot access the core resource generation mechanism.",,,82.48882;956.0389
 我_43_182,43,182,1,69,,,圣山是被创造出来的吗?,False,Block,Normal,,,,[],,,[],,,,Was the ShenShan created?,,,75.8941;1035.646
 查克_43_183,43,183,69,1,,,这也许只有圣山自己清楚了,False,Block,Normal,,,,[],,,[],,,,That only ShenShan knew.,,,81.22269;1110.842
-查克_43_184,43,184,69,1,,,有什么新发现吗？,False,Block,Normal,"(CurrentQuestState(""对战"")==""success"")and\n(CurrentQuestState(""等到奎卡发车时间"")==""unassigned"")",,,[],,,[],,,FALSE,ya?,,,1504.734;412.7698
+查克_43_184,43,184,69,1,,,有什么新发现吗？,False,Block,Normal,"(CurrentQuestState(""对战"")==""success"")and\n(CurrentQuestState(""等到奎卡发车时间"")==""unassigned"")",,,[],,,[],,,FALSE,ya?,,,1504.734;411.4
 我_43_185,43,185,1,69,,,离开,False,Block,Normal,,,,[],,,[],,,,Exit,,,1638.136;648.3145
 我_43_186,43,186,1,69,,,对战,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,Battle,,,1436.051;593.282
 我_43_187,43,187,1,69,,,圣山对决,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,,ShenShan Battle,,,144.3623;442.8875
@@ -1046,12 +1046,12 @@ Text,Number,Number,Number,Number,Text,Text,Text,Boolean,Special,Special,Text,Tex
 查克_43_207,43,207,69,1,,,"一个对战方式的普及可以使该势力获得极大的资源补助,先知通过向圣山发送各地对战方式提议从而使圣山会通过这一提议的策略向各地发送资源的部署,使各地可以利用资源去激活这个方式的卡牌进行对战。",False,Block,Normal,,,,[],,,[],,,,"The spread of a fighting mode can make the force get a great resource subsidy. The prophet sends the suggestions of fighting mode to ShenShan, so that ShenShan society can send the deployment of resources to all places through the proposed strategy, so that all places can use the resources to activate the cards of this mode to fight.",,,1562.783;1351.327
 查克_43_208,43,208,69,1,,,"就在今晚,晚上会有一趟列车前往奎卡运输物资,我们可以利用这一行程离开奎卡.",False,Block,Normal,,,,[],,,[],,,,,,,2480.989;1067.946
 我_43_209,43,209,1,69,,,为什么不现在离开?,False,Block,Normal,,,,[],,,[],,,,,,,2238.365;1078.872
-我_43_210,43,210,1,69,,,那我们现在怎么办？,False,Block,Normal,,,,[],,,[],,,,what should we do now?,,,2059.4;1402.481
+我_43_210,43,210,1,69,,,那我们现在怎么办？,False,Block,Normal,,,,[],,,[],,,,what should we do now?,,,2065.979;1420.902
 查克_43_211,43,211,69,1,,,"离开奎卡的唯一方式是通过由肯托控制的列车网离开,这也是唯一离开奎卡通向其他主要位置的方式,保守的奎卡人认为不必开放多条线路使自己的城镇暴露在公众眼中.也至此至于肯托签订了协议,每天保证2个时段的路线开放,列车上有来自圣山各地的物资和商人,也有前来交易克农的人。",False,Block,Normal,,,,[],,,[],,,,,,,2218.942;1161.759
 我_43_212,43,212,1,69,,,克农是什么?,False,Block,Normal,,,,[],,,[],,,,,,,2506.818;1182.898
 我_43_213,43,213,1,69,,,那等于说只要控制这对战方式就能控制整个圣山吗？,False,Block,Normal,,,,[],,,[],,,,"Does that mean that as long as you control this way of fighting, you can control the whole ShenShan?",,,1534.89;1437.198
 查克_43_214,43,214,69,1,,,"严格上来说是的,对战方式使得创立势力获得极大的资源补助,也可以向其他势力收取使用的费用,这对于一个势力的是一个极大的经济增长.",False,Block,Normal,,,,[],,,[],,,,"Strictly speaking, yes, the way of fighting enables the founding forces to obtain huge resource subsidies, and they can also charge other forces for their use. This is a great economic growth for one force",,,1815.788;1503.192
-查克_43_215,43,215,69,1,,,"克农为奎卡族人的主要产物,用于促进列车燃料产量的主要手段.肯托的列车燃油需要克农的激活从而提高列车的移动速度和减少耗油量.",False,Block,Normal,,,,[],,,[],,,,,,,2539.988;1271.257
+查克_43_215,43,215,69,1,,,"克农为奎卡族人的主要产物,用于促进列车燃料产量的主要手段.肯托的列车燃油需要克农的激活从而提高列车的移动速度和减少耗油量.",False,Block,Normal,,,,[],,,[],,,,,,,2539.988;1269.941
 查克_43_216,43,216,69,1,,,"你四处逛逛,到晚上我回来找你一起离开奎卡.",False,Block,Normal,,"SetQuestState(""等到奎卡发车时间"",""active"");\nSetQuestState(""试图离开奎卡"",""success"");",,[],,,[],,,,"walk around until midnight ,we will leave by sodtyx train.",,,2170.207;1612.228
 我_43_217,43,217,1,69,,,等待到发车时间.,False,Block,Normal,"CurrentQuestState(""等到奎卡发车时间"")==""active"";",,Delay({{end}}),[],,,[],,,,Wait till the departure time,,,1923.718;494.7636
 回滚_43_218,43,218,97,1,,,"夜晚,你尝试回想奎利姆的告诫.并不断地对自我产生怀疑.你尝试与回滚进行沟通",False,Block,Normal,,,,[],,,[],,,,"At night, you try to recall Quimu admonition. You constantly doubt yourself. You try to communicate with Rollback",,,2167.181;424.35
@@ -1071,7 +1071,7 @@ Text,Number,Number,Number,Number,Text,Text,Text,Boolean,Special,Special,Text,Tex
 我_43_232,43,232,1,97,,,".........外面传出一阵爆炸声,一股邪恶的能量将门破坏,你看见外面已经是浓烟滚滚.所多提斯的士兵开始清除奎卡人了.",False,Block,Normal,,,,[],"Event Start ,Fbx generate fire und sounds",,[],,,,"......There was an explosion outside, and an evil energy destroyed the door. You can see the smoke outside. The soldiers of Sodtyx began to clean up the quacks",,,2733.354;873.7882
 查克_43_233,43,233,69,1,,"快跑,所多提斯人已经攻陷了奎卡,我们需要从其他地方离开","Run, Sodtyx are coming. They've blocked the KenQuo train. We need to get out of Qika another way",False,Block,Normal,,,,[],,,[],,,,,,,2856.322;951.4182
 我_43_234,43,234,1,69,,,我们应该去哪里,False,Block,Normal,,,,[],,,[],,,,What should we go ?,,,2852.586;1035.419
-查克_43_235,43,235,69,1,,,"奎卡的位置处于失落的古城旁建立的,我们可以尝试穿过古城离开奎卡,我在地图上标示出了地点.\n""解锁新地点""",False,Block,Normal,,"SetQuestState(""从下水道逃离奎卡"",""active"");\nSetQuestState(""等到奎卡发车时间"",""failure"");\nUnlockLoc(""下水道"");",,[],,,[],,,,"The location of kuika is built next to the lost ancient city. We can try to leave kuika through the ancient city. I marked the location on the map\n\n""Unlock new location""",,,2838.798;1110.62
+查克_43_235,43,235,69,1,,,"奎卡的位置处于失落的古城旁建立的,我们可以尝试穿过古城离开奎卡,我在地图上标示出了地点.\n""解锁新地点""",False,Block,Normal,,"SetQuestState(""从下水道逃离奎卡"",""active"");\nSetQuestState(""等到奎卡发车时间"",""failure"");\nUnlockLoc(""下水道"");",,[],,,[],,,,"The location of kuika is built next to the lost ancient city. We can try to leave kuika through the ancient city. I marked the location on the map\n\n""Unlock new location""",,,2837.482;1114.567
 查克_43_236,43,236,69,1,,,前面有个人我们可以去问问他,False,Block,Normal,,"GetNpc(""特里律"");\nSetQuestState(""新生"",""active"");",,[],,,[],,,,,,,2970.806;472.2487
 我_43_237,43,237,1,69,,,"我已经击败了所夺提斯士兵了,我们应该去哪?",False,Block,Normal,"CurrentQuestState(""从下水道逃离奎卡"")==""active"" and\nVariable[""DungeonBoss""]>=1","SetQuestState(""从下水道逃离奎卡"",""success"")",,[],,,[],,,,,,,2733.541;407.4745
 查克_43_238,43,238,69,1,,,准备好离开了吗?,False,Block,Normal,"(CurrentQuestState(""等到奎卡发车时间"")==""active"")\nand\n(CurrentQuestState(""从下水道逃离奎卡"")==""unassigned"")",,,[],,,[],,,,Are you ready to leave?,,,1855.218;376.7531
@@ -1512,23 +1512,25 @@ Text,Number,Number,Number,Number,Text,Text,Text,Boolean,Special,Special,Text,Tex
 我_105_13,105,13,1,97,,,智慧,False,Block,Normal,,"AddPack(""INTE"");",,[],,,[],,,FALSE,wisdom,,,691.9631;378.6328
 回滚_105_14,105,14,97,1,,,开始祛除干扰,False,Block,Normal,,"OpenPackSelection();\nSetQuestState(""苏醒"",""active"");\n",,[],,,[],,,FALSE,Start resisting interference,,,587.6907;610.6699
 回滚_105_15,105,15,97,1,New Dialogue Entry,,,True,Block,Normal,,,Continue(),[],,,[],,,FALSE,,,,602.8082;101.9619
-回滚_105_16,105,16,97,1,,,一股属于你的思维正在汇聚.你开始引导你的方向,False,Block,Normal,"CurrentQuestState(""苏醒"")==""active"" and\nVariable[""DungeonMonster""]>=1",,,[],,,[],,,FALSE,A stream of thoughts is coming together that belongs to you. You begin to steer your course,,,814.5306;179.1602
+回滚_105_16,105,16,97,1,,,一股属于你的思维正在汇聚.你开始引导你的方向,False,Block,Normal,"CurrentQuestState(""苏醒"")==""active"" and\nVariable[""DungeonMonster""]>=1",,,[],,,[],,,FALSE,A stream of thoughts is coming together that belongs to you. You begin to steer your course,,,814.5306;178.0238
 我_105_17,105,17,1,97,,,回忆舱内发生的一切,False,Block,Normal,,"Variable[""DungeonMonster""]=0;",,[],,,[],,,FALSE,Recall what happened in the cabin,,,876.7808;281.274
 回滚_105_18,105,18,97,1,,,"巨大的轰鸣声围绕在你的周围,在噪声中一股机制产生了",False,Block,Normal,,"SetQuestState(""苏醒"",""success"");",,[],,,[],,,FALSE,"A huge roar is all around you, and in the noise a mechanism is created",,,889.1096;343.6028
 回滚_105_19,105,19,97,1,,,"我是回滚,是你思维中危机保存的装置,需要在圣山中重新适应并且解决危机",False,Block,Normal,,,,[],,,[],,,FALSE,"I am a rollback, a crisis preservation device in your mind that needs to readjust and resolve in the ShenShan",,,975.4108;423.7398
 我_105_20,105,20,1,97,,,圣山是什么？,False,Block,Normal,,,,[],,,[],,,FALSE,What is the ShenShan?,,,862.1;483.8195
 我_105_21,105,21,1,97,,,我该怎么做?,False,Block,Normal,,,,[],,,[],,,FALSE,What should i do?,,,1050.116;489.7517
-回滚_105_22,105,22,97,1,,,圣山是你的使命,False,Block,Normal,,,,[],,,[],,,FALSE,The ShenShan is your destiny,,,902.7469;565.6508
+回滚_105_22,105,22,97,1,,,圣山是你的使命,False,Block,Normal,,,,[],,,[],,,FALSE,The ShenShan is your destiny,,,903.8832;565.6508
 回滚_105_23,105,23,97,1,,,"你需要一个创建实体并在圣山中找回自己的使命,我会引导你找回自己原本的意识动向,首先,你的实体是如何在圣山中生存的.",False,Block,Normal,,,,[],,,[],,,FALSE,"You need a mission to create an entity and find yourself in the ShenShan. I will guide you to find your original conscious direction. First, how your entity survives in the ShenShan.",,,1021.934;634.8338
-我_105_24,105,24,1,97,,,奎卡,False,Block,Normal,,"AddPack(""Qika_1"");",,[],,,[],,,FALSE,Qika,,,705.5634;771.6064
+我_105_24,105,24,1,97,,,奎卡,False,Block,Normal,,"AddPack(""Qika_1"");",,[],,,[],,,FALSE,Qika,,,704.5634;771.6064
 我_105_25,105,25,1,97,,,帕罗尔,False,Block,Normal,,"AddPack(""Parlo_1"");",,[],,,[],,,FALSE,Parlo,,,888.5544;772.2321
 我_105_26,105,26,1,97,,,所多提斯,False,Block,Normal,,"AddPack(""Styx_1"");",,[],,,[],,,FALSE,Sodtyx,,,1080.004;774.4366
 我_105_27,105,27,1,97,,,伏尔图斯,False,Block,Normal,,"AddPack(""Vts_1"");",,[],,,[],,,FALSE,Vultus,,,1269.566;773.2522
-回滚_105_28,105,28,97,1,,,前往奎卡,False,Block,Normal,,"UnlockLoc(""奎卡"");\n\nSetQuestActive(""与查克交谈"",""active"");",,[],,,[],,,FALSE,To Qika,,,1001.53;844.4975
+回滚_105_28,105,28,97,1,,,前往奎卡,False,Block,Normal,,"UnlockLoc(""奎卡"");\nSetQuestState(""与查克交谈"",""active"");",,[],,,[],,,FALSE,To Qika,,,1001.53;845.6339
 回滚_105_29,105,29,97,1,,,。。。,False,Block,Normal,"CurrentQuestState(""苏醒"")==""active""",,,[],,,[],,,FALSE,,,,592.6582;206.0328
 我_105_30,105,30,1,97,,,战斗,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,FALSE,Battle,,,618.1901;293.2668
 我_105_31,105,31,1,97,,,离开,False,Block,Normal,,LeaveTown();,,[],,,[],,,FALSE,Exit,,,1004.256;933.6261
 回滚_105_32,105,32,97,1,New Dialogue Entry,,,False,Block,Normal,,,,[],,,[],,,FALSE,,,,1008.365;1005.544
+回滚_105_33,105,33,97,1,,,。。,False,Block,Normal,"CurrentQuestState(""苏醒"")==""success""",,,[],,,[],,,False,。。,,,977.8082;138.8255
+我_105_34,105,34,1,97,,,离开,False,Block,Normal,,LeaveTown();,,[],,,[],,,False,Leave,,,1104.081;218.9619
 我_106_0,106,0,1,109,START,,,False,Block,Normal,,,None(),[],,,[],,,FALSE,,,,254;51
 迷失实体_106_1,106,1,109,1,,,干扰体,False,Block,Normal,,,,[],,,[],,,FALSE,The Disturbance Entity ,,,298;143
 我_106_2,106,2,1,109,,,抵抗,False,Block,Normal,,OpenPackSelection();,,[],,,[],,,FALSE,Battle,,,399;231
@@ -2711,6 +2713,7 @@ Number,Number,Number,Number,Special
 105,15,105,1,Normal
 105,15,105,16,Normal
 105,15,105,29,Normal
+105,15,105,33,Normal
 105,16,105,17,Normal
 105,17,105,18,Normal
 105,18,105,19,Normal
@@ -2730,6 +2733,7 @@ Number,Number,Number,Number,Special
 105,28,105,31,Normal
 105,29,105,30,Normal
 105,31,105,32,Normal
+105,33,105,34,Normal
 106,0,106,1,Normal
 106,1,106,2,Normal
 107,0,107,1,Normal
