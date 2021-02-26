@@ -101,19 +101,19 @@ public static bool GetReward=false;
     panel.gameObject.SetActive(true);
     TownManager.instance.enviormentPrefab.gameObject.SetActive(true);
       int gotMoney =Mathf.FloorToInt(Random.Range(BattleStartInfo.SelectEnemyDeck.enemyAsset.gold/2,BattleStartInfo.SelectEnemyDeck.enemyAsset.gold));
-      p.money += gotMoney;
+      // p.money += gotMoney;
       moneyText.text = gotMoney.ToString();
       
     
      int  gotExp=Mathf.FloorToInt(Random.Range(BattleStartInfo.SelectEnemyDeck.enemyAsset.exp/2,BattleStartInfo.SelectEnemyDeck.enemyAsset.exp));
-     p.experience += gotExp;
+    //  p.experience += gotExp;
       expText.text=gotExp.ToString();
       
       UIExp.instance.slider.Value = BattleStartInfo.SelectEnemyDeck.enemyAsset.exp;
 
       
       int gotDust =Mathf.FloorToInt(Random.Range(BattleStartInfo.SelectEnemyDeck.enemyAsset.dustReward/2,BattleStartInfo.SelectEnemyDeck.enemyAsset.dustReward));
-      p.dust += gotDust;
+      // p.dust += gotDust;
       dustText.text = gotDust.ToString();
     if (frombt && BattleStartInfo.IsWinner==true )
     {
@@ -124,7 +124,7 @@ public static bool GetReward=false;
         {
           //try get items
           Debug.Log("Try Get Item From Enemy==>"+BattleStartInfo.SelectEnemyDeck.enemyAsset.EnemyName.ToString());
-          if (BattleStartInfo.SelectEnemyDeck.enemyAsset.itemShopIDs!=null)
+          if (BattleStartInfo.SelectEnemyDeck.enemyAsset.itemShopIDs.Count>0)
           {
             int itemCounter=0;
             //rnd 1 items
@@ -197,37 +197,6 @@ public static bool GetReward=false;
         Debug.Log("TOWN NPC");
         //Town Npc
        
-      
-     //  float perc = UnityEngine.Random.Range(0f,1.0f);
-//      if(BattleStartInfo.SelectEnemyDeck.enemyAsset.hasReward){
-//        foreach(int items in BattleStartInfo.SelectEnemyDeck.enemyAsset.rewardId){
-//          if(items!=null){
-//            Items item = ItemDatabase.instance.FindItem(items);
-//            //per try get item
-//            if(perc >item.perc){
-//              //Get item to explore UI und console UI
-//        
-//              GameObject dropItem = Instantiate(itemObj,explore.itemSPos.position,Quaternion.identity)as GameObject;
-//              
-//              dropItem.transform.parent = itemPos;
-//              dropItem.transform.localScale=new Vector3(1,1,1);
-//               dropItem.GetComponent<DropItems>().items=item;
-//              dropItem.GetComponent<DropItems>().itemName.text=item.itemName;
-//              dropItem.GetComponent<DropItems>().itemIcon.sprite=item.icon;
-//              dropItem.GetComponent<DropItems>().itemNumber.text="1";
-//              dropItem.transform.parent= explore.itemSPos.transform;
-//              ;
-//              explore.dropItems.Add(dropItem);
-//
-//              NetworkServer.Spawn(dropItem);
-//              
-//            }else{
-//              Debug.Log("No Get this Item");
-//            }
-//          }
-//        }
-//      }
-//     
 
 //Get one of reward if ddifficult is hard
 // if(BattleStartInfo.DungeonDifficult=="Hard"){
@@ -299,6 +268,8 @@ public static bool GetReward=false;
     }
     frombt=false;
     GetReward=false;
+    }else{
+      Debug.Log("Failed return map");
     }
   }
  

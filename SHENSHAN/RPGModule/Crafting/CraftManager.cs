@@ -66,7 +66,7 @@ public class CraftManager : MonoBehaviour
 
 	public CraftTab selectedTab;
 
-
+	public TooltipManager tm;
 	public float materialIconSlotSize;
 	public float iconSlotSize;
 	// public float tabWidth;
@@ -106,6 +106,8 @@ public class CraftManager : MonoBehaviour
 	public List<GameObject> craftingTabs;
 	private bool crafting;
 
+	
+
 	// Use this for initialization
 	void Start () {
 
@@ -131,6 +133,8 @@ public class CraftManager : MonoBehaviour
 		amountToCraftLabel.text="0";
 		craftStateText.text="制作状态";
 
+
+		ResetItem();
 
 	
 	}
@@ -159,6 +163,78 @@ public class CraftManager : MonoBehaviour
 		// }
 	}
 
+	public void ResetItem(){
+			tooltip.minfrText.text = "0";
+			tooltip.maxfrText.text = "0";
+			
+				tooltip.minporText.text = "0";
+			tooltip.maxporText.text = "0";
+			//
+				tooltip.minirText.text = "0";
+			tooltip.maxirText.text = "0";
+			//
+				tooltip.minfrText.text ="0";
+			tooltip.maxfrText.text = "0";
+			tooltip.minDamageText.text = "0";
+			
+			tooltip.maxDamageText.text = "0";
+			
+			tooltip.minArmorText.text = "0";
+	tooltip.maxArmorText.text = "0";
+	tooltip.tooltipHeaderText.text = " ";
+	tooltip.DescriptionText.text =" ";
+	}
+	public void ShowItem(Items item){
+		if(item==null)return;
+		if(TownManager.CheckLan()==true){
+		tooltip.tooltipHeaderText.text = item.itemName.ToString();
+		}else{
+			tooltip.tooltipHeaderText.text = item.eitemName.ToString();
+		}
+		tooltip.tooltipRatityText.text= item.itemRatity.ToString();
+		if(item.itemType == EquipmentSlotType.weapon){
+			tooltip.weaponObj.gameObject.SetActive(true);
+			tooltip.armorObj.gameObject.SetActive(false);
+			//
+			tooltip.minDamageText.text = item.minDamage.ToString();
+			
+			tooltip.maxDamageText.text = item.maxDamage.ToString();
+
+		
+		}else if(item.itemType==EquipmentSlotType.armor){
+tooltip.weaponObj.gameObject.SetActive(false);
+			tooltip.armorObj.gameObject.SetActive(true);
+
+			tooltip.minArmorText.text = item.minArmor.ToString();
+	tooltip.maxArmorText.text = item.maxArmor.ToString();
+
+		
+		}
+
+
+			tooltip.minfrText.text = item.minFireRes.ToString();
+			tooltip.maxfrText.text = item.maxFireRes.ToString();
+			
+				tooltip.minporText.text = item.minPosionRes.ToString();
+			tooltip.maxporText.text = item.maxPosionRes.ToString();
+			//
+				tooltip.minirText.text = item.minIceRes.ToString();
+			tooltip.maxirText.text = item.maxIceRes.ToString();
+			//
+				tooltip.minfrText.text = item.minFireRes.ToString();
+			tooltip.maxfrText.text = item.maxFireRes.ToString();
+			//
+			if(TownManager.CheckLan()==true && tooltip.DescriptionText.text!=""){
+				tooltip.DescriptionText.text =item.descriptionText.ToString(); 
+			}else{
+
+				
+				string [] sc = item.descriptionText.Split(':');
+				tooltip.DescriptionText.text =Utils.GetCardEffect(sc[0])+":"+sc[1]; 
+			}
+			//
+			tooltip.tooltipSellValueText.text = item.sellPrice.ToString();
+	}
 	//Add an item to the tabs
 	public void AddCraftingItem(int ID) {
 		CraftedItem item = database.FindCraftItem(ID);
@@ -223,7 +299,11 @@ public class CraftManager : MonoBehaviour
 			tItem.transform.SetParent(itemListPos.transform);
 			tItem.transform.localScale = Vector3.one;
 			tItem.GetComponent<CraftButton>().item = selectedTab.items[i];
-		tItem.GetComponent<CraftButton>().text.text = selectedTab.items[i].item.itemName;tItem.GetComponent<CraftButton>().text.text = selectedTab.items[i].item.itemName;
+			if(TownManager.CheckLan()==true){
+		tItem.GetComponent<CraftButton>().text.text = selectedTab.items[i].item.itemName;
+			}else{
+				tItem.GetComponent<CraftButton>().text.text = selectedTab.items[i].item.eitemName;
+			}
 		Debug.Log("TRY GOT Sprite by names");
 		tItem.GetComponent<CraftButton>().itemSprite.sprite =Sprite.Create(selectedTab.items[i].cIcon,new Rect(0,0,selectedTab.items[i].cIcon.width,selectedTab.items[i].cIcon.height),Vector2.zero);
 			//
@@ -257,27 +337,6 @@ public class CraftManager : MonoBehaviour
 
 		//Instantiate all the materials
 		materialAmounts = new List<int>();
-		
-		//create materials items
-				// for(int j = 0; j < item.item.materials.Count; j++) {
-				// 	GameObject material = Instantiate(materialPrefab,materialsPos.position,Quaternion.identity) as GameObject;
-				// 	material.transform.SetParent(materialsPos);
-				// 	//Set Dataj
-				// 	material.GetComponent<CraftMaterials>().nametext.text = item.item.materials[j].itemName.ToString();
-				// 	// material.GetComponent<CraftMaterials>().co.text = item.item.materials[i].itemName.ToString();
-					
-				// 	// material.GetComponent<CraftMaterials>().current.text = InventorySystem.instance.CheckItemEnough(material.GetComponent<CraftMaterials>())
-				// 	// material.GetComponent<CraftMaterials>().needs.text =item.item.materialRequiredAmount[i].ToString();
-				// 	materials.Add(material);
-				// }
-			
-	
-		// while(materialsPos.transform.childCount != 0) {
-		// 	DestroyImmediate(materialsPos.transform.GetChild(0).gameObject);
-		// }
-
-		//clear old materials
-		
 
 		//
 		Debug.Log("Add Materials");
@@ -292,11 +351,20 @@ public class CraftManager : MonoBehaviour
 					mObj.transform.SetParent(materialsPos);
 					//Set Data TODO1117 Set Data To MObj (string)
 					Items gItem = ItemDatabase.instance.FindItem(int.Parse(item.item.materials[j].itemID));
+					if(TownManager.CheckLan()==true){
 					mObj.GetComponent<CraftMaterials>().nametext.text = item.item.materials[j].itemName.ToString();
+					}else{
+						mObj.GetComponent<CraftMaterials>().nametext.text = item.item.materials[j].eitemName.ToString();
+					}
+					//
 						mObj.GetComponent<CraftMaterials>().mItem = gItem;
 						//TODO
 						mObj.GetComponent<CraftMaterials>().icon.sprite= GotItems(item.item.materials[j].iconName);
+						if(TownManager.CheckLan()==true){
 						mObj.name = gItem.itemName.ToString();
+						}else{
+							mObj.name = gItem.eitemName.ToString();
+						}
 
 						//Got requreied
 			// 				int count = 0;
@@ -321,7 +389,11 @@ public class CraftManager : MonoBehaviour
 				
 			materials[j].transform.SetParent(materials[j].transform);
 			materials[j].transform.localScale = Vector3.one;
+			if(TownManager.CheckLan()){
 			materials[j].GetComponent<CraftMaterials>().nametext.text =item.item.materials[j].itemName;
+			}else{
+				materials[j].GetComponent<CraftMaterials>().nametext.text =item.item.materials[j].eitemName;
+			}
 			materials[j].GetComponent<CraftMaterials>().icon.sprite =GotItems(item.item.materials[j].iconName);
 			materials[j].GetComponent<CraftMaterials>().mItem = item.item.materials[j];
 	
@@ -362,7 +434,12 @@ public class CraftManager : MonoBehaviour
 		//select detail
 		craftingItemImage.sprite =GotItems(selectedItem.item.iconName);
 		// craftingItemImage.rectTransform.sizeDelta = new Vector2(item.item.item.width * iconSlotSize, item.item.item.height * iconSlotSize);
+
+		if(TownManager.CheckLan()==true){
 		selectedItemNameText.text = item.item.item.itemName;
+		}else{
+			selectedItemNameText.text = item.item.item.eitemName;
+		}
 		craftPercText.text= selectedItem.craftPerc+"%";
 		
 		craftCostLabel.text = (selectedItem.craftPerc * amountToCraft).ToString();
@@ -402,29 +479,7 @@ public class CraftManager : MonoBehaviour
 
 	//Craft the item over time
 	public void CraftItem() {
-		// yield return new WaitForEndOfFrame();
-
-		// while(selectedItem.craftTimer < selectedItem.craftTime) {
-		// 	yield return new WaitForEndOfFrame();
-		// 	selectedItem.craftTimer += Time.deltaTime;
-		// 	// buttonHighlight.fillAmount = (selectedItem.craftTimer/selectedItem.craftTime);
-		// }
-
-		// selectedItem.craftTimer = 0;
-		// buttonHighlight.fillAmount = 0;
-		// if(amountToCraft > 0) {
-		// 	amountToCraft--;
-		// }
-		// amountToCraftLabel.text = amountToCraft.ToString();
-		// craftCostLabel.text = (selectedItem.craftTime * a+mountToCraft).ToString();
-		// craftCostLabel.rectTransform.sizeDelta = new Vector2(craftCostLabel.preferredWidth, craftCostLabel.rectTransform.sizeDelta.y);
-		// AddItem();
-		// ChangeCraftingItem(selectedItem.button);
-		// for(int i = 0; i < selectedTab.items.Count; i++) {
-		// 	selectedTab.items[i].button.UpdateText();
-		// }
-		// acceptButton.interactable = true;
-	float rnd= Random.Range(0f,1f);
+		float rnd= Random.Range(0f,1f);
 		if(rnd > (1-selectedItem.item.perc)){
 			//success
 			Debug.Log(" rnd "+rnd+"Can Craft "+(1-selectedItem.item.perc)+"\t"+selectedItem.item.itemName.ToString());
@@ -547,12 +602,12 @@ public class CraftManager : MonoBehaviour
 
 	// Called when the material icon is hovered over
 	public void OnMaterialIconEnter(CraftMaterials item) {
-		StartCoroutine(tooltip.ShowTooltip(false, item.mItem, SlotType.Crafting, 0, item.GetComponent<RectTransform>(),false));
+		// StartCoroutine(tooltip.ShowTooltip(false, item.mItem, SlotType.Crafting, 0, item.GetComponent<RectTransform>(),false));
 	}
 
 	// Called when the material icon isn't hovered over anymore
 	public void OnMaterialIconExit(CraftMaterials item) {
-		tooltip.HideTooltip();
+		// tooltip.HideTooltip();
 	}
 
 	// //Called when the craft item icon is hovered over
@@ -676,7 +731,11 @@ public class CraftManager : MonoBehaviour
 			
 			item.GetComponent<CraftButton>().item.item =ItemDatabase.instance.FindItem(int.Parse(selectedTab.items[i].item.itemID));
 				 item.GetComponent<CraftButton>().item = selectedTab.items[i] ;
+				 if(TownManager.CheckLan()==true){
 				  item.GetComponent<CraftButton>().text.text =selectedTab.items[i].item.itemName.ToString();
+				 }else{
+					  item.GetComponent<CraftButton>().text.text =selectedTab.items[i].item.eitemName.ToString();
+				 }
 								 item.GetComponent<CraftButton>().itemSprite.sprite = GotItems(selectedTab.items[i].item.iconName);
 										 item.GetComponent<CraftButton>().item = selectedTab.items[i] ;
 				
@@ -701,11 +760,21 @@ public class CraftManager : MonoBehaviour
 
 
 	public string ConvertTabType(CraftingTabType n){
+
+		if(TownManager.CheckLan()==true){
 		if(n==CraftingTabType.Equipment){
 			return "装备";
 			
 		}else if(n==CraftingTabType.Reagent){
 			return "材料";
+		}
+		}else{
+			if(n==CraftingTabType.Equipment){
+			return "Equipment";
+			
+		}else if(n==CraftingTabType.Reagent){
+			return "Materials";
+		}
 		}
 
 		return "";

@@ -94,17 +94,33 @@ public GameObject createUI;
     
      public Button LoadBtn;
     public Button deleBtn;
-    public Button NewBtn;
+    public Button playBtn;
     public Button QuitBtn;
 
+    [Header("Loc UI")]
+    public UILocalizationManager gtt;
+    public TextMeshProUGUI playText;
+    public TextMeshProUGUI loadText;
+    public TextMeshProUGUI exitText;
+
     public TextMeshProUGUI versionText;
+    public static string GameLanaguage;
+
+
     public  void Awake()
     {
      
         instance = this;
+        Debug.Log("Check Language");
+        DialogueManager.SetLanguage("en");
+        
+        Debug.Log(Application.systemLanguage+"\thas check");
+      
         //Start Host();
         StartCoroutine(HostRoutine());
-        
+
+        //
+       
         //Set Screen
         Screen.SetResolution(Screen.currentResolution.width,Screen.currentResolution.height,false);
            Application.targetFrameRate =60;
@@ -116,16 +132,34 @@ public GameObject createUI;
            }else{
                  versionText.text=Application.version+" BY (LYNCHHEAD)";
            }
+
+           UpdateTextForLanguage();
     }
     
-
+    
     
     public void SelectPanel(){
         selectCharacterPanel.transform.DOMoveY(100.0f,1.0f);
         Debug.Log("Show Panel");
     }
 
+        void UpdateTextForLanguage(){
+            Debug.Log("Update Lanaguage"+PlayerPrefs.GetString("Language"));
+            string cl = "";
+           if(PlayerPrefs.HasKey("Language")){
+               cl = PlayerPrefs.GetString("Language");
+               DialogueManager.SetLanguage(cl);
+           }else{
+               //Default
+               DialogueManager.SetLanguage("zh");
+               cl = "zh";
+           }
 
+           TownManager.currentLanguage = cl;
+
+           Debug.Log("current lanaguage ist "+TownManager.currentLanguage);
+
+        }
     public IEnumerator HostRoutine(){
 
         //Show Panel
@@ -154,7 +188,10 @@ public void ChangeCamera(){
 //  blendListCamera.
 }
    
+  public void SetLanguage(string cl){
 
+      DialogueManager.SetLanguage(cl);
+  }
     
     
     public void DeletePlayer(){

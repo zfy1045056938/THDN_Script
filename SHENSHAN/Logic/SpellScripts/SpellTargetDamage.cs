@@ -7,8 +7,18 @@ public class SpellTargetDamage : SpellEffect
     public override void ActiveEffect(int specialAmount = 0, ICharacter target = null)
     {
         Debug.Log("Spell Target Damage====> Active");
+        if(target.CreatureDef-specialAmount>0){
        target.MaxHealth -= specialAmount;
-       new DealDamageCommand(target.ID,specialAmount,target.MaxHealth-specialAmount,0).AddToQueue();
+      new DealDamageCommand(target.ID,specialAmount,target.MaxHealth,target.CreatureDef).AddToQueue();
+        }else if(target.CreatureDef-specialAmount<0){
+            var damover = target.CreatureDef-specialAmount;
+            target.CreatureDef -= specialAmount;
+            target.MaxHealth += damover;
+            new DealDamageCommand(target.ID,specialAmount,target.MaxHealth,target.CreatureDef).AddToQueue();
+        }else if(target.CreatureDef==0){
+             target.MaxHealth -= specialAmount;
+      new DealDamageCommand(target.ID,specialAmount,target.MaxHealth,target.CreatureDef).AddToQueue();
+        }
     }
 
     public override void ActiveEffectToTargetStat(int specialAmount = 0, ICharacter target = null, SpellBuffType type = SpellBuffType.None)

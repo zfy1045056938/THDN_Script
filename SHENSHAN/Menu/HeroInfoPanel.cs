@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using System;
-
+using TMPro;
 /// <summary>
 /// 选择英雄页面,包含以下内容
 /// 1.当选中时，显示该卡组信息,当卡组不满足条件时则显示图标，信息包含(名称，城堡信息，工人信息，天赋树,卡组概况)
@@ -19,7 +19,8 @@ public class HeroInfoPanel : MonoBehaviour
     public Button playBtn;
     public Button editBtn;
     public Button BackBtn;
-
+    public TextMeshProUGUI atext;
+    public TextMeshProUGUI artext;
     public static HeroInfoPanel instance;
     public PortraitMenu selectPortraitMenu { get; set; }
     //
@@ -47,23 +48,21 @@ public class HeroInfoPanel : MonoBehaviour
     public  void SelectDeck(DeckIcon deck)
     {
 //        || !deck.DeckInformation.IsComplete()KC
-        if (deck==null&& selectDeck==deck)
+        if (deck==null)
         {
             
           playerPortrait.gameObject.SetActive(false);
             selectDeck = null;
-       
-
+    
         }else{ 
             selectDeck = deck; 
-            
-            
-            
+  
             playerPortrait.characterAsset = deck.DeckInformation.characterAsset;
-            
-            
-            
+                   
             playerPortrait.ApplyLookFromAsset();
+            // atext.text= deck.DeckInformation.atkNum.ToString();
+            // artext.text = deck.DeckInformation.defNum.ToString();
+   
            playerPortrait.gameObject.SetActive(true);
            Debug.Log(selectDeck.DeckNameText.text);
 
@@ -108,6 +107,8 @@ public class HeroInfoPanel : MonoBehaviour
                 if(playerPortrait.detailText!=null){
                 playerPortrait.detailText.text = menu.asset.description.ToString();
                 }
+                atext.text =menu.asset.atkNum.ToString();
+                artext.text=menu.asset.defNum.ToString();
                 playerPortrait.gameObject.SetActive(true);
                 selectPortraitMenu = menu;
           

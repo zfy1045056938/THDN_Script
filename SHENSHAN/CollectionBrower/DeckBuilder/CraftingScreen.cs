@@ -194,7 +194,13 @@ statPanel.gameObject.SetActive(true);
 
         if (currentCard.cardDetail != "")
         {
+            if(TownManager.CheckLan()==true){
             cardDes.text = cardToShow.cardDetail.ToString();
+            }else{
+                string [] cs = cardToShow.cardDetail.Split(':');
+
+                cardDes.text = Utils.GetCardEffect(cs[0])+":"+cs[1];
+            }
         }
         else
         {
@@ -212,8 +218,11 @@ statPanel.gameObject.SetActive(true);
         for(int i=0;i< ggd.Count;i++){
            if(cardToShow.cardDetail.Substring(0,cardToShow.cardDetail.LastIndexOf(":")) ==  ggd[i].GName ){
                //
-               Debug.Log(cardToShow.cardDetail.Substring(0,cardToShow.cardDetail.LastIndexOf(":"))+"got");
+               if(TownManager.CheckLan()){
                EffectDetailText.text=ggd[i].GDetail.ToString();
+               }else{
+                    EffectDetailText.text=ggd[i].EGDetail.ToString();
+               }
            } 
         }
 

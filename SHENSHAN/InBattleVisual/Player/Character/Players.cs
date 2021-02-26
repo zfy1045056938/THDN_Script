@@ -385,6 +385,7 @@ public class Players : MonoBehaviour, ICharacter
         ++manaThisTurn;
         manaLeft = manaThisTurn;
         //TODO 123
+        Debug.Log("=========Check ShenShanModule ===============");
         if(TurnManager.instance.WhoseTurn.manaLeft >=7){
             GlobalSetting.instance.ShenShanModule();
         }
@@ -438,6 +439,9 @@ public class Players : MonoBehaviour, ICharacter
         // }else{
         //     otherPlayer.playerArea.playerPortraitVisual.weapon.usedPanel.gameObject.SetActive(false);
         // }
+
+        //Reset the Armor
+       TurnManager.instance.WhoseTurn.CreatureDef =  0;
 
 
     }
@@ -897,19 +901,9 @@ public void LoadBattleInfoEnemy(EnemyAsset e){
                 DialogueLua.SetVariable("DungeonBoss",1);
                 Debug.Log("Get Variable From Dialogue"+DialogueLua.GetVariable(BattleStartInfo.SelectEnemyDeck.enemyAsset.EnemyName));
             }
-            //
-           
-//            if (DialogueLua.GetVariable(BattleStartInfo.SelectEnemyDeck.enemyAsset.EnemyName).asString ==
-//                BattleStartInfo.SelectEnemyDeck.enemyAsset.EnemyName)
-//            {
-            //Check enemy type to add var
-//                           DialogueLua.SetVariable("DungeonBoss",1);
-//                               Debug.Log("Get Variable From Dialogue"+DialogueLua.GetVariable(BattleStartInfo.SelectEnemyDeck.enemyAsset.EnemyName));
-               //            }
-//            else
-//            {
-//                Debug.Log("No data at dialogue");
-//            }
+            //Normal Set
+            // DialogueLua.SetVariable("DungeonMonster",1);
+            // Debug.Log("now monster counter ist"+DialogueLua.GetVariable("DungeonMonster").asString);
             //QuestTracker
             DialogueLua.SetVariable("isKill",true);
             //
@@ -940,6 +934,8 @@ public void LoadBattleInfoEnemy(EnemyAsset e){
         }
         else if(GlobalSetting.instance.topPlayer.MaxHealth > 0 && GlobalSetting.instance.lowPlayer.MaxHealth<=0)
         {
+
+            ConsoleManager.GetReward=false;
             Debug.Log("U Lose");
             // block both players from taking new moves 
             ConsoleManager.EXP += 0;

@@ -24,24 +24,38 @@ public class TooltipManager : MonoBehaviour {
    public GameObject setObj;
    
 	public float tooltipMainHeight;
-	public Text tooltipText;
-	public Text tooltipHeaderText;
+	public TextMeshProUGUI tooltipText;
+	public TextMeshProUGUI tooltipHeaderText;
 	public Text tooltipSellValueText;
 	public Text tooltipSellValueTextLabel;
-	public Text tooltipDescriptionText;
-	public Text tooltipRequiredLevelText;
-	public Text tooltipRatityText;
+	public TextMeshProUGUI tooltipDescriptionText;
+	public TextMeshProUGUI tooltipRequiredLevelText;
+	public TextMeshProUGUI tooltipRatityText;
 	public Image tooltipImage;
-	public Text armorText;
-	[Header("Resistance")] public Text frText;
-	public Text irText;
-	public Text poRText;
-	public Text ERText;
+	public TextMeshProUGUI armorText;
+	[Header("Resistance")] 
+	public TextMeshProUGUI frText;
+	public TextMeshProUGUI minfrText;
+	public TextMeshProUGUI maxfrText;
+	public TextMeshProUGUI irText;
+		public TextMeshProUGUI minirText;
+	public TextMeshProUGUI maxirText;
+	public TextMeshProUGUI poRText;
+		public TextMeshProUGUI minporText;
+	public TextMeshProUGUI maxporText;
+	public TextMeshProUGUI ERText;
+		public TextMeshProUGUI minerText;
+	public TextMeshProUGUI maxerText;
 	
-	public Text baseValueText;
-	public Text baseDurText;
+	public TextMeshProUGUI baseValueText;
+	public TextMeshProUGUI minDamageText;
+	public TextMeshProUGUI maxDamageText;
 
-	public Text DescriptionText;
+	public Text baseDurText;
+	public TextMeshProUGUI minArmorText;
+	public TextMeshProUGUI maxArmorText;
+
+	public TextMeshProUGUI DescriptionText;
 	public Text ItemScoreText;
 	//public  Text StrengthText;
 	//public Text DexText;
@@ -79,6 +93,12 @@ public class TooltipManager : MonoBehaviour {
 	[HideInInspector]
 	public bool showTooltip;
 
+	[Header("FRAME")]
+	public Color normalColor;
+	public Color rareColor;
+	public Color epicColor;
+	public GameObject frameObj;
+
 	void Awake(){
 		if(instance==null)instance=this;
 	}
@@ -108,7 +128,12 @@ public class TooltipManager : MonoBehaviour {
 			//
 			tooltip.gameObject.SetActive(true);
 			tooltipHeader.color = FindColor(item);
+
+			if(TownManager.CheckLan()==true){
 			tooltipHeaderText.text = item.itemName.ToString();
+			}else{
+				tooltipHeaderText.text = item.eitemName.ToString();
+			}
 			//
 
 			if (!item.unidentified)
@@ -121,15 +146,10 @@ public class TooltipManager : MonoBehaviour {
 				{
 					ItemScoreText.text = item.score.ToString();
 
+
 					tooltipRatityText.text = LoadRatityLoC(item);
 					tooltipRequiredLevelText.text = "<size=10>需要等级: " + item.itemLevel.ToString() + "</size>";
-
-					//
-					// StrengthText.text = Mathf.RoundToInt(item.strength).ToString();
-					// DexText.text = Mathf.RoundToInt(item.dexterity).ToString();
-					// MagicText.text = Mathf.RoundToInt(item.magic).ToString();
-
-					//
+	//
 					frText.text = item.fireResistance.ToString();
 					irText.text = item.iceResistance.ToString();
 					poRText.text = item.posionResistance.ToString();
@@ -143,6 +163,7 @@ public class TooltipManager : MonoBehaviour {
 						equipDetail.gameObject.SetActive(true);
 						OthersDetail.gameObject.SetActive(false);
 						baseValueText.text = Mathf.FloorToInt(item.damage).ToString();
+						
 						baseDurText.text = Mathf.FloorToInt(item.weaponDur).ToString();
 					}
 					else if (item.itemType == EquipmentSlotType.armor)
@@ -176,15 +197,6 @@ public class TooltipManager : MonoBehaviour {
 
 				}
 
-
-//			tooltipRequiredLevelText.rectTransform.sizeDelta = new Vector2(tooltipRequiredLevelText.preferredWidth, tooltipRequiredLevelText.preferredHeight);
-
-				// tooltipText.rectTransform.sizeDelta = new Vector2(tooltipText.preferredWidth-2, tooltipText.preferredHeight + 4);
-				// tooltipDescriptionText.rectTransform.sizeDelta = new Vector2(tooltipRequiredLevelText.preferredWidth, tooltipDescriptionText.preferredHeight);
-
-				// tooltip.GetComponent<RectTransform>().sizeDelta = new Vector2(tooltipRequiredLevelText.rectTransform.sizeDelta.x + 200, 
-				// tooltipMainHeight + tooltipText.rectTransform.sizeDelta.y + tooltipDescriptionText.rectTransform.sizeDelta.y + tooltipRequiredLevelText.rectTransform.sizeDelta.y);
-
 			}
 			else
 			{
@@ -206,130 +218,6 @@ public class TooltipManager : MonoBehaviour {
 			}
 
 
-			// Debug.Log("Check Set Item");
-			// //IF set show Set
-			// if(item.hasSet==true){
-			// 	setObj.gameObject.SetActive(true);
-			// 	setText.text =  item.setName.ToString();
-			// 	totalSetNum = InventorySystem.instance.setNum;
-			// 	
-			// 		//Clear Old obj
-			// 		foreach(var o in setDetail ){
-			// 			if(o!=null){
-			// 				Destroy(o);
-			// 			}
-			// 		}
-			// 			foreach(var o in setEquipment ){
-			// 			if(o!=null){
-			// 				Destroy(o);
-			// 			}
-			// 		}
-			//
-			//
-			// 						//Show Set Item Name equals set Item Id as 
-			// 						for(int i=0;i<item.setList.Count;i++){
-			// 								setTip = Instantiate(setListObj) as GameObject;
-			// 								setTip.transform.SetParent(setListPos);
-			// 							
-			// 								setTip.GetComponent<SetObj>().setName.text = ItemDatabase.instance.GetItemName(item.setList[i]);
-			// 								setTip.GetComponent<SetObj>().setName.color = Color.grey;
-			//
-			// 								if (setTip.GetComponent<SetObj>().setName.text == item.itemName)
-			// 								{
-			// 									setTip.GetComponent<SetObj>().setName.color = Color.white;
-			// 								}
-			//
-			// 								
-			// 								
-			// 								setEquipment.Add(setTip);
-			// 						}
-			//
-			// 						//Got SetName
-			// 						Debug.Log("Got set list detail");
-			// 					List<GDESetListData> setList = GDEDataManager.GetAllItems<GDESetListData>();
-			// 					
-			// 						for(int i=0;i<setList.Count;i++){
-			// 							if(item.setName== setList[i].SetListName ){
-			// 								//has targe setlist
-			// 								Debug.Log("Got listname");
-			// 								//Got SetList Detail
-			// 								
-			// 									setDetailObj = Instantiate(setDetailObj) as GameObject;
-			// 									setDetailObj.transform.localScale= new Vector3(1,1,1);
-			// 									setDetailObj.transform.SetParent(setDetailPos);
-			// 									setDetailObj.GetComponent<SetObj>().setDetail.text =
-			// 										setList[i].SetEffect1.ToString();
-			// 									setDetailObj.GetComponent<SetObj>().setDetail.color = Color.grey;
-			// 									setDetail.Add(setDetailObj);
-			//
-			//
-			//
-			// 									setDetailObj = Instantiate(setDetailObj) as GameObject;
-			// 									setDetailObj.transform.localScale= new Vector3(1,1,1);
-			// 									setDetailObj.transform.SetParent(setDetailPos);
-			// 									setDetailObj.GetComponent<SetObj>().setDetail.text =
-			// 										setList[i].SetEffect2.ToString();
-			// 									setDetailObj.GetComponent<SetObj>().setDetail.color = Color.gray;
-			// 										
-			// 									setDetail.Add(setDetailObj);
-			//
-			// 										if(totalSetNum>=2){
-			// 						foreach(var v in setDetail){
-			// 							if(v!=null && v.GetComponent<SetObj>().setDetail.text==setList[i].SetEffect1){
-			// 								setDetailObj.GetComponent<SetObj>().setDetail.color = Color.white;
-			// 									
-			// 							}
-			// 							
-			// 							
-			// 						}
-			// 										}
-			// 							else if(totalSetNum>=3){
-			// 						foreach(var v in setDetail){
-			// 							
-			// 								setDetailObj.GetComponent<SetObj>().setDetail.color = Color.white;
-			// 					
-			// 						}
-			// 					}
-			//
-			// 										for (int m = 0; m < setEquipment.Count; m++)
-			// 										{
-			// 											string setName =
-			// 												ItemDatabase.instance.GetItemSetName(setEquipment[m]
-			// 													.GetComponent<SetObj>().setName.text);
-			// 											//
-			// 											if (setName == InventorySystem.instance.setName)
-			// 											{
-			// 												setEquipment[m].GetComponent<SetObj>().setName.color =
-			// 													Color.white;
-			// 											}
-			// 										}
-			// 							
-			// 							
-			// 							
-			// 							//show active set detail by setnum from inventory
-			// 							// UpdateSetDetail( setNum);
-			// 					
-			// 					//Check Both
-			// 					// var eq = InventorySystem.instance.equipmentSlots.ToList();
-			// 					// for (int i=0;i<eq.Count;i++){
-			// 					// 	if(eq[i].item.setName== InventorySystem.instance.setName){
-			// 					// 		//
-			// 					// 		foreach(var v in setEquipment){
-			// 					// 			if(v.GetComponent<SetObj>().setName.text==eq[i].item.itemName){
-			// 					// 				v.GetComponent<SetObj>().setName.color=Color.white;	
-			// 					// 			}
-			// 					// 		}
-			// 					// 	}
-			// 					// }
-			// 					//
-			// 					//
-			// 				
-			// 					
-			// 							}
-			// 						}
-			// 				
-			// 				
-			// }
 
 			if (merchant)
 			{

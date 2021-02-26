@@ -9,6 +9,7 @@ using Mirror;
 using TMPro;
 public enum DungeonType{
    None,
+   Init,
     Kill,
    Explore,
    Boss,
@@ -192,18 +193,7 @@ public class DungeonExplore : MonoBehaviour
             // eObj.GetComponent<Monster>().HP = mapLocation.bossAsset.Health;
             Debug.Log("Now Monster health is"+eObj.GetComponent<Monster>().HP);
             eObj.GetComponent<Monster>().cardList=new List<CardAsset>(mapLocation.bossAsset.cardList);
-            // eObj.GetComponent<DialogueActor>().actor = mapLocation.bossAsset.EnemyName;
-           
-           
-                    //    GameObject enemyPack = Instantiate(enemySelection.deckIcon,enemySelection.contentPos.position,Quaternion.identity)as GameObject;
-                    //    enemyPack.transform.parent = enemySelection.contentPos;
-                    //    enemyPack.GetComponent<EnemyPortraitVisual>().enemyAsset = mapLocation.bossAsset;
-                    //    enemyPack.GetComponent<EnemyPortraitVisual>().EnemyHead.sprite = mapLocation.bossAsset.Head;
-                    //    enemyPack.GetComponent<EnemyPortraitVisual>().EnemyName.text = mapLocation.bossAsset.EnemyName;
-                    //    //
-                    //    enemyPack.GetComponent<EnemyPortraitVisual>().enemyCardList = new List<CardAsset>(mapLocation.bossAsset.cardList);
-                       
-                    //    enemySelection.deckIcons.Add(enemyPack);
+            
                         
 bossList.Add(eObj);
             // NetworkServer.Spawn(eObj);
@@ -222,7 +212,12 @@ bossList.Add(eObj);
                 enemyPack.transform.SetParent(enemySelection.contentPos);
                 enemyPack.GetComponent<EnemyPortraitVisual>().enemyAsset = mapLocation.bossAsset;
                 enemyPack.GetComponent<EnemyPortraitVisual>().EnemyHead.sprite = mapLocation.bossAsset.Head;
+                //
+                if(TownManager.CheckLan()==true){
                 enemyPack.GetComponent<EnemyPortraitVisual>().EnemyName.text = mapLocation.bossAsset.EnemyName;
+                }else{
+                      enemyPack.GetComponent<EnemyPortraitVisual>().EnemyName.text = mapLocation.bossAsset.eEnemyName;
+                }
                 //
                 enemyPack.GetComponent<EnemyPortraitVisual>().enemyCardList =
                     new List<CardAsset>(mapLocation.bossAsset.cardList);
@@ -250,7 +245,7 @@ bossList.Add(eObj);
 
         hasKillBoss = DialogueLua.GetVariable("KillBossDone").asBool;
       if(hasKillBoss==true){
-
+        Debug.Log("========================CONSOLE  DUNGEON MODULE ============================");
           //Clear Boss 
           foreach(var b in bossList){
               if(b!=null){Destroy(b);}
@@ -266,6 +261,20 @@ bossList.Add(eObj);
            {
             //    TownManager.instance.leaveObj.SetActive(true);
                LDRoutline(BattleStartInfo.IsWinner);
+           }
+           Debug.Log("================NEXT LOCATION MODULE==================");
+           //Unlock Next Loc
+           if(mapLocation.nextLocation.Count>0){
+               for(int i=0;i<mapLocation.nextLocation.Count;i++){
+                   //Unlock
+                   for(int j=0;j<TravelSystem.TravelSystem.instance.areaCollection.Count;j++)
+                       if(mapLocation.nextLocation[i] == TravelSystem.TravelSystem.instance.areaCollection[j].areaName){
+                           TravelSystem.TravelSystem.instance.areaCollection[j].Locked=false;
+                           TravelSystem.TravelSystem.instance.areaCollection[j].gameObject.SetActive(true);
+
+                           PlayerPrefs.SetInt(TravelSystem.TravelSystem.instance.areaCollection[j].location.elocationName+"_Lock",0);
+                       }
+               }
            }
       }
       
@@ -469,6 +478,10 @@ Debug.Log("DungeonType Ist"+mapLocation.dungeonType);
              LoadBoss();
              break;
 
+            case DungeonType.Init:
+            LoadBoss();
+            break;
+
          case DungeonType.Explore:
 
              break;
@@ -515,7 +528,11 @@ Debug.Log("DungeonType Ist"+mapLocation.dungeonType);
                        enemyPack.transform.parent = enemySelection.contentPos;
                        enemyPack.GetComponent<EnemyPortraitVisual>().enemyAsset = mapLocation.enemyList[j];
                        enemyPack.GetComponent<EnemyPortraitVisual>().EnemyHead.sprite = mapLocation.enemyList[j].Head;
+                       if(TownManager.CheckLan()){
                        enemyPack.GetComponent<EnemyPortraitVisual>().EnemyName.text = mapLocation.enemyList[j].EnemyName;
+                       }else{
+                           enemyPack.GetComponent<EnemyPortraitVisual>().EnemyName.text = mapLocation.enemyList[j].eEnemyName;
+                       }
                        //
                        enemyPack.GetComponent<EnemyPortraitVisual>().enemyCardList = new List<CardAsset>(mapLocation.enemyList[j].cardList);
                        
@@ -527,38 +544,31 @@ Debug.Log("DungeonType Ist"+mapLocation.dungeonType);
         }
         
      
-
-      //boss normal has one others according asset
-//     if(bossAsset!=null){
-//         Debug.Log("Create Boss");
-//            GameObject eObj = TownManager.instance.LoadItemFromAB(mapLocation.bossAsset.model,mapLocation.bossAsset);
-//            int rnd = Random.Range(0,mapLocation.enemyPos.Count);
-//            eObj.transform.position = new Vector3(mapLocation.enemyPos[rnd].x,mapLocation.enemyPos[rnd].y,mapLocation.enemyPos[rnd].z);
-//            //
-//             eObj.GetComponent<Monster>().enemyAsset=mapLocation.bossAsset;
-//             // eObj.GetComponent<Monster>().avaSprite.sprite=mapLocation.bossAsset.Head;
-//             eObj.GetComponent<Monster>().converName=mapLocation.bossAsset.conver;
-//             // eObj.GetComponent<Monster>().frameSprite.sprite=mapLocation.bossAsset.Frame;
-//             // eObj.GetComponent<Monster>().HP = mapLocation.bossAsset.Health;
-//             Debug.Log("Now Monster health is"+eObj.GetComponent<Monster>().HP);
-//             eObj.GetComponent<Monster>().cardList=new List<CardAsset>(mapLocation.bossAsset.cardList);
-//             // eObj.GetComponent<DialogueActor>().actor = mapLocation.bossAsset.EnemyName;
+        var dm =  FindObjectOfType<DungeonManager>();
+        if(dm!=null){
+            for(int i=0;i<dm.enemiesList.Count;i++){
+                for(int j=0;j<mapLocation.enemyList.Count;j++)
+                    if(dm.enemiesList[i].name == mapLocation.enemyList[j].EnemyName){
+                        var eObj = dm.enemiesList[i];
+                        eObj.transform.parent=monsterPos;
+          
+            eObj.name=mapLocation.enemyList[j].EnemyName;
            
-           
-//                     //    GameObject enemyPack = Instantiate(enemySelection.deckIcon,enemySelection.contentPos.position,Quaternion.identity)as GameObject;
-//                     //    enemyPack.transform.parent = enemySelection.contentPos;
-//                     //    enemyPack.GetComponent<EnemyPortraitVisual>().enemyAsset = mapLocation.bossAsset;
-//                     //    enemyPack.GetComponent<EnemyPortraitVisual>().EnemyHead.sprite = mapLocation.bossAsset.Head;
-//                     //    enemyPack.GetComponent<EnemyPortraitVisual>().EnemyName.text = mapLocation.bossAsset.EnemyName;
-//                     //    //
-//                     //    enemyPack.GetComponent<EnemyPortraitVisual>().enemyCardList = new List<CardAsset>(mapLocation.bossAsset.cardList);
-                       
-//                     //    enemySelection.deckIcons.Add(enemyPack);
-                        
-// bossList.Add(eObj);
-//             // NetworkServer.Spawn(eObj);
-
-//             }
+            //     Debug.Log("Has monster");
+            eObj.GetComponent<Monster>().enemyAsset=mapLocation.enemyList[j];
+            // // eObj.GetComponent<Monster>().avaSprite.sprite=mapLocation.enemyList[rnd].Head;
+            // // eObj.GetComponent<Monster>().frameSprite.sprite=mapLocation.enemyList[rnd].Frame;
+            // eObj.GetComponent<Monster>().HP = mapLocation.enemyList[j].Health;
+            // Debug.Log("Now Monster health is"+eObj.GetComponent<Monster>().HP);
+            if(mapLocation.enemyList[j].hasCard==true){
+                    eObj.GetComponent<Monster>().cardList=new List<CardAsset>(mapLocation.enemyList[j].cardList);
+            }
+         
+            eObj.GetComponent<Monster>().converName=mapLocation.enemyList[j].conver;
+                    }
+            }
+        }
+   
     
     }
  public void ShowTip(DungeonIcon icon){
@@ -583,19 +593,7 @@ public void LoadBoss(){
             // eObj.GetComponent<Monster>().HP = mapLocation.bossAsset.Health;
             // Debug.Log("Now Monster health is"+eObj.GetComponent<Monster>().HP);
             eObj.GetComponent<Monster>().cardList=new List<CardAsset>(mapLocation.bossAsset.cardList);
-            // eObj.GetComponent<DialogueActor>().actor = mapLocation.bossAsset.EnemyName;
-            //
-           
-                    //    GameObject enemyPack = Instantiate(enemySelection.deckIcon,enemySelection.contentPos.position,Quaternion.identity)as GameObject;
-                    //    enemyPack.transform.parent = enemySelection.contentPos;
-                    //    enemyPack.GetComponent<EnemyPortraitVisual>().enemyAsset = mapLocation.bossAsset;
-                    //    enemyPack.GetComponent<EnemyPortraitVisual>().EnemyHead.sprite = mapLocation.bossAsset.Head;
-                    //    enemyPack.GetComponent<EnemyPortraitVisual>().EnemyName.text = mapLocation.bossAsset.EnemyName;
-                    //    //
-                    //    enemyPack.GetComponent<EnemyPortraitVisual>().enemyCardList = new List<CardAsset>(mapLocation.bossAsset.cardList);
-                       
-                    //    enemySelection.deckIcons.Add(enemyPack);
-                        
+            
 bossList.Add(eObj);
             // NetworkServer.Spawn(eObj);
 
@@ -648,6 +646,13 @@ bossList.Add(eObj);
           if (e != null)
           {
               Destroy(e);
+          }
+      }
+
+      var dm = FindObjectOfType<DungeonManager>();
+      if(dm!=null){
+          for(int i=0;i<dm.enemiesList.Count;i++){
+              Destroy(dm.enemiesList[i]);
           }
       }
       

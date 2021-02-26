@@ -41,7 +41,12 @@ public static CharacterSelectionTabs instance;
             GameObject tabObj = Instantiate(filterObj,tabsPos.position,Quaternion.identity)as GameObject;
             tabObj.transform.parent = tabsPos.transform;
             tabObj.GetComponent<CharacterFiliterTabs>().characterAsset = GetCharacterAsset(cd[i]);
+
+            if(TownManager.CheckLan()==true){
             tabObj.GetComponent<CharacterFiliterTabs>().nameText.text = cd[i].ClassName.ToString();
+            }else{
+                tabObj.GetComponent<CharacterFiliterTabs>().nameText.text = cd[i].EClassName.ToString();
+            }
             tabObj.GetComponent<CharacterFiliterTabs>().Deselect();
             if (cd[i].ClassName == "中立")
             {
@@ -86,7 +91,11 @@ public static CharacterSelectionTabs instance;
                 GameObject obj = Instantiate(classTabs,tabsPos.position,Quaternion.identity)as GameObject;
                 obj.transform.SetParent(tabsPos);
                 obj.GetComponent<CharacterFiliterTabs>().characterAsset = GetCharacterAsset(cs);
+                if(TownManager.CheckLan()==true){
                 obj.GetComponent<CharacterFiliterTabs>().nameText.text = cs.ClassName.ToString();
+                }else{
+                     obj.GetComponent<CharacterFiliterTabs>().nameText.text = cs.EClassName.ToString();
+                }
                 obj.GetComponent<CharacterFiliterTabs>().Select(true);
 
                 // classTbas.Add(obj);
@@ -98,7 +107,11 @@ public static CharacterSelectionTabs instance;
                     GameObject neu = GameObject.Instantiate(neutralTabWhenCollectionBrowsing,tabsPos.position,Quaternion.identity)as GameObject;
             neu.transform.SetParent(tabsPos);
             neu.GetComponent<CharacterFiliterTabs>().characterAsset =GetCharacterAsset(cs);
+            if(TownManager.CheckLan()==true){
             neu.GetComponent<CharacterFiliterTabs>().nameText.text=cs.ClassName.ToString();
+            }else{
+                 neu.GetComponent<CharacterFiliterTabs>().nameText.text=cs.EClassName.ToString();
+            }
             // classTbas.Add(neu);
             tabs.Add(neu);
             }
@@ -138,7 +151,7 @@ public static CharacterSelectionTabs instance;
       GameObject co =  GameObject.Instantiate(classTabs,tabsPos.position,Quaternion.identity)as GameObject;
       co.transform.SetParent( tabsPos);
         co.GetComponent<CharacterFiliterTabs>().characterAsset = asset;
-         co.GetComponentInChildren<Text>().text = LoadAssetName(asset);
+         co.GetComponent<CharacterFiliterTabs>().nameText.text = LoadAssetName(asset);
          co.GetComponent<CharacterFiliterTabs>().Select(true);
          tabs.Add(co);
       
@@ -165,6 +178,7 @@ private PlayerJob GetPlayerJobs(string playersJob)
         return Sprite.Create(avatarImage,new Rect(0,0,avatarImage.width,avatarImage.height),Vector2.zero);
     }
     string LoadAssetName(CharacterAsset asset){
+        if(TownManager.CheckLan()==true){
         switch(asset.jobs){
             case PlayerJob.Hunter:
                 return "猎人";
@@ -177,7 +191,20 @@ private PlayerJob GetPlayerJobs(string playersJob)
             break;
         }
         return "中立";
-        
+        }else{
+             switch(asset.jobs){
+            case PlayerJob.Hunter:
+                return "猎人";
+                break;
+            case PlayerJob.Magic:
+            return "研习者";
+            break;
+            case PlayerJob.Survicer:
+            return "生存者";
+            break;
+        }
+        return "中立";
+        }
     }
 
     /// <summary>

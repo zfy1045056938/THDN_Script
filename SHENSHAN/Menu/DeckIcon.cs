@@ -20,10 +20,10 @@ public class DeckIcon : MonoBehaviour,IPointerClickHandler
     public PlayerPortraitVisual infoPanel;
  
     private float initalScale=0.5f;					//default position
-    private float targetScale = 1.3f;       //
+    private float targetScale = 1.1f;       //
     private bool selected = false;				//have select
-    [HideInInspector]
-    public DeckInfo DeckInformation { get; set; }   //pack info show right deck
+    
+    public DeckInfo DeckInformation ;  //pack info show right deck
 	
     //Storge Enemy Data
   
@@ -83,27 +83,22 @@ public class DeckIcon : MonoBehaviour,IPointerClickHandler
               if(eventData.button ==PointerEventData.InputButton.Left){
 	            if (!selected)
 	            {
+                    Debug.Log("Select");
 		            selected = true;
      
-//		            if (DeckInformation.IsComplete()){
-                
 			            transform.DOScale(targetScale, 0.1f);   
-//            }
+
            DeckSelectionScreen.instance.heroSelection.SelectDeck(this);
            //
            SoundManager.instance.PlayRndMusic();
-      
-            //
-            // SelectDeck.instance.SelectDeck(this);
-            
-//                    infoPanel.gameObject.SetActive(true);
-		            //
 		            DeckIcon[] allHero =FindObjectsOfType<DeckIcon>();
 		            foreach (DeckIcon info in allHero)
 		            {
 			            if (info != this) info.DeSelect();  //
 		            }
+
                 }else{
+                    
                     DeSelect();
                     DeckSelectionScreen.instance.heroSelection.SelectDeck(null);
                 }

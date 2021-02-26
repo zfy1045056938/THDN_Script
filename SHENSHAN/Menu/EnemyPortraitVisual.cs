@@ -77,7 +77,11 @@ public class EnemyPortraitVisual : MonoBehaviour
     {
         
         healthText.text =enemyAsset.Health.ToString();
+        if(TownManager.CheckLan()==true){
         EnemyName.text = enemyAsset.EnemyName;
+        }else{
+             EnemyName.text = enemyAsset.eEnemyName;
+        }
         EnemyHead.sprite = enemyAsset.Head;
     
         

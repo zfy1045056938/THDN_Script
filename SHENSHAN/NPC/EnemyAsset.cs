@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class EnemyAsset 
 {
     public string EnemyName;
+    public string eEnemyName;
     public string Tags;
     public NpcType npcType;
     public Sprite Head;

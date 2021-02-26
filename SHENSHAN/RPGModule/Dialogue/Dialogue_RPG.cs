@@ -5,6 +5,7 @@ using UnityEngine;
 using PixelCrushers.DialogueSystem;
 using TravelSystem;
 using Cinemachine;
+using GameDataEditor;
 //For dialogue call rpg
 public class Dialogue_RPG : MonoBehaviour
 {
@@ -20,11 +21,16 @@ public class Dialogue_RPG : MonoBehaviour
   {
     Lua.RegisterFunction("UpdateServer", this, SymbolExtensions.GetMethodInfo(() => UpdateServer()));
     Lua.RegisterFunction("GetPlayerName", this, SymbolExtensions.GetMethodInfo(() => GetPlayerName()));
+    Lua.RegisterFunction("GetHName", this, SymbolExtensions.GetMethodInfo(() => GetHName()));
+    
     Lua.RegisterFunction("OpenDeckBuilding", this, SymbolExtensions.GetMethodInfo(() => OpenDeckBuilding()));
     //Town
     Lua.RegisterFunction("GiveItems", this, SymbolExtensions.GetMethodInfo(() => GiveItems((Double)0)));
     Lua.RegisterFunction("GiveMoney", this, SymbolExtensions.GetMethodInfo(() => GiveMoney((double) 0)));
     Lua.RegisterFunction("AddExp", this, SymbolExtensions.GetMethodInfo(() => AddExp((float) 0)));
+     Lua.RegisterFunction("AddPack", this, SymbolExtensions.GetMethodInfo(() => AddPack(String.Empty)));
+       Lua.RegisterFunction("TurMode", this, SymbolExtensions.GetMethodInfo(() => TurMode()));
+ 
     Lua.RegisterFunction("OpenShop", this, SymbolExtensions.GetMethodInfo(() => OpenShop()));
       Lua.RegisterFunction("OpenNBPanel", this, SymbolExtensions.GetMethodInfo(() =>OpenNBPanel()));
     Lua.RegisterFunction("OpenPackSelection", this, SymbolExtensions.GetMethodInfo(() => OpenPackSelection()));
@@ -43,6 +49,7 @@ public class Dialogue_RPG : MonoBehaviour
     
 
     Lua.RegisterFunction("UnlockLoc",this,SymbolExtensions.GetMethodInfo(()=>UnlockLoc(string.Empty)));
+        Lua.RegisterFunction("UnlockAllLoc",this,SymbolExtensions.GetMethodInfo(()=> UnlockAllLoc()));
     
     Lua.RegisterFunction("ChangeDungeon",this,SymbolExtensions.GetMethodInfo(()=>ChangeDungeon(string.Empty)));
     Lua.RegisterFunction("SetItemAmount",this,SymbolExtensions.GetMethodInfo(()=>SetItemAmount((Double)0,(Double)0)));
@@ -60,6 +67,7 @@ public class Dialogue_RPG : MonoBehaviour
     //Module
      Lua.RegisterFunction("MatchesModule", this, SymbolExtensions.GetMethodInfo(() =>MatchesModule()));
      Lua.RegisterFunction("CheckFreeVersion", this, SymbolExtensions.GetMethodInfo(() =>CheckFreeVersion()));
+    Lua.RegisterFunction("StartTimer", this, SymbolExtensions.GetMethodInfo(() =>StartTimer()));
     
     
   }
@@ -79,7 +87,12 @@ public class Dialogue_RPG : MonoBehaviour
   {
     if (updateServerOnConverEnd) UpdateServer();
   }
-
+public void StartTimer(){
+  var st = FindObjectOfType<TurnManager>();
+  if(st !=null){
+    st.timer.StartTimer();
+  }
+}
   public static string GetPlayerName()
   {
     var player = PlayerData.localPlayer;
@@ -147,6 +160,39 @@ public class Dialogue_RPG : MonoBehaviour
        TownManager.instance.worldMapCamera.enabled=false;
        
      }
+
+  }
+
+  public void GetHName(){
+    
+  }
+
+  public void AddPack(string pname){
+    List<GDEInitPackData> initpack = GDEDataManager.GetAllItems<GDEInitPackData>();
+    //
+    if(initpack.Count>0)
+    {
+      for(int i=0;i<initpack.Count;i++){
+        if(initpack[i].PackName == pname){
+          if(DeckStorge.instance.AllDecks.Count < DeckStorge.instance.limitofDeckSlot){
+          var ips =initpack[i];
+          DeckInfo newInfo = new DeckInfo(ips.PackName,Utils.GetCardCharacterAsset(ips.PackCharacter),Utils.ConvertCard(ips.PackList)
+          ,ips.AtkNum,ips.ArmorNum);
+        DeckStorge.instance.AllDecks.Add(newInfo);
+        DeckStorge.instance.SaveDecksIntoPlayerPrefs();
+
+        Debug.Log(DeckStorge.instance.AllDecks.Count+"\n"+ newInfo.deckName.ToString());
+
+          }else{
+              Debug.Log("Pack Full ");
+          }
+        }
+      }
+    }
+
+  }
+
+  public void TurMode(){
 
   }
 
@@ -370,23 +416,42 @@ public void LeaveTown(){
     var areas = FindObjectOfType<TownManager>();
     var mapArea =FindObjectOfType<TravelSystem.TravelSystem>();
     if(areas!=null){
-     for(int i=0;i<areas.maps.Count;i++){
-       if(areas.maps[i].locationName==loc){
-          areas.maps[i].isLock = false;
+    //  for(int i=0;i<areas.maps.Count;i++){
+    //    if(areas.maps[i].locationName==loc){
+    //       areas.maps[i].isLock = false;
 
-          foreach(var g in mapArea.areas ){
-          if(g.GetComponent<TravelArea>().areaName==loc){
-            g.gameObject.SetActive(true);
+         
+ for(int g=0;g<areas.maps.Count;g++){
+          if(areas.maps[g].locationName==loc){
+            Debug.Log("UNLOCK LOC");
+             areas.maps[g].isLock=false;
+          
+          
+            PlayerPrefs.SetInt(areas.maps[g].elocationName + "_Lock", 0);
+         Debug.Log("DIALOGUE===> SET UNLOCK LOC" +areas.maps[g].elocationName );
           }
-          }
-            PlayerPrefs.SetInt(areas.maps[i].locationName + "_Lock", 1);
-         Debug.Log("DIALOGUE===> SET UNLOCK LOC");
        }
+    }
      }
 
      
       // TownManager.instance.leaveObj.gameObject.SetActive(true);
-    }
+    // }
+  // }
+
+  public void UnlockAllLoc(){
+    var areas = FindObjectOfType<TownManager>();
+    var mapArea =FindObjectOfType<TravelSystem.TravelSystem>();
+
+//
+ for(int i=0;i<areas.maps.Count;i++){
+   areas.maps[i].isLock=false;
+ }
+ //
+
+ Debug.Log("Unlock All Area");
+
+
   }
 
   public void OpenNBPanel(){

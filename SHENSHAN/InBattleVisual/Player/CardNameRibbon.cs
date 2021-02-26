@@ -29,7 +29,11 @@ public class CardNameRibbon:MonoBehaviour,IPointerEnterHandler,IPointerExitHandl
 
         asset=ca;
         
-        nameText.text= ca.name;
+        if(TownManager.CheckLan()==true){
+        nameText.text= ca.name.ToString();
+        }else{
+            nameText.text=ca.ename.ToString();
+        }
 
         SetQuantity(quantity);
     }

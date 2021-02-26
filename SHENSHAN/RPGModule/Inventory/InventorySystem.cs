@@ -939,46 +939,6 @@ public float slotIconSize = 39f;					//Size of the icons
 
 		slot.transform.Find("ItemBackground").gameObject.SetActive(false);
 
-		// //Check to see if the item equipped is of type two-handed weapon
-		// if(slot.item.itemType == EquipmentSlotType.weapon && slot.item.itemName!="" ) {
-		// 	for(int i = 0; i < equipmentSlots.Count; i++) {
-        //    AddItem(equipmentSlots[i].item);
-        //    RemoveEquippedItem(equipmentSlots[i]);
-		// 	}
-			
-		// }
-//		}
-//when player equip item must set und add set state with player
-// 
-//		if(item.hasSet==true){
-//			player.hasSet=true;
-//			hasSet=true;
-//			int tmpSno = 0;
-//			//
-//			string tmpSetName = item.setName;
-//			PlayerPrefs.SetString("PlayerSetName",item.setName);
-//			for(int i=0;i<equipmentSlots.Count;i++){
-//				if(equipmentSlots[i].item.setName==tmpSetName){
-//						tmpSno++;
-//						if(tmpSno==2){
-//							setNum=tmpSno;
-//							setName = tmpSetName;
-//							//Active target SetDetail1
-//							SetSetDetail(tmpSetName,2);
-//							PlayerPrefs.SetInt("PlayerSetNum",setNum);
-//							PlayerPrefs.SetString("PlayerSetName",setName);
-//						}
-//						//
-						
-//						if(tmpSno==3){
-//							setNum=tmpSno;
-//							//Active targe SetDetail2
-//SetSetDetail(tmpSetName,3);
-//PlayerPrefs.SetInt("PlayerSetNum",setNum);
-//						}
-//				}
-//			}
-//		}
 	}
 
 #region 套装配置
@@ -1226,7 +1186,7 @@ public void RemoveSet(){
 
 	public void SetSlotImageSprite(EquipmentSlot slot, Sprite sprite)
 	{
-		slot.itemIcon.sprite = slot.item.icon;
+		slot.itemIcon.sprite =  slot.item.icon;
 		slot.itemIcon.rectTransform.sizeDelta = new Vector2(slot.item.width * slotIconSize * slot.iconSclarFactor, slot.item.height * slotIconSize * slot.iconSclarFactor);
 		slot.itemIcon.gameObject.SetActive(true);
 	}

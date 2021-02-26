@@ -279,10 +279,12 @@ GUILayout.EndHorizontal();
 		  Debug.Log(ncard.CardName+"Load it");
 		  CardAsset nItem  = new CardAsset();
 		  nItem.name = ncard.CardName;
+		  nItem.ename=ncard.ECardName;
 		  nItem.ratityOption=GetCardRarity(ncard.CardRatity);
 		  nItem.tags=ncard.Tag;
 		 
  		  nItem.cardDetail = ncard.CardDetail;
+		   
  		nItem.cardSprite = Sprite.Create(ncard.CardSprite,new Rect(0,0,ncard.CardSprite.width,ncard.CardSprite.height),Vector3.zero);
  		  nItem.manaCost=ncard.CardMana;
  		  nItem.OverrideLimitOfThisCardsInDeck=ncard.OverrideLimitOfThisCardInDeck;
@@ -418,9 +420,9 @@ GUILayout.EndHorizontal();
 	   }else if (spellType == "CharacterArmor")
 	   {
 		   return SpellBuffType.CharacterArmor;
-	   }else if (spellType == "CHArmor")
+	   }else if (spellType == "CharacterAtk")
 	   {
-		   return SpellBuffType.CharacterArmor;
+		   return SpellBuffType.CharacterAtk;
 	   }
 	   else if(spellType=="FireArmor"){
 		   return SpellBuffType.Atk;
@@ -1115,6 +1117,7 @@ public void ClearAllItems(){
 					Debug.Log(geti.ItemName);
 					gdeItems.itemID = geti.ItemID;
 					gdeItems.itemName=geti.ItemName;
+					gdeItems.eitemName=geti.EItemName;
 					gdeItems.width =geti.Width;
 					gdeItems.height =geti.Height;
 					gdeItems.itemRatity=GetRatity(geti.RatityType);
@@ -1132,6 +1135,7 @@ public void ClearAllItems(){
 					gdeItems.iconName =  geti.IconSprite;
 					//
 					gdeItems.descriptionText= geti.ItemDescription;
+					gdeItems.eItemDetail=geti.EItemDescription;
 					gdeItems.itemLevel =geti.ItemLevel;
 					// gdeItems.unidentified= geti.Unidentified;
 					

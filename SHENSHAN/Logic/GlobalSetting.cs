@@ -8,7 +8,7 @@ using PixelCrushers;
 using GameDataEditor;
 using TMPro;
 using Mirror;
-
+using  PixelCrushers.DialogueSystem;
 
 
 
@@ -382,6 +382,10 @@ LoadCard();
 
 
         
+    }
+
+    public void StartCon(string cn){
+        DialogueManager.StartConversation(cn);
     }
     
     public void HidePanel()

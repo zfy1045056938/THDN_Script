@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using DG.Tweening;
 using PixelCrushers.DialogueSystem;
+using System;
 
 
 // this class will take care of switching turns and counting down time until the turn expires
@@ -20,7 +21,7 @@ public class TurnManager : MonoBehaviour {
 
     // PRIVATE FIELDS
     // reference to a timer to measure 
-    private RopeTimer timer;
+    public RopeTimer timer;
 
    
     
@@ -57,13 +58,17 @@ public class TurnManager : MonoBehaviour {
     }
 
 
+///
+   
+
+
     // METHODS
-//    void Awake()
-//    {
-//        Players = GameObject.FindObjectsOfType<Players>();
-//        instance = this;
-//        timer = GetComponent<RopeTimer>();
-//    }
+    //    void Awake()
+    //    {
+    //        Players = GameObject.FindObjectsOfType<Players>();
+    //        instance = this;
+    //        timer = GetComponent<RopeTimer>();
+    //    }
 
 
 
@@ -144,8 +149,7 @@ public class TurnManager : MonoBehaviour {
                 GlobalSetting.instance.lowPlayer.playerArea.playerPortraitVisual.LoadStatsFromAsset();
                 p.LoadBattleInfo(BattleStartInfo.player);
                 p.playerArea.playerPortraitVisual.LoadNames();
-                //
-                Debug.Log("Load Player Done");
+       
             }
             else if(p==GlobalSetting.instance.topPlayer){
              p.LoadEnemyAssetFromVisual(p,BattleStartInfo.GameDifficult);
@@ -189,7 +193,7 @@ public class TurnManager : MonoBehaviour {
        s.OnComplete(() =>
        {
            // determine who starts the game.
-           int rnd = Random.Range(0, 2); // 2 is exclusive boundary
+           int rnd = UnityEngine.Random.Range(0, 2); // 2 is exclusive boundary
            Debug.Log("rnd is "+rnd);
            // Debug.Log(Players.Playerss.Length);
             Players whoGoesFirst = Players[rnd];
@@ -231,7 +235,7 @@ public class TurnManager : MonoBehaviour {
         foreach(Players s in Players){
             Debug.Log(s.name+"\n\n");
         }
-        int rnd = Random.Range(0,2);  // 2 is exclusive boundary
+        int rnd = UnityEngine.Random.Range(0,2);  // 2 is exclusive boundary
         Debug.Log("rnd"+rnd);
         Players whoGoesFirst = Players[rnd];
         Debug.Log(whoGoesFirst);

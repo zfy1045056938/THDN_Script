@@ -10,7 +10,6 @@ public class CraftMaterials : MonoBehaviour,IPointerEnterHandler,IPointerExitHan
     
     public TextMeshProUGUI current;
    
-    //
     public Image icon;
     public Items mItem;
     private CraftManager crafting;

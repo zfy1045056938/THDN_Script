@@ -5,9 +5,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
-
+using PixelCrushers.DialogueSystem;
 //List Items
-public class CraftButton : MonoBehaviour,IPointerClickHandler
+public class CraftButton : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler
 {
 
 	public CraftedItem item;
@@ -87,5 +87,11 @@ public class CraftButton : MonoBehaviour,IPointerClickHandler
     	
     	CraftManager.instance.ChangeCraftingItem(this);
 
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+    //    TooltipManager.instance.ShowTooltip(false,item.item,SlotType.Crafting,1,this.GetComponent<RectTransform>(),false);
+	CraftManager.instance.ShowItem(item.item);
     }
 }
