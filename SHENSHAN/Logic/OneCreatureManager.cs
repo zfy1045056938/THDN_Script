@@ -158,7 +158,7 @@ public class OneCreatureManager:MonoBehaviour
             case  SpellBuffType.Armor:
             Debug.Log("ARMOR EFFECT");
              SoundManager.instance.PlaySound(GlobalSetting.instance.armorClip);
-                SoundManager.instance.PlaySound(GlobalSetting.instance.weaponClip);
+      
                 cl.CreatureDef += amount;
                 defText.text = cl.CreatureDef.ToString();
                 
@@ -169,7 +169,7 @@ public class OneCreatureManager:MonoBehaviour
                 TurnManager.instance.WhoseTurn.CreatureDef += amount;
                 TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.defText.text =
                     TurnManager.instance.WhoseTurn.CreatureDef.ToString();
-                TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.ArmorImage.gameObject.SetActive(true);
+                //TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.ArmorImage.gameObject.SetActive(true);
                 break;
             case SpellBuffType.FireArmor:
 TurnManager.instance.WhoseTurn.CreatureDef += amount;
@@ -201,81 +201,7 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
                     c.CreatureAtk += amount;
                 }
                 break;
-            
-            // case SpellBuffType.AtkDur:
-            //     SoundManager.instance.PlaySound(GlobalSetting.instance.weaponClip);
-            //     // TurnManager.instance.WhoseTurn.atkDur += amount;
-            //     TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.atkDurText.text =TurnManager.instance.WhoseTurn.atkDur.ToString();
-            //     break;
-            // case  SpellBuffType.DEX:
-            //     Debug.Log("SpellBuff ----> Dex");
-            //     // TurnManager.instance.WhoseTurn.DEX += amount;
-            //     TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.InteText.text =  TurnManager.instance.WhoseTurn.DEX.ToString();
-            //     if ( TurnManager.instance.WhoseTurn.DEX % 3 == 0)
-            //     {
-            //          TurnManager.instance.WhoseTurn.DEX += 1;
-            //     }
-            //     break;
-            // case SpellBuffType.INT:
-            //     //cl change to player
-            // Debug.Log("SpellBuff ----> INTE");
-            //     TurnManager.instance.WhoseTurn.INTE += amount;
-            //     TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.InteText.text =  TurnManager.instance.WhoseTurn.INTE.ToString();
-            //     if ( TurnManager.instance.WhoseTurn.INTE % 3 == 0)
-            //     {
-            //          TurnManager.instance.WhoseTurn.INTE += 1;
-            //     }
-            //     break;
-            //       case SpellBuffType.ExtraSpell:
-            //       Debug.Log("Extra Spell");
-            //    TurnManager.instance.WhoseTurn.ExtraSpellDamage +=amount;
-            //    TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.ExtraSDText.text=TurnManager.instance.WhoseTurn.ExtraSpellDamage.ToString();
-            //     break;
-            // case  SpellBuffType.STR:
-            //    Debug.Log("SpellBuff ----> STR");
-            //     TurnManager.instance.WhoseTurn.STR += amount;
-            //     TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.StrText.text =  TurnManager.instance.WhoseTurn.STR.ToString();
-            //     if ( TurnManager.instance.WhoseTurn.STR % 3 == 0)
-            //     {
-            //          TurnManager.instance.WhoseTurn.STR += 1;
-            //     }
-            //     break;
-//            case SpellBuffType.Bloody:
-//                //Add Icon with 3 round
-//                cl.MaxHealth -= 1;
-//                DamageEffect.CreateDamageEffect(transform.position,amount);
-//                //
-//                CreateBuffIcon(SpellBuffType.Bloody, round);
-//                cl.CreatureAtk += amount;
-//                atkText.text = cl.CreatureAtk.ToString();
-//                healthText.text = cl.MaxHealth.ToString();
-//                healthText.color = Color.red;
-//                atkText.color = Color.green;
-//                break;
-            case SpellBuffType.Taunt:
-                SoundManager.instance.PlaySound(GlobalSetting.instance.armorClip);
-                cl.Taunt=true;
-                TauntImage.gameObject.SetActive(true);
-                break;
-            case SpellBuffType.HurtTaunt:
-            //荆棘状态,受到伤害对攻击方造成荆棘伤害
-            Debug.Log("HUrt Taunt ================>Active,amount ist"+amount);
-               TurnManager.instance.WhoseTurn.CreatureDef += amount;
-            //    TurnManager.instance.WhoseTurn.hasHurtDef=true;
-            //    TurnManager.instance.WhoseTurn.hurtDef=1;
-               TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.defText.text= TurnManager.instance.WhoseTurn.CreatureDef.ToString();
-               TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.ArmorSprite.sprite =  TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.HurtDefSprite;
-               
-                break;
-            // case SpellBuffType.CharacterArmor:
-            //     cl.HasHurtTaunt=true;
-            //     cl.CreatureDef += amount;
-            //    defImage.sprite = hurtArmor;
-            //     defImage.gameObject.SetActive(false);
-            //     cl.hurtDef+=1;
-            //     defText.text = cl.CreatureDef.ToString();
-            // break;
-
+           
 
             case SpellBuffType.TableAmount:
                 Debug.Log("Table amount");
@@ -299,12 +225,14 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
                     cl.CreatureDef += amount;
                     defText.text = cl.CreatureDef.ToString();
                     defImage.gameObject.SetActive(true);
+                defText.color = Color.green;
                 
                 break;
             case SpellBuffType.MachineAtk:
                 SoundManager.instance.PlaySound(GlobalSetting.instance.machineClip);
                     cl.CreatureAtk += amount;
                     atkText.text = cl.CreatureAtk.ToString();
+                atkText.color = Color.green;
                 
             break;
              case SpellBuffType.MachineHeal:
@@ -399,11 +327,30 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
             
         }
     }
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="type"></param>
+    /// <param name="r"></param>
+    /// <param name="a"></param>
+    /// <param name="first"></param>
     public void CreateVBT(DamageElementalType type,int r,int a,bool first){
-        GameObject o = Instantiate(GlobalSetting.instance.viewEffectPrefab,vbtPos.position,Quaternion.identity)as GameObject;
-        o.transform.SetParent(vbtPos);
-        o.GetComponent<ViewEffectTabs>().typeText.text= type.ToString();
-        switch(type){
+
+        GameObject o = null;
+        if (first == true)
+        {
+            //The first for das creature create buff icon
+            GameObject os = Instantiate(GlobalSetting.instance.viewEffectPrefab, vbtPos.position, Quaternion.identity) as GameObject;
+            os.transform.SetParent(vbtPos);
+            os.GetComponent<ViewEffectTabs>().typeText.text = type.ToString();
+
+            o = os;
+        }
+
+        //
+            switch(type){
             case DamageElementalType.Electronic:
         o.GetComponent<ViewEffectTabs>().detailText.text=string.Format("麻痹状态,{0}回合内失去{1}点攻击",r,a);
         break;
@@ -419,6 +366,11 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
         o.GetComponent<ViewEffectTabs>().detailText.text=string.Format("流血状态,{0}回合里每回合受到{1}点伤害",r,a);
         
         break;
+            case DamageElementalType.Freeze:
+                o.GetComponent<ViewEffectTabs>().detailText.text = string.Format("冻结状态,{0}回合里无法行动", r);
+
+                break;
+
         }
         //
         viewBuffTabs.Add(o);
@@ -433,7 +385,14 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
 
         return count;
     }
-    
+
+    /// <summary>
+    /// TODO 227 generate buff icon at the left side the creature show
+    /// 
+    /// </summary>
+    /// <param name="type"></param>
+    /// <param name="round"></param>
+    /// <param name="amount"></param>
     public void CreateBuffIcon(DamageElementalType type, int round,int amount)
     {
         GameObject obj  = Instantiate(GlobalSetting.instance.buffIcon,buffPos.position,Quaternion.identity)as GameObject;
@@ -467,6 +426,7 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
     /// 与buff不同的是获得伤害性持续效果,在每回合开始受到伤害,buff效果为基础属性增益,damageeffect为伤害性属性增益,
     /// Resistance effect  r influence to indie effect
     /// the total damage = effect.value + esd + (!Resistance )+ stats
+    /// TODO 2021-2-27 change the effecet(burning&posion&paralysis&freeze -> extra effect if contains 
     /// </summary>
     /// <param name="cl"></param>
     /// <param name="amount"></param>
@@ -475,27 +435,30 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
     /// <param name="type"></param>
     public void ElementalBuff(CreatureLogic cl,int amount, int roundTime, DamageElementalType type)
     {
-             bool hasEffect=false;
+             //bool hasEffect=false;
 
         var gf = GlobalSetting.instance;
-        //Check has Elemental
-        for(int i=0;i<buffList.Count;i++){
-            if(buffList[i].GetComponent<BuffIcon>().det==type){
-                //has effect just add round time
-                Debug.Log("Has Effect just add round");
-                UpdateRound(type,roundTime,amount);
-                hasEffect=true;
-            }
-        }
+        
+        ////Check has Elemental
+        //Debug.Log("Check contains effect ,if have update round und add extra effect");
+        //for(int i=0;i<buffList.Count;i++){
+        //    if(buffList[i].GetComponent<BuffIcon>().det==type){
+        //        //has effect just add round time
+        //        Debug.Log("Has Effect just add round");
+        //        UpdateRound(type,roundTime,amount);
+        //        hasEffect=true;
+        //    }
+        //}
         
 
-        if(hasEffect==false){
+        //if(hasEffect==false){
          //cl.HasAura = true;
         //if has extra spell  b.v+esp
         //int esp = 0;        
             switch (type)
             {
                 case DamageElementalType.Posion:
+                    //TODO 2-27 damage-= round >0 if contains += totalDamage , cause damage at the begin of the turn und minus total damage
                   SoundManager.instance.PlaySound(GlobalSetting.instance.posionClip);
                     //OnTurnStart amoun-1>0
                     Debug.Log("Posion Effect Cause");
@@ -515,47 +478,68 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
                     //
                     GlobalSetting.instance.SETLogs(string.Format("毒液伤害{0}回合内造成{1}点伤害",roundTime,amount));
                     }else{
-                        UpdateRound(type,roundTime,amount);
-                    }
-                    // Updat ps
-                    gf.posionEffect.Play();
-                    break;
-                case DamageElementalType.Bloody:
-                    Debug.Log("DE Active ===> Bloody" );
-                    SoundManager.instance.PlaySound(GlobalSetting.instance.bloodyClip);
-                    //每回合失去1点血,攻击增加1
-                    GetDamageByDET(cl,type,amount);
-                    healthText.text = cl.MaxHealth.ToString();
-                    atkText.text=cl.CreatureAtk.ToString();
-                    healthText.color=Color.red;
-                    CreateBuffIcon(type,roundTime,amount);
-                    //Glogs
-                   GlobalSetting.instance.SETLogs(string.Format("3回合内每回合造成{0}点伤害",amount));
-
-                    //pre init delay
-                    gf.bloodEffect.Play();
-                    break;
-                case DamageElementalType.Electronic:
-                  SoundManager.instance.PlaySound(GlobalSetting.instance.elecClip);
-                  
-                    // if(TurnManager.instance.WhoseTurn.hasESD==true){
-                    //    amount += TurnManager.instance.WhoseTurn.ExtraSpellDamage;
-                    //}
-                  
-                     GlobalSetting.instance.SETLogs(string.Format("麻痹状态,伤害降至为0,持续两回合"));
-                    if(cl.HasElec==false){
-
-                    cl.HasElec = true;
-                    int eb = 0;
-                   cl.CreatureAtk =eb;
-                   atkText.text = cl.CreatureAtk.ToString();
-                    CreateBuffIcon(type,roundTime,amount);
-                    }else{
-                        //Add Round
-                        UpdateRound(type,roundTime);
+                        cl.PosPoint += amount;
                     }
                     //
-                    gf.electronicEffect.Play();
+                GlobalSetting.instance.ShowEffect(DamageElementalType.Posion);
+                    break;
+                case DamageElementalType.Bloody:
+                    //d -- / r++ if(hasbloody) dd *= amonut*2
+                    //cause damage at the begin of turn  
+                    Debug.Log("DE Active ===> Bloody" );
+                
+                    SoundManager.instance.PlaySound(GlobalSetting.instance.bloodyClip);
+                if (cl.HasBloody == true)
+                {
+                    int td = (amount + TurnManager.instance.WhoseTurn.ExtraSpellDamage) * 2;
+                    DamageToTarget(cl,td);
+                    UpdateRound(DamageElementalType.Bloody,roundTime);
+                    CreateVBT(type, roundTime, amount, false);
+                }
+                else
+                {
+                    cl.HasBloody = true;
+                    //每回合失去1点血,攻击增加1
+                    //GetDamageByDET(cl,type,amount);
+                    //healthText.text = cl.MaxHealth.ToString();
+                    //atkText.text = cl.CreatureAtk.ToString();
+                    //DamageToTarget(amount);
+                    healthText.color = Color.red;
+                    atkText.color = Color.red;
+                    CreateBuffIcon(type, roundTime, amount);
+                    CreateVBT(type,roundTime,amount,true);
+                    //Glogs
+                    GlobalSetting.instance.SETLogs(string.Format("3回合内每回合造成{0}点伤害", amount));
+                }
+                //pre init delay
+                GlobalSetting.instance.ShowEffect(DamageElementalType.Bloody);
+                    break;
+                case DamageElementalType.Electronic:
+                    //TODO 2-27 update paralysis damage und minus atk in round
+                  SoundManager.instance.PlaySound(GlobalSetting.instance.elecClip);
+              
+                     GlobalSetting.instance.SETLogs(string.Format("麻痹状态,伤害减少,持续两回合"));
+
+                DamageToTarget(cl,amount);
+
+                if (cl.HasElec == true)
+                {
+                    UpdateRound(type, roundTime);
+                }
+                else
+                {
+                    cl.HasElec = true;
+
+                    //cl.CreatureAtk -= amount ;
+
+                    atkText.text = cl.CreatureAtk.ToString();
+                    CreateBuffIcon(type, roundTime, amount);
+                    UpdateRound(type, roundTime);
+                }
+
+
+                //
+                GlobalSetting.instance.ShowEffect(DamageElementalType.Electronic);
 
                     break;
                 case DamageElementalType.Fire:
@@ -567,52 +551,74 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
                     if (cl.HasFire==false)
                     {
                         cl.HasFire = true;
-                        cl.MaxHealth -= amount;
 
+                    //DamageToTarget(amount+TurnManager.instance.WhoseTurn.ExtraSpellDamage);
+                    cl.burningPoint += (amount+TurnManager.instance.WhoseTurn.ExtraSpellDamage);
+                        //cl.MaxHealth -= amount;
+                        
                         CreateBuffIcon(type, roundTime, amount);
-                        GlobalSetting.instance.SETLogs(string.Format("燃烧效果触发,每回合造成{0}点伤害,持续3回合",amount));
+                    CreateVBT(type, roundTime, amount, true);
+                    GlobalSetting.instance.SETLogs(string.Format("燃烧效果触发,每回合造成{0}点伤害,持续3回合",amount));
                     }
                     else
                     {
-                        UpdateRound(type, roundTime,amount);
-                    }
-                    //
-                    gf.burningEffect.Play();
+                        //
+                        Debug.Log("Contains burning ,update round und amount,the maxround ist 3 just update amount ");
+                    cl.burningPoint += (amount + TurnManager.instance.WhoseTurn.ExtraSpellDamage);
+                    UpdateRound(type);
+                    CreateVBT(type, roundTime, amount, false);
+                }
+                //
+                GlobalSetting.instance.ShowEffect(DamageElementalType.Fire);
 
                     break;
                 
 
                 case DamageElementalType.Damage:
                     Debug.Log("Spell Damage to target");
-                    //int extraBouns =0;
+                //int extraBouns =0;
 
-                    //if(TurnManager.instance.WhoseTurn.hasESD){
-                    //    Debug.Log("Has EB und EB ist"+extraBouns.ToString());
-                    //    extraBouns = TurnManager.instance.WhoseTurn.ExtraSpellDamage;
-                    //    cl.MaxHealth -= (amount+extraBouns);
+                //if(TurnManager.instance.WhoseTurn.hasESD){
+                //    Debug.Log("Has EB und EB ist"+extraBouns.ToString());
+                //    extraBouns = TurnManager.instance.WhoseTurn.ExtraSpellDamage;
+                //    cl.MaxHealth -= (amount+extraBouns);
 
-                    //}else{
-                        cl.MaxHealth -= amount;
-                    //}
-                     healthText.text=  cl.MaxHealth.ToString();
-                    //
-                    gf.ESDBulletShoot(transform.position);
+                //}else{
+                //cl.MaxHealth -= amount;
+                //}
+                //healthText.text=  cl.MaxHealth.ToString();
+                //
+
+                DamageToTarget(cl,amount + TurnManager.instance.WhoseTurn.ExtraSpellDamage) ;
+                    GlobalSetting.instance.ShowEffect(DamageElementalType.Damage);
                     break;
                 case DamageElementalType.Freeze:
+                    //TODO 2-27 added damage if contains damage twice 
                 Debug.Log("FREEZE ACTIVE EFFECT");
                   SoundManager.instance.PlaySound(GlobalSetting.instance.freezeClip);
                     //冻结,无法行动,后期失去效果
-                    if(UnityEngine.Random.Range(0.0f,1.0f)>(amount/2)){
-                    cl.IsFreeze = true;
-                    GetDamageByDET(cl,type,amount);
-                    CreateBuffIcon(type,roundTime,amount);
-                    GlobalSetting.instance.SETLogs(string.Format("冰冻状态,1回合内无法行动"));
-                    }else{
-                        Debug.Log("No active ICE");
-                    }
+                    //TODO 2-27 removed freeze perc
 
-                    //
-                    gf.freezeEffect.Play();
+                    if (cl.IsFreeze == true)
+                    {
+                        //deal double amount to target
+                        Debug.Log("::FREEZE STATE:: , damage double amount to target");
+                    //cl.MaxHealth -= amount * 2;
+                    int cd = amount + TurnManager.instance.WhoseTurn.ExtraSpellDamage;
+                    DamageToTarget(cl,cd * 2);
+                    CreateVBT(type, roundTime, amount, true);
+                }
+                    else
+                    {
+
+                        cl.IsFreeze = true;
+                    //GetDamageByDET(cl, type, amount);
+                    DamageToTarget(cl,amount + TurnManager.instance.WhoseTurn.ExtraSpellDamage);
+                        CreateBuffIcon(type, roundTime, amount);
+                        GlobalSetting.instance.SETLogs(string.Format("冰冻状态,1回合内无法行动"));
+                    CreateVBT(type, roundTime, amount, false);
+                }
+                GlobalSetting.instance.ShowEffect(DamageElementalType.Freeze);
                       break;
                 case DamageElementalType.Rage:
                     //暴怒,伤害+,血量降至1
@@ -626,7 +632,7 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
                     gf.RangedAttackEffect.Play();
                     break;
                 case DamageElementalType.CanAtk:
-                    //击晕 无法行动k
+                    //击晕 无法行动
                     cl.AttacksForThisTurn = 0;
                     CreateBuffIcon(type,roundTime,amount);
                     break;
@@ -659,6 +665,7 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
                     SoundManager.instance.PlaySound(GlobalSetting.instance.AbsorbClip);
                     TurnManager.instance.WhoseTurn.MaxHealth += amount;
                     UpdateCharacterStats(SpellBuffType.Health,amount);
+                    GlobalSetting.instance.ShowEffect(DamageElementalType.Absorb);
                     break;
                 case DamageElementalType.AbsorbArmor:
                       Debug.Log("AbsorbArmor EFFECT ACTIVE und got amount ist"+amount);
@@ -719,77 +726,104 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
                 
             }
             
-        }else{
-            hasEffect=false;
-        }
+       
             atkText.text = cl.CreatureAtk.ToString();
             healthText.text = cl.MaxHealth.ToString();
             defText.text = cl.CreatureDef.ToString();
     }
 
+    /// <summary>
+    /// counter the total damage to target
+    /// check armor und damage to target
+    /// the amount include esd 
+    /// </summary>
+    /// <param name="amount"></param>
+    void DamageToTarget(CreatureLogic cl,int amount)
+    {
+        if (cl.CreatureDef -amount > 0)
+        {
+            cl.CreatureDef -= amount;
+        }else if(cl.CreatureDef-amount > 0)
+        {
+            int rd = cl.CreatureDef - amount;
+            cl.MaxHealth += rd;
+        }
+        else
+        {
+            cl.MaxHealth -= amount;
+        }
+    }
 
-
-    //TODO
+    //spell buff are control stats include (3v +resit+ c3v  )
+    // removed str/dex/inte/atkdur/defdur/ flash / hurttaunt
     public void UpdateCharacterStats(SpellBuffType type,int amount){
-        switch(type){
+        switch (type)
+        {
             case SpellBuffType.Health:
-            Debug.Log("Update Stat For Player == > Health :: num ist "+amount);
-            TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.healthText.text = TurnManager.instance.WhoseTurn.MaxHealth.ToString();
-            DamageEffect.ShowBuffEffect(transform.position,type,amount);
-            break;
+                Debug.Log("Update Stat For Player == > Health :: num ist " + amount);
+                TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.healthText.text = TurnManager.instance.WhoseTurn.MaxHealth.ToString();
+                DamageEffect.ShowBuffEffect(transform.position, type, amount);
+                break;
 
             case SpellBuffType.CharacterArmor:
-                 Debug.Log("Update Stat For Player == > CA :: num ist "+amount);
-            TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.defText.text = TurnManager.instance.WhoseTurn.CreatureDef.ToString();
-            DamageEffect.ShowBuffEffect(transform.position,type,amount);
-            break;
+                Debug.Log("Update Stat For Player == > CA :: num ist " + amount);
+                TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.defText.text = TurnManager.instance.WhoseTurn.CreatureDef.ToString();
+                DamageEffect.ShowBuffEffect(transform.position, type, amount);
+                break;
 
-            // case SpellBuffType.STR:
-            //  Debug.Log("Update Stat For Player == > STR :: num ist "+amount);
-            // TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.StrText.text = TurnManager.instance.WhoseTurn.STR.ToString();
-            // DamageEffect.ShowBuffEffect(transform.position,type,amount);
-
-            // break;
-
-            //  case SpellBuffType.DEX:
-            //   Debug.Log("Update Stat For Player == > DEX :: num ist "+amount);
-            // TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.DexText.text = TurnManager.instance.WhoseTurn.DEX.ToString();
-            // DamageEffect.ShowBuffEffect(transform.position,type,amount);
-
-            // break;
-            //  case SpellBuffType.INT:
-            //   Debug.Log("Update Stat For Player == > INTE :: num ist "+amount);
-            // TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.InteText.text = TurnManager.instance.WhoseTurn.INTE.ToString();
-            // DamageEffect.ShowBuffEffect(transform.position,type,amount);
-
-            // break;
 
             case SpellBuffType.Atk:
-             Debug.Log("Update Stat For Player == > ATK :: num ist "+amount);
-            TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.atkText.text = TurnManager.instance.WhoseTurn.CreatureAtk.ToString();
-            DamageEffect.ShowBuffEffect(transform.position,type,amount);
+                Debug.Log("Update Stat For Player == > ATK :: num ist " + amount);
+                TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.atkText.text = TurnManager.instance.WhoseTurn.CreatureAtk.ToString();
+                DamageEffect.ShowBuffEffect(transform.position, type, amount);
 
-            break;
-
-            // case SpellBuffType.AtkDur:
-            //  Debug.Log("Update Stat For Player == > AD :: num ist "+amount);
-            //  SoundManager.instance.PlaySound(GlobalSetting.instance.weaponClip);
-            //  TurnManager.instance.WhoseTurn.atkDur+=amount;
-            // TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.atkDurText.text = TurnManager.instance.WhoseTurn.atkDur.ToString();
-            // DamageEffect.ShowBuffEffect(transform.position,type,amount);
-
-            // break;
+                break;
 
         }
     }
 
-    public void UpdateRound(DamageElementalType det, int round,int amount=0)
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="det"></param>
+    /// <param name="round"></param>
+    /// <param name="amount"></param>
+    public void UpdateRound(DamageElementalType det, int round=0,int amount=0)
     {
         for (int i = 0; i < buffList.Count; i++)
         {
             if (buffList[i].GetComponent<BuffIcon>().det == det)
             {
-                buffList[i].GetComponent<BuffIcon>().round += round;
+                //update round
+                //TODO 2-27
+                switch (det)
+                {
+                    case DamageElementalType.Fire:
+                        buffList[i].GetComponent<BuffIcon>().round =3;
+                        break;
+                    case DamageElementalType.Freeze:
+                        buffList[i].GetComponent<BuffIcon>().round =2;
+                        break;
+                    case DamageElementalType.Electronic:
+                        buffList[i].GetComponent<BuffIcon>().round =2;
+                        break;
+                    case DamageElementalType.Posion:
+                        break;
+                    case DamageElementalType.Bloody:
+                        buffList[i].GetComponent<BuffIcon>().round += round;
+                        break;
+                    case DamageElementalType.AbsorbBurning:
+                        buffList[i].GetComponent<BuffIcon>().round =3;
+                        break;
+                    case DamageElementalType.AbsorbFreeze:
+                        buffList[i].GetComponent<BuffIcon>().round =2 ;
+                        break;
+                    case DamageElementalType.AbsorbPosion:
+                        break;
+                  
+
+                }
+                //buffList[i].GetComponent<BuffIcon>().round += round;
                 
                 buffList[i].GetComponent<BuffIcon>().amount += amount;
                 buffList[i].GetComponent<BuffIcon>().roundTime.text= buffList[i].GetComponent<BuffIcon>().round.ToString() ;
@@ -797,51 +831,61 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
         }
     }
 
-    public void GetDamageByDET(CreatureLogic cl,DamageElementalType types,int amount)
-    {
-        switch (types)
-        {
-            case DamageElementalType.Bloody:
-                cl.MaxHealth -= amount;
-                cl.CreatureAtk += 1;
-                healthText.text = cl.MaxHealth.ToString();
-                healthText.color=Color.red;
-                break;
-            case DamageElementalType.Electronic:   
-                cl.HasElec = true;
-                cl.CreatureAtk -= amount;
-                atkText.color=Color.yellow;    
-                break;
-            case DamageElementalType.Fire:             
-                cl.MaxHealth-=amount;
-                break;
-            case DamageElementalType.Freeze:
-                cl.IsFreeze = true;  
+    //public void GetDamageByDET(CreatureLogic cl,DamageElementalType types,int amount)
+    //{
+    //    switch (types)
+    //    {
+    //        case DamageElementalType.Bloody:
+    //            cl.MaxHealth -= amount;
+    //            cl.CreatureAtk += 1;
+    //            healthText.text = cl.MaxHealth.ToString();
+    //            healthText.color=Color.red;
+    //            break;
+    //        case DamageElementalType.Electronic:   
+    //            cl.HasElec = true;
+    //            cl.CreatureAtk -= amount;
+    //            atkText.color=Color.yellow;    
+    //            break;
+    //        case DamageElementalType.Fire:             
+    //            cl.MaxHealth-=amount;
+    //            break;
+    //        case DamageElementalType.Freeze:
+    //            cl.IsFreeze = true;  
                
-                break;
-            case DamageElementalType.Rage:
-                cl.Rage = true;
-                cl.MaxHealth -= cl.MaxHealth + 1;
-                cl.CreatureAtk += 3;
+    //            break;
+    //        case DamageElementalType.Rage:
+    //            cl.Rage = true;
+    //            cl.MaxHealth -= cl.MaxHealth + 1;
+    //            cl.CreatureAtk += 3;
                 
-                break;
+    //            break;
           
                 
-        }
-    }
+    //    }
+    //}
 
+    /// <summary>
+    /// Start turn when creature has effect 
+    /// </summary>
+    /// <param name="cl"></param>
     public void UpdateBuff(CreatureLogic cl)
     {
         Debug.Log("ROUND UPDATE BUFF");
         for (int i = 0; i < buffList.Count; i++)
         {
-           
+            //turn start minus round
+
+            buffList[i].GetComponent<BuffIcon>().round--;
+
+            //Check round 
             if (buffList[i].GetComponent<BuffIcon>().round > 0)
             {
                
 //                GetDamageByDET(cl,buffList[i].GetComponent<BuffIcon>().det,buffList[i].GetComponent<BuffIcon>().amount);
                 RoundUpdateBuff(cl, buffList[i].GetComponent<BuffIcon>().det,
                     buffList[i].GetComponent<BuffIcon>().amount);
+
+                //
                 if (buffList[i].GetComponent<BuffIcon>().round <= 0)
                 {
                      ResetEffect(cl,buffList[i].GetComponent<BuffIcon>().det);
@@ -849,7 +893,7 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
                     
                 }
                 
-                buffList[i].GetComponent<BuffIcon>().round--;
+               
                 buffList[i].GetComponent<BuffIcon>().roundTime.text = buffList[i].GetComponent<BuffIcon>().round.ToString();
             }
             else
@@ -901,9 +945,10 @@ TurnManager.instance.WhoseTurn.CreatureDef += amount;
                 cl.AttacksForThisTurn=0;
                 break;
             case DamageElementalType.Fire:
-                cl.MaxHealth-=1;
+                cl.MaxHealth-= amount;
                 break;
             case DamageElementalType.Ice:
+                cl.AttacksForThisTurn = 0;
                 break;
             case DamageElementalType.Rage:
                 break;

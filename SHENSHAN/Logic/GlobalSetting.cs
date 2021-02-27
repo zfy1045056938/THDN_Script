@@ -411,6 +411,45 @@ LoadCard();
 
     }
 
+    /// <summary>
+    /// Spell Effect by det , Common spell likes strike as damage bullet shoot target 
+    /// </summary>
+    /// <param name="edType"></param>
+    public void ShowEffect(DamageElementalType edType)
+    {
+        switch (edType)
+        {
+            case DamageElementalType.Absorb:
+                break;
+            case DamageElementalType.AbsorbArmor:
+                break;
+            case DamageElementalType.AbsorbBloody:
+                break;
+            case DamageElementalType.AbsorbBurning:
+                break;
+            case DamageElementalType.AbsorbFreeze:
+                break;
+            case DamageElementalType.AbsorbPosion:
+                break;
+            case DamageElementalType.Fire:
+                break;
+            case DamageElementalType.Freeze:
+                break;
+            case DamageElementalType.Posion:
+                break;
+            case DamageElementalType.Electronic:
+                break;
+            case DamageElementalType.Bloody:
+                break;
+            case DamageElementalType.Rage:
+                break;
+            case DamageElementalType.Damage:
+                //
+                break;
+
+        }
+    }
+
     #endregion
 }
 

@@ -20,10 +20,12 @@ public class CreatureLogic : ICharacter
 
 
     public CardEffects cardEffects = CardEffects.None;
+
+    //Effect counter  collect creature elemental effect state
     public int UniqueCreatureId;
-    private bool frozen = false;
+    //private bool frozen = false;
     private bool taunt = false;
-    private bool hasHurtTaunt = false;
+    //private bool hasHurtTaunt = false;
     private bool isFreeze = false;
     private bool hasAura = false;
     private bool hasBuff = false;
@@ -33,7 +35,8 @@ public class CreatureLogic : ICharacter
     private bool hasFire = false;
     private bool hasIce = false;
     private bool hasPosion = false;
-    private int posPoint = 0;
+    public int posPoint = 0;
+    public int burningPoint = 0;
     private bool hasElec = false;
     private bool hasBloody = false;
     private bool machine = false;

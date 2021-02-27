@@ -352,6 +352,8 @@ public class Players : MonoBehaviour, ICharacter
 
     public virtual void OnTurnStart()
     {
+
+        //who begin the das round 
         if (StartTurnEvent != null)
         {
             StartTurnEvent.Invoke();

@@ -102,9 +102,9 @@ public class DealDamageCommand : Command
               case DamageElementalType.Electronic:
               target.GetComponent<OneCreatureManager>().ElementalBuff(cl,amount,roundTime,det);
                   break;
-              case DamageElementalType.Freeze:
-              target.GetComponent<OneCreatureManager>().ElementalBuff(cl,amount,roundTime,det);
-                  break;
+              //case DamageElementalType.Freeze:
+              //target.GetComponent<OneCreatureManager>().ElementalBuff(cl,amount,roundTime,det);
+              //    break;
           }
       }
 
