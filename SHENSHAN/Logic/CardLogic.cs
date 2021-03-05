@@ -68,10 +68,6 @@ public class CardLogic : IIdentifiable
 
       
         ResetManaCost();
-
-
-       
-        
         
         Debug.Log("PRE LOAD SPN"+ca.spellScriptName);
       
@@ -82,6 +78,8 @@ public class CardLogic : IIdentifiable
             spellEffect.owner = owner; 
             
         } 
+
+
 
          if(ca.typeOfCards==TypeOfCards.Common){
         Debug.Log("Common Set Bouns");

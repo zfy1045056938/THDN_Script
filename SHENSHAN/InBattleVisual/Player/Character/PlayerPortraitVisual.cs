@@ -396,14 +396,14 @@ public class PlayerPortraitVisual:MonoBehaviour
 
             //load armor
             defText.text = playerData.ArmorDef.ToString();
-            if (playerData.ArmorDef > 0)
-            {
-                ArmorImage.gameObject.SetActive(true);
-            }
-            else
-            {
-                ArmorImage.gameObject.SetActive(false);
-            }
+            // if (playerData.ArmorDef > 0)
+            // {
+            //     ArmorImage.gameObject.SetActive(true);
+            // }
+            // else
+            // {
+            //     ArmorImage.gameObject.SetActive(false);
+            // }
 
             //
             // if(BattleStartInfo.player.Strength>0){

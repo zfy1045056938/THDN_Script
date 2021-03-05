@@ -132,6 +132,7 @@ public class DeckStorge : MonoBehaviour
 
     public CharacterAsset LoadCharacterFromGDE(string cn)
     {
+        Debug.Log("casset " + cn);
         List<GDECharacterAssetData> gad = GDEDataManager.GetAllItems<GDECharacterAssetData>();
 
         for(int i = 0; i<gad.Count;i++)

@@ -9,63 +9,67 @@ using UnityEngine.UI;
 public class CustomCursor
 {
     public string cursorName;
-    public Sprite cursorImage;
+    public Texture2D cursorImage;
 }
 public class CursorManager : MonoBehaviour
 {
-//     public List<CustomCursor> cursorList;
-//     private static List<CustomCursor> cursor;
-    private static  Image image;
+    public static CursorManager instance;
+    public List<CustomCursor> cursorList;
+    private static List<CustomCursor> cursor;
+    public   Image cimage;
 
-    public void Start()
-    {
-        // cursor = cursorList;
-        image = GetComponent<Image>();
+
+ private void Start() {
+      instance=this;
+        cursor = cursorList;
+        // cimage = GetComponent<Image>();
         UnityEngine.Cursor.visible = false;
         
+        ChangeCursor("Common");
         
-    }
+}
+  
 
     public void Update()
     {
-        // cursor = cursorList;
+        cursor = cursorList;
 
-        image = GetComponent<Image>();
-
-        if (image.enabled)
-        {
-            image.rectTransform.position =
-                new Vector3(
-                    Input.mousePosition.x + image.rectTransform.sizeDelta.x * image.rectTransform.lossyScale.x *0.4f ,
-                    Input.mousePosition.y - image.rectTransform.sizeDelta.x *
-                    image.rectTransform.lossyScale.y *0.4f  , 0f);
+       
+        
+            // cimage.rectTransform.position =
+            //     new Vector3(
+            //         Input.mousePosition.x + cimage.rectTransform.sizeDelta.x * cimage.rectTransform.lossyScale.x *0.4f ,
+            //         Input.mousePosition.y - cimage.rectTransform.sizeDelta.x *
+            //         cimage.rectTransform.lossyScale.y *0.4f  , 0f);
                 
 
         // }
-        // UnityEngine.Cursor.SetCursor(image,new Vector2(1000.0f,1000.0f),CursorMode.ForceSoftware);
+       
+    }
+
+    public  void HideCursor()
+    {
+        cimage.enabled = false;
+    }
+
+    public  void ShowCursor()
+    {
+        cimage.enabled = true;
+    }
+
+    public  void ChangeCursor(string cursorName)
+    {
+        for (int i = 0; i < cursor.Count; i++)
+        {
+            if (cursor[i].cursorName ==cursorName)
+            {
+                cimage.sprite = Utils.CreateSprite(cursor[i].cursorImage);
+                 UnityEngine.Cursor.SetCursor(cimage.sprite.texture,new Vector2(1.0f,1.0f),CursorMode.ForceSoftware);
         
-    }
-
-    // public static void HideCursor()
-    // {
-    //     image.enabled = false;
-    // }
-
-    // public static void ShowCursor()
-    // {
-    //     image.enabled = true;
-    // }
-
-    // public static void ChangeCursor(string cursorName)
-    // {
-    //     for (int i = 0; i < cursor.Count; i++)
-    //     {
-    //         if (cursor[i].cursorName ==cursorName)
-    //         {
-    //             image.sprite = cursor[i].cursorImage;
-    //         }
+                
+            }
             
-    //     }
-    // }
+        }
     }
+    
 }

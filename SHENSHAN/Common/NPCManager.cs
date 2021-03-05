@@ -66,12 +66,14 @@ public class NPCManager : Entity,IPointerEnterHandler,IPointerExitHandler,IPoint
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        // glowImage.gameObject.SetActive(true);
+        glowImage.gameObject.SetActive(true);
+        // TownManager.instance.ShowPopup(this);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        // glowImage.gameObject.SetActive(false);
+        glowImage.gameObject.SetActive(false);
+        // TownManager.instance.ShowPopup(null);
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -90,16 +92,18 @@ public class NPCManager : Entity,IPointerEnterHandler,IPointerExitHandler,IPoint
     }
     private void OnMouseEnter() {
        outline.enabled=true;
+    //    TownManager.instance.ShowPopup(this);
    }
 
    private void OnMouseExit() {
        outline.enabled=false;
+    //    TownManager.instance.ShowPopup(null);
    }
      private void OnMouseDown() {
 
         //  faceCamera.Priority=200;
         if(Utils.IsClickUI())return;
-         PlayerData.localPlayer.target=this;
+         FindObjectOfType<PlayerData>().target=this;
             Debug.Log("player select target ist"+PlayerData.localPlayer.target);
                 if(converName!=null ){
                     Debug.Log("Start con"+converName.ToString());

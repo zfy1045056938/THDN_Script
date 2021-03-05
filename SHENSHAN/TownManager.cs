@@ -16,12 +16,13 @@ using Cinemachine;
 using TMPro;
 using Michsky.LSS;
 using Michsky.UI.Zone;
-
+using Steamworks;
 using TravelSystem;
 
 ///
 public class TownManager : MonoBehaviour
 {
+    
     public UIPanel content;
    
     public MapLocation mapLocation;
@@ -103,7 +104,9 @@ public class TownManager : MonoBehaviour
     public CinemachineVirtualCamera worldMapCamera;
 
 
-    public UIPanel worldMap;
+    public GameObject worldMap;
+
+    public List<GameObject> areaList;
 
     [Header("BottomUI")] public Button CollectionBtn;
     public Button CurrCardBtn;
@@ -124,6 +127,13 @@ public class TownManager : MonoBehaviour
 
     public GameObject FtObj;
     public Transform Ftpos;
+
+    [Header(" Popup")]
+    public GameObject popupObj;
+    public TextMeshProUGUI nameText;
+
+
+    public static string currentLanguage = "ch";
     private void Awake()
     {
         instance = this;
@@ -146,7 +156,6 @@ public class TownManager : MonoBehaviour
 
     void Start(){
         
-
         AssetBundle.UnloadAllAssetBundles(true);
         Resources.UnloadUnusedAssets();
 
@@ -294,6 +303,8 @@ public class TownManager : MonoBehaviour
 
     gameCamera.LookAt=manager.selectionLocations[0];
     }
+    
+    
    void LoadTownData(string map)
    {
        Debug.Log("Load Map"+map.ToString());
@@ -322,7 +333,7 @@ int m=0;
                 {
                     PlayerPrefs.SetString("locName",map);
                 }
-                Debug.Log("load map"+tLoc.ToString());
+                // Debug.Log("load map"+tLoc.ToString());
             }
         }
 
@@ -346,24 +357,17 @@ int m=0;
             Debug.Log("Can't Load Scene");
         }
     
-        // Load Camera
-         //CamPos
-            // Debug.Log("Add Camera");
-        //   if(mapLocation.DireAsset!=null){
-        //       GameObject o = LoadItemFromAB(mapLocation.DireAsset.model,mapLocation.DireAsset);
-        //     o.transform.position=new Vector3(mapLocation.camPos.x,mapLocation.camPos.y,mapLocation.camPos.z);
-        //     Debug.Log(o.transform.position);
-        //     npcModels.Add(o);
-        //   }else{
-        //         Debug.Log("NO CAMERA");
-        //   }
-        // mainCamera.transform.position = mapLocation.cameraPos;
+       
         if (mapLocation != null)
         {
             //Load Location Data
+            if(TownManager.CheckLan()==true){
             locationText.text = mapLocation.locationName;
+            }else{
+                locationText.text = mapLocation.elocationName;
+            }
             locationBG.sprite = mapLocation.locationBG;
-            loactionDetail.text = mapLocation.locationDetail;
+            // loactionDetail.text = mapLocation.locationDetail;
             leaveTownText.text = "离开"+mapLocation.locationName.ToString();
             locationEnemy = new List<EnemyAsset>();
             foreach (EnemyAsset ea in mapLocation.enemyList)
@@ -395,10 +399,7 @@ int m=0;
                         Debug.Log("AB LOAD MODEL"+locationEnemy[i].EnemyName);
                         enemyModel =  LoadItemFromAB(locationEnemy[i].model,locationEnemy[i]);
                         
-                            
-//    if(enemyModel!=null){
-//      enemyModel.transform.position= new Vector3(mapLocation.enemyPos[m].x,mapLocation.enemyPos[m].y,mapLocation.enemyPos[m].z);
-//    }
+
    m++;
        
                     Debug.Log("Got Enemy Module");
@@ -429,14 +430,6 @@ int m=0;
                         
                         
                         
-        //                 if(nModel!=null){
-        //   enemyObj.GetComponent<NPCManager>().model=nModel;
-        //                 }else{
-        //                     Debug.Log(" Null Model");
-        //                 }
-                        // eman.avaSprite.sprite = locationEnemy[i].Head;
-                        // eman.frameSprite.sprite = locationEnemy[i].Frame;
-                        // eman.isLock = locationEnemy[i].isLock;
                         
                         //if has pack set to enemy deck selection
                         if(locationEnemy[i].hasCard&&atDungeon==false){
@@ -445,7 +438,12 @@ int m=0;
                         enemyPack.transform.localScale = new Vector3(1,1,1);
                         enemyPack.GetComponent<EnemyPortraitVisual>().enemyAsset = locationEnemy[i];
                         enemyPack.GetComponent<EnemyPortraitVisual>().EnemyHead.sprite = locationEnemy[i].Head;
+                        //
+                        if(TownManager.CheckLan()){
                         enemyPack.GetComponent<EnemyPortraitVisual>().EnemyName.text = locationEnemy[i].EnemyName;
+                        }else{
+                             enemyPack.GetComponent<EnemyPortraitVisual>().EnemyName.text = locationEnemy[i].eEnemyName;
+                        }
                         //
                          //Sell Items if is merchant
                        
@@ -478,27 +476,7 @@ int m=0;
                             }
                         }
 
-                        // NetworkServer.Spawn(enemyObj);
-                        // enemyObj.transform.parent = npcPos;
-                        // //
-                        // int ll =PlayerPrefs.GetInt(locationEnemy[i].EnemyName+"isLock"); 
-                        // if(ll==0){
-                        //     enemyObj.gameObject.SetActive(true);
-                        // }else if (ll == 1)
-                        // {
-                        //     enemyObj.gameObject.SetActive(false);
-                        // }
-                        // else
-                        // {
-                        //     enemyObj.gameObject.SetActive(true);
-                        // }
-                        
-                        // //
-                        // if (atDungeon == true && locationEnemy[i].npcType != NpcType.Merchant)
-                        // {
-                        //     enemyObj.gameObject.SetActive(false);
-                        // }
-                        // }
+                       
                     }
                     }
 
@@ -519,12 +497,19 @@ int m=0;
                 explore.panel.Open();
                     explore.mapLocation = mapLocation;
                     // leaveObj.gameObject.SetActive(false);
+
+
+               if(mapLocation.dungeonType !=DungeonType.Init){
                     noticeUI.gameObject.SetActive(true);
-                   
+               
                     //Set Notice UI Content
+                    if(TownManager.CheckLan()==true){
                     dungeonLocText.text=mapLocation.locationName;
+                    }else{
+                        dungeonLocText.text=mapLocation.elocationName;
+                    }
                     currentLoc.text=GetDungeonNames(mapLocation.dungeonType);
-                    goalText.text = mapLocation.locationDetail.ToString();
+                    // goalText.text = mapLocation.locationDetail.ToString();
                     leaveTownText.text = "离开地下城";
                     //difficult
                     // if(BattleStartInfo.DungeonDifficult=="普通"){
@@ -533,11 +518,15 @@ int m=0;
                     //     DungeonExplore.instance.dungeonDifficult=DungeonDifficult.Hard;
                     // }
                     //
-                    
+               
                     
 
                     StartCoroutine(StartDungeon());
-                  
+               }
+                  else{
+                      //
+                      DungeonExplore.instance.ConfigDungeon();
+                  }
             }
                    
            
@@ -547,7 +536,9 @@ int m=0;
         {
             Debug.LogError("NO LOC");
         }
-
+        //
+        DeckBuildScreen.ShowScreenForCollectionBrower();
+        DeckBuildScreen.CloseCB();
             Debug.Log("Load Success"+locationText.text);
              
            
@@ -635,7 +626,7 @@ int m=0;
     //    mainCamera.Priority=300;
       
        LoadMap();
-       PlayerData.localPlayer.SavePanel.SetActive(false);
+    //    PlayerData.localPlayer.SavePanel.SetActive(false);
        //main -> town
        if( PlayerPrefs.HasKey("PlayerName"))
       { 
@@ -666,7 +657,7 @@ int m=0;
           else
           {
             //   First game
-              GDEMapLocationData map = new GDEMapLocationData(GDEItemKeys.MapLocation_奎卡);
+              GDEMapLocationData map = new GDEMapLocationData(GDEItemKeys.MapLocation_迷离意识);
               LoadTownData(map.MapName);
               if(map.MapType=="Main"){
               PlayerPrefs.SetString("locName",map.MapName);
@@ -674,14 +665,14 @@ int m=0;
             //   show 
                newBeePanel.gameObject.SetActive(true);
                hasNB = PlayerPrefsX.GetBool("TownNBUI");
-            if(hasNB==false){
-                newBeePanel.SetActive(false);
-                Debug.Log("HAS X KEY");
-            }
-            else{
-                newBeePanel.SetActive(true);
-                Debug.Log("Show new bee");
-            }
+            // if(hasNB==false){
+            //     newBeePanel.SetActive(false);
+            //     Debug.Log("HAS X KEY");
+            // }
+            // else{
+            //     newBeePanel.SetActive(true);
+            //     Debug.Log("Show new bee");
+            // }
 
           }
                
@@ -706,6 +697,11 @@ int m=0;
 
    public void EnterTown(string mapLoc,bool isDungeon)
    {
+       //destory obj
+       if(TravelSystem.TravelSystem.instance.currentPlayerObj!=null){
+           Destroy(TravelSystem.TravelSystem.instance.currentPlayerObj);
+       }
+       //
        if(isDungeon==false){
        PlayerData.LOCTYPE = LocType.Town;
        if (PlayerPrefs.HasKey("InMap"))
@@ -728,6 +724,14 @@ int m=0;
        mapCameraGroup.gameObject.SetActive(false);
        content.gameObject.SetActive(true);
    }
+public static bool CheckLan(){
+    if(currentLanguage=="zh"){
+        return true;
+    }else {
+        return false;   //en0
+    }
+}
+   //
 public void JumpMap(){
     DungeonExplore.moneyPool = 0;
             DungeonExplore.dustPool = 0;
@@ -759,13 +763,19 @@ public void JumpMap(){
         }
             
         }
+
+        //
         DeckStorge.instance.LoadDecksFromPlayerPrefs();
         if(worldMapCamera!=null && MapObj!=null)
         {
             //
            
           // LoadMap();
+          Debug.Log("Load Map Data");
           TravelSystem.TravelSystem.instance.LoadMapData();
+          TravelSystem.TravelSystem.instance.LoadPlayerTravel();
+
+          
           //Clear Deck Icon
           foreach(GameObject ei in enemySelection.deckIcons){
               if(ei!=null){
@@ -783,6 +793,7 @@ public void JumpMap(){
                 Destroy(fm);
             }
         }
+
           //enemymodel
           foreach(var e in npcModels){
               if(e!=null){Destroy(e);}
@@ -814,77 +825,63 @@ public void JumpMap(){
                 Destroy(npcTownObj[i]);
             }
            
+            Debug.Log("Opennmap");
             worldMap.gameObject.SetActive(true);
             worldMapCamera.enabled = true;
             // mainCamera.enabled = false;
-            
-            
-            Debug.Log("Map Location Config und load current player markPos");
-            // Debug.Log(mapSc.CalculateLength());
-            // Debug.Log(mapSc.CalculateLength(0.25,0.75));
-
-            TravelSystem.TravelSystem.instance.LoadPlayerTravel();
-            //   var ps = mapSc.GetPoints();
-
-            //   for (int j = 0; j < TravelSystem.TravelSystem.instance.areaCollection.Length; j++)
-            //   {
-            //      for (int i = 0; i < ps.Length; i++)
- 
-            //           TravelSystem.TravelSystem.instance.areaCollection[j].sPos =new Vector3(ps[i].position.x,ps[i].position.y,ps[i].position.z);
- 
-            //   }
-              
-              
-               TravelSystem.TravelSystem.instance.SetMarkerLocation();
+        
+       
+               //Check Lock state
                foreach (var a in TravelSystem.TravelSystem.instance.areaCollection)
                {
+
+                    if (PlayerPrefs.HasKey(a.location.elocationName + "_Lock"))
+           {
+               int g = PlayerPrefs.GetInt(a.location.elocationName + "_Lock");
+               if (g == 0)
+               {
+                //    Debug.Log("has key "+newMap.locationName.ToString());
+                a.Locked=false;
+                
+               
                    if (a.Locked == false)
                    {
+                       a.gameObject.GetComponent<BoxCollider>().enabled=true;
                        a.gameObject.SetActive(true);
                    }
                    else
                    {
-                       a.gameObject.SetActive(false);
+                        a.gameObject.GetComponent<BoxCollider>().enabled=false;
+                        a.gameObject.SetActive(false);
                    }
-
-                   if (a.areaName == "地下列车" && a.Locked == false)
-                   {
-                       TravelSystem.TravelSystem.instance.underneathLoc.gameObject.SetActive(true);
-                   }
+                   
                }
-
+           }
+               }
             MapObj.gameObject.SetActive(true);
-               //Load Spline
-               // double distanceStart = mapSc.Travel(0.0f, 15.0f, Spline.Direction.Forward);
-               // double distanceEnd = mapSc.Travel(1.0f, 15.0f, Spline.Direction.Backward);
-               //
-               // //
-               // float sLen = mapSc.CalculateLength();
-               // double travel = mapSc.Travel(0.0, sLen);
-               // Vector3 mid = mapSc.EvaluatePosition(travel);
-               // //
-               // Debug.DrawRay(mid,Vector3.up,Color.red,10f);
-                
-               //Get Travel List if lock is false
-            //    int currentLoc =0;
-            //  foreach(var c in TravelSystem.TravelSystem.instance.areaCollection){
-            //      if(c.Locked==false){
-            //          Debug.Log("loc ist"+c.location.locationName+"::"+c.Locked);
-            //          currentLoc++;
-            //      }
-            //  }
-             //
-            
+               
+               
              //Obj
-             Debug.Log("Load Map Loc"+TravelSystem.TravelSystem.instance.areaCollection.Length);
-            //  for(int i=0;i<TravelSystem.TravelSystem.instance.areaCollection.Length;i++){
+             Debug.Log("Load Map Loc"+TravelSystem.TravelSystem.instance.areaCollection.Count);
+            int cl = 1;
+             //
                  foreach(var c in TravelSystem.TravelSystem.instance.areaCollection){
-                 if(c.Locked==false){
-                 GameObject tObj = Instantiate(FtObj,Ftpos.position,Quaternion.identity)as GameObject;
+                    if(PlayerPrefs.HasKey(c.location.elocationName+"_Lock")){
+                        cl = PlayerPrefs.GetInt(c.location.elocationName+"_Lock");
+                    }else{
+                        cl=1;   //default is lock
+                    }
+
+                     if(cl==0){
+                     GameObject tObj = Instantiate(FtObj,Ftpos.position,Quaternion.identity)as GameObject;
                  tObj.name = c.location.locationName.ToString();
                  tObj.transform.SetParent(Ftpos);
                  tObj.transform.localScale= new Vector3(1,1,1);
+                 if(TownManager.CheckLan()==true){
                  tObj.GetComponent<FastTravel>().locText.text = c.location.locationName.ToString();
+                 }else{
+                      tObj.GetComponent<FastTravel>().locText.text = c.location.elocationName.ToString();
+                 }
                   tObj.GetComponent<FastTravel>().currentArea = c;
                  tObj.GetComponent<FastTravel>().tBtn.onClick.AddListener(()=>{
                     //  if(TravelSystem.TravelSystem.instance.currentArea == tObj.GetComponent<FastTravel>().currentArea){
@@ -898,29 +895,30 @@ public void JumpMap(){
                  NetworkServer.Spawn(tObj);
                     
                  }else{
-
                  }
+                //  }
              }
+             
              //
              TravelSystem.TravelSystem.instance.ShowAreaWindow(TravelSystem.TravelSystem.instance.currentArea);
-           
-
-
+             
+//    TravelSystem.TravelSystem.instance.SetMarkerLocation();
+ 
+  
 
                DialogueManager.SendUpdateTracker();
 
-        
         }
 }
     //show World Map
     public void WorldMap(){
+       // TravelSystem.TravelSystem.instance.LoadPlayerTravel();
        loadingScreenManager.LoadSceneWait();
-        // loadScreen.gameObject.SetActive(true);
-       
+        // loadScreen.gameObject.SetActive(true); 
            JumpMap();
-       
+        //    TravelSystem.TravelSystem.instance.playerMarker.transform.position = Vector3.Lerp( TravelSystem.TravelSystem.instance.currentArea.gameObject.transform.position, TravelSystem.TravelSystem.instance.playerMarker.transform.position,0.4f*Time.deltaTime);
+           
 
-       
     }
 
     public void UpdateTown()
@@ -930,6 +928,20 @@ public void JumpMap(){
             obj.gameObject.SetActive(true);
         }
         Canvas.ForceUpdateCanvases();
+    }
+
+
+     public void ShowPopup(NPCManager nPCManager)
+    {
+       if(nPCManager==null)return;
+       //
+       popupObj.gameObject.SetActive(true);
+       if(CheckLan()==true){
+       nameText.text = npcManager.asset.EnemyName.ToString();
+       }else{
+           nameText.text = npcManager.asset.eEnemyName.ToString();
+       }
+       
     }
 public GameObject LoadItemFromAB(string abName,EnemyAsset ea){
     if(ea.model!=""){
@@ -965,22 +977,23 @@ return null;
         List<GDEMapLocationData> alllMap = GDEDataManager.GetAllItems<GDEMapLocationData>();
         for (int i = 0; i < alllMap.Count; i++)
         {
-            Debug.Log("try got map"+alllMap[i].MapName);
+            // Debug.Log("try got map"+alllMap[i].MapName);
             MapLocation newMap = new MapLocation();
             newMap.locationID =alllMap[i].MapID.ToString();
             
             newMap.locationName = alllMap[i].MapName;
+            newMap.elocationName =alllMap[i].EMapName;
             newMap.locationScene=alllMap[i].LocationScene;
 
             // Debug.Log("LOC NAMES IS"+newMap.locationName.ToString());
             newMap.townType = GetTownType(alllMap[i].MapType);
             newMap.dungeonType = GetDungeonType(alllMap[i].DungeonType);
-
+            newMap.nextLocation = alllMap[i].NextLocation;
 
             newMap.locationDetail = alllMap[i].LocDetail;
             newMap.isDungeon = alllMap[i].IsDungeon;
             newMap.isLock = alllMap[i].IsLock;
-            newMap.sceneName = alllMap[i].SceneName;
+            // newMap.sceneName = alllMap[i].LocationScene;
             newMap.itemList = alllMap[i].DItems;
             // newMap.cameraPos =alllMap[i].CameraPos;
             // newMap.DirePos=alllMap[i].DirePos;
@@ -988,27 +1001,24 @@ return null;
             // if(alllMap[i].CamObj!=null){
             // newMap.DireAsset =GetBossAsset(alllMap[i].CamObj);
             // }
-           if (PlayerPrefs.HasKey(newMap.locationName + "_Lock"))
+            
+            
+           if (PlayerPrefs.HasKey(newMap.elocationName + "_Lock"))
            {
-               int g = PlayerPrefs.GetInt(newMap.locationName + "_Lock");
-               if (g == 1)
+               int g = PlayerPrefs.GetInt(newMap.elocationName + "_Lock");
+               if (g == 0)
                {
-                   Debug.Log("has key "+newMap.locationName.ToString());
+                   Debug.Log("has key "+newMap.elocationName.ToString());
                 newMap.isLock=false;
+                
                }
             
+           }else{
+               //first
+               PlayerPrefs.SetInt(newMap.elocationName+"_Lock",1);
+               newMap.isLock=true;
            }
-//            else
-//            {
-//                if (newMap.isLock == true)
-//                {
-//                    PlayerPrefs.SetInt(newMap.locationName + "IsLock", 1);
-//                }
-//                else if (newMap.isLock == false)
-//                {
-//                    PlayerPrefs.SetInt(newMap.locationName + "IsLock", 0);
-//                }
-//            }
+
 
             newMap.hasEvent = alllMap[i].HasEvent;
      
@@ -1022,6 +1032,8 @@ return null;
             newMap.hasBoss = alllMap[i].HasBoss; 
 if(newMap.hasBoss==true){
             newMap.bossAsset = GetBossAsset(alllMap[i].DungeonBoss);
+            
+            
 }
             maps.Add(newMap);
 
@@ -1039,11 +1051,12 @@ if(newMap.hasBoss==true){
 
     public EnemyAsset GetBossAsset(GDEEnemyAssetData boss)
     {
-        Debug.Log("Try Got Boss"+boss.NpcName);
+        // Debug.Log("Try Got Boss"+boss.NpcName);
         boss = new GDEEnemyAssetData(boss.Key);
         
         EnemyAsset e =new EnemyAsset();
         e.EnemyName=boss.NpcName;
+        e.eEnemyName = boss.ENpcname;
         // Debug.Log(e.EnemyName+"Got boss");
         e.Tags = boss.Tags;
         e.npcType = Utils.ConvertNpcType(boss.NpcType);
@@ -1088,6 +1101,7 @@ if(newMap.hasBoss==true){
         {
             EnemyAsset e = new EnemyAsset();
             e.EnemyName = enemy[i].NpcName;
+            e.eEnemyName=enemy[i].ENpcname;
             // Debug.Log(e.EnemyName + "Got enemy ");
             e.Tags = enemy[i].Tags;
             e.npcType = Utils.ConvertNpcType(enemy[i].NpcType);
@@ -1194,7 +1208,7 @@ if(newMap.hasBoss==true){
         }else if (d == "Boss")
         {
             return DungeonType.Boss;
-        }
+        }else if(d=="Init"){return DungeonType.Init;}
 
         return DungeonType.None;
     }

@@ -78,6 +78,10 @@ public class DeckBuilderScreen:MonoBehaviour{
         collectionBroswerScript.ShowCollectionForBrowsing();
 
     }
+    
+    public void CloseCB(){
+        screenContent.gameObject.SetActive(false);
+    }
    
 
     /// <summary>

@@ -19,10 +19,11 @@ public class MapLocation
     
     public string locationID;
  public string locationName;
+ public string elocationName;
  public string locationScene;
  public string locationDetail;
  public EnemyAsset[] npcList;
-
+  public List<string> nextLocation;
  private bool _islock;
 
  [SerializeField]
@@ -54,7 +55,7 @@ public class MapLocation
  public DungeonType dungeonType;
  public int NeedsKill;
  public string dungeonChest;
- public string sceneName;
+ // public string sceneName;
  
  public Vector3 Spos;
 

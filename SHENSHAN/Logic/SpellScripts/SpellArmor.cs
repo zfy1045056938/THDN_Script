@@ -6,9 +6,11 @@ public class SpellArmor : SpellEffect
 {
     public override void ActiveEffect(int specialAmount = 0, ICharacter target = null)
     {
+        Debug.Log("Armor Card Effect");
         TurnManager.instance.WhoseTurn.CreatureDef += specialAmount;
+        TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.defText.text = TurnManager.instance.WhoseTurn.CreatureDef.ToString();
         //
-        new DealDamageCommand(TurnManager.instance.WhoseTurn.playerID,0,specialAmount,0).AddToQueue();
+        // new DealDamageCommand(TurnManager.instance.WhoseTurn.playerID,0,specialAmount,0).AddToQueue();
     }
 
     public override void ActiveEffectToTargetStat(int specialAmount = 0, ICharacter target = null, SpellBuffType type = SpellBuffType.None)

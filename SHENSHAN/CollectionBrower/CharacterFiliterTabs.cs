@@ -4,7 +4,7 @@ using System.Collections;
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.EventSystems;
-
+using TMPro;
 
 /// <summary>
 /// Character filiter tabs.
@@ -14,7 +14,7 @@ public class CharacterFiliterTabs:MonoBehaviour,IPointerClickHandler
 
     public CharacterAsset characterAsset;
     public bool showAllCharacter = false;
-    public Text nameText;
+    public TextMeshProUGUI nameText;
     
     private CharacterSelectionTabs tabsScript;
     private float selectionTransitionTime = 0.5f;

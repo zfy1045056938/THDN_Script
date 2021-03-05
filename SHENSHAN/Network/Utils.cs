@@ -86,8 +86,17 @@ public static class Utils
 
         return PlayerJob.None;
     }
+    public static string GetCardEffect(string cn)
+{
+    List<GDECardEffectGuideData> cfgd = GDEDataManager.GetAllItems<GDECardEffectGuideData>();
 
-   
+    for(int i=0;i<cfgd.Count;i++){
+        if(cn==cfgd[i].GName){
+            return cfgd[i].EGName;
+        }
+    }
+    return null;
+}   
        public static CardRatityOption GetCardRarity(string data)
     {
         	
@@ -137,6 +146,21 @@ public static class Utils
 		 }
 		}
 		return null;
+    }
+
+    public static CharacterAsset GetCardCharacterAsset(string characterAsset)
+    {
+        List<GDECharacterAssetData> gda = GDEDataManager.GetAllItems<GDECharacterAssetData>();
+		for(int i=0;i<gda.Count;i++){
+	     if(gda[i].ClassName==characterAsset){
+			 GDECharacterAssetData cs =new GDECharacterAssetData(gda[i].Key);
+			return new  CharacterAsset(GetPlayerJobs(cs.PlayersJob),cs.ClassName,cs.MaxHealth,
+			cs.PowerName,GetCsAvaSprite(cs.AvatarImage),cs.Detail,GetCsBGSpritecs(cs.BGSprite),
+			cs.AttackCard,cs.ArmorCard);
+		 }
+		}
+		return null;
+		
     }
 
     
@@ -196,12 +220,12 @@ public static class Utils
               List<CardAsset> cs = new List<CardAsset>();
               for( int i=0;i<c.Count; i++){
                   CardAsset ca = CardCollection.instance.GetCardAssetByName(c[i].CardName);
-
+                    Debug.Log("Pack to card"+ca.name.ToString());
                   cs.Add(ca);
-                  return cs;
+                
               }
 
-        return null;
+        return cs;
     }
 
     public static TargetOptions GetSpellTarget(string spellTarget)

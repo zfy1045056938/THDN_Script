@@ -13,6 +13,7 @@ public class CardAsset :IComparable<CardAsset>
 {
     [Header("General Info")]
     public string name;
+    public string ename;
     public int cardID;
     // public CharacterAsset characterAsset;
     public CharacterAsset characterAsset;

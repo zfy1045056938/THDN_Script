@@ -113,16 +113,36 @@ public class OneCardManager : MonoBehaviour {
 //        }else{
 //            cardFaceFrameImage.color = Color.white;
 //        }
+
+        Debug.Log("Load Card asset check locate first");
            
         //卡牌名字
+        if(TownManager.currentLanguage=="zh"){
         nameText.text = cardAsset.name;
-      
+        //卡牌效果解释
+        descriptionText.text = cardAsset.cardDetail;
+        }else if(TownManager.currentLanguage=="en"){
+            nameText.text = cardAsset.ename.ToString();
+            nameText.fontSize=7.0f;
+
+            if(cardAsset.cardDetail!=""){
+            string [] cd = null;
+
+            cd = cardAsset.cardDetail.Split(':');
+            if(cd.Length>0){
+                foreach(var v in cd){
+                    Debug.Log(cd);
+                
+                }
+descriptionText.text = Utils.GetCardEffect(cd[0])+":"+cd[1];
+            }
+            }
+        
+        }
         //卡牌水晶数
         manaCostText.text = cardAsset.manaCost.ToString();
 
-        //卡牌效果解释
-        descriptionText.text = cardAsset.cardDetail;
-
+      
         //卡牌图像
         cardGraphicImage.sprite = cardAsset.cardSprite;
 
@@ -141,7 +161,7 @@ public class OneCardManager : MonoBehaviour {
             
             // LocliaztionType();
 
-        }else if(cardAsset.typeOfCards==TypeOfCards.Common)
+        }else if(cardAsset.typeOfCards==TypeOfCards.Common&& cardAsset.name=="攻击力")
         {
             int cf = cardAsset.SpecialSpellAmount + GlobalSetting.instance.lowPlayer.CreatureAtk;
             descriptionText.text = "打击:"+cf;

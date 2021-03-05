@@ -180,6 +180,7 @@ public enum SpellBuffType
     Health,
     Armor,
     CharacterArmor,
+    CharacterAtk,
     // CHArmor,
     Atk,
     DoubleAtk,

@@ -164,12 +164,31 @@ public class OneCreatureManager:MonoBehaviour
                 
                 break;
             case SpellBuffType.CharacterArmor:
-            Debug.Log("CharacterArmor Effect Active");
-            SoundManager.instance.PlaySound(GlobalSetting.instance.armorClip);
+             Debug.Log("CharacterArmor Effect Active");
+             SoundManager.instance.PlaySound(GlobalSetting.instance.armorClip);
                 TurnManager.instance.WhoseTurn.CreatureDef += amount;
                 TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.defText.text =
                     TurnManager.instance.WhoseTurn.CreatureDef.ToString();
                 //TurnManager.instance.WhoseTurn.playerArea.playerPortraitVisual.ArmorImage.gameObject.SetActive(true);
+                break;
+                 case SpellBuffType.CharacterAtk:
+             Debug.Log("CharacterArmor Atk Active");
+                SoundManager.instance.PlaySound(GlobalSetting.instance.atkClip);
+                TurnManager.instance.WhoseTurn.CreatureAtk += amount;
+
+                //Update Atk data
+                foreach(var v in TurnManager.instance.WhoseTurn.hand.CardInHand){
+                    if(v.card.name=="攻击力"){
+                        v.card.SpecialSpellAmount =  TurnManager.instance.WhoseTurn.CreatureAtk;
+                    }
+                }
+
+                //
+                foreach(var v in TurnManager.instance.WhoseTurn.playerArea.handVisual.CardsInHand){
+                    if(v.GetComponent<OneCardManager>().cardAsset.name=="攻击力"){
+                        v.GetComponent<OneCardManager>().atkText.text=TurnManager.instance.WhoseTurn.CreatureAtk.ToString(); 
+                    }
+                }
                 break;
             case SpellBuffType.FireArmor:
 TurnManager.instance.WhoseTurn.CreatureDef += amount;

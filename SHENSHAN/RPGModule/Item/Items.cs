@@ -7,6 +7,7 @@ public class Items
 {
    
     public string itemName;
+    public string eitemName;
   public string itemID;
   public int width;
   public int height;
@@ -19,6 +20,7 @@ public class Items
   public int armorDur;
   public int ringDur;
   public string descriptionText;
+  public string eItemDetail;
   public Sprite icon;
   public string iconName;
   public int itemLevel;

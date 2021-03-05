@@ -67,7 +67,7 @@ public Button deleteBtn;
          {
              CharactersAvailableMsg.CharacterPreview[] cs = manager.charactersAvailableMsg.characters;
              
-             startBtn.interactable=(cs.Length>0);
+             startBtn.gameObject.SetActive(cs.Length>0);
 //             startBtn.onClick.AddListener(() =>
 //             {
 //                 ClientScene.Ready(NetworkClient.connection);
@@ -144,64 +144,10 @@ ls.LoadSceneWait();
 
                   LoadingScreen.instance.onFinishEvents.AddListener(()=>{
                       Debug.Log("End Button Event");
-                       DialogueManager.StartConversation("回滚");
+                    //    DialogueManager.StartConversation("回滚");
                   });
                   
                     menuPanel.gameObject.SetActive(false);
-            //   StartCoroutine(StartGameRoutine());
-            //    shenshanloading.Loading();
-            //    loadingScreenManager.gameObject.SetActive(true);
-           
-            //   CharactersAvailableMsg.CharacterPreview[] cs = manager.charactersAvailableMsg.characters;
-
-            //   ClientScene.Ready(NetworkClient.connection);
-            //   //
-            //   NetworkClient.connection.Send(new CharacterSelectMsg {index = manager.selection});
-
-            //   manager.ClearPreviews();
-            //   //
-            // //   shenshanloading.LoadingForWaitRoutine();
-
-            // //   FindObjectOfType<PlayerData>().GetComponent<SaveSlots>().panel.Close();
-
-            //     //
-            //     Debug.Log("Load Town");
-            //       TownManager.instance.ShowTown(true);
-            //       PlayerData.LOCTYPE = LocType.Town;
-            //       DialogueManager.StartConversation("回滚");
-                  
-            //         menuPanel.gameObject.SetActive(false);
-
-            // Debug.Log("Load Game");
-            // shenshanloading.LoadingForWaitRoutine();
-            //   TownManager.instance.ShowTown(true);
-            //       PlayerData.LOCTYPE = LocType.Town;
-            //       DialogueManager.StartConversation("回滚");
-            
-//              if (PlayerPrefs.HasKey("InMap"))
-//              {
-//                  bool check = PlayerPrefsX.GetBool("InMap");
-//                  if (check)
-//                  {
-////                      BG.SetActive(true);
-//                      shenshanloading.OpenPanel();
-//                      shenshanloading.LeaveTown();
-////                      StartCoroutine(LoadMapRoutine());
-//
-//                  }
-//
-//              }
-//              else
-//              {
-
-            
-//              }
-//              }
-
-            //   panel.SetActive(false);
-
-            //       menu.panel.SetActive(false);
-              
 
           }
       }

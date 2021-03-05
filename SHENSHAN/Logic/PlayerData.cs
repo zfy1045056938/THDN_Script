@@ -12,7 +12,7 @@ using System.Linq;
 using DG.Tweening;
 using PixelCrushers.DialogueSystem;
 using UnityEngine.AI;
-
+using GameDataEditor;
 public enum LocType
 {
     None,
@@ -364,12 +364,24 @@ private int er;
     [SerializeField]
     public string account{ get; set; }
 
-    private ExponentialLong _expMax = new ExponentialLong{mult=100,bv=1.1f};
+    private int _expMax ;
     [SerializeField] public float expMax{
         get{
-        return _expMax.Get(PlayerLevel);
+        return GetExpMax(PlayerLevel);
 }
 
+    }
+
+    public int GetExpMax(int level){
+        int cl=0; 
+        List<GDEPlayerExpData> exp = GDEDataManager.GetAllItems<GDEPlayerExpData>();
+        for(int i=0;i<exp.Count;i++){
+            if(level == exp[i].level){
+                cl =Mathf.FloorToInt(exp[i].Exp);
+                return cl;
+            }
+        }
+         return cl;
     }
 
     private float _exp;

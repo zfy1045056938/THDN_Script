@@ -26,8 +26,8 @@ public class CreatureKill : CreatureEffect
             owner.otherPlayer.table.creatureOnTable[rndCreature].MaxHealth -=
                 owner.otherPlayer.table.creatureOnTable[rndCreature].MaxHealth;
 
-                 GlobalSetting.instance.SETLogs(string.Format("对{0}发动猎杀效果,{1}死亡",owner.otherPlayer.table.creatureOnTable[rndCreature].card.name,
-                 owner.otherPlayer.table.creatureOnTable[rndCreature].card.name));
+                //  GlobalSetting.instance.SETLogs(string.Format("对{0}发动猎杀效果,{1}死亡",owner.otherPlayer.table.creatureOnTable[rndCreature].card.name,
+                //  owner.otherPlayer.table.creatureOnTable[rndCreature].card.name));
         }
     }
 }
